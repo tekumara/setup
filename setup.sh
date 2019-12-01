@@ -17,6 +17,9 @@ brew install jq
 # nb: awscli also installs python3
 brew install awscli
 
+# dev tools, needed for building some python packages
+brew install automake libtool
+
 # set zsh as default shell
 chsh -s /bin/zsh
 
@@ -65,7 +68,9 @@ brew cask install spotify
 brew cask install go2shell
 brew cask install intellij-idea-ce
 brew cask install docker
-
+brew cask install firefox
+brew cask install authy
+brew cask install iterm2
 
 if [[ ! -d "/Applications/VLC.app" ]]; then
     brew cask install vlc
@@ -75,7 +80,6 @@ if [[ ! -d "/Applications/Google Chrome.app" ]]; then
     brew cask install google-chrome
 fi
 
-brew cask install iterm2
 
 # specify the preferences directory
 defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/Dropbox/Mackup/Library/Preferences"

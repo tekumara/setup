@@ -1,2 +1,2 @@
 # setup
-Set up my machine
+Set up my mac
