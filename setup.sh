@@ -16,45 +16,35 @@ brew install wget
 brew install jq
 # nb: awscli also installs python3
 brew install awscli
+brew install shellcheck
 
-# dev tools, needed for building some python packages
+# for building some python packages
 brew install automake libtool
+
+# for skywind3000/z.lua
+brew install lua
 
 # set zsh as default shell
 chsh -s /bin/zsh
-
-# install oh-my-zsh
-if [[ ! -d ~/.oh-my-zsh ]]; then
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
-fi
 
 # install zgen
 if [[ ! -d ~/.zgen ]]; then
     git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
 fi
 
+# install dotfiles
+brew install stow
+mv ~/.zshrc ~/.zshrc-pre-setup
+stow -vv dotfiles -t ~
 
 # install fzf + key bindings
 brew install fzf
 $(brew --prefix)/opt/fzf/install
 
-# install z
-brew install z
-if ! grep -qF "z.sh" ~/.zshrc; then
-    echo ". /usr/local/etc/profile.d/z.sh" >> ~/.zshrc
-fi
-
 # install python
 brew install pyenv
 pyenv install 3.6.9
-if ! grep -qF "pyenv init" ~/.zshrc; then
-    echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
-fi
-
 brew install pyenv-virtualenvwrapper
-if ! grep -sqF "virtualenvwrapper" ~/.zshrc; then
-    echo "pyenv virtualenvwrapper_lazy" >> ~/.zshrc
-fi
 
 # install java
 brew tap AdoptOpenJDK/openjdk
@@ -71,6 +61,7 @@ brew cask install docker
 brew cask install firefox
 brew cask install authy
 brew cask install iterm2
+brew cask install google-backup-and-sync
 
 if [[ ! -d "/Applications/VLC.app" ]]; then
     brew cask install vlc
@@ -80,6 +71,12 @@ if [[ ! -d "/Applications/Google Chrome.app" ]]; then
     brew cask install google-chrome
 fi
 
+# install mac drivers
+brew tap homebrew/cask-drivers
+brew cask install evoluent-vertical-mouse-device-controller
+
+# iterm2 settings
+# ---------------
 
 # specify the preferences directory
 defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/Dropbox/Mackup/Library/Preferences"
@@ -88,14 +85,11 @@ defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 # save changes to the customer preferences directory
 defaults write com.googlecode.iterm2.plist NoSyncNeverRemindPrefsChangesLostForFile_selection -bool false
 
-brew tap homebrew/cask-drivers
-brew cask install evoluent-vertical-mouse-device-controller
+# Finder settings
+# ---------------
 
 # Save screenshots to Downloads
 defaults write com.apple.screencapture location -string "${HOME}/Downloads"
-
-# Finder settings
-# ---------------
 
 # show path bar
 defaults write com.apple.finder ShowPathbar -bool true
