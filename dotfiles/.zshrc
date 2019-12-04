@@ -21,14 +21,14 @@ if ! zgen saved; then
 
   # theme
   zgen prezto prompt theme 'cloud'
-  zgen prezto utility:ls color 'yes'
+  zgen prezto '*:*' color 'yes'
   #zgen prezto editor key-bindings 'emacs'
 
   #zgen prezto python
 
-  #zgen oh-my-zsh
-  #zgen oh-my-zsh plugins/git
-  #zgen oh-my-zsh themes/robbyrussell
+  # zgen oh-my-zsh
+  # zgen oh-my-zsh plugins/git
+  # zgen oh-my-zsh themes/robbyrussell
 
   zgen load skywind3000/z.lua
   # zgen load zsh-users/zsh-autosuggestions
@@ -47,6 +47,10 @@ if ! zgen saved; then
   # generate the init script for everything above
   zgen save
 fi
+
+# set prezto to use same history file as oh-my-zsh
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=50000
 
 # fzf keybindings (CTRL-T, CTRL-R) must be loaded after the prezto editor module
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
