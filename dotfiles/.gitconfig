@@ -1,0 +1,18 @@
+[branch]
+	# Automatically appends '--rebase' to 'git pull' commands; can be overridden with --no-rebase
+	# If the origin has been force updated since you last pulled, this will silently rewrite your local history to match the origin
+	# Do this before cloning the repository so branches inherit this setting as they are used
+	autoSetupRebase = always
+[rebase]
+	# Automatically create a temporary stash entry before the operation begins, and apply it after the operation ends. 
+	# This means that you can run rebase on a dirty worktree without the message "error: cannot pull with rebase: You have unstaged changes" 
+	autoStash = true
+
+	# merge squash & fixup commits see https://robots.thoughtbot.com/autosquashing-git-commits
+	autosquash = true
+[core]
+	# checkout as-is, commit as-is
+	autocrlf = false
+[user]
+	name = Oliver Mannion
+	email = 125105+tekumara@users.noreply.github.com

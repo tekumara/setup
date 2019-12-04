@@ -105,21 +105,3 @@ if [[ ! -d ~/.vim_runtime ]]; then
     git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
     sh ~/.vim_runtime/install_awesome_vimrc.sh
 fi
-
-## git settings
-
-# Automatically appends '--rebase' to 'git pull' commands; can be overridden with --no-rebase
-# If the origin has been force updated since you last pulled, this will silently rewrite your local history to match the origin
-# Do this before cloning the repository so branches inherit this setting as they are used
-git config --global branch.autoSetupRebase always 
-# To retroactively apply it to an already pulled branch: git config branch.<branchname>.rebase true
-
-# When set to true, automatically create a temporary stash entry before the operation begins, and apply it after the operation ends. 
-# This means that you can run rebase on a dirty worktree without the message "error: cannot pull with rebase: You have unstaged changes" 
-git config --global rebase.autoStash true
-
-git config --global core.autocrlf false      # checkout as-is, commit as-is
-git config --global rebase.autosquash true   # merge squash & fixup commits see https://robots.thoughtbot.com/autosquashing-git-commits
- 
-git config --global user.name "Oliver Mannion"
-git config --global user.email 125105+tekumara@users.noreply.github.com
