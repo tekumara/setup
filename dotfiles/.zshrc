@@ -48,6 +48,10 @@ if ! zgen saved; then
   zgen save
 fi
 
+# allow overwriting existing files
+# (this is unset by the prezto directory module)
+setopt CLOBBER
+
 # set prezto to use same history file as oh-my-zsh
 HISTFILE="$HOME/.zsh_history"
 HISTSIZE=50000

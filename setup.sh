@@ -4,6 +4,9 @@
 
 set -uoe pipefail
 
+# set zsh as default shell
+chsh -s /bin/zsh
+
 # install brew
 if ! which -s brew; then
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -16,7 +19,12 @@ brew install wget
 brew install jq
 # nb: awscli also installs python3
 brew install awscli
+
+# dev tools
 brew install shellcheck
+
+# for vscode symbol generation
+brew install ctags
 
 # for building some python packages
 brew install automake libtool
@@ -24,8 +32,8 @@ brew install automake libtool
 # for skywind3000/z.lua
 brew install lua
 
-# set zsh as default shell
-chsh -s /bin/zsh
+# kubernetes
+brew install kubernetes-helm
 
 # install zgen
 if [[ ! -d ~/.zgen ]]; then
@@ -75,6 +83,13 @@ fi
 brew tap homebrew/cask-drivers
 brew cask install evoluent-vertical-mouse-device-controller
 
+
+## vim settings
+if [[ ! -d ~/.vim_runtime ]]; then
+    git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+    sh ~/.vim_runtime/install_awesome_vimrc.sh
+fi
+
 # iterm2 settings
 # ---------------
 
@@ -100,8 +115,5 @@ defaults write com.apple.finder _FXSortFoldersFirst -bool true
 # When performing a search, use the previous search scope
 defaults write com.apple.finder FXDefaultSearchScope -string "SCsp"
 
-## vim settings
-if [[ ! -d ~/.vim_runtime ]]; then
-    git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
-    sh ~/.vim_runtime/install_awesome_vimrc.sh
-fi
+# doesn't seem to work
+# defaults write "Apple Global Domain" com.apple.keyboard.fnState -bool true
