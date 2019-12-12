@@ -59,6 +59,9 @@ HISTSIZE=50000
 # fzf keybindings (CTRL-T, CTRL-R) must be loaded after the prezto editor module
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+
+export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
+
 # pyenv + virtualenvwrapper
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
