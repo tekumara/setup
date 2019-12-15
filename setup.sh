@@ -22,6 +22,7 @@ brew install awscli
 
 # dev tools
 brew install shellcheck
+brew cask install beyond-compare
 
 # for vscode symbol generation
 brew install ctags

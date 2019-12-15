@@ -36,7 +36,7 @@ if ! zgen saved; then
 
   #zgen load junegunn/fzf shell
   #if [[ -f ~/.fzf.zsh ]]; then
-    #zgen load ~/.fzf.zsh
+  #zgen load ~/.fzf.zsh
   #fi
 
   for zshfile in "${ZDOTDIR:-$HOME}"/.*.zsh; do
@@ -59,7 +59,6 @@ HISTSIZE=50000
 # fzf keybindings (CTRL-T, CTRL-R) must be loaded after the prezto editor module
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 
 # pyenv + virtualenvwrapper
@@ -70,3 +69,6 @@ pyenv virtualenvwrapper_lazy
 
 # added by pipx
 export PATH="$PATH:$HOME/.local/bin"
+
+# load slack functions
+source "$HOME/Dropbox/Slack/functions.zsh" || echo "Warning: Slack functions not loaded"
