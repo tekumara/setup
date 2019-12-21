@@ -19,13 +19,17 @@ if ! zgen saved; then
   # load additional modules
   zgen prezto git
 
+  # when pressing up/down arrows, completes the beginning of a command by searching in the history
+  zgen prezto history-substring-search
+
   # theme
-  zgen prezto prompt theme 'cloud'
+  zgen prezto prompt theme 'pure'
   zgen prezto '*:*' color 'yes'
   #zgen prezto editor key-bindings 'emacs'
 
   #zgen prezto python
 
+  #zgen oh-my-zsh plugins/kubectl
   # zgen oh-my-zsh
   # zgen oh-my-zsh plugins/git
   # zgen oh-my-zsh themes/robbyrussell
@@ -57,6 +61,7 @@ HISTFILE="$HOME/.zsh_history"
 HISTSIZE=50000
 
 # fzf keybindings (CTRL-T, CTRL-R) must be loaded after the prezto editor module
+# TODO: move this into a module
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"

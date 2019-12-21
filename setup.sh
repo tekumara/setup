@@ -71,6 +71,7 @@ brew cask install firefox
 brew cask install authy
 brew cask install iterm2
 brew cask install google-backup-and-sync
+brew cask install calibre
 
 if [[ ! -d "/Applications/VLC.app" ]]; then
     brew cask install vlc

@@ -10,4 +10,4 @@ It's fast because it uses a static init script.
 
 ## why prezto?
 
-Currently trialling it and as alternative to oh-my-zsh.
+Currently trialling it as an alternative to oh-my-zsh.
