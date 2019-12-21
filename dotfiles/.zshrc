@@ -1,7 +1,12 @@
+zmodload zsh/zprof
+
 ZGEN_RESET_ON_CHANGE=(${HOME}/.zshrc)
 
 # Disable oh-my-zsh autoupdate, rely on zgen to update it
 DISABLE_AUTO_UPDATE=true
+
+autoload -Uz compinit && \
+   compinit -C 
 
 # load zgen
 source "${HOME}/.zgen/zgen.zsh"
@@ -17,7 +22,7 @@ if ! zgen saved; then
   zgen prezto
 
   # load additional modules
-  zgen prezto git
+  # zgen prezto git
 
   # when pressing up/down arrows, completes the beginning of a command by searching in the history
   zgen prezto history-substring-search
@@ -25,7 +30,6 @@ if ! zgen saved; then
   # theme
   zgen prezto prompt theme 'pure'
   zgen prezto '*:*' color 'yes'
-  #zgen prezto editor key-bindings 'emacs'
 
   #zgen prezto python
 
@@ -35,6 +39,7 @@ if ! zgen saved; then
   # zgen oh-my-zsh themes/robbyrussell
 
   zgen load skywind3000/z.lua
+  zgen load scmbreeze/scm_breeze
   # zgen load zsh-users/zsh-autosuggestions
   # zgen load zsh-users/zsh-syntax-highlighting
 
