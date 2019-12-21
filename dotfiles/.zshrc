@@ -5,8 +5,12 @@ ZGEN_RESET_ON_CHANGE=(${HOME}/.zshrc)
 # Disable oh-my-zsh autoupdate, rely on zgen to update it
 DISABLE_AUTO_UPDATE=true
 
+# do this up-front because scmbreeze needs compdef 
 autoload -Uz compinit && \
    compinit -C 
+
+# personal modules
+zstyle ':prezto:load' 'pmodule-dirs' '/Users/oliver.mannion/.zprezto-modules'
 
 # load zgen
 source "${HOME}/.zgen/zgen.zsh"
@@ -31,6 +35,8 @@ if ! zgen saved; then
   zgen prezto prompt theme 'pure'
   zgen prezto '*:*' color 'yes'
 
+  zgen prezto golang
+
   #zgen prezto python
 
   #zgen oh-my-zsh plugins/kubectl
@@ -40,6 +46,7 @@ if ! zgen saved; then
 
   zgen load skywind3000/z.lua
   zgen load scmbreeze/scm_breeze
+  zgen load zdharma/fast-syntax-highlighting
   # zgen load zsh-users/zsh-autosuggestions
   # zgen load zsh-users/zsh-syntax-highlighting
 
@@ -55,6 +62,8 @@ if ! zgen saved; then
 
   # generate the init script for everything above
   zgen save
+
+  # zcompile ${ZDOTDIR:-${HOME}}/.zgen/init.zsh
 fi
 
 # allow overwriting existing files
