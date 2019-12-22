@@ -47,8 +47,8 @@ mv ~/.zshrc ~/.zshrc-pre-setup
 stow -vv dotfiles -t ~
 
 # install personal prezto modules
-mkdir -p "$HOME/.zprezto-modules"
-stow -vv zprezto-modules -t ~/.zprezto-modules 
+mkdir -p "$HOME/.zshrc.d"
+stow -vv zshrc.d -t ~/.zshrc.d 
 
 # install fzf + key bindings
 brew install fzf

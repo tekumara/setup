@@ -9,9 +9,6 @@ DISABLE_AUTO_UPDATE=true
 autoload -Uz compinit && \
    compinit -C 
 
-# personal modules
-zstyle ':prezto:load' 'pmodule-dirs' '/Users/oliver.mannion/.zprezto-modules'
-
 # load zgen
 source "${HOME}/.zgen/zgen.zsh"
 
@@ -35,8 +32,6 @@ if ! zgen saved; then
   zgen prezto prompt theme 'pure'
   zgen prezto '*:*' color 'yes'
 
-  zgen prezto golang
-
   #zgen prezto python
 
   #zgen oh-my-zsh plugins/kubectl
@@ -55,7 +50,13 @@ if ! zgen saved; then
   #zgen load ~/.fzf.zsh
   #fi
 
-  for zshfile in "${ZDOTDIR:-$HOME}"/.*.zsh; do
+  zgen load "$HOME/.zshrc.d/golang.zsh"
+  zgen load "$HOME/.zshrc.d/awsweb.zsh"
+  zgen load "$HOME/Dropbox/Slack/functions.zsh"
+
+  # dynamically load anything in the work directory
+  # this won't be under source control 
+  for zshfile in "${ZDOTDIR:-$HOME}"/.zshrc.d/work/*.zsh; do
     echo "load $zshfile"
     zgen load "$zshfile"
   done
@@ -75,7 +76,6 @@ HISTFILE="$HOME/.zsh_history"
 HISTSIZE=50000
 
 # fzf keybindings (CTRL-T, CTRL-R) must be loaded after the prezto editor module
-# TODO: move this into a module
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
@@ -88,6 +88,3 @@ pyenv virtualenvwrapper_lazy
 
 # added by pipx
 export PATH="$PATH:$HOME/.local/bin"
-
-# load slack functions
-source "$HOME/Dropbox/Slack/functions.zsh" || echo "Warning: Slack functions not loaded"
