@@ -62,6 +62,7 @@ brew install pyenv-virtualenvwrapper
 # install java
 brew tap AdoptOpenJDK/openjdk
 brew cask install adoptopenjdk11
+brew cask install adoptopenjdk8
 
 # install mac apps
 brew cask install visual-studio-code
