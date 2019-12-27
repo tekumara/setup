@@ -71,7 +71,6 @@ brew cask install dropbox
 brew cask install spotify
 brew cask install go2shell
 brew cask install intellij-idea-ce
-brew cask install docker
 brew cask install firefox
 brew cask install authy
 brew cask install iterm2
@@ -85,6 +84,12 @@ fi
 if [[ ! -d "/Applications/Google Chrome.app" ]]; then
     brew cask install google-chrome
 fi
+
+# install docker and zsh completions
+brew cask install docker
+etc=/Applications/Docker.app/Contents/Resources/etc
+ln -s $etc/docker.zsh-completion /usr/local/share/zsh/site-functions/_docker
+
 
 # install mac drivers
 brew tap homebrew/cask-drivers
