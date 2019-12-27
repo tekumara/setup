@@ -42,6 +42,7 @@ if ! zgen saved; then
   zgen load skywind3000/z.lua
   zgen load scmbreeze/scm_breeze
   zgen load zdharma/fast-syntax-highlighting
+  zgen load srijanshetty/docker-zsh
   # zgen load zsh-users/zsh-autosuggestions
   # zgen load zsh-users/zsh-syntax-highlighting
 

@@ -46,7 +46,7 @@ brew install stow
 mv ~/.zshrc ~/.zshrc-pre-setup
 stow -vv dotfiles -t ~
 
-# install personal prezto modules
+# install zsh scripts
 mkdir -p "$HOME/.zshrc.d"
 stow -vv zshrc.d -t ~/.zshrc.d 
 
