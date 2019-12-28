@@ -30,9 +30,6 @@ brew install ctags
 # for building some python packages
 brew install automake libtool
 
-# for skywind3000/z.lua
-brew install lua
-
 # kubernetes
 brew install kubernetes-helm
 

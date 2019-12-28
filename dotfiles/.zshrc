@@ -39,7 +39,7 @@ if ! zgen saved; then
   # zgen oh-my-zsh plugins/git
   # zgen oh-my-zsh themes/robbyrussell
 
-  zgen load skywind3000/z.lua
+  zgen load agkozak/zsh-z
   zgen load scmbreeze/scm_breeze
   zgen load zdharma/fast-syntax-highlighting
  
