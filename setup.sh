@@ -54,6 +54,10 @@ $(brew --prefix)/opt/fzf/install
 # install python
 brew install pyenv
 pyenv install 3.6.9
+
+# don't rely on system installed python as the global default
+# because it can change under us and break existing virtualenvs
+pyenv global 3.6.9
 brew install pyenv-virtualenvwrapper
 
 # install java
@@ -94,6 +98,8 @@ brew cask install evoluent-vertical-mouse-device-controller
 
 
 ## vim settings
+#brew install vim --override-system-vim
+
 if [[ ! -d ~/.vim_runtime ]]; then
     git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
     sh ~/.vim_runtime/install_awesome_vimrc.sh
