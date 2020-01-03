@@ -42,6 +42,9 @@ if ! zgen saved; then
   zgen load agkozak/zsh-z
   zgen load scmbreeze/scm_breeze
   zgen load zdharma/fast-syntax-highlighting
+
+  # for jumping to github.com
+  zgen load peterhurford/git-it-on.zsh
  
   # zgen load zsh-users/zsh-autosuggestions
   # zgen load zsh-users/zsh-syntax-highlighting
