@@ -2,6 +2,7 @@
 	# Automatically appends '--rebase' to 'git pull' commands; can be overridden with --no-rebase
 	# If the origin has been force updated since you last pulled, this will silently rewrite your local history to match the origin
 	# Do this before cloning the repository so branches inherit this setting as they are used
+	# To retroactively apply it to an already pulled branch: git config branch.<branchname>.rebase true
 	autoSetupRebase = always
 [rebase]
 	# Automatically create a temporary stash entry before the operation begins, and apply it after the operation ends. 
@@ -13,6 +14,8 @@
 [core]
 	# checkout as-is, commit as-is
 	autocrlf = false
+	#  don't page if output will fit on one screen (for things like git config -l)
+	pager = "less -F -X"
 [user]
 	name = Oliver Mannion
 	email = 125105+tekumara@users.noreply.github.com
