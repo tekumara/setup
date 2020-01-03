@@ -23,6 +23,8 @@ brew install awscli
 # dev tools
 brew install shellcheck
 brew cask install beyond-compare
+brew tap coursier/formulas
+brew install coursier/formulas/coursier
 
 # for vscode symbol generation
 brew install ctags
@@ -55,10 +57,11 @@ $(brew --prefix)/opt/fzf/install
 brew install pyenv
 pyenv install 3.6.9
 
-# don't rely on system installed python as the global default
-# because it can change under us and break existing virtualenvs
+# don't rely on system installed python as the global
+# default, because it can change under us
 pyenv global 3.6.9
 brew install pyenv-virtualenvwrapper
+pip install --user pipx
 
 # install java
 brew tap AdoptOpenJDK/openjdk
