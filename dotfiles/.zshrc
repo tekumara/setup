@@ -16,14 +16,8 @@ source "${HOME}/.zgen/zgen.zsh"
 if ! zgen saved; then
   echo "Creating a zgen save"
 
-  # Automatically run zgen update and zgen selfupdate every 7 days.
-  zgen load unixorn/autoupdate-zgen
-
   # load default modules
   zgen prezto
-
-  # load additional modules
-  # zgen prezto git
 
   # when pressing up/down arrows, completes the beginning of a command by searching in the history
   zgen prezto history-substring-search
@@ -32,27 +26,21 @@ if ! zgen saved; then
   zgen prezto prompt theme 'pure'
   zgen prezto '*:*' color 'yes'
 
-  #zgen prezto python
-
-  #zgen oh-my-zsh plugins/kubectl
   # zgen oh-my-zsh
+  # zgen oh-my-zsh plugins/kubectl
   # zgen oh-my-zsh plugins/git
   # zgen oh-my-zsh themes/robbyrussell
 
+  # Automatically run zgen update and zgen selfupdate every 7 days.
+  zgen load unixorn/autoupdate-zgen
   zgen load agkozak/zsh-z
   zgen load scmbreeze/scm_breeze
   zgen load zdharma/fast-syntax-highlighting
-
   # for jumping to github.com
   zgen load peterhurford/git-it-on.zsh
  
   # zgen load zsh-users/zsh-autosuggestions
   # zgen load zsh-users/zsh-syntax-highlighting
-
-  #zgen load junegunn/fzf shell
-  #if [[ -f ~/.fzf.zsh ]]; then
-  #zgen load ~/.fzf.zsh
-  #fi
 
   zgen load "$HOME/.zshrc.d/awsweb.zsh"
   zgen load "$HOME/.zshrc.d/golang.zsh"
@@ -75,6 +63,9 @@ fi
 # allow overwriting existing files
 # (this is unset by the prezto directory module)
 setopt CLOBBER
+
+# use same definition as oh-my-zsh so hypen and dot aren't considered part of a word
+export WORDCHARS=''
 
 # set prezto to use same history file as oh-my-zsh
 HISTFILE="$HOME/.zsh_history"
