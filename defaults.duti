@@ -1,0 +1,6 @@
+# default applications for specific file types
+# aka UTIs (Uniform Type Identifiers) see http://mths.be/utis
+
+# bundle id             UTI/ext                 role
+
+com.microsoft.VSCode    public.plain-text       editor

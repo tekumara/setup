@@ -29,6 +29,9 @@ brew install coursier/formulas/coursier
 # for vscode symbol generation
 brew install ctags
 
+# setup tools
+brew install duti
+
 # for building some python packages
 brew install automake libtool
 
@@ -115,7 +118,7 @@ fi
 defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/Dropbox/Mackup/Library/Preferences"
 # use the custom preferences directory
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
-# save changes to the customer preferences directory
+# save changes to the custom preferences directory
 defaults write com.googlecode.iterm2.plist NoSyncNeverRemindPrefsChangesLostForFile_selection -bool false
 
 # Finder settings
@@ -135,3 +138,6 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCsp"
 
 # doesn't seem to work
 # defaults write "Apple Global Domain" com.apple.keyboard.fnState -bool true
+
+# Set default application file type assoications
+duti defaults.duti

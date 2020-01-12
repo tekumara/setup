@@ -42,6 +42,12 @@ if ! zgen saved; then
   # zgen load zsh-users/zsh-autosuggestions
   # zgen load zsh-users/zsh-syntax-highlighting
 
+  #TODO: turn this into a prezto module
+  #zgen load junegunn/fzf shell
+  #if [[ -f ~/.fzf.zsh ]]; then
+  #zgen load ~/.fzf.zsh
+  #fi
+
   zgen load "$HOME/.zshrc.d/awsweb.zsh"
   zgen load "$HOME/.zshrc.d/golang.zsh"
   zgen load "$HOME/.zshrc.d/java.zsh"
