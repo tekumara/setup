@@ -12,31 +12,8 @@ if ! which -s brew; then
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-# install cli tools
-brew install ripgrep
-brew install zsh
-brew install wget
-brew install jq
-# nb: awscli also installs python3
-brew install awscli
-
-# dev tools
-brew install shellcheck
-brew cask install beyond-compare
-brew tap coursier/formulas
-brew install coursier/formulas/coursier
-
-# for vscode symbol generation
-brew install ctags
-
-# setup tools
-brew install duti
-
-# for building some python packages
-brew install automake libtool
-
-# kubernetes
-brew install kubernetes-helm
+# install packages in Brewfile
+brew bundle install --verbose --no-lock
 
 # install zgen
 if [[ ! -d ~/.zgen ]]; then
@@ -44,7 +21,6 @@ if [[ ! -d ~/.zgen ]]; then
 fi
 
 # install dotfiles
-brew install stow
 mv ~/.zshrc ~/.zshrc-pre-setup
 stow -vv dotfiles -t ~
 
@@ -52,56 +28,20 @@ stow -vv dotfiles -t ~
 mkdir -p "$HOME/.zshrc.d"
 stow -vv zshrc.d -t ~/.zshrc.d 
 
-# install fzf + key bindings
-brew install fzf
+# install fzf key bindings
 $(brew --prefix)/opt/fzf/install
 
 # install python
-brew install pyenv
 pyenv install 3.6.9
 
 # don't rely on system installed python as the global
 # default, because it can change under us
 pyenv global 3.6.9
-brew install pyenv-virtualenvwrapper
 pip install --user pipx
 
-# install java
-brew tap AdoptOpenJDK/openjdk
-brew cask install adoptopenjdk11
-brew cask install adoptopenjdk8
-
-# install mac apps
-brew cask install visual-studio-code
-brew cask install macbreakz
-brew cask install dropbox
-brew cask install spotify
-brew cask install go2shell
-brew cask install intellij-idea-ce
-brew cask install firefox
-brew cask install authy
-brew cask install iterm2
-brew cask install google-backup-and-sync
-brew cask install calibre
-
-if [[ ! -d "/Applications/VLC.app" ]]; then
-    brew cask install vlc
-fi
-
-if [[ ! -d "/Applications/Google Chrome.app" ]]; then
-    brew cask install google-chrome
-fi
-
-# install docker and zsh completions
-brew cask install docker
+# install docker zsh completions
 etc=/Applications/Docker.app/Contents/Resources/etc
 ln -s $etc/docker.zsh-completion /usr/local/share/zsh/site-functions/_docker
-
-
-# install mac drivers
-brew tap homebrew/cask-drivers
-brew cask install evoluent-vertical-mouse-device-controller
-
 
 ## vim settings
 #brew install vim --override-system-vim
