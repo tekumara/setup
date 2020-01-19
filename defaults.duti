@@ -1,6 +1,7 @@
 # default applications for specific file types
-# aka UTIs (Uniform Type Identifiers) see http://mths.be/utis
+# aka UTIs (Uniform Type Identifiers) see http://qmths.be/utis
 
-# bundle id             UTI/ext                 role
+# bundle_id             uti | url_scheme | extension | MIME_type        role
 
-com.microsoft.VSCode    public.plain-text       editor
+com.microsoft.VSCode    public.plain-text                               editor
+org.videolan.vlc        public.mp3                                      all
