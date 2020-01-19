@@ -2,9 +2,6 @@
 brew "stow"
 brew "duti"
 
-# latest instead of macOS version of zsh
-brew "zsh"
-
 # cli tools
 brew "fzf"
 brew "ripgrep"
@@ -18,6 +15,9 @@ brew "shellcheck"
 cask "beyond-compare"
 tap "coursier/formulas"
 brew "coursier/formulas/coursier"
+
+# compared to docker, kubernetes-cli includes a newer version of kubectl, man pages & completions 
+brew "kubernetes-cli"
 cask "docker"
 
 # for vscode symbol generation

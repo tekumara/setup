@@ -1,3 +1,4 @@
+# enable profiling
 zmodload zsh/zprof
 
 ZGEN_RESET_ON_CHANGE=(${HOME}/.zshrc)
@@ -6,8 +7,7 @@ ZGEN_RESET_ON_CHANGE=(${HOME}/.zshrc)
 DISABLE_AUTO_UPDATE=true
 
 # do this up-front because scmbreeze needs compdef 
-autoload -Uz compinit && \
-   compinit -C 
+autoload -Uz compinit && compinit -C 
 
 # load zgen
 source "${HOME}/.zgen/zgen.zsh"
