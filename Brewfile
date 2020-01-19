@@ -15,13 +15,12 @@ brew "shellcheck"
 cask "beyond-compare"
 tap "coursier/formulas"
 brew "coursier/formulas/coursier"
+# for vscode symbol generation
+brew "ctags"
 
 # compared to docker, kubernetes-cli includes a newer version of kubectl, man pages & completions 
 brew "kubernetes-cli"
 cask "docker"
-
-# for vscode symbol generation
-brew "ctags"
 
 # python
 brew "pyenv"
@@ -34,6 +33,9 @@ brew "libtool"
 tap "AdoptOpenJDK/openjdk"
 cask "adoptopenjdk11"
 cask "adoptopenjdk8"
+
+# golang
+brew "go"
 
 # install mac apps
 cask "visual-studio-code"

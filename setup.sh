@@ -51,6 +51,9 @@ if [[ ! -d ~/.vim_runtime ]]; then
     sh ~/.vim_runtime/install_awesome_vimrc.sh
 fi
 
+# golang tools
+go get -u github.com/go-delve/delve/cmd/dlv
+
 # iterm2 settings
 # ---------------
 
