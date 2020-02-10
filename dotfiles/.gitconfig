@@ -16,6 +16,8 @@
 	autocrlf = false
 	#  don't page if output will fit on one screen (for things like git config -l)
 	pager = "less -F -X"
+	# global ignore
+	excludesfile = ~/.gitignore_global
 [user]
 	name = Oliver Mannion
 	email = 125105+tekumara@users.noreply.github.com

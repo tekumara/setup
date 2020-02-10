@@ -82,5 +82,5 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCsp"
 # doesn't seem to work
 # defaults write "Apple Global Domain" com.apple.keyboard.fnState -bool true
 
-# Set default application file type assoications
+# Set default applications for file types
 duti defaults.duti
