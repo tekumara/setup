@@ -13,8 +13,6 @@ brew "awscli"
 # dev tools
 brew "shellcheck"
 cask "beyond-compare"
-tap "coursier/formulas"
-brew "coursier/formulas/coursier"
 # for vscode symbol generation
 brew "ctags"
 
@@ -25,6 +23,7 @@ cask "docker"
 # python
 brew "pyenv"
 brew "pyenv-virtualenvwrapper"
+
 # needing for building some python packages
 brew "automake"
 brew "libtool"
@@ -33,6 +32,8 @@ brew "libtool"
 tap "AdoptOpenJDK/openjdk"
 cask "adoptopenjdk11"
 cask "adoptopenjdk8"
+tap "coursier/formulas"
+brew "coursier/formulas/coursier"
 
 # golang
 brew "go"
@@ -50,4 +51,5 @@ cask "iterm2"
 cask "google-backup-and-sync"
 cask "calibre"
 cask "vlc" unless system "[[ -d '/Applications/VLC.app' ]]"
-cask "google-chrome"  unless system "[[ -d '/Applications/Google Chrome.app' ]]" 
+cask "google-chrome" unless system "[[ -d '/Applications/Google Chrome.app' ]]"
+cask "slack" unless system "[[ -d '/Applications/Slack.app' ]]"  
