@@ -9,6 +9,7 @@ brew "wget"
 brew "jq"
 # nb: awscli also installs python3
 brew "awscli"
+brew "mdcat"
 
 # dev tools
 brew "shellcheck"
