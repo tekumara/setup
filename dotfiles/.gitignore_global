@@ -1,3 +1,6 @@
+# IDEs
+
 .idea/
 *.iml
 .vscode/
+.metals/
