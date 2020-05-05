@@ -42,7 +42,7 @@ else
         fi
 
         if [[ "$ID" == "amzn" ]]; then
-            sudo yum -y install make gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel xz xz-devel libffi-devel findutils openssl
+            sudo yum -y install make gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel xz xz-devel libffi-devel findutils openssl gcc-c++
         fi
     }
 
@@ -57,8 +57,8 @@ fi
 # install python via pyenv
 # we use pyenv to install a specific version of python, and make it the global default,
 # rather than relying on whatever the distro gives us (which can change underneath us)
-pyenv install 3.6.8
-pyenv global 3.6.8
+pyenv install 3.6.9
+pyenv global 3.6.9
 
 pip install --upgrade pip==19.0.1
 
