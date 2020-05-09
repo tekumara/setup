@@ -52,6 +52,9 @@ else
     echo -e '\nexport PATH="$HOME/.pyenv/bin:$PATH"\neval "$(pyenv init -)"' >> ~/.bashrc
     export PATH="$HOME/.pyenv/bin:$PATH"
     eval "$(pyenv init -)"
+
+    # fixes missing libpython3.6m.so.1.0 see https://github.com/pyenv/pyenv/issues/917
+    export CONFIGURE_OPTS=--enable-shared
 fi
 
 # install python via pyenv
