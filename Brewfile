@@ -25,7 +25,7 @@ cask "docker"
 brew "pyenv"
 brew "pyenv-virtualenvwrapper"
 
-# needing for building some python packages
+# needed for building some python packages
 brew "automake"
 brew "libtool"
 
