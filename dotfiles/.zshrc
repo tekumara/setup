@@ -49,6 +49,7 @@ if ! zgen saved; then
   #fi
 
   zgen load "$HOME/.zshrc.d/awsweb.zsh"
+  zgen load "$HOME/.zshrc.d/docker.zsh"
   zgen load "$HOME/.zshrc.d/golang.zsh"
   zgen load "$HOME/.zshrc.d/java.zsh"
   zgen load "$HOME/Dropbox/Slack/functions.zsh"
