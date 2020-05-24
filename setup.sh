@@ -29,7 +29,7 @@ mkdir -p "$HOME/.zshrc.d"
 stow -vv zshrc.d -t ~/.zshrc.d 
 
 # install fzf key bindings & fuzzy completion and update zshrc
-$(brew --prefix)/opt/fzf/install --key-bindings --completion --update-rc
+"$(brew --prefix)"/opt/fzf/install --key-bindings --completion --update-rc
 
 # install python
 python_version=3.6.10
@@ -47,7 +47,7 @@ pip install --user pipx
 
 # install docker zsh completions
 etc=/Applications/Docker.app/Contents/Resources/etc
-ln -fs $etc/docker.zsh-completion /usr/local/share/zsh/site-functions/_docker
+ln -fs "$etc"/docker.zsh-completion /usr/local/share/zsh/site-functions/_docker
 
 ## vim settings
 #brew install vim --override-system-vim
