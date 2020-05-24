@@ -28,8 +28,8 @@ stow -vv dotfiles -t ~
 mkdir -p "$HOME/.zshrc.d"
 stow -vv zshrc.d -t ~/.zshrc.d 
 
-# install fzf key bindings
-$(brew --prefix)/opt/fzf/install
+# install fzf key bindings & fuzzy completion and update zshrc
+$(brew --prefix)/opt/fzf/install --key-bindings --completion --update-rc
 
 # install python
 python_version=3.6.10
