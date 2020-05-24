@@ -7,9 +7,12 @@ brew "fzf"
 brew "ripgrep"
 brew "wget"
 brew "jq"
-# nb: awscli also installs python3
-brew "awscli"
 brew "mdcat"
+
+# aws 
+brew "awscli"
+tap "tekumara/tap"
+brew "awsweb"
 
 # dev tools
 brew "shellcheck"
