@@ -6,3 +6,4 @@
 .metals/
 
 .pytype/
+.pytest_cache/
