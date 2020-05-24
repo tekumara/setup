@@ -21,6 +21,10 @@ brew "ctags"
 brew "kubernetes-cli"
 cask "docker"
 
+# handy kubernetes tools
+brew "kubectx"
+brew "k9s"
+
 # python
 brew "pyenv"
 brew "pyenv-virtualenvwrapper"
