@@ -32,16 +32,22 @@ stow -vv zshrc.d -t ~/.zshrc.d
 $(brew --prefix)/opt/fzf/install
 
 # install python
-pyenv install 3.6.9
+python_version=3.6.10
+pyenv install -s "$python_version"
 
-# don't rely on system installed python as the global
-# default, because it can change under us
-pyenv global 3.6.9
+# set default python version
+# don't rely on the system/brew installed python as the global default 
+# because virtualenvs using it will break when brew performs major upgrades
+pyenv global "$python_version"
+
+# rehash in case we've just upgraded pyenv via brew 
+pyenv rehash
+
 pip install --user pipx
 
 # install docker zsh completions
 etc=/Applications/Docker.app/Contents/Resources/etc
-ln -s $etc/docker.zsh-completion /usr/local/share/zsh/site-functions/_docker
+ln -fs $etc/docker.zsh-completion /usr/local/share/zsh/site-functions/_docker
 
 ## vim settings
 #brew install vim --override-system-vim
