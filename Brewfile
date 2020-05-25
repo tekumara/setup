@@ -11,7 +11,7 @@ brew "mdcat"
 
 # aws 
 brew "awscli"
-tap "tekumara/tap"
+tap "glassechidna/taps"
 brew "awsweb"
 
 # dev tools
