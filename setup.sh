@@ -1,11 +1,13 @@
-#! /bin/bash
+#!/usr/bin/env bash
 
 # every instruction is idempotent so this script can be rerun multiple times
 
 set -uoe pipefail
 
 # set zsh as default shell
-chsh -s /bin/zsh
+if [[ "$SHELL" != "/bin/zsh" ]]; then
+    chsh -s /bin/zsh
+fi
 
 # install brew
 if ! which -s brew; then
@@ -20,16 +22,16 @@ if [[ ! -d ~/.zgen ]]; then
     git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
 fi
 
-# install dotfiles
+# install dotfile symlinks
 mv ~/.zshrc ~/.zshrc-pre-setup
 stow -vv dotfiles -t ~
 
-# install zsh scripts
+# install zsh script symlinks
 mkdir -p "$HOME/.zshrc.d"
 stow -vv zshrc.d -t ~/.zshrc.d 
 
 # install fzf key bindings & fuzzy completion and update zshrc
-"$(brew --prefix)"/opt/fzf/install --key-bindings --completion --update-rc
+"$(brew --prefix)"/opt/fzf/install --all
 
 # install python
 python_version=3.6.10
