@@ -15,7 +15,7 @@
 	# checkout as-is, commit as-is
 	autocrlf = false
 	#  don't page if output will fit on one screen (for things like git config -l)
-	pager = "less -F -X"
+	pager = less -F -X
 	# global ignore
 	excludesfile = ~/.gitignore_global
 [user]
