@@ -1,4 +1,7 @@
-# scmpuff git aliases
+# scmpuff adds the following aliases with nice colours and number shortcuts next to changed files:
+# alias gs='git status'
+# alias ga='git add'
+# alias gco='git checkout'
 eval "$(scmpuff init -s)"
 
 # taken from scm breeze https://github.com/scmbreeze/scm_breeze/blob/master/lib/git/aliases.sh
