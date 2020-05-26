@@ -19,7 +19,7 @@ if ! zgen saved; then
   # load default modules
   zgen prezto
 
-  # when pressing up/down arrows, completes the beginning of a command by searching in the history
+  # when pressing up/down arrows, completes the end of a command from history
   zgen prezto history-substring-search
 
   # theme
@@ -34,7 +34,7 @@ if ! zgen saved; then
   # Automatically run zgen update and zgen selfupdate every 7 days.
   zgen load unixorn/autoupdate-zgen
   zgen load agkozak/zsh-z
-  zgen load scmbreeze/scm_breeze
+  
   zgen load zdharma/fast-syntax-highlighting
   # for jumping to github.com
   zgen load peterhurford/git-it-on.zsh
@@ -91,3 +91,5 @@ pyenv virtualenvwrapper_lazy
 
 # added by pipx
 export PATH="$PATH:$HOME/.local/bin"
+
+eval "$(scmpuff init -s)"

@@ -8,6 +8,7 @@ brew "ripgrep"
 brew "wget"
 brew "jq"
 brew "mdcat"
+brew "scmpuff"
 
 # aws 
 brew "awscli"
