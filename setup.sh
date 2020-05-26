@@ -31,7 +31,7 @@ mkdir -p "$HOME/.zshrc.d"
 stow -vv zshrc.d -t ~/.zshrc.d 
 
 # install fzf key bindings & fuzzy completion and update zshrc
-"$(brew --prefix)"/opt/fzf/install --all
+"$(brew --prefix)"/opt/fzf/install --all --no-bash
 
 # install python
 python_version=3.6.10
