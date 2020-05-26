@@ -52,6 +52,7 @@ if ! zgen saved; then
   zgen load "$HOME/.zshrc.d/docker.zsh"
   zgen load "$HOME/.zshrc.d/golang.zsh"
   zgen load "$HOME/.zshrc.d/java.zsh"
+  zgen load "$HOME/.zshrc.d/git.zsh"
   zgen load "$HOME/Dropbox/Slack/functions.zsh"
 
   # dynamically load anything in the work directory
@@ -91,5 +92,3 @@ pyenv virtualenvwrapper_lazy
 
 # added by pipx
 export PATH="$PATH:$HOME/.local/bin"
-
-eval "$(scmpuff init -s)"
