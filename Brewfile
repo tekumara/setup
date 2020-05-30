@@ -32,6 +32,7 @@ brew "k9s"
 # python
 brew "pyenv"
 brew "pyenv-virtualenvwrapper"
+brew "pipx"
 
 # needed for building some python packages
 brew "automake"

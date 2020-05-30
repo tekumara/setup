@@ -45,8 +45,6 @@ pyenv global "$python_version"
 # rehash in case we've just upgraded pyenv via brew 
 pyenv rehash
 
-pip install --user pipx
-
 # install docker zsh completions
 etc=/Applications/Docker.app/Contents/Resources/etc
 ln -fs "$etc"/docker.zsh-completion /usr/local/share/zsh/site-functions/_docker
