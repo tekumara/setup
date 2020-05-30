@@ -12,8 +12,7 @@ brew "scmpuff"
 
 # aws 
 brew "awscli"
-tap "glassechidna/taps"
-brew "awsweb"
+brew "glassechidna/taps/awsweb"
 
 # dev tools
 brew "shellcheck"
@@ -42,7 +41,6 @@ brew "libtool"
 tap "AdoptOpenJDK/openjdk"
 cask "adoptopenjdk11"
 cask "adoptopenjdk8"
-tap "coursier/formulas"
 brew "coursier/formulas/coursier"
 
 # golang
