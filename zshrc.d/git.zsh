@@ -13,3 +13,7 @@ alias gps='git push'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gla='gl --all'
 alias grs='git reset' # ie: unstage
+alias gdc='git diff --cached'
+
+# other 
+alias gdh='git diff "HEAD^" HEAD'

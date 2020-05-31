@@ -19,6 +19,7 @@ brew "shellcheck"
 cask "beyond-compare"
 # for vscode symbol generation
 brew "ctags"
+brew "nbdime"
 
 # compared to docker, kubernetes-cli includes a newer version of kubectl, man pages & completions 
 brew "kubernetes-cli"

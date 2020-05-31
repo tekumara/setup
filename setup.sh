@@ -30,6 +30,9 @@ stow -vv dotfiles -t ~
 mkdir -p "$HOME/.zshrc.d"
 stow -vv zshrc.d -t ~/.zshrc.d 
 
+# install git config
+stow -vv git -t ~/.config/git/
+
 # install fzf key bindings & fuzzy completion and update zshrc
 "$(brew --prefix)"/opt/fzf/install --all --no-bash
 
