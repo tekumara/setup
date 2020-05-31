@@ -48,11 +48,11 @@ if ! zgen saved; then
   #zgen load ~/.fzf.zsh
   #fi
 
-  zgen load "$HOME/.zshrc.d/awsweb.zsh"
-  zgen load "$HOME/.zshrc.d/docker.zsh"
-  zgen load "$HOME/.zshrc.d/golang.zsh"
-  zgen load "$HOME/.zshrc.d/java.zsh"
-  zgen load "$HOME/.zshrc.d/git.zsh"
+  zgen load "$HOME/.zshrc.d/awsweb.plugin.zsh"
+  zgen load "$HOME/.zshrc.d/docker.plugin.zsh"
+  zgen load "$HOME/.zshrc.d/golang.plugin.zsh"
+  zgen load "$HOME/.zshrc.d/java.plugin.zsh"
+  zgen load "$HOME/.zshrc.d/git.plugin.zsh"
   zgen load "$HOME/Dropbox/Slack/functions.zsh"
 
   # dynamically load anything in the work directory
