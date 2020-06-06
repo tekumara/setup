@@ -1,41 +1,15 @@
 # enable profiling
 zmodload zsh/zprof
 
-ZGEN_RESET_ON_CHANGE=(${HOME}/.zshrc)
+source ~/.zsh_plugins.sh
 
-# Disable oh-my-zsh autoupdate, rely on zgen to update it
-DISABLE_AUTO_UPDATE=true
-
-# load zgen
-source "${HOME}/.zgen/zgen.zsh"
-
-# if the init script doesn't exist
-if ! zgen saved; then
-  echo "Creating a zgen save"
-
-  # load default modules
-  zgen prezto
-
-  # when pressing up/down arrows, completes the end of a command from history
-  zgen prezto history-substring-search
-
-  # theme
-  zgen prezto prompt theme 'pure'
-  zgen prezto '*:*' color 'yes'
+  #zgen prezto '*:*' color 'yes'
 
   # zgen oh-my-zsh
   # zgen oh-my-zsh plugins/kubectl
   # zgen oh-my-zsh plugins/git
   # zgen oh-my-zsh themes/robbyrussell
 
-  # Automatically run zgen update and zgen selfupdate every 7 days.
-  zgen load unixorn/autoupdate-zgen
-  zgen load agkozak/zsh-z
-  
-  zgen load zdharma/fast-syntax-highlighting
-  # for jumping to github.com
-  zgen load peterhurford/git-it-on.zsh
- 
   # zgen load zsh-users/zsh-autosuggestions
   # zgen load zsh-users/zsh-syntax-highlighting
 
@@ -45,26 +19,28 @@ if ! zgen saved; then
   #zgen load ~/.fzf.zsh
   #fi
 
-  zgen load "$HOME/.zshrc.d/awsweb.plugin.zsh"
-  zgen load "$HOME/.zshrc.d/docker.plugin.zsh"
-  zgen load "$HOME/.zshrc.d/golang.plugin.zsh"
-  zgen load "$HOME/.zshrc.d/java.plugin.zsh"
-  zgen load "$HOME/.zshrc.d/git.plugin.zsh"
-  zgen load "$HOME/.zshrc.d/rust.plugin.zsh"
-  zgen load "$HOME/Dropbox/Slack/functions.zsh"
+source "$HOME/.zshrc.d/awsweb.plugin.zsh"
+source "$HOME/.zshrc.d/docker.plugin.zsh"
+source "$HOME/.zshrc.d/golang.plugin.zsh"
+source "$HOME/.zshrc.d/java.plugin.zsh"
+source "$HOME/.zshrc.d/rust.plugin.zsh"
+source "$HOME/.zshrc.d/git.plugin.zsh"
+source "$HOME/Dropbox/Slack/functions.zsh"
 
-  # dynamically load anything in the work directory
-  # this won't be under source control 
-  for zshfile in "${ZDOTDIR:-$HOME}"/.zshrc.d/work/*.zsh; do
-    echo "load $zshfile"
-    zgen load "$zshfile"
-  done
+# dynamically load anything in the work directory
+# this won't be under source control 
+for zshfile in "${ZDOTDIR:-$HOME}"/.zshrc.d/work/*.zsh; do
+  echo "load $zshfile"
+  source "$zshfile"
+done
 
-  # generate the init script for everything above
-  zgen save
+#autoload -Uz compinit && compinit -C 
 
-  # zcompile ${ZDOTDIR:-${HOME}}/.zgen/init.zsh
-fi
+autoload -Uz compinit
+for dump in ~/.zcompdump(N.mh+24); do
+  compinit
+done
+compinit -C
 
 # allow overwriting existing files
 # (this is unset by the prezto directory module)

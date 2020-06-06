@@ -1,6 +1,7 @@
 # setup tools
 brew "stow"
 brew "duti"
+brew "getantibody/tap/antibody"
 
 # cli tools
 brew "fzf"
