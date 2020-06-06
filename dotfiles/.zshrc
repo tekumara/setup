@@ -1,9 +1,9 @@
 # enable profiling
 zmodload zsh/zprof
 
-source ~/.zsh_plugins.sh
+zstyle ':prezto:*:*' 'color' 'yes'
 
-  #zgen prezto '*:*' color 'yes'
+source ~/.zsh_plugins.sh
 
   # zgen oh-my-zsh
   # zgen oh-my-zsh plugins/kubectl
