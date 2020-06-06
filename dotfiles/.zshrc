@@ -71,7 +71,7 @@ fi
 setopt CLOBBER
 
 # use same definition as oh-my-zsh so hypen and dot aren't considered part of a word
-export WORDCHARS=''
+WORDCHARS=''
 
 # set prezto to use same history file as oh-my-zsh and the macOS default
 HISTFILE="$HOME/.zsh_history"
@@ -90,3 +90,6 @@ pyenv virtualenvwrapper_lazy
 
 # added by pipx
 export PATH="$PATH:$HOME/.local/bin"
+
+# awscli: don't page if output will fit on one screen 
+export AWS_PAGER="less -F -X"
