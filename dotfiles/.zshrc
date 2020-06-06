@@ -50,6 +50,7 @@ if ! zgen saved; then
   zgen load "$HOME/.zshrc.d/golang.plugin.zsh"
   zgen load "$HOME/.zshrc.d/java.plugin.zsh"
   zgen load "$HOME/.zshrc.d/git.plugin.zsh"
+  zgen load "$HOME/.zshrc.d/rust.plugin.zsh"
   zgen load "$HOME/Dropbox/Slack/functions.zsh"
 
   # dynamically load anything in the work directory
@@ -72,7 +73,7 @@ setopt CLOBBER
 # use same definition as oh-my-zsh so hypen and dot aren't considered part of a word
 export WORDCHARS=''
 
-# set prezto to use same history file as oh-my-zsh
+# set prezto to use same history file as oh-my-zsh and the macOS default
 HISTFILE="$HOME/.zsh_history"
 HISTSIZE=50000
 
