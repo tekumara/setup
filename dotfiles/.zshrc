@@ -34,13 +34,14 @@ for zshfile in "${ZDOTDIR:-$HOME}"/.zshrc.d/work/*.zsh; do
   source "$zshfile"
 done
 
-#autoload -Uz compinit && compinit -C 
-
+# create zcompdump only if the existing one is older than 24 hours (or doesn't exist)
 autoload -Uz compinit
-for dump in ~/.zcompdump(N.mh+24); do
-  compinit
-done
-compinit -C
+# shellcheck disable=SC1073,SC1036,SC1072
+if [[ -n "${ZDOTDIR:-$HOME}"/.zcompdump(#qN.mh+24) ]]; then
+	compinit;
+else
+	compinit -C;
+fi;
 
 # allow overwriting existing files
 # (this is unset by the prezto directory module)
