@@ -6,10 +6,10 @@ Set up my mac
 
 It makes it easy to load plugins from github repos.
 Also has functionality for auto-updating plugins.
-It's fast because it uses a static plugin script, and faster than zgen.
+It's faster than zgen by ~90ms.
 The plugin script is simple to read, unlike zgen. 
 
-Total startup time with zgen is ~390ms. 
+Total startup time with antibody is ~390ms (dynamic, static saves an additional 10ms). 
 
 ## why prezto?
 
