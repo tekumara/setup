@@ -1,6 +1,7 @@
 # enable profiling
 zmodload zsh/zprof
 
+# coloured listings
 zstyle ':prezto:*:*' 'color' 'yes'
 
 # Generate new ~/.zsh_plugins.sh if it does not exist or ~/.zshrc is newer
@@ -13,8 +14,8 @@ if [[ ! -f ~/.zsh_plugins.sh ]] || [[ ~/.zshrc -nt ~/.zsh_plugins.sh ]]; then
     sorin-ionescu/prezto path:modules/editor
     sorin-ionescu/prezto path:modules/history
     sorin-ionescu/prezto path:modules/directory
-    sorin-ionescu/prezto path:modules/spectrum
     sorin-ionescu/prezto path:modules/utility
+    tekumara/prezto-tweaks
 
     zsh-users/zsh-completions
     agkozak/zsh-z
@@ -31,19 +32,14 @@ fi
 
 source ~/.zsh_plugins.sh
 
-  # zgen oh-my-zsh
-  # zgen oh-my-zsh plugins/kubectl
-  # zgen oh-my-zsh plugins/git
-  # zgen oh-my-zsh themes/robbyrussell
+# TODO: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/kubectl
+# TODO: https://github.com/zsh-users/zsh-autosuggestions
 
-  # zgen load zsh-users/zsh-autosuggestions
-  # zgen load zsh-users/zsh-syntax-highlighting
-
-  #TODO: turn this into a prezto module
-  #zgen load junegunn/fzf shell
-  #if [[ -f ~/.fzf.zsh ]]; then
-  #zgen load ~/.fzf.zsh
-  #fi
+# TODO: turn this into a prezto module
+#zgen load junegunn/fzf shell
+#if [[ -f ~/.fzf.zsh ]]; then
+#zgen load ~/.fzf.zsh
+#fi
 
 source "$HOME/.zshrc.d/awsweb.plugin.zsh"
 source "$HOME/.zshrc.d/docker.plugin.zsh"
@@ -56,7 +52,6 @@ source "$HOME/Dropbox/Slack/functions.zsh"
 # dynamically load anything in the work directory
 # this won't be under source control 
 for zshfile in "${ZDOTDIR:-$HOME}"/.zshrc.d/work/*.zsh; do
-  echo "load $zshfile"
   source "$zshfile"
 done
 
@@ -69,15 +64,7 @@ else
 	compinit -C;
 fi;
 
-# allow overwriting existing files
-# (this is unset by the prezto directory module)
-setopt CLOBBER
-
-# use same definition as oh-my-zsh so hypen and dot aren't considered part of a word
-WORDCHARS=''
-
-# set prezto to use same history file as oh-my-zsh and the macOS default
-HISTFILE="$HOME/.zsh_history"
+# increase history size
 HISTSIZE=50000
 
 # fzf keybindings (CTRL-T, CTRL-R) must be loaded after the prezto editor module

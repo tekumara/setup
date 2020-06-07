@@ -13,4 +13,4 @@ Total startup time with antibody is ~390ms (dynamic, static saves an additional 
 
 ## why prezto?
 
-Currently trialling it as an alternative to oh-my-zsh. Seems lighter weight.
+Faster (>100ms) and more lightweight than ohmyzsh
