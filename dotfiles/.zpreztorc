@@ -13,7 +13,8 @@ zstyle ':prezto:load' pmodule \
   'editor' \
   'history' \
   'directory' \
-  'utility'  
+  'utility' \
+  'completion'
 
 #
 # Editor

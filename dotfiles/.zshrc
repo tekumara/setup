@@ -34,15 +34,6 @@ source "$HOME/.zshrc.d/rust.plugin.zsh"
 source "$HOME/.zshrc.d/python.plugin.zsh"
 source "$HOME/Dropbox/Slack/functions.zsh"
 
-# create zcompdump only if the existing one is older than 24 hours (or doesn't exist)
-autoload -Uz compinit
-# shellcheck disable=SC1073,SC1036,SC1072
-if [[ -n "${ZDOTDIR:-$HOME}"/.zcompdump(#qN.mh+24) ]]; then
-	compinit;
-else
-	compinit -C;
-fi;
-
 # increase history size
 HISTSIZE=50000
 
