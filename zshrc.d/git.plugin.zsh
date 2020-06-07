@@ -14,6 +14,8 @@ alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %
 alias gla='gl --all'
 alias grs='git reset' # ie: unstage
 alias gdc='git diff --cached'
+alias grb='git rebase'
+alias grbi='git rebase -i'
 
 # other 
 alias gdh='git diff "HEAD^" HEAD'
