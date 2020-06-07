@@ -3,11 +3,14 @@
 # lazy load pyenv & virtualenvwrapper for faster shell startup times
 
 __pyenv_init() {
-    eval "$(command pyenv init -)"
-    pyenv virtualenvwrapper_lazy
-
     unset -f python
     unset -f pip
+
+    eval "$(command pyenv init -)"
+    
+    if [[ -n "${VIRTUALENVWRAPPER_LAZY_SCRIPT}" ]]; then
+        pyenv virtualenvwrapper_lazy
+    fi
 }	
 
 pyenv() {	
@@ -25,12 +28,16 @@ pip() {
 	pip "$@"	
 }
 
-mkvirtualenv() {
-	__pyenv_init	
-	mkvirtualenv "$@"	
-}
+if [[ -n "${VIRTUALENVWRAPPER_LAZY_SCRIPT}" ]]; then
 
-workon() {
-	__pyenv_init	
-	workon "$@"	
-}
+    mkvirtualenv() {
+        __pyenv_init	
+        mkvirtualenv "$@"	
+    }
+
+    workon() {
+        __pyenv_init	
+        workon "$@"	
+    }
+
+fi
