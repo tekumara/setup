@@ -1,28 +1,15 @@
 # enable profiling
 zmodload zsh/zprof
 
-# coloured listings
-zstyle ':prezto:*:*' 'color' 'yes'
-
 # Generate new ~/.zsh_plugins.sh if it does not exist or ~/.zshrc is newer
 if [[ ! -f ~/.zsh_plugins.sh ]] || [[ ~/.zshrc -nt ~/.zsh_plugins.sh ]]; then
   echo "antibody bundle"
   antibody bundle <<- EOF > ~/.zsh_plugins.sh
     sorin-ionescu/prezto
-    sorin-ionescu/prezto path:modules/environment
-    sorin-ionescu/prezto path:modules/editor
-    sorin-ionescu/prezto path:modules/history
-    sorin-ionescu/prezto path:modules/directory
-    sorin-ionescu/prezto path:modules/utility
     tekumara/prezto-tweaks
 
-    zsh-users/zsh-completions
     agkozak/zsh-z
     peterhurford/git-it-on.zsh
-
-    # zsh-async is needed by pure
-    mafredri/zsh-async
-    sindresorhus/pure
 
     zdharma/fast-syntax-highlighting
     zsh-users/zsh-history-substring-search
