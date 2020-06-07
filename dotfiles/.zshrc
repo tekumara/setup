@@ -10,7 +10,6 @@ if [[ ! -f ~/.zsh_plugins.sh ]] || [[ ~/.zshrc -nt ~/.zsh_plugins.sh ]]; then
   antibody bundle <<- EOF > ~/.zsh_plugins.sh
     sorin-ionescu/prezto
     sorin-ionescu/prezto path:modules/environment
-    sorin-ionescu/prezto path:modules/terminal
     sorin-ionescu/prezto path:modules/editor
     sorin-ionescu/prezto path:modules/history
     sorin-ionescu/prezto path:modules/directory
