@@ -5,12 +5,9 @@
 __pyenv_init() {
     unset -f python
     unset -f pip
-
-    eval "$(command pyenv init -)"
     
-    if [[ -n "${VIRTUALENVWRAPPER_LAZY_SCRIPT}" ]]; then
-        pyenv virtualenvwrapper_lazy
-    fi
+    eval "$(command pyenv init -)"
+    pyenv virtualenvwrapper_lazy
 }	
 
 pyenv() {	
@@ -28,16 +25,12 @@ pip() {
 	pip "$@"	
 }
 
-if [[ -n "${VIRTUALENVWRAPPER_LAZY_SCRIPT}" ]]; then
+mkvirtualenv() {
+	__pyenv_init	
+	mkvirtualenv "$@"	
+}
 
-    mkvirtualenv() {
-        __pyenv_init	
-        mkvirtualenv "$@"	
-    }
-
-    workon() {
-        __pyenv_init	
-        workon "$@"	
-    }
-
-fi
+workon() {
+	__pyenv_init	
+	workon "$@"	
+}
