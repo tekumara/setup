@@ -11,6 +11,10 @@ if [[ ! -f ~/.zsh_plugins.sh ]] || [[ ~/.zshrc -nt ~/.zsh_plugins.sh ]]; then
     agkozak/zsh-z
     peterhurford/git-it-on.zsh
 
+    # zsh-async is needed by pure
+    mafredri/zsh-async
+    sindresorhus/pure
+
     zdharma/fast-syntax-highlighting
     zsh-users/zsh-history-substring-search
 EOF
