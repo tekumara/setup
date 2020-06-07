@@ -17,11 +17,6 @@ fi
 # install packages in Brewfile
 brew bundle install --verbose --no-lock
 
-# install zgen
-if [[ ! -d ~/.zgen ]]; then
-    git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
-fi
-
 # install dotfile symlinks
 mv ~/.zshrc ~/.zshrc-pre-setup
 stow -vv dotfiles -t ~
