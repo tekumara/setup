@@ -35,25 +35,14 @@ source ~/.zsh_plugins.sh
 # TODO: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/kubectl
 # TODO: https://github.com/zsh-users/zsh-autosuggestions
 
-# TODO: turn this into a prezto module
-#zgen load junegunn/fzf shell
-#if [[ -f ~/.fzf.zsh ]]; then
-#zgen load ~/.fzf.zsh
-#fi
-
 source "$HOME/.zshrc.d/awsweb.plugin.zsh"
 source "$HOME/.zshrc.d/docker.plugin.zsh"
+source "$HOME/.zshrc.d/git.plugin.zsh"
 source "$HOME/.zshrc.d/golang.plugin.zsh"
 source "$HOME/.zshrc.d/java.plugin.zsh"
 source "$HOME/.zshrc.d/rust.plugin.zsh"
-source "$HOME/.zshrc.d/git.plugin.zsh"
+source "$HOME/.zshrc.d/python.plugin.zsh"
 source "$HOME/Dropbox/Slack/functions.zsh"
-
-# dynamically load anything in the work directory
-# this won't be under source control 
-for zshfile in "${ZDOTDIR:-$HOME}"/.zshrc.d/work/*.zsh; do
-  source "$zshfile"
-done
 
 # create zcompdump only if the existing one is older than 24 hours (or doesn't exist)
 autoload -Uz compinit
@@ -69,10 +58,3 @@ HISTSIZE=50000
 
 # fzf keybindings (CTRL-T, CTRL-R) must be loaded after the prezto editor module
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# pyenv + virtualenvwrapper
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
-pyenv virtualenvwrapper_lazy
-
