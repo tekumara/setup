@@ -3,14 +3,29 @@ zmodload zsh/zprof
 
 zstyle ':prezto:*:*' 'color' 'yes'
 
-autoload -Uz compinit && compinit -C
-
 # Generate new ~/.zsh_plugins.sh if it does not exist or ~/.zshrc is newer
 if [[ ! -f ~/.zsh_plugins.sh ]] || [[ ~/.zshrc -nt ~/.zsh_plugins.sh ]]; then
   echo "antibody bundle"
   antibody bundle <<- EOF > ~/.zsh_plugins.sh
-    ohmyzsh/ohmyzsh path:lib 
-    ohmyzsh/ohmyzsh path:themes/robbyrussell.zsh-theme
+    sorin-ionescu/prezto
+    sorin-ionescu/prezto path:modules/environment
+    sorin-ionescu/prezto path:modules/terminal
+    sorin-ionescu/prezto path:modules/editor
+    sorin-ionescu/prezto path:modules/history
+    sorin-ionescu/prezto path:modules/directory
+    sorin-ionescu/prezto path:modules/spectrum
+    sorin-ionescu/prezto path:modules/utility
+
+    zsh-users/zsh-completions
+    agkozak/zsh-z
+    peterhurford/git-it-on.zsh
+
+    # zsh-async is needed by pure
+    mafredri/zsh-async
+    sindresorhus/pure
+
+    zdharma/fast-syntax-highlighting
+    zsh-users/zsh-history-substring-search
 EOF
 fi
 
@@ -63,7 +78,6 @@ WORDCHARS=''
 
 # set prezto to use same history file as oh-my-zsh and the macOS default
 HISTFILE="$HOME/.zsh_history"
-
 HISTSIZE=50000
 
 # fzf keybindings (CTRL-T, CTRL-R) must be loaded after the prezto editor module
