@@ -2,6 +2,10 @@
 
 Set up my mac
 
+Run ./install.sh to install and configure a fresh mac.
+
+Contains zshrc and dotfiles for a minimal, fast (200ms startup) zsh experience 
+
 ## why antibody?
 
 antibody is a fast and minimal plugin manager.
@@ -11,4 +15,4 @@ It's faster than zgen by ~90ms, and the plugin script is generates is much simpl
 
 ## why prezto?
 
-Faster (>100ms) and more lightweight than ohmyzsh
+>100ms faster start up times and more lightweight than ohmyzsh
