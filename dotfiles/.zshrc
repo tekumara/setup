@@ -30,8 +30,9 @@ source "$HOME/.zshrc.d/docker.plugin.zsh"
 source "$HOME/.zshrc.d/git.plugin.zsh"
 source "$HOME/.zshrc.d/golang.plugin.zsh"
 source "$HOME/.zshrc.d/java.plugin.zsh"
-source "$HOME/.zshrc.d/rust.plugin.zsh"
+source "$HOME/.zshrc.d/kubectl.plugin.zsh"
 source "$HOME/.zshrc.d/python.plugin.zsh"
+source "$HOME/.zshrc.d/rust.plugin.zsh"
 source "$HOME/Dropbox/Slack/functions.zsh"
 
 # increase history size
