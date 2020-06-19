@@ -10,6 +10,7 @@ brew "wget"
 brew "jq"
 brew "mdcat"
 brew "scmpuff"
+brew "hub"
 
 # aws 
 brew "awscli"

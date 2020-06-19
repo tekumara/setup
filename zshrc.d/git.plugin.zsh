@@ -19,3 +19,7 @@ alias grbi='git rebase -i'
 
 # other 
 alias gdh='git diff "HEAD^" HEAD'
+
+# hub
+alias hb='hub browse'
+alias hbpr='hub pull-request'
