@@ -20,3 +20,8 @@ workon() {
 	__vew_init	
 	workon "$@"	
 }
+
+mktmpenv() {
+	__vew_init
+	mktmpenv "$@"
+}
