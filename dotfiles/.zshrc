@@ -9,7 +9,6 @@ if [[ ! -f ~/.zsh_plugins.sh ]] || [[ ~/.zshrc -nt ~/.zsh_plugins.sh ]]; then
     tekumara/prezto-tweaks
 
     agkozak/zsh-z
-    peterhurford/git-it-on.zsh
 
     # zsh-async is needed by pure
     mafredri/zsh-async

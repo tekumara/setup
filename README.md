@@ -4,7 +4,7 @@ Set up my mac
 
 Run ./install.sh to install and configure a fresh mac.
 
-Contains zshrc and dotfiles for a minimal, fast (200ms startup) zsh experience 
+Contains zshrc and dotfiles for a minimal, fast (130ms startup) zsh experience 
 
 ## why antibody?
 
