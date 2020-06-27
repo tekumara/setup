@@ -8,7 +8,7 @@ if [[ ! -f ~/.zsh_plugins.sh ]] || [[ ~/.zshrc -nt ~/.zsh_plugins.sh ]]; then
     sorin-ionescu/prezto
     tekumara/prezto-tweaks
 
-    agkozak/zsh-z
+    ajeetdsouza/zoxide
 
     # zsh-async is needed by pure
     mafredri/zsh-async

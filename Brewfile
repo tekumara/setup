@@ -11,6 +11,7 @@ brew "jq"
 brew "mdcat"
 brew "scmpuff"
 brew "hub"
+brew "zoxide"
 
 # aws 
 brew "awscli"
