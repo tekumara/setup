@@ -17,13 +17,11 @@ if [[ ! -f ~/.zsh_plugins.sh ]] || [[ ~/.zshrc -nt ~/.zsh_plugins.sh ]]; then
 
     zdharma/fast-syntax-highlighting
     zsh-users/zsh-history-substring-search
+    zsh-users/zsh-autosuggestions
 EOF
 fi
 
 source ~/.zsh_plugins.sh
-
-# TODO: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/kubectl
-# TODO: https://github.com/zsh-users/zsh-autosuggestions
 
 source "$HOME/.zshrc.d/awsweb.plugin.zsh"
 source "$HOME/.zshrc.d/docker.plugin.zsh"
@@ -37,6 +35,7 @@ source "$HOME/Dropbox/Slack/functions.zsh"
 
 # increase history size
 HISTSIZE=50000
+SAVEHIST=50000
 
 # fzf keybindings (CTRL-T, CTRL-R) must be loaded after the prezto editor module
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
