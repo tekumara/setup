@@ -15,7 +15,7 @@ It's faster than zgen by ~90ms, and the plugin script is generates is much simpl
 
 ## why prezto?
 
->100ms faster start up times and more lightweight than ohmyzsh
+At least 100ms faster start up times and more lightweight than ohmyzsh
 
 ## bench
 

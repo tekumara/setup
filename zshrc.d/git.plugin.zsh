@@ -16,6 +16,7 @@ alias grs='git reset' # ie: unstage
 alias gdc='git diff --cached'
 alias grb='git rebase'
 alias grbi='git rebase -i'
+alias gcb='git checkout -b'
 
 # other 
 alias gdh='git diff "HEAD^" HEAD'

@@ -12,6 +12,7 @@ brew "mdcat"
 brew "scmpuff"
 brew "hub"
 brew "zoxide"
+brew "diff-so-fancy"
 
 # aws 
 brew "awscli"
