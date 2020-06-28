@@ -9,13 +9,8 @@ if [[ "$SHELL" != "/bin/zsh" ]]; then
     chsh -s /bin/zsh
 fi
 
-# install brew
-if ! which -s brew; then
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-fi
-
-# install packages in Brewfile
-brew bundle install --verbose --no-lock
+install/packages.sh
+install/python.sh
 
 # install dotfile symlinks
 mv ~/.zshrc ~/.zshrc-pre-setup
@@ -28,25 +23,6 @@ stow -vv zshrc.d -t ~/.zshrc.d
 # install config
 stow -vv config -t ~/.config
 
-# install fzf key bindings & fuzzy completion and update zshrc
-"$(brew --prefix)"/opt/fzf/install --all --no-bash
-
-# install python
-python_version=3.6.10
-pyenv install -s "$python_version"
-
-# set default python version
-# don't rely on the system/brew installed python as the global default 
-# because virtualenvs using it will break when brew performs major upgrades
-pyenv global "$python_version"
-
-# rehash in case we've just upgraded pyenv via brew 
-pyenv rehash
-
-# install docker zsh completions
-etc=/Applications/Docker.app/Contents/Resources/etc
-ln -fs "$etc"/docker.zsh-completion /usr/local/share/zsh/site-functions/_docker
-
 ## vim settings
 #brew install vim --override-system-vim
 
@@ -54,9 +30,6 @@ if [[ ! -d ~/.vim_runtime ]]; then
     git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
     sh ~/.vim_runtime/install_awesome_vimrc.sh
 fi
-
-# golang tools
-go get -u github.com/go-delve/delve/cmd/dlv
 
 # iterm2 settings
 # ---------------
