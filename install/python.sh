@@ -13,5 +13,7 @@ pyenv install -s "$python_version"
 # because virtualenvs using it will break when brew performs major upgrades
 pyenv global "$python_version"
 
-# rehash in case we've just upgraded pyenv via brew 
-pyenv rehash
+# needed on first install so pip can be found
+eval "$(pyenv init -)"
+
+pip install --upgrade pip
