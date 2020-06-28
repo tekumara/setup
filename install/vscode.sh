@@ -13,4 +13,5 @@ code \
     --install-extension fwcd.kotlin                                 \
     --install-extension foxundermoon.shell-format                   \
     --install-extension timonwong.shellcheck                        \
-    --install-extension redhat.vscode-yaml
+    --install-extension redhat.vscode-yaml                          \
+    --install-extension davidanson.vscode-markdownlint
