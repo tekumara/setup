@@ -8,10 +8,6 @@ set -uoe pipefail
 mv ~/.zshrc ~/.zshrc-pre-setup
 stow -vv dotfiles -t ~
 
-# install zsh script symlinks
-mkdir -p "$HOME/.zshrc.d"
-stow -vv zshrc.d -t ~/.zshrc.d 
-
 ## vim settings
 if [[ ! -d ~/.vim_runtime ]]; then
     git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
