@@ -5,7 +5,7 @@
 set -oe pipefail
 
 # install brew
-if ! which -s brew; then
+if ! hash brew; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
