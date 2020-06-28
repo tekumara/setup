@@ -33,4 +33,4 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCsp"
 # defaults write "Apple Global Domain" com.apple.keyboard.fnState -bool true
 
 # Set default applications for file types
-duti defaults.duti
+duti install/defaults.duti

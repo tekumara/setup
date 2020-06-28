@@ -5,6 +5,8 @@
 .vscode/
 .metals/
 
+# Python
+
 .pytype/
 .pytest_cache/
 *.egg-info/

@@ -10,7 +10,7 @@ if ! hash brew; then
 fi
 
 # install packages in Brewfile
-brew bundle install --verbose --no-lock
+brew bundle install --verbose --no-lock --file install/Brewfile
 
 # rehash shims in case we've just upgraded pyenv via brew 
 pyenv rehash

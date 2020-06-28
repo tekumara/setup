@@ -1,3 +1,9 @@
+#!/usr/bin/env bash
+
+# every instruction is idempotent so this script can be rerun multiple times
+
+set -uoe pipefail
+
 # install extensions
 code \
     --install-extension ms-python.python                            \
