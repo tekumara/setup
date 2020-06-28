@@ -11,5 +11,6 @@ fi
 
 install/packages.sh
 install/python.sh
+install/vscode.sh
 install/defaults.sh
 install/dotfiles.sh
