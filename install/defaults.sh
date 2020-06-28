@@ -1,8 +1,14 @@
+#!/usr/bin/env bash
+
+# every instruction is idempotent so this script can be rerun multiple times
+
+set -uoe pipefail
+
 # iterm2 settings
 # ---------------
 
 # specify the preferences directory
-defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/Dropbox/Mackup/Library/Preferences"
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "${HOME}/Dropbox/Mackup/Library/Preferences"
 # use the custom preferences directory
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 # save changes to the custom preferences directory
