@@ -9,7 +9,7 @@ Run `./install.sh` to install and configure a fresh mac. It is idempotent and sa
 antibody is a fast and minimal plugin manager.
 
 It makes it easy to load plugins from github repos, and can update them.
-It's faster than zgen by ~90ms, and the plugin script is generates is much simpler to read.
+It's faster than zgen by ~90ms, and the plugin script it generates is much simpler to read.
 
 ## why prezto?
 

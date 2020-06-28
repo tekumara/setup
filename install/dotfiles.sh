@@ -12,9 +12,6 @@ stow -vv dotfiles -t ~
 mkdir -p "$HOME/.zshrc.d"
 stow -vv zshrc.d -t ~/.zshrc.d 
 
-# install config
-stow -vv config -t ~/.config
-
 ## vim settings
 if [[ ! -d ~/.vim_runtime ]]; then
     git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
