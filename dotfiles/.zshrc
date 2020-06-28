@@ -9,6 +9,7 @@ if [[ ! -f ~/.zsh_plugins.sh ]] || [[ ~/.zshrc -nt ~/.zsh_plugins.sh ]]; then
     tekumara/prezto-tweaks
 
     ajeetdsouza/zoxide
+    wfxr/forgit
 
     # zsh-async is needed by pure
     mafredri/zsh-async
@@ -38,3 +39,6 @@ SAVEHIST=50000
 
 # fzf keybindings (CTRL-T, CTRL-R) must be loaded after the prezto editor module
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# order the same as git log
+FORGIT_FZF_DEFAULT_OPTS="--reverse $FORGIT_FZF_DEFAULT_OPTS"
