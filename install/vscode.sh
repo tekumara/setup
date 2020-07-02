@@ -7,7 +7,7 @@ set -uoe pipefail
 # install extensions
 code \
     --install-extension ms-python.python                            \
-    --install-extension ms-pyright.pyright                          \
+    --install-extension ms-python.vscode-pylance                    \
     --install-extension kddejong.vscode-cfn-lint                    \
     --install-extension streetsidesoftware.code-spell-checker       \
     --install-extension fwcd.kotlin                                 \
