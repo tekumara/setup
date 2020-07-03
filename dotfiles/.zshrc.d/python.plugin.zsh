@@ -3,7 +3,7 @@
 # pyenv can't be lazy loaded using the same technique for 
 # virtualenvwrapper because if a virtualenv is activated before
 # pyenv loads (eg: by an IDE terminal) it will break the virtualenv
-eval "$(pyenv init - zsh --no-rehash)"
+eval "$(pyenv init - --no-rehash zsh)"
 
 # lazy load virtualenvwrapper for faster shell startup times
 # faster than pyenv virtualenvwrapper_lazy
