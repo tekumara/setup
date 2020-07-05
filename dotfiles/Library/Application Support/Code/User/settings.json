@@ -19,8 +19,11 @@
     "Kinesis",
     "Versioning",
     "argh",
+    "asyncio",
     "boto",
+    "contextvars",
     "deregister",
+    "httpx",
     "jupyter",
     "kubernetes",
     "moto",
@@ -28,6 +31,8 @@
     "pytoml",
     "recurse",
     "setuptools",
+    "structlog",
+    "tekumara",
     "typer"
   ],
   "diffEditor.ignoreTrimWhitespace": false,
@@ -72,7 +77,6 @@
     "**/.settings": true,
     "**/.factorypath": true
   },
-  "pyright.disableLanguageServices": true,
   "python.pythonPath": "/Users/oliver.mannion/.virtualenvs/delme/bin/python",
   "terminal.integrated.rendererType": "dom",
   "java.semanticHighlighting.enabled": true,
@@ -83,5 +87,8 @@
     }
   },
   "python.languageServer": "Pylance",
-  "python.analysis.typeCheckingMode": "basic"
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportIncompatibleMethodOverride": "error"
+  }
 }
