@@ -2,7 +2,7 @@
 
 Contains installation scripts, .zshrc and dotfiles for a minimal, fast (130ms startup) zsh experience.
 
-Run `./install.sh` to install and configure a fresh mac. It is idempotent and safe to run multiple times.
+Run `./install.sh` to install and configure a fresh mac. Run it again to upgrade to the latest versions.
 
 ## why antibody?
 
