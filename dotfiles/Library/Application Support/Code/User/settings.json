@@ -21,6 +21,7 @@
     "argh",
     "asyncio",
     "boto",
+    "botocore",
     "contextvars",
     "deregister",
     "httpx",
@@ -80,15 +81,17 @@
   "python.pythonPath": "/Users/oliver.mannion/.virtualenvs/delme/bin/python",
   "terminal.integrated.rendererType": "dom",
   "java.semanticHighlighting.enabled": true,
-  "python.formatting.provider": "black",
   "markdownlint.config": {
     "MD026": {
       "punctuation": ".,;:!"
-    }
+    },
+    "MD032": false,
+    "MD040": false,
   },
   "python.languageServer": "Pylance",
   "python.analysis.typeCheckingMode": "basic",
   "python.analysis.diagnosticSeverityOverrides": {
-    "reportIncompatibleMethodOverride": "error"
+    "reportIncompatibleMethodOverride": "error",
+    "reportGeneralTypeIssues": "error"
   }
 }
