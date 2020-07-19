@@ -22,6 +22,7 @@ alias gcb='git checkout -b'
 
 # other 
 alias gdh='git diff "HEAD^" HEAD'
+alias gd='git diff HEAD'
 
 # hub
 alias hb='hub browse'
@@ -29,4 +30,3 @@ alias hbpr='hub pull-request'
 
 # forgit aliases take precedence over anything above
 alias ga=forgit::add
-alias gd=forgit::diff
