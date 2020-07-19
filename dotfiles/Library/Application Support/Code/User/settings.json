@@ -28,6 +28,8 @@
     "jupyter",
     "kubernetes",
     "moto",
+    "mypy",
+    "pyright",
     "pytest",
     "pytoml",
     "recurse",
