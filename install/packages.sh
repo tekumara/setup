@@ -7,6 +7,9 @@ set -oe pipefail
 # install brew
 if ! hash brew; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+else
+    echo brew update ...
+    brew update
 fi
 
 # install packages in Brewfile
