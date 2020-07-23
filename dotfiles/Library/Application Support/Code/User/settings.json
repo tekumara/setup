@@ -17,6 +17,7 @@
   "cSpell.userWords": [
     "Checklist",
     "Kinesis",
+    "Stats",
     "Versioning",
     "argh",
     "asyncio",
@@ -29,6 +30,7 @@
     "kubernetes",
     "moto",
     "mypy",
+    "ndarray",
     "pyright",
     "pytest",
     "pytoml",
