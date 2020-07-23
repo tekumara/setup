@@ -16,4 +16,4 @@ pyenv global "$python_version"
 # needed on first install so pip can be found
 eval "$(pyenv init -)"
 
-pip install --upgrade pip
+PIP_REQUIRE_VIRTUALENV=false && pip install --upgrade pip
