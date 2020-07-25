@@ -97,5 +97,6 @@
   "python.analysis.diagnosticSeverityOverrides": {
     "reportIncompatibleMethodOverride": "error",
     "reportGeneralTypeIssues": "error"
-  }
+  },
+  "python.linting.pylintEnabled": true
 }
