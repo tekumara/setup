@@ -14,4 +14,5 @@ code \
     --install-extension foxundermoon.shell-format                   \
     --install-extension timonwong.shellcheck                        \
     --install-extension redhat.vscode-yaml                          \
-    --install-extension davidanson.vscode-markdownlint
+    --install-extension davidanson.vscode-markdownlint              \
+    --install-extension mhutchie.git-graph
