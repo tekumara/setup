@@ -20,9 +20,15 @@ alias grb='git rebase'
 alias grbi='git rebase -i'
 alias gcb='git checkout -b'
 
+
 # other 
+
 alias gdh='git diff "HEAD^" HEAD'
+# show both staged and unstaged changes
 alias gd='git diff HEAD'
+# add everything except untracked files
+alias gaa='git add -u'
+
 
 # hub
 alias hb='hub browse'
