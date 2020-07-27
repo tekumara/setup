@@ -2,6 +2,9 @@
 	# Automatically appends '--rebase' to 'git pull' commands; can be overridden with --no-rebase
 	# If the origin has been force updated since you last pulled, this will silently rewrite your local history to match the origin
 	rebase = true
+[push]
+	# Automatically creates an upstream branch when none exists
+	default = current
 [rebase]
 	# Automatically create a temporary stash entry before the operation begins, and apply it after the operation ends. 
 	# This means that you can run rebase on a dirty worktree without the message "error: cannot pull with rebase: You have unstaged changes" 
