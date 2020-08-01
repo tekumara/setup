@@ -5,3 +5,5 @@ awsenv() {
 }
 
 alias ae='awsenv'
+
+alias ec2='aec ec2'

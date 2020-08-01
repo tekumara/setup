@@ -25,7 +25,7 @@ fi
 
 source ~/.zsh_plugins.sh
 
-source "$HOME/.zshrc.d/awsweb.plugin.zsh"
+source "$HOME/.zshrc.d/aws.plugin.zsh"
 source "$HOME/.zshrc.d/docker.plugin.zsh"
 source "$HOME/.zshrc.d/git.plugin.zsh"
 source "$HOME/.zshrc.d/golang.plugin.zsh"
