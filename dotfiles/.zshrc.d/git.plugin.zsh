@@ -25,7 +25,7 @@ alias gcb='git checkout -b'
 
 alias gdh='git diff "HEAD^" HEAD'
 # show both staged and unstaged changes
-alias gd='git diff HEAD'
+alias gda='git diff HEAD'
 # add everything except untracked files
 alias gaa='git add -u'
 
