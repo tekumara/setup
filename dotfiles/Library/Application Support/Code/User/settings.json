@@ -35,6 +35,7 @@
     "pytest",
     "pytoml",
     "recurse",
+    "setup",
     "setuptools",
     "structlog",
     "tekumara",
