@@ -16,30 +16,41 @@
   "gitlens.hovers.currentLine.over": "line",
   "cSpell.userWords": [
     "Checklist",
+    "Intelli",
     "Kinesis",
     "Stats",
     "Versioning",
     "argh",
     "asyncio",
+    "awscli",
     "boto",
     "botocore",
+    "cmds",
     "contextvars",
     "deregister",
     "httpx",
     "jupyter",
     "kubernetes",
+    "me's",
     "moto",
     "mypy",
     "ndarray",
+    "pandarallel",
+    "pargs",
     "pyright",
     "pytest",
     "pytoml",
+    "rebased",
     "recurse",
+    "repos",
+    "resp",
     "setup",
     "setuptools",
     "structlog",
     "tekumara",
-    "typer"
+    "typer",
+    "unmerged",
+    "virtualenv"
   ],
   "diffEditor.ignoreTrimWhitespace": false,
   "go.formatTool": "goimports",
@@ -99,5 +110,11 @@
     "reportIncompatibleMethodOverride": "error",
     "reportGeneralTypeIssues": "error"
   },
-  "python.linting.pylintEnabled": true
+  "python.linting.pylintEnabled": true,
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
 }
