@@ -42,3 +42,6 @@
 	smudge = git-lfs smudge -- %f
 [diff-so-fancy]
 	first-run = false
+# allow local customizations in the .gitconfig_local file
+[include]
+	path = ~/.gitconfig_local
