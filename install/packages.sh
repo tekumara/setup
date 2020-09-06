@@ -38,3 +38,6 @@ npm install -g pyright
 
 # for formatting markdown, json and javscript
 npm install -g prettier
+
+# for switching between node versions
+npm install --force -g n
