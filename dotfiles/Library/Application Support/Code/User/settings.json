@@ -34,6 +34,7 @@
     "me's",
     "moto",
     "mypy",
+    "ncurses",
     "ndarray",
     "pandarallel",
     "pargs",
@@ -111,8 +112,16 @@
     "reportGeneralTypeIssues": "error"
   },
   "python.linting.pylintEnabled": true,
+  "files.watcherExclude": {
+    "**/.bloop": true,
+    "**/.metals": true,
+    "**/.ammonite": true
+  },
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
   "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "files.trimTrailingWhitespace": false
   },
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
