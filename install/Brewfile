@@ -14,7 +14,7 @@ brew "hub"
 brew "zoxide"
 brew "diff-so-fancy"
 
-# aws 
+# aws
 brew "awscli"
 brew "glassechidna/taps/awsweb"
 
@@ -29,7 +29,7 @@ brew "wrk2", args: ["HEAD"]
 brew "pre-commit"
 brew "pandoc"
 
-# compared to docker, kubernetes-cli includes a newer version of kubectl, man pages & completions 
+# compared to docker, kubernetes-cli includes a newer version of kubectl, man pages & completions
 brew "kubernetes-cli"
 cask "docker"
 
@@ -41,7 +41,11 @@ brew "k9s"
 brew "pyenv"
 brew "pyenv-virtualenvwrapper"
 brew "pipx"
+
+# node
 brew "node"
+brew "yarn"
+brew "Schniz/tap/fnm"
 
 # needed for building some python packages
 brew "automake"

@@ -20,12 +20,9 @@ if [[ ! -f ~/.zsh_plugins.sh ]] || [[ ~/.zshrc -nt ~/.zsh_plugins.sh ]]; then
     zsh-users/zsh-autosuggestions
 
     tekumara/zsh-pyenv-virtualenvwrapper-lazy
-
-    lukechilds/zsh-nvm
 EOF
 fi
 
-export NVM_LAZY_LOAD=true
 source ~/.zsh_plugins.sh
 
 source "$HOME/.zshrc.d/aws.plugin.zsh"
@@ -34,6 +31,7 @@ source "$HOME/.zshrc.d/git.plugin.zsh"
 source "$HOME/.zshrc.d/golang.plugin.zsh"
 source "$HOME/.zshrc.d/java.plugin.zsh"
 source "$HOME/.zshrc.d/kubectl.plugin.zsh"
+source "$HOME/.zshrc.d/node.plugin.zsh"
 source "$HOME/.zshrc.d/python.plugin.zsh"
 source "$HOME/.zshrc.d/rust.plugin.zsh"
 source "$HOME/Dropbox/Slack/functions.zsh"
