@@ -15,7 +15,7 @@ fi
 # install packages in Brewfile
 brew bundle install --verbose --no-lock --file install/Brewfile
 
-# rehash shims in case we've just upgraded pyenv via brew 
+# rehash shims in case we've just upgraded pyenv via brew
 pyenv rehash
 
 # run pyenv virtualenvwrapper upfront so it downloads and installs itself
@@ -38,6 +38,3 @@ npm install -g pyright
 
 # for formatting markdown, json and javscript
 npm install -g prettier
-
-# for switching between node versions
-npm install --force -g n
