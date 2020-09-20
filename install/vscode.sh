@@ -15,4 +15,5 @@ code \
     --install-extension timonwong.shellcheck                        \
     --install-extension redhat.vscode-yaml                          \
     --install-extension davidanson.vscode-markdownlint              \
-    --install-extension mhutchie.git-graph
+    --install-extension mhutchie.git-graph                          \
+    --install-extension esbenp.prettier-vscode
