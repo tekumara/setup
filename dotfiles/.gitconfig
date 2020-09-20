@@ -6,8 +6,8 @@
 	# Automatically creates an upstream branch when none exists
 	default = current
 [rebase]
-	# Automatically create a temporary stash entry before the operation begins, and apply it after the operation ends. 
-	# This means that you can run rebase on a dirty worktree without the message "error: cannot pull with rebase: You have unstaged changes" 
+	# Automatically create a temporary stash entry before the operation begins, and apply it after the operation ends.
+	# This means that you can run rebase on a dirty worktree without the message "error: cannot pull with rebase: You have unstaged changes"
 	autoStash = true
 
 	# merge squash & fixup commits see https://robots.thoughtbot.com/autosquashing-git-commits
@@ -16,7 +16,7 @@
 	# checkout as-is, commit as-is
 	autocrlf = false
 	#  don't page if output will fit on one screen (for things like git config -l)
-	pager = diff-so-fancy | less --tabs=4 -RFXSi
+	pager = diff-so-fancy | less --tabs=4 -RFXi
 	# global ignore
 	excludesfile = ~/.gitignore_global
 [user]
