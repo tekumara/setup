@@ -19,6 +19,8 @@
 	pager = diff-so-fancy | less --tabs=4 -RFXi
 	# global ignore
 	excludesfile = ~/.gitignore_global
+[init]
+	defaultBranch = main
 [user]
 	name = Oliver Mannion
 	email = 125105+tekumara@users.noreply.github.com
