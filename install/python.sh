@@ -5,11 +5,11 @@
 set -uoe pipefail
 
 # install python
-python_version=3.7.8
+python_version=3.7.9
 pyenv install -s "$python_version"
 
 # set default python version
-# don't rely on the system/brew installed python as the global default 
+# don't rely on the system/brew installed python as the global default
 # because virtualenvs using it will break when brew performs major upgrades
 pyenv global "$python_version"
 
