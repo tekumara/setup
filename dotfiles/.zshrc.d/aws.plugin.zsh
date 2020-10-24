@@ -6,4 +6,4 @@ awsenv() {
 
 alias ae='awsenv'
 
-alias ec2='aec ec2'
+alias ec2='COLUMNS=$COLUMNS aec ec2'

@@ -42,6 +42,7 @@
     "ndarray",
     "pandarallel",
     "pargs",
+    "pydantic",
     "pyright",
     "pyspark",
     "pytest",
@@ -54,6 +55,7 @@
     "setuptools",
     "structlog",
     "tekumara",
+    "terraform",
     "typer",
     "unmerged",
     "virtualenv"
@@ -130,5 +132,6 @@
   },
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
-  }
+  },
+  "python.dataScience.alwaysTrustNotebooks": true
 }
