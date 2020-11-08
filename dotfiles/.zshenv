@@ -9,9 +9,5 @@ export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 # added by pipx
 export PATH="$PATH:$HOME/.local/bin"
 
-# use a stable python3 path instead of the default brew path so
-# pipx packages aren't broken when brew upgrades python
-export PIPX_DEFAULT_PYTHON=$(pyenv which python)
-
 # prevent pip from installing globally
 export PIP_REQUIRE_VIRTUALENV=true
