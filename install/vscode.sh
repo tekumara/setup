@@ -16,4 +16,5 @@ code \
     --install-extension redhat.vscode-yaml                          \
     --install-extension davidanson.vscode-markdownlint              \
     --install-extension mhutchie.git-graph                          \
-    --install-extension esbenp.prettier-vscode
+    --install-extension esbenp.prettier-vscode                      \
+    --install-extension njpwerner.autodocstring

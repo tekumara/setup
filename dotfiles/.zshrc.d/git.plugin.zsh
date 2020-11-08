@@ -19,9 +19,10 @@ alias gdc='git diff --cached'
 alias grb='git rebase'
 alias grbi='git rebase -i'
 alias gcb='git checkout -b'
+alias gsh='git show'
 
 
-# other 
+# other
 
 alias gdh='git diff "HEAD^" HEAD'
 # show both staged and unstaged changes
