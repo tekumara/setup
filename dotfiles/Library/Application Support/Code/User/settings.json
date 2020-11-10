@@ -133,5 +133,6 @@
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "python.dataScience.alwaysTrustNotebooks": true
+  "python.dataScience.alwaysTrustNotebooks": true,
+  "autoDocstring.docstringFormat": "sphinx"
 }
