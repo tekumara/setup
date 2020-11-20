@@ -132,7 +132,8 @@
   },
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "python.dataScience.alwaysTrustNotebooks": true,
-  "autoDocstring.docstringFormat": "sphinx"
+},
+"autoDocstring.docstringFormat": "sphinx",
+"jupyter.alwaysTrustNotebooks": true,
+"editor.columnSelection": false
 }

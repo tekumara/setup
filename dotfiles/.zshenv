@@ -8,6 +8,3 @@ export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 
 # added by pipx
 export PATH="$PATH:$HOME/.local/bin"
-
-# prevent pip from installing globally
-export PIP_REQUIRE_VIRTUALENV=true
