@@ -7,6 +7,7 @@ if [[ ! -f ~/.zsh_plugins.sh ]] || [[ ~/.zshrc -nt ~/.zsh_plugins.sh ]]; then
   antibody bundle <<- EOF > ~/.zsh_plugins.sh
     sorin-ionescu/prezto
     tekumara/prezto-tweaks
+    tekumara/history.zsh
 
     ajeetdsouza/zoxide
     wfxr/forgit
@@ -35,10 +36,6 @@ source "$HOME/.zshrc.d/node.plugin.zsh"
 source "$HOME/.zshrc.d/python.plugin.zsh"
 source "$HOME/.zshrc.d/rust.plugin.zsh"
 source "$HOME/Dropbox/Slack/functions.zsh"
-
-# increase history size
-HISTSIZE=50000
-SAVEHIST=50000
 
 # fzf keybindings (CTRL-T, CTRL-R) must be loaded after the prezto editor module
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
