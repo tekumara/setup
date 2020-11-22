@@ -5,7 +5,7 @@ zmodload zsh/zprof
 if [[ ! -f ~/.zsh_plugins.sh ]] || [[ ~/.zshrc -nt ~/.zsh_plugins.sh ]]; then
   echo "antibody bundle"
   antibody bundle <<- EOF > ~/.zsh_plugins.sh
-    sorin-ionescu/prezto
+    #sorin-ionescu/prezto
     #yous/vanilli.sh
     tekumara/prezto-tweaks
     tekumara/history.zsh
@@ -18,7 +18,7 @@ if [[ ! -f ~/.zsh_plugins.sh ]] || [[ ~/.zshrc -nt ~/.zsh_plugins.sh ]]; then
     sindresorhus/pure
 
     zdharma/fast-syntax-highlighting
-    zsh-users/zsh-history-substring-search
+    #zsh-users/zsh-history-substring-search
     zsh-users/zsh-autosuggestions
     #zsh-users/zsh-completions
 
