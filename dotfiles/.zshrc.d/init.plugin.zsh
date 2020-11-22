@@ -34,3 +34,7 @@ fi
 alias ll='ls -lh'                 # Lists human readable sizes.
 alias la='ll -A'                  # Lists human readable sizes, hidden files.
 alias grep="grep --color=auto"    # Coloured grep
+
+# hypen and dot shouldn't be consider part of a word
+# see 4.3.4 of http://zsh.sourceforge.net/Guide/zshguide04.html
+WORDCHARS=''

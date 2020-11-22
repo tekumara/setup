@@ -7,8 +7,8 @@ if [[ ! -f ~/.zsh_plugins.sh ]] || [[ ~/.zshrc -nt ~/.zsh_plugins.sh ]]; then
   antibody bundle <<- EOF > ~/.zsh_plugins.sh
     #sorin-ionescu/prezto
     #yous/vanilli.sh
-    tekumara/prezto-tweaks
-    tekumara/history.zsh
+    #tekumara/prezto-tweaks
+    #tekumara/history.zsh
 
     ajeetdsouza/zoxide
     wfxr/forgit
@@ -26,13 +26,11 @@ if [[ ! -f ~/.zsh_plugins.sh ]] || [[ ~/.zshrc -nt ~/.zsh_plugins.sh ]]; then
 EOF
 fi
 
-# init must run first
-source "$HOME/.zshrc.d/init.plugin.zsh"
+# minimal.zsh must run before zdharma/fast-syntax-highlighting
+source "$HOME/.zshrc.d/minimal.zsh"
 
 source ~/.zsh_plugins.sh
 
-# completion runs after plugins have been loaded and added their completions to fpath
-source "$HOME/.zshrc.d/completion.plugin.zsh"
 source "$HOME/.zshrc.d/aws.plugin.zsh"
 source "$HOME/.zshrc.d/docker.plugin.zsh"
 source "$HOME/.zshrc.d/git.plugin.zsh"
@@ -44,9 +42,11 @@ source "$HOME/.zshrc.d/python.plugin.zsh"
 source "$HOME/.zshrc.d/rust.plugin.zsh"
 source "$HOME/Dropbox/Slack/functions.zsh"
 
-
-# fzf keybindings (CTRL-T, CTRL-R) must be loaded after the prezto editor module
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# add fzf to path, and load fzf completion & keybindings (CTRL-T, CTRL-R)
+source ~/.fzf.zsh
 
 # same order as git log
 FORGIT_FZF_DEFAULT_OPTS="--reverse $FORGIT_FZF_DEFAULT_OPTS"
+
+# load completion system
+_load_compinit

@@ -7,6 +7,7 @@
 #
 # Load/initialize the completion system
 #
+
 autoload -Uz compinit
 
 # if dump exists and > 20 hours old
