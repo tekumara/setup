@@ -31,7 +31,7 @@ source "$HOME/.zshrc.d/init.plugin.zsh"
 
 source ~/.zsh_plugins.sh
 
-# completions run after plugins
+# completion runs after plugins have been loaded and added their completions to fpath
 source "$HOME/.zshrc.d/completion.plugin.zsh"
 source "$HOME/.zshrc.d/aws.plugin.zsh"
 source "$HOME/.zshrc.d/docker.plugin.zsh"
