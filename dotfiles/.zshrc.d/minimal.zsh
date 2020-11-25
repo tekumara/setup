@@ -18,6 +18,9 @@ export LESS_TERMCAP_so=$'\E[00;47;30m'   # Begins standout-mode.
 export LESS_TERMCAP_ue=$'\E[0m'          # Ends underline.
 export LESS_TERMCAP_us=$'\E[01;32m'      # Begins underline.
 
+# enable double char quoting, eg: 'don''t' = don't
+setopt rcquotes
+
 # enable spell correction
 setopt correct
 
@@ -28,6 +31,15 @@ setopt interactivecomments
 # hypen and dot shouldn't be consider part of a word
 # see "4.3.4: Words, regions and marks" of http://zsh.sourceforge.net/Guide/zshguide04.html
 WORDCHARS=''
+
+if [[ "$VENDOR" == "ubuntu" ]]; then
+    # default /etc/zsh/zshrc on Ubuntu puts the terminal into application mode
+    # some terminals (eg: cloud9) don't play well with terminal mode (eg: scroll is broken)
+    # see https://github.com/c9/core/issues/436#issuecomment-731917131
+    # so we override the Ubuntu installed functions
+    zle-line-init() {}
+    zle-line-finish() {}
+fi
 
 # Aliases
 # -------

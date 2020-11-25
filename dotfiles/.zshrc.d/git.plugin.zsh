@@ -38,3 +38,4 @@ alias hbpr='hub pull-request'
 # forgit aliases take precedence over anything above
 alias ga=forgit::add
 alias gdf=forgit::diff
+alias glf=forgit::log
