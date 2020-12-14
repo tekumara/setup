@@ -134,6 +134,9 @@ fi
 
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
+# shift-tab goes to previous menu item
+bindkey '^[[Z' reverse-menu-complete
+
 # call this after all plugins with completions have loaded
 _load_compinit() {
     autoload -Uz compinit
