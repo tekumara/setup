@@ -4,6 +4,8 @@ export PIPX_DEFAULT_PYTHON=$(pyenv which python)
 
 # activate virtualenv in ./venv/
 alias venv='. venv/bin/activate'
+# create venv
+alias mkvenv='python3 -m venv --clear venv'
 
 # prevent pip from installing globally
 export PIP_REQUIRE_VIRTUALENV=true
