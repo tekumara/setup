@@ -12,7 +12,9 @@ alias gc='git commit'
 alias gcm='git commit --amend'
 alias gb='git branch'
 alias gpl='git pull'
-alias gps='git push'
+# -u creates a remote tracking branch when a new local branch is first pushed
+# avoids "there is no tracking information for the current branch" during git pull
+alias gps='git push -u'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gla='gl --all'
 alias gdc='git diff --cached'
