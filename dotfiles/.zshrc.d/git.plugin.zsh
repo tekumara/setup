@@ -11,10 +11,10 @@ eval "$(scmpuff init -s)"
 alias gc='git commit'
 alias gcm='git commit --amend'
 alias gb='git branch'
+# set tracking information for current branch to same named branch on origin
+alias gbu='current=$(git rev-parse --abbrev-ref HEAD) && git branch --set-upstream-to="origin/$current" "$current"'
 alias gpl='git pull'
-# -u creates a remote tracking branch when a new local branch is first pushed
-# avoids "there is no tracking information for the current branch" during git pull
-alias gps='git push -u'
+alias gps='git push'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gla='gl --all'
 alias gdc='git diff --cached'
