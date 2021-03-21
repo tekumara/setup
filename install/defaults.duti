@@ -3,5 +3,8 @@
 
 # bundle_id             uti | url_scheme | extension | MIME_type        role
 
-com.microsoft.VSCode    public.plain-text                               editor
+com.microsoft.VSCode    public.plain-text                               all
 org.videolan.vlc        public.mp3                                      all
+com.google.Chrome       .csv                                            all
+com.google.Chrome       .xls                                            all
+com.google.Chrome       .xlsx                                           all
