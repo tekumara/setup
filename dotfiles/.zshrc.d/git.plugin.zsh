@@ -11,8 +11,6 @@ eval "$(scmpuff init -s)"
 alias gc='git commit'
 alias gcm='git commit --amend'
 alias gb='git branch'
-# set tracking information for current branch to same named branch on origin
-alias gbu='current=$(git rev-parse --abbrev-ref HEAD) && git branch --set-upstream-to="origin/$current" "$current"'
 alias gpl='git pull'
 alias gps='git push'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
@@ -32,6 +30,8 @@ alias gda='git diff HEAD'
 # add everything except untracked files
 alias gaa='git add -u'
 alias ginit='git init && git commit -m "root commit" --allow-empty'
+# set tracking information for current branch to same named branch on origin
+alias gbu='current=$(git rev-parse --abbrev-ref HEAD) && git branch --set-upstream-to="origin/$current" "$current"'
 
 # hub
 alias hb='hub browse'
