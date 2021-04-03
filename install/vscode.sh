@@ -17,4 +17,5 @@ code \
     --install-extension davidanson.vscode-markdownlint              \
     --install-extension mhutchie.git-graph                          \
     --install-extension esbenp.prettier-vscode                      \
-    --install-extension njpwerner.autodocstring
+    --install-extension njpwerner.autodocstring                     \
+    --install-extension sysoev.vscode-open-in-github
