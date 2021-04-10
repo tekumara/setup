@@ -21,6 +21,7 @@
     "RBAC",
     "Stats",
     "Struct",
+    "Stubber",
     "Versioning",
     "argh",
     "asyncio",
@@ -29,6 +30,7 @@
     "botocore",
     "cmds",
     "contextvars",
+    "dateutil",
     "deregister",
     "httpx",
     "jupyter",
@@ -117,7 +119,8 @@
     "reportIncompatibleMethodOverride": "error",
     "reportGeneralTypeIssues": "error"
   },
-  "python.linting.pylintEnabled": true,
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
   "files.watcherExclude": {
     "**/.bloop": true,
     "**/.metals": true,
@@ -131,17 +134,18 @@
   },
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
-},
-"autoDocstring.docstringFormat": "sphinx",
-"jupyter.alwaysTrustNotebooks": true,
-"editor.columnSelection": false,
-"[jsonc]": {
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
-},
-"workbench.editorAssociations": [
-  {
-    "viewType": "jupyter.notebook.ipynb",
-    "filenamePattern": "*.ipynb"
-  }
-]
+  },
+  "autoDocstring.docstringFormat": "sphinx",
+  "jupyter.alwaysTrustNotebooks": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    }
+  ],
+  "omnisharp.useGlobalMono": "always",
+  "python.experiments.optInto": ["pythonDiscoveryModule"]
 }
