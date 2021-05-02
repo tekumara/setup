@@ -5,8 +5,11 @@
 set -uoe pipefail
 
 # install dotfile symlinks
-mv ~/.zshrc ~/.zshrc-pre-setup
+mv ~/.zshrc ~/.zshrc-pre-setup."$(date +%s)"
 stow -vv dotfiles -t ~
+if [[ -d ~/Dropbox/secret/dotfiles ]]; then
+    stow -vv dotfiles -d ~/Dropbox/secret -t ~
+fi
 
 ## vim settings
 if [[ ! -d ~/.vim_runtime ]]; then
