@@ -32,6 +32,7 @@ alias gaa='git add -u'
 alias ginit='git init && git commit -m "root commit" --allow-empty'
 # set tracking information for current branch to same named branch on origin
 alias gbu='current=$(git rev-parse --abbrev-ref HEAD) && git branch --set-upstream-to="origin/$current" "$current"'
+alias gcom='gco master 2> /dev/null || gco main'
 
 # hub
 alias hb='hub browse'
