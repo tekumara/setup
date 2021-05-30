@@ -147,5 +147,9 @@
     }
   ],
   "omnisharp.useGlobalMono": "always",
-  "python.experiments.optInto": ["pythonDiscoveryModule"]
+  "python.experiments.optInto": ["pythonDiscoveryModule"],
+  "go.toolsManagement.autoUpdate": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
