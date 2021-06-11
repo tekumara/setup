@@ -4,11 +4,6 @@
 
 set -uoe pipefail
 
-# set zsh as default shell
-if [[ "$SHELL" != "/bin/zsh" ]]; then
-    chsh -s /bin/zsh
-fi
-
 install/packages.sh
 install/python.sh
 install/vscode.sh
