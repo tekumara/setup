@@ -9,5 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: remove packages already on runner that will be installed by install.sh
+        run: |
+          rm '/usr/local/bin/aws'
+          brew unlink go@1.15
       - name: install.sh
         run: ./install.sh
