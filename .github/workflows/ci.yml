@@ -11,7 +11,9 @@ jobs:
 
       - name: remove packages already on runner that will be installed by install.sh
         run: |
-          rm '/usr/local/bin/aws'
-          brew unlink go@1.15
+          rm /usr/local/bin/aws
+          rm /usr/local/bin/aws_completer
+          rm /usr/local/bin/go
+          rm /usr/local/bin/gofmt
       - name: install.sh
         run: ./install.sh
