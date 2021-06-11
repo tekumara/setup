@@ -8,7 +8,7 @@ set -uoe pipefail
 # ---------------
 
 # specify the preferences directory
-defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "${HOME}/Dropbox/Mackup/Library/Preferences"
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "${PWD}/defaults/"
 # use the custom preferences directory
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 # save changes to the custom preferences directory
