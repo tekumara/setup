@@ -2,7 +2,7 @@
 
 # every instruction is idempotent so this script can be rerun multiple times
 
-set -uoe pipefail
+set -euo pipefail
 
 # install dotfile symlinks
 mv ~/.zshrc ~/.zshrc-pre-setup."$(date +%s)"

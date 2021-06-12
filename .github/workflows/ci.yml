@@ -9,11 +9,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: remove packages already on runner that will be installed by install.sh
+      # remove the packages we install that are already in the environment
+      # see https://github.com/actions/virtual-environments
+      - name: remove existing packages
         run: |
           rm /usr/local/bin/aws
           rm /usr/local/bin/aws_completer
           rm /usr/local/bin/go
           rm /usr/local/bin/gofmt
+          rm "$HOME/.gitconfig"
       - name: install.sh
         run: ./install.sh

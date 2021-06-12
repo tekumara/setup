@@ -2,7 +2,7 @@
 
 # every instruction is idempotent so this script can be rerun multiple times
 
-set -uoe pipefail
+set -euo pipefail
 
 # install python
 python_version=3.7.9
@@ -14,6 +14,11 @@ pyenv install -s "$python_version"
 pyenv global "$python_version"
 
 # needed on first install so pip can be found
-eval "$(pyenv init -)"
+export PATH="${HOME}/.pyenv/shims:${PATH}" && eval "$(pyenv init -)"
+
+# run pyenv virtualenvwrapper upfront so it downloads and installs itself
+# must allow unbound variables for virtualenvwrapper
+set +u
+pyenv virtualenvwrapper
 
 PIP_REQUIRE_VIRTUALENV=false && pip install --upgrade pip

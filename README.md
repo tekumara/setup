@@ -1,6 +1,6 @@
 # setup
 
-Contains installation scripts, .zshrc and dotfiles for a minimal, fast (250ms startup) zsh experience.
+Contains installation scripts, .zshrc and dotfiles for a minimal, fast (120ms startup) zsh experience.
 
 Run `./install.sh` to install and configure a fresh mac. Run it again to upgrade to the latest versions.
 

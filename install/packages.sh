@@ -2,7 +2,7 @@
 
 # every instruction is idempotent so this script can be rerun multiple times
 
-set -oe pipefail
+set -euo pipefail
 
 # install brew
 if ! hash brew; then
@@ -17,9 +17,6 @@ brew bundle install --verbose --no-lock --file install/Brewfile
 
 # rehash shims in case we've just upgraded pyenv via brew
 pyenv rehash
-
-# run pyenv virtualenvwrapper upfront so it downloads and installs itself
-eval "$(pyenv init -)" && pyenv virtualenvwrapper
 
 # install fzf key bindings & fuzzy completion and update zshrc
 "$(brew --prefix)"/opt/fzf/install --all --no-bash
