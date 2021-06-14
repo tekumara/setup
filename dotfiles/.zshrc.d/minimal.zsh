@@ -57,6 +57,14 @@ alias ll='ls -lh'                 # Lists human readable sizes.
 alias la='ll -A'                  # Lists human readable sizes, hidden files.
 alias grep="grep --color=auto"    # Coloured grep
 
+# Bindkeys
+# --------
+
+# edit command in an external editor
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '^X^E' edit-command-line
+
 # History
 # -------
 #
