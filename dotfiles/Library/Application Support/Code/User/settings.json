@@ -99,9 +99,10 @@
     ".pytest_cache/": true,
     "**/__pycache__/": true,
     "**/.classpath": true,
+    "**/.factorypath": true,
     "**/.project": true,
     "**/.settings": true,
-    "**/.factorypath": true
+    "**/.venv": true
   },
   "python.pythonPath": "/Users/oliver.mannion/.virtualenvs/delme/bin/python",
   "terminal.integrated.rendererType": "dom",
@@ -140,16 +141,19 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.editorAssociations": [
-    {
-      "viewType": "jupyter.notebook.ipynb",
-      "filenamePattern": "*.ipynb"
-    }
-  ],
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
   "omnisharp.useGlobalMono": "always",
-  "python.experiments.optInto": ["pythonDiscoveryModule"],
+  "python.experiments.optInto": [
+    "pythonDiscoveryModule"
+  ],
   "go.toolsManagement.autoUpdate": true,
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "search.exclude": {
+    "**/vendor": true
+  },
+  "terminal.integrated.defaultProfile.osx": "zsh"
 }
