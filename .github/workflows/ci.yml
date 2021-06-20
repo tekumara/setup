@@ -20,3 +20,7 @@ jobs:
           rm "$HOME/.gitconfig"
       - name: install.sh
         run: ./install.sh
+
+      - name: Setup tmate session
+        if: ${{ failure() }}
+        uses: mxschmitt/action-tmate@v3
