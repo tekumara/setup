@@ -40,7 +40,9 @@ source "$HOME/.zshrc.d/kubectl.plugin.zsh"
 source "$HOME/.zshrc.d/node.plugin.zsh"
 source "$HOME/.zshrc.d/python.plugin.zsh"
 source "$HOME/.zshrc.d/rust.plugin.zsh"
-source "$HOME/Dropbox/Slack/functions.zsh"
+if [[ -f "$HOME/Dropbox/Slack/functions.zsh" ]]; then
+  source "$HOME/Dropbox/Slack/functions.zsh"
+fi
 
 # add fzf to path, and load fzf completion & keybindings (CTRL-T, CTRL-R)
 source ~/.fzf.zsh

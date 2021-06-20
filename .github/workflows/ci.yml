@@ -18,6 +18,13 @@ jobs:
           rm /usr/local/bin/go
           rm /usr/local/bin/gofmt
           rm "$HOME/.gitconfig"
+
+      # fixes https://github.com/zsh-users/zsh-completions/issues/433
+      # which causes compinit: initialization aborted
+      - name: fix insecure directories
+        run: |
+          sudo chmod go-w /usr/share/zsh/vendor-completions /usr/share/zsh/
+
       - name: install.sh
         run: ./install.sh
 
