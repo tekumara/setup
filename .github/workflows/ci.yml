@@ -23,7 +23,7 @@ jobs:
       # which causes compinit: initialization aborted
       - name: fix insecure directories
         run: |
-          sudo chmod go-w /usr/share/zsh/vendor-completions /usr/share/zsh/
+          chmod go-w /usr/local/share/zsh/site-functions /usr/local/share/zsh
 
       - name: install.sh
         run: ./install.sh
