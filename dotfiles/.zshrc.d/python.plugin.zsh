@@ -1,6 +1,7 @@
 # use a stable python3 path instead of the default brew path so
 # pipx packages aren't broken when brew upgrades python
-export PIPX_DEFAULT_PYTHON=$(pyenv which python)
+PIPX_DEFAULT_PYTHON=$(pyenv which python)
+export PIPX_DEFAULT_PYTHON
 
 # activate virtualenv in .venv/ or venv/
 alias venv='{[[ -d .venv ]] && . .venv/bin/activate} || {[[ -d venv ]] && . venv/bin/activate} || echo "Missing .venv/"'

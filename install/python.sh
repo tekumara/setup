@@ -22,3 +22,11 @@ set +u
 pyenv virtualenvwrapper
 
 PIP_REQUIRE_VIRTUALENV=false && pip install --upgrade pip
+
+# python tools
+# use a stable python3 path instead of the default brew path so
+# pipx packages aren't broken when brew upgrades python
+PIPX_DEFAULT_PYTHON=$(pyenv which python)
+export PIPX_DEFAULT_PYTHON
+
+pipx install --force py-spy

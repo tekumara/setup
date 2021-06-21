@@ -28,9 +28,5 @@ ln -fs "$etc"/docker.zsh-completion /usr/local/share/zsh/site-functions/_docker
 # golang tools
 go get -u github.com/go-delve/delve/cmd/dlv
 
-# python tools
-# NB: pipx installed packages use the system version of python
-pipx install --force py-spy
-
 # for formatting markdown, json and javscript
 npm install -g prettier
