@@ -32,8 +32,8 @@ alias gaa='git add -u'
 alias ginit='git init && git commit -m "root commit" --allow-empty'
 # set tracking information for current branch to same named branch on origin
 alias gbu='current=$(git rev-parse --abbrev-ref HEAD) && git branch --set-upstream-to="origin/$current" "$current"'
-# checkout main or master depending on which exists
-alias gcom='git show-ref --verify --quiet refs/heads/main && gco main || gco master'
+# if a main branch exists, checkout main, else checkout master
+alias gcom='if git show-ref --verify --quiet refs/heads/main; then git checkout main; else git checkout master; fi'
 
 # hub
 alias hb='hub browse'

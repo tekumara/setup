@@ -6,5 +6,5 @@ export AWS_PAGER="less -F -X"
 
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 
-# local/bin is for pipx installed entrypoints
+# .local/bin is for pipx installed entrypoints
 export PATH="$PATH:$HOME/.local/bin"

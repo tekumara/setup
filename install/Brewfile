@@ -26,7 +26,6 @@ brew "ctags"
 brew "nbdime"
 tap "jabley/homebrew-wrk2"
 brew "wrk2", args: ["HEAD"]
-brew "pre-commit"
 brew "pandoc"
 # later version than apple git
 brew "git"
