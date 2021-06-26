@@ -101,8 +101,7 @@
     "**/.classpath": true,
     "**/.factorypath": true,
     "**/.project": true,
-    "**/.settings": true,
-    "**/.venv": true
+    "**/.settings": true
   },
   "python.pythonPath": "/Users/oliver.mannion/.virtualenvs/delme/bin/python",
   "terminal.integrated.rendererType": "dom",
@@ -153,7 +152,21 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "search.exclude": {
+    "**/.venv": true,
     "**/vendor": true
   },
-  "terminal.integrated.defaultProfile.osx": "zsh"
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "redhat.telemetry.enabled": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "mssql.connections": [
+    {
+      "server": "{{put-server-name-here}}",
+      "database": "{{put-database-name-here}}",
+      "user": "{{put-username-here}}",
+      "password": "{{put-password-here}}"
+    }
+  ],
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "local-history.enabled": 0
 }

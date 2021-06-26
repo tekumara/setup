@@ -60,7 +60,7 @@ alias grep="grep --color=auto"    # Coloured grep
 # Bindkeys
 # --------
 
-# edit command in an external editor
+# edit the command line in vim
 autoload -Uz edit-command-line
 zle -N edit-command-line
 bindkey '^X^E' edit-command-line
