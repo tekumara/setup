@@ -1,7 +1,10 @@
-# IDEs
+# IntelliJ
 
 .idea/
 *.iml
+
+# VSCode
+
 .vscode/
 .metals/
 *.code-workspace
@@ -14,3 +17,4 @@
 *.egg-info/
 __pycache__/
 venv/
+.venv/
