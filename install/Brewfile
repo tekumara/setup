@@ -62,6 +62,7 @@ brew "coursier/formulas/coursier"
 # golang
 brew "go"
 brew "staticcheck"
+brew "goreleaser/tap/goreleaser"
 
 # install mac apps
 cask "authy"
