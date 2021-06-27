@@ -147,6 +147,7 @@
   "python.experiments.optInto": [
     "pythonDiscoveryModule"
   ],
+  "sourcery.token": "user_uHVo2QOwtuIorJELvsSFIaWtWajE7_k07wKFRA62so_IRta0F_JBNggbiBA",
   "go.toolsManagement.autoUpdate": true,
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -158,15 +159,7 @@
   "terminal.integrated.defaultProfile.osx": "zsh",
   "redhat.telemetry.enabled": true,
   "security.workspace.trust.untrustedFiles": "open",
-  "mssql.connections": [
-    {
-      "server": "{{put-server-name-here}}",
-      "database": "{{put-database-name-here}}",
-      "user": "{{put-username-here}}",
-      "password": "{{put-password-here}}"
-    }
-  ],
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "local-history.enabled": 0
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
