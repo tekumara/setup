@@ -6,8 +6,12 @@
 # VSCode
 
 .vscode/
-.metals/
 *.code-workspace
+
+# Metals
+
+.metals/
+.bloop/
 
 # Python
 
@@ -18,3 +22,7 @@
 __pycache__/
 venv/
 .venv/
+
+# Java
+
+target/
