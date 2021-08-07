@@ -18,5 +18,5 @@ code \
     --install-extension mhutchie.git-graph                          \
     --install-extension esbenp.prettier-vscode                      \
     --install-extension njpwerner.autodocstring                     \
-    --install-extension sysoev.vscode-open-in-github                \
+    --install-extension ziyasal.vscode-open-in-github               \
     --install-extension tomoyukim.vscode-mermaid-editor
