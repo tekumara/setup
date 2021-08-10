@@ -16,7 +16,7 @@ brew "diff-so-fancy"
 
 # aws
 brew "awscli"
-brew "glassechidna/taps/awsweb"
+brew "aws-vault"
 
 # dev tools
 brew "shellcheck"
