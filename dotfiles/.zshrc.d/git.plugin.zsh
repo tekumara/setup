@@ -21,9 +21,7 @@ alias grbi='git rebase -i'
 alias gcb='git checkout -b'
 alias gsh='git show'
 
-
 # other
-
 alias gdh='git diff "HEAD^" HEAD'
 # show both staged and unstaged changes
 alias gda='git diff HEAD'
