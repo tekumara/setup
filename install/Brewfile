@@ -56,7 +56,6 @@ brew "libtool"
 # java
 tap "AdoptOpenJDK/openjdk"
 cask "adoptopenjdk11"
-cask "adoptopenjdk8"
 brew "coursier/formulas/coursier"
 
 # golang
