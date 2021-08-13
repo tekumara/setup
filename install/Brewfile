@@ -10,7 +10,7 @@ brew "wget"
 brew "jq"
 brew "mdcat"
 brew "scmpuff"
-brew "hub"
+brew "gh"
 brew "zoxide"
 brew "diff-so-fancy"
 

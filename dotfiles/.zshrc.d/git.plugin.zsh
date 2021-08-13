@@ -33,9 +33,9 @@ alias gbu='current=$(git rev-parse --abbrev-ref HEAD) && git branch --set-upstre
 # if a main branch exists, checkout main, else checkout master
 alias gcom='if git show-ref --verify --quiet refs/heads/main; then git checkout main; else git checkout master; fi'
 
-# hub
-alias hb='hub browse'
-alias hbpr='hub pull-request'
+# github cli
+alias ghb='gh browse --branch $(git rev-parse HEAD)'
+alias ghprc='gh pr create --fill -w'
 
 # forgit aliases take precedence over anything above
 alias ga=forgit::add
