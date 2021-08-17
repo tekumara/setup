@@ -143,7 +143,9 @@
     "*.ipynb": "jupyter-notebook"
   },
   "omnisharp.useGlobalMono": "always",
-  "python.experiments.optInto": ["pythonDiscoveryModule"],
+  "python.experiments.optInto": [
+    "pythonDiscoveryModule"
+  ],
   "sourcery.token": "user_uHVo2QOwtuIorJELvsSFIaWtWajE7_k07wKFRA62so_IRta0F_JBNggbiBA",
   "go.toolsManagement.autoUpdate": true,
   "[typescript]": {
