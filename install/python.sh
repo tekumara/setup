@@ -5,7 +5,7 @@
 set -euo pipefail
 
 # install python
-python_version=3.7.9
+python_version=3.7.11
 pyenv install -s "$python_version"
 
 # set default python version
