@@ -6,6 +6,7 @@
 com.microsoft.VSCode    public.plain-text                               all
 com.microsoft.VSCode    .md                                             all
 com.microsoft.VSCode    .log                                            all
+com.microsoft.VSCode    .xml                                            all
 org.videolan.vlc        public.mp3                                      all
 com.google.Chrome       .csv                                            all
 com.google.Chrome       .xls                                            all

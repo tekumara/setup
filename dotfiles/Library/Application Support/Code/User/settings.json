@@ -6,13 +6,6 @@
     "editor.defaultFormatter": "ms-python.python"
   },
   "cSpell.language": "en-GB",
-  "gitlens.views.repositories.location": "gitlens",
-  "gitlens.views.fileHistory.location": "gitlens",
-  "gitlens.views.lineHistory.location": "gitlens",
-  "gitlens.views.compare.location": "gitlens",
-  "gitlens.views.search.location": "gitlens",
-  "gitlens.currentLine.enabled": false,
-  "gitlens.hovers.currentLine.over": "line",
   "cSpell.userWords": [
     "Checklist",
     "Intelli",
@@ -180,5 +173,6 @@
     "default": "right",
     "jupyter-notebook": "left"
   },
-  "jupyter.interactiveWindowMode": "perFile"
+  "jupyter.interactiveWindowMode": "perFile",
+  "python.analysis.logLevel": "Trace"
 }

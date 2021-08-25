@@ -5,7 +5,10 @@
 set -euo pipefail
 
 # install dotfile symlinks
-mv ~/.zshrc ~/.zshrc-pre-setup."$(date +%s)"
+if [[ -s ~/.zshrc ]]; then
+    mv ~/.zshrc ~/.zshrc-pre-setup."$(date +%s)"
+fi
+
 stow -vv dotfiles -t ~
 if [[ -d ~/Dropbox/secret/dotfiles ]]; then
     stow -vv dotfiles -d ~/Dropbox/secret -t ~
