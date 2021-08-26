@@ -80,7 +80,7 @@ setopt EXTENDED_HISTORY             # record ':start:elapsed;command' in history
 setopt HIST_FIND_NO_DUPS            # don't show duplicates when searching history
 setopt HIST_IGNORE_ALL_DUPS         # don't write duplicates to the history file (drops the older event)
 setopt HIST_IGNORE_SPACE            # ignore commands that start with space
-setopt SHARE_HISTORY                # share history across all zsh sessions
+setopt SHARE_HISTORY                # share history across all zsh sessions (implies INC_APPEND_HISTORY)
 
 # Completions
 # -----------
