@@ -25,6 +25,7 @@
     "dateutil",
     "deregister",
     "httpx",
+    "itertools",
     "jupyter",
     "kube",
     "kubectl",
@@ -174,5 +175,10 @@
     "jupyter-notebook": "left"
   },
   "jupyter.interactiveWindowMode": "perFile",
-  "python.analysis.logLevel": "Trace"
+  "remote.SSH.connectTimeout": 60,
+  "remote.SSH.defaultExtensions": [
+    "ms-python.python",
+    "ms-python.vscode-pylance"
+  ],
+  "remote.SSH.maxReconnectionAttempts": 2
 }
