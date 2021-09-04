@@ -21,10 +21,6 @@ pyenv rehash
 # install fzf key bindings & fuzzy completion and update zshrc
 "$(brew --prefix)"/opt/fzf/install --all --no-bash
 
-# install docker zsh completions
-etc=/Applications/Docker.app/Contents/Resources/etc
-ln -fs "$etc"/docker.zsh-completion /usr/local/share/zsh/site-functions/_docker
-
 # golang tools
 go get -u github.com/go-delve/delve/cmd/dlv
 
