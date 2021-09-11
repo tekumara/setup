@@ -19,4 +19,5 @@ code \
     --install-extension esbenp.prettier-vscode                      \
     --install-extension njpwerner.autodocstring                     \
     --install-extension ziyasal.vscode-open-in-github               \
-    --install-extension tomoyukim.vscode-mermaid-editor
+    --install-extension tomoyukim.vscode-mermaid-editor             \
+    --install-extension exiasr.hadolint

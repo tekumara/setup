@@ -34,6 +34,7 @@ brew "git-lfs"
 # compared to docker, kubernetes-cli includes a newer version of kubectl, man pages & completions
 brew "kubernetes-cli"
 cask "docker"
+brew "hadolint"
 
 # handy kubernetes tools
 brew "kubectx"
