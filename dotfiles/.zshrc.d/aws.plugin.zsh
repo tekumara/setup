@@ -7,10 +7,13 @@ aws_vault_export() {
 }
 
 ae() {
-   if [[ "$1" == "--unset" ]]; then
-      # unset AWS_* vars, ie: unassume any roles (zsh only)
+   if [[ "$AWS_SESSION_TOKEN" ]]; then
+      # clear existing session and avoid nested sessions
+      # by unsetting AWS_* vars (using zsh syntax)
       unset $(print -rC1 - $parameters[(I)AWS*] | egrep -v 'AWS_PAGER|AWS_VAULT')
-   else
+   fi
+
+   if [[ "$1" != "--unset" ]]; then
       # eval AWS env vars in current shell
       # ignore AWS_PAGER because it has spaces
       # ignore AWS_VAULT so we can switch to other roles in the same shell
