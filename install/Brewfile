@@ -16,7 +16,9 @@ brew "diff-so-fancy"
 
 # aws
 brew "awscli"
+cask "session-manager-plugin", args: {'no-quarantine': true}
 brew "aws-vault"
+brew "cfn-lint"
 
 # dev tools
 brew "shellcheck"
