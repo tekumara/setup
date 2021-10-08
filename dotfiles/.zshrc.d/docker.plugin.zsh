@@ -7,3 +7,9 @@ alias drvk='docker run -it -v "$(pwd)":/app -w /app'
 # existing containers
 alias ds='docker start -i'
 deb() { docker exec -it "$1" bash }
+
+# docker compose
+alias dc='docker compose'
+alias dcr='docker compose run --rm'
+alias dce='docker compose exec'
+
