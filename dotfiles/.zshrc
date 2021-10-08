@@ -6,8 +6,9 @@ if [[ ! -f ~/.zsh_plugins.sh ]] || [[ ~/.zshrc -nt ~/.zsh_plugins.sh ]]; then
   echo "antibody bundle"
   antibody bundle <<- EOF > ~/.zsh_plugins.sh
     #sorin-ionescu/prezto
-    #yous/vanilli.sh
     #tekumara/prezto-tweaks
+
+    #yous/vanilli.sh
     #tekumara/history.zsh
 
     ajeetdsouza/zoxide
@@ -36,7 +37,7 @@ source "$HOME/.zshrc.d/docker.plugin.zsh"
 source "$HOME/.zshrc.d/git.plugin.zsh"
 source "$HOME/.zshrc.d/golang.plugin.zsh"
 source "$HOME/.zshrc.d/java.plugin.zsh"
-source "$HOME/.zshrc.d/kubectl.plugin.zsh"
+source "$HOME/.zshrc.d/kubes.plugin.zsh"
 source "$HOME/.zshrc.d/node.plugin.zsh"
 source "$HOME/.zshrc.d/python.plugin.zsh"
 source "$HOME/.zshrc.d/rust.plugin.zsh"
