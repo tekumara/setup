@@ -1,6 +1,8 @@
 # use the login keychain for aws-vault so we don't need a separate password
 export AWS_VAULT_KEYCHAIN_NAME=login
 
+alias ave='aws-vault exec'
+
 # print AWS env vars as export statements
 aws_vault_export() {
    aws-vault exec "$1" -- env | grep AWS | sed -e 's/^/export\ /'
@@ -26,6 +28,7 @@ ab() {
 }
 
 alias awsid='aws sts get-caller-identity'
+alias s3ls='aws s3 ls --summarize --human-readable'
 
 alias ec2='COLUMNS=$COLUMNS aec ec2'
 alias ami='COLUMNS=$COLUMNS aec ami'
