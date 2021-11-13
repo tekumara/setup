@@ -1,1 +1,6 @@
+# truncate long lines and show a preview (useful for minified files)
+--max-columns=200
+--max-columns-preview
+
+# case insensitive search if the pattern is all lowercase
 --smart-case
