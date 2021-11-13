@@ -7,6 +7,10 @@ alias kge='kubectl get events --sort-by='{.lastTimestamp}''
 keb() {
     kubectl exec -i -t "$1" -- /bin/bash
 }
+kes() {
+    kubectl exec -i -t "$1" -- /bin/sh
+}
+
 
 export KUBECONFIG=$HOME/.kube/config:$HOME/.flyte/k3s/k3s.yaml:$HOME/.k3d/kubeconfig-gha.yaml
 
