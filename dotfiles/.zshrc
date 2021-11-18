@@ -18,7 +18,7 @@ if [[ ! -f ~/.zsh_plugins.sh ]] || [[ ~/.zshrc -nt ~/.zsh_plugins.sh ]]; then
     mafredri/zsh-async
     sindresorhus/pure
 
-    zdharma/fast-syntax-highlighting
+    zdharma-continuum/fast-syntax-highlighting
     #zsh-users/zsh-history-substring-search
     zsh-users/zsh-autosuggestions
     #zsh-users/zsh-completions
