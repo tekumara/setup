@@ -12,7 +12,7 @@ kes() {
 }
 
 
-export KUBECONFIG=$HOME/.kube/config:$HOME/.flyte/k3s/k3s.yaml:$HOME/.k3d/kubeconfig-gha.yaml
+export KUBECONFIG=$HOME/.kube/config:$HOME/.flyte/k3s/k3s.yaml:$HOME/.k3d/kubeconfig-gha.yaml:$HOME/.k3d/kubeconfig-ray.yaml
 
 # kube context per shell https://github.com/ahmetb/kubectx/issues/12#issuecomment-557852519
 file="$(mktemp -t "kubectx.XXXXXX")"
