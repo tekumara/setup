@@ -21,4 +21,4 @@ if [[ ! -d ~/.vim_runtime ]]; then
 fi
 
 # run zsh to start antibody for the first time to download plugins
-zsh -c "source ~/.zshrc"
+zsh -c "set -e; source ~/.zshrc"
