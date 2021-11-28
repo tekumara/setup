@@ -38,13 +38,13 @@
     },
     {
         "key": "cmd+j",
-        "command": "workbench.action.navigateUp",
+        "command": "workbench.action.focusActiveEditorGroup",
         "when": "panelFocus"
     },
     {
         "key": "cmd+j",
         "command": "workbench.action.focusPanel",
-        "when": "editorFocus"
+        "when": "!panelFocus"
     },
     {
         "key": "alt+cmd+left",
