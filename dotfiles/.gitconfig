@@ -51,3 +51,5 @@
 # allow local customizations in the .gitconfig_local file
 [include]
 	path = ~/.gitconfig_local
+[diff]
+	tool = bc
