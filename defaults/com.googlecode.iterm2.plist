@@ -78,34 +78,12 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
-		<key>0xf72c-0x0-0x74</key>
-		<dict>
-			<key>Action</key>
-			<integer>9</integer>
-			<key>Label</key>
-			<string></string>
-			<key>Text</key>
-			<string></string>
-			<key>Version</key>
-			<integer>0</integer>
-		</dict>
 		<key>0xf72c-0x100000</key>
 		<dict>
 			<key>Action</key>
 			<integer>9</integer>
 			<key>Text</key>
 			<string></string>
-		</dict>
-		<key>0xf72d-0x0-0x79</key>
-		<dict>
-			<key>Action</key>
-			<integer>8</integer>
-			<key>Label</key>
-			<string></string>
-			<key>Text</key>
-			<string></string>
-			<key>Version</key>
-			<integer>0</integer>
 		</dict>
 		<key>0xf72d-0x100000</key>
 		<dict>
@@ -1363,6 +1341,8 @@
 				</dict>
 			</dict>
 			<key>Mouse Reporting</key>
+			<true/>
+			<key>Movement Keys Scroll Outside Interactive Apps</key>
 			<true/>
 			<key>Name</key>
 			<string>Default - natural editing</string>
