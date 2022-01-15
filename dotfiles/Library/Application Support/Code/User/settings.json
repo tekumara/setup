@@ -180,5 +180,7 @@
     "ms-python.python",
     "ms-python.vscode-pylance"
   ],
-  "remote.SSH.maxReconnectionAttempts": 2
+  "remote.SSH.maxReconnectionAttempts": 2,
+  "terminal.integrated.scrollback": 5000,
+  "terminal.integrated.persistentSessionScrollback": 500
 }
