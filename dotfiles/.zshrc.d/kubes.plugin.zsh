@@ -3,16 +3,23 @@
 # https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/kubectl/kubectl.plugin.zsh
 # https://github.com/ahmetb/kubectl-aliases
 alias k='kubectl'
+alias kgp='kubectl get pods'
+alias kgpa='kubectl get pods --all-namespaces'
 alias kge='kubectl get events --sort-by='{.lastTimestamp}''
 keb() {
-    kubectl exec -i -t "$1" -- /bin/bash
+    kubectl exec -i -t "$@" -- /bin/bash
 }
 kes() {
-    kubectl exec -i -t "$1" -- /bin/sh
+    kubectl exec -i -t "$@" -- /bin/sh
 }
 
+unset KUBECONFIG
+files=($HOME/.kube/*.yaml(N) $HOME/.k3d/kubeconfig*.yaml(N))
+for file in $files; do
+  KUBECONFIG+="${file}:"
+done
 
-export KUBECONFIG=$HOME/.kube/config:$HOME/.flyte/k3s/k3s.yaml:$HOME/.k3d/kubeconfig-gha.yaml:$HOME/.k3d/kubeconfig-ray.yaml
+export KUBECONFIG
 
 # kube context per shell https://github.com/ahmetb/kubectx/issues/12#issuecomment-557852519
 file="$(mktemp -t "kubectx.XXXXXX")"

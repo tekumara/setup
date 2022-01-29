@@ -37,6 +37,7 @@ brew "git-lfs"
 brew "kubernetes-cli"
 cask "docker"
 brew "hadolint"
+brew "k3d"
 
 # handy kubernetes tools
 brew "kubectx"
