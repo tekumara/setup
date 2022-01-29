@@ -53,3 +53,7 @@
 	path = ~/.gitconfig_local
 [diff]
 	tool = bc
+[merge]
+	tool = bc
+[mergetool "bc"]
+	trustExitCode = true
