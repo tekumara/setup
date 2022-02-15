@@ -3,8 +3,13 @@
 # https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/kubectl/kubectl.plugin.zsh
 # https://github.com/ahmetb/kubectl-aliases
 alias k='kubectl'
+alias kg='kubectl get'
 alias kgp='kubectl get pods'
 alias kgpa='kubectl get pods --all-namespaces'
+alias kgd='kubectl get deployment'
+alias kgda='kubectl get deployment --all-namespaces'
+alias kgs='kubectl get service'
+alias kgsa='kubectl get service --all-namespaces'
 alias kge='kubectl get events --sort-by='{.lastTimestamp}''
 keb() {
     kubectl exec -i -t "$@" -- /bin/bash
@@ -16,7 +21,7 @@ kes() {
 unset KUBECONFIG
 files=($HOME/.kube/*.yaml(N) $HOME/.k3d/kubeconfig*.yaml(N))
 for file in $files; do
-  KUBECONFIG+="${file}:"
+  KUBECONFIG+="${KUBECONFIG+:}${file}"
 done
 
 export KUBECONFIG
