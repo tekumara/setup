@@ -24,5 +24,5 @@ pyenv rehash
 # golang tools
 go get -u github.com/go-delve/delve/cmd/dlv
 
-# for formatting markdown, json and javscript
+# for formatting markdown, json and javascript
 npm install -g prettier
