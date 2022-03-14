@@ -7,26 +7,22 @@
   },
   "cSpell.language": "en-GB",
   "cSpell.userWords": [
-    "Checklist",
-    "Intelli",
-    "Kinesis",
-    "RBAC",
-    "Stats",
-    "Struct",
-    "Stubber",
-    "Versioning",
     "argh",
     "asyncio",
     "awscli",
     "boto",
     "botocore",
+    "Checklist",
     "cmds",
     "contextvars",
     "dateutil",
     "deregister",
+    "hashicorp",
     "httpx",
+    "Intelli",
     "itertools",
     "jupyter",
+    "Kinesis",
     "kube",
     "kubectl",
     "kubernetes",
@@ -42,17 +38,22 @@
     "pyspark",
     "pytest",
     "pytoml",
+    "RBAC",
     "rebased",
     "recurse",
     "repos",
     "resp",
     "setup",
     "setuptools",
+    "Stats",
+    "Struct",
     "structlog",
+    "Stubber",
     "tekumara",
     "tensorboard",
     "typer",
     "unmerged",
+    "Versioning",
     "virtualenv"
   ],
   "diffEditor.ignoreTrimWhitespace": false,
@@ -96,9 +97,6 @@
     "**/.project": true,
     "**/.settings": true
   },
-  "python.pythonPath": "/Users/oliver.mannion/.virtualenvs/delme/bin/python",
-  "terminal.integrated.rendererType": "dom",
-  "java.semanticHighlighting.enabled": true,
   "markdownlint.config": {
     "MD026": {
       "punctuation": ".,;:!"
@@ -118,6 +116,7 @@
     "**/.ammonite": true,
     "**/.bloop": true,
     "**/.metals": true,
+    "**/.tox": true,
     "**/.venv": true
   },
   "files.insertFinalNewline": true,
@@ -146,6 +145,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "search.exclude": {
+    "**/.tox": true,
     "**/.venv": true,
     "**/vendor": true
   },
@@ -181,5 +181,15 @@
   ],
   "remote.SSH.maxReconnectionAttempts": 2,
   "terminal.integrated.scrollback": 5000,
-  "terminal.integrated.persistentSessionScrollback": 500
+  "terminal.integrated.persistentSessionScrollback": 500,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.quickSuggestions": {
+      "strings": true
+    }
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.editor.historyBasedLanguageDetection": true
 }
