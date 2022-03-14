@@ -15,6 +15,9 @@ fi
 # install packages in Brewfile
 brew bundle install --verbose --no-lock --file install/Brewfile
 
+# overwrite docker's kubectl because kubernetes-cli is newer
+brew link --overwrite kubernetes-cli
+
 # rehash shims in case we've just upgraded pyenv via brew
 pyenv rehash
 

@@ -17,7 +17,7 @@ brew "diff-so-fancy"
 # aws
 brew "awscli"
 cask "session-manager-plugin", args: {'no-quarantine': true}
-brew "aws-vault"
+cask "aws-vault"
 brew "cfn-lint"
 
 # dev tools
@@ -32,16 +32,16 @@ brew "pandoc"
 # later version than apple git
 brew "git"
 brew "git-lfs"
-
-# compared to docker, kubernetes-cli includes a newer version of kubectl, man pages & completions
-brew "kubernetes-cli"
-cask "docker"
 brew "hadolint"
-brew "k3d"
 
-# handy kubernetes tools
+# handy kubernetes tools, kubernetes-cli includes man pages & completions
+brew "kubernetes-cli"
 brew "kubectx"
 brew "k9s"
+brew "helm"
+brew "k3d"
+
+cask "docker"
 
 # python
 brew "pyenv"
