@@ -44,6 +44,9 @@ source "$HOME/.zshrc.d/rust.plugin.zsh"
 if [[ -f "$HOME/Dropbox/Slack/functions.zsh" ]]; then
   source "$HOME/Dropbox/Slack/functions.zsh"
 fi
+if [[ -f "$HOME/.zshrc.d/aws-doctor.plugin.zsh" ]]; then
+  source "$HOME/.zshrc.d/aws-doctor.plugin.zsh"
+fi
 
 # add fzf to path, and load fzf completion & keybindings (CTRL-T, CTRL-R)
 source ~/.fzf.zsh
