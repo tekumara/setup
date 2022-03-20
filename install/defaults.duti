@@ -10,6 +10,7 @@ com.microsoft.VSCode        .xml                                            all
 com.microsoft.VSCode        .json                                           all
 com.microsoft.VSCode        .ndjson                                         all
 com.microsoft.VSCode        .sha256                                         all
+com.microsoft.VSCode        .pom                                            all
 org.videolan.vlc            public.mp3                                      all
 com.apple.iWork.Numbers     .csv                                            all
 com.apple.iWork.Numbers     .xls                                            all
