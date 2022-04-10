@@ -12,10 +12,18 @@ alias kgs='kubectl get service'
 alias kgsa='kubectl get service --all-namespaces'
 alias kge='kubectl get events --sort-by='{.lastTimestamp}''
 keb() {
-    kubectl exec -i -t "$@" -- /bin/bash
+  kubectl exec -i -t "$@" -- /bin/bash
 }
 kes() {
-    kubectl exec -i -t "$@" -- /bin/sh
+  kubectl exec -i -t "$@" -- /bin/sh
+}
+krb() {
+  [[ "$#" -ne 2 ]] && echo -e "Usage: $0 podname imagename" >&2 && return 42
+  kubectl run "$1" -it --image="$2" --command -- /bin/bash
+}
+krs() {
+  [[ "$#" -ne 2 ]] && echo -e "Usage: $0 podname imagename" >&2 && return 42
+  kubectl run "$1" -it --image="$2" --command -- /bin/sh
 }
 
 unset KUBECONFIG
