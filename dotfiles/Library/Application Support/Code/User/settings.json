@@ -137,9 +137,7 @@
     "*.ipynb": "jupyter-notebook"
   },
   "omnisharp.useGlobalMono": "always",
-  "python.experiments.optInto": [
-    "pythonDiscoveryModule"
-  ],
+  "go.testEnvFile": "${workspaceFolder}/.env",
   "go.toolsManagement.autoUpdate": true,
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -191,5 +189,6 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.editor.historyBasedLanguageDetection": true
+  "gitlens.currentLine.enabled": false,
+  "gitlens.codeLens.enabled": false
 }
