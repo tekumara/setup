@@ -190,5 +190,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "gitlens.currentLine.enabled": false,
-  "gitlens.codeLens.enabled": false
+  "gitlens.codeLens.enabled": false,
+  "terminal.integrated.commandsToSkipShell": [
+    "workbench.action.switchWindow"
+  ]
 }
