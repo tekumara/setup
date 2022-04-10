@@ -32,6 +32,9 @@ alias ginit='git init && git commit -m "root commit" --allow-empty'
 alias gbu='current=$(git rev-parse --abbrev-ref HEAD) && git branch --set-upstream-to="origin/$current" "$current"'
 # if a main branch exists, checkout main, else checkout master
 alias gcom='if git show-ref --verify --quiet refs/heads/main; then git checkout main; else git checkout master; fi'
+# fetch main/master whilst remaining on the currently checked out branch. also updates local tracking branch
+alias gfom='if git show-ref --verify --quiet refs/heads/main; then git fetch origin main:main; else git fetch origin master:master; fi'
+
 # delete branch
 gbd() {
     git branch -D "$1"; git push origin --delete "$1"
@@ -40,6 +43,7 @@ gbd() {
 # github cli
 alias hb='gh browse --branch $(git rev-parse HEAD)'
 alias hprc='gh pr create --fill -w'
+alias hprv='gh pr view --web'
 
 # forgit aliases take precedence over anything above
 alias ga=forgit::add
