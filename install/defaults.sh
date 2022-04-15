@@ -32,5 +32,11 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCsp"
 # doesn't seem to work
 # defaults write "Apple Global Domain" com.apple.keyboard.fnState -bool true
 
+# Podcasts settings
+# -----------------
+
+# disable automatic downloads when following to save disk space
+defaults write com.apple.podcasts MTPodcastAutoDownloadStateDefaultKey -bool false
+
 # Set default applications for file types
 duti install/defaults.duti
