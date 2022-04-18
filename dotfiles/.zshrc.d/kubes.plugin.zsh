@@ -27,7 +27,7 @@ krs() {
 }
 
 unset KUBECONFIG
-files=($HOME/.kube/*.yaml(N) $HOME/.k3d/kubeconfig*.yaml(N))
+files=($HOME/.k3d/kubeconfig*.yaml(N) $HOME/.kube/*.yaml(N))
 for file in $files; do
   KUBECONFIG+="${KUBECONFIG+:}${file}"
 done
