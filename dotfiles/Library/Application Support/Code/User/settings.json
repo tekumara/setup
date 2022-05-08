@@ -13,6 +13,7 @@
     "boto",
     "botocore",
     "Checklist",
+    "cicd",
     "cmds",
     "contextvars",
     "dateutil",
@@ -23,6 +24,7 @@
     "itertools",
     "jupyter",
     "Kinesis",
+    "kotahi",
     "kube",
     "kubectl",
     "kubernetes",
@@ -116,8 +118,7 @@
     "**/.ammonite": true,
     "**/.bloop": true,
     "**/.metals": true,
-    "**/.tox": true,
-    "**/.venv": true
+    "**/.tox": true
   },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
