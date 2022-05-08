@@ -40,6 +40,7 @@ source "$HOME/.zshrc.d/java.plugin.zsh"
 source "$HOME/.zshrc.d/kubes.plugin.zsh"
 source "$HOME/.zshrc.d/node.plugin.zsh"
 source "$HOME/.zshrc.d/python.plugin.zsh"
+source "$HOME/.zshrc.d/ripgrep.plugin.zsh"
 source "$HOME/.zshrc.d/rust.plugin.zsh"
 if [[ -f "$HOME/Dropbox/Slack/functions.zsh" ]]; then
   source "$HOME/Dropbox/Slack/functions.zsh"
