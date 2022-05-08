@@ -3,6 +3,7 @@
 # https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/kubectl/kubectl.plugin.zsh
 # https://github.com/ahmetb/kubectl-aliases
 alias k='kubectl'
+alias kc='kubectx'
 alias kg='kubectl get'
 alias kgp='kubectl get pods'
 alias kgpa='kubectl get pods --all-namespaces'
