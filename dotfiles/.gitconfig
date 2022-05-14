@@ -1,7 +1,3 @@
-[pull]
-	# Automatically appends '--rebase' to 'git pull' commands; can be overridden with --no-rebase
-	# If the origin has been force updated since you last pulled, this will silently rewrite your local history to match the origin
-	rebase = true
 [push]
 	# When pushing a branch for the first time a remote branch needs to be supplied. This
 	# automatically sets the remote branch to one with the same name as the current branch.
