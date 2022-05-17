@@ -1,3 +1,6 @@
+[pull]
+	# Use merge to resolve divergent branches on pull.
+	rebase = false
 [push]
 	# When pushing a branch for the first time a remote branch needs to be supplied. This
 	# automatically sets the remote branch to one with the same name as the current branch.
