@@ -194,5 +194,8 @@
   "gitlens.codeLens.enabled": false,
   "terminal.integrated.commandsToSkipShell": [
     "workbench.action.switchWindow"
-  ]
+  ],
+  "[dockercompose]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
