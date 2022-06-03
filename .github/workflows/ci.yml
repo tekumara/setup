@@ -18,6 +18,7 @@ jobs:
           rm /usr/local/bin/go
           rm /usr/local/bin/gofmt
           rm "$HOME/.gitconfig"
+          brew unlink git
 
       # fixes https://github.com/zsh-users/zsh-completions/issues/433
       # which causes compinit: initialization aborted
