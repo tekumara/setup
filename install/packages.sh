@@ -25,7 +25,7 @@ pyenv rehash
 "$(brew --prefix)"/opt/fzf/install --all --no-bash
 
 # golang tools
-go get -u github.com/go-delve/delve/cmd/dlv
+go install github.com/go-delve/delve/cmd/dlv@latest
 
 # for formatting markdown, json and javascript
 npm install -g prettier
