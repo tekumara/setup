@@ -4,7 +4,16 @@
 
 Contains installation scripts, .zshrc and dotfiles for a minimal, fast (120ms startup) zsh experience.
 
-Run `./install.sh` to install and configure a fresh mac. Run it again to upgrade to the latest versions.
+## install
+
+On a fresh mac:
+
+```
+git clone https://github.com/tekumara/setup.git ~/code/setup
+cd ~/code/setup && ./install.sh
+```
+
+Run it again to upgrade to the latest version.
 
 ## why antibody?
 
