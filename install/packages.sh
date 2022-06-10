@@ -4,6 +4,12 @@
 
 set -euo pipefail
 
+# make sure homebrew ARM binaries are on the path if already installed
+# this handles reruns within the same terminal of the very first install
+if [[ -f /opt/homebrew/bin/brew ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 # install brew
 if ! hash brew 2> /dev/null; then
     echo "Installing homebrew"
@@ -35,6 +41,3 @@ pyenv rehash
 
 # golang tools
 go install github.com/go-delve/delve/cmd/dlv@latest
-
-# for formatting markdown, json and javascript
-npm install -g prettier
