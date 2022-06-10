@@ -144,8 +144,10 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "search.exclude": {
+    "**/.metals": true,
     "**/.tox": true,
     "**/.venv": true,
+    "**/.vscode": true,
     "**/vendor": true
   },
   "terminal.integrated.defaultProfile.osx": "zsh",
