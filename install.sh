@@ -4,6 +4,7 @@
 
 set -euo pipefail
 
+install/softwareupdate.sh
 install/packages.sh
 install/python.sh
 install/vscode.sh
