@@ -76,6 +76,7 @@ cask "authy"
 cask "calibre"
 cask "dropbox"
 cask "firefox"
+# run go2shell manually after first install to add to Finder
 cask "go2shell"
 cask "google-drive"
 cask "google-chrome" unless system "[[ -d '/Applications/Google Chrome.app' ]]"

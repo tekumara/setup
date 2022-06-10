@@ -6,6 +6,7 @@ set -euo pipefail
 
 install/softwareupdate.sh
 install/packages.sh
+install/kubectl.sh
 install/python.sh
 install/vscode.sh
 install/defaults.sh
