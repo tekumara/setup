@@ -29,4 +29,15 @@ PIP_REQUIRE_VIRTUALENV=false && pip install --upgrade pip
 PIPX_DEFAULT_PYTHON=$(pyenv which python)
 export PIPX_DEFAULT_PYTHON
 
-pipx install --force py-spy
+pipx_upgrade() {
+	# install or upgrade pipx package
+	pipx_venvs=${PIPX_HOME:-$HOME/.local/pipx}/venvs
+
+    if [[ -d "$pipx_venvs/$1" ]]; then
+        pipx upgrade "$1"
+    else
+        pipx install "$1"
+    fi
+}
+
+pipx_upgrade aec-cli
