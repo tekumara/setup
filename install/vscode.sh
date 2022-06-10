@@ -9,6 +9,7 @@ code \
     --install-extension ms-python.python                            \
     --install-extension ms-python.vscode-pylance                    \
     --install-extension kddejong.vscode-cfn-lint                    \
+    --install-extension hashicorp.terraform                         \
     --install-extension streetsidesoftware.code-spell-checker       \
     --install-extension fwcd.kotlin                                 \
     --install-extension foxundermoon.shell-format                   \
