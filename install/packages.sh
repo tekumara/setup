@@ -5,7 +5,8 @@
 set -euo pipefail
 
 # install brew
-if ! hash brew; then
+if ! hash brew 2> /dev/null; then
+    echo "Installing homebrew"
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
     if [[ "$(/usr/bin/uname -m)" == "arm64" ]]; then
