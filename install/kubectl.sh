@@ -35,6 +35,9 @@ fi
 # check any existing binary first, so we can skip if the desired version is already installed
 if ! [[ -f /usr/local/bin/kubectl ]] || ! echo "$sha256  /usr/local/bin/kubectl"  | shasum -s --check; then
     set -x
+    # remove any existing version installed by brew (as a dependency of kubectx) or docker
+    # NB: don't unlink because we want the man pages installed by brew
+    rm -f /usr/local/bin/kubectl
     curl -fsSLo /usr/local/bin/kubectl $url
     echo "$sha256  /usr/local/bin/kubectl"  | shasum --check
     chmod a+x /usr/local/bin/kubectl
