@@ -43,5 +43,7 @@ pyenv rehash
 # golang tools
 go install github.com/go-delve/delve/cmd/dlv@latest
 
-# update antibody plugins
-antibody update
+# update antibody plugins if any
+if [[ -d "$HOME/Library/Caches/antibody" ]]; then
+    antibody update
+fi
