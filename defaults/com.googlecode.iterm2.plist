@@ -855,7 +855,7 @@
 			<key>Background Image Location</key>
 			<string></string>
 			<key>Badge Text</key>
-			<string>\(session.hostname)</string>
+			<string></string>
 			<key>Blinking Cursor</key>
 			<false/>
 			<key>Blur</key>

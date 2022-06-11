@@ -11,7 +11,9 @@ set -euo pipefail
 defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "${PWD}/defaults/"
 # use the custom preferences directory
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
-# save changes to the custom preferences directory
+# when prefs have changed, don't show the preferences have changed window on exit
+defaults write com.googlecode.iterm2.plist NoSyncNeverRemindPrefsChangesLostForFile -bool true
+# when prefs have changed, copy them to the custom folder
 defaults write com.googlecode.iterm2.plist NoSyncNeverRemindPrefsChangesLostForFile_selection -bool false
 
 # Finder settings
