@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # every instruction is idempotent so this script can be rerun multiple times
+# subsequent runs will upgrade existing installations
 
 set -euo pipefail
 
