@@ -10,6 +10,7 @@ if ${CI:-false}; then
     exit 0
 fi
 
+echo "Checking for system software updates"
 # do a check with no-scan first for speed
 if ! softwareupdate --no-scan -l 2>&1 | grep "No new software available"; then
     # install recommended system updates (eg: xcode tools)
