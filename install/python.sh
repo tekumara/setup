@@ -4,6 +4,12 @@
 
 set -euo pipefail
 
+# make sure homebrew ARM binaries are on the path during the first install
+# so we can find pyenv
+if [[ -f /opt/homebrew/bin/brew ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 # install python
 python_version=3.9.13
 pyenv install -s "$python_version"

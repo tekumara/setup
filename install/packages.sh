@@ -6,6 +6,7 @@ set -euo pipefail
 
 # make sure homebrew ARM binaries are on the path if already installed
 # this handles reruns within the same terminal of the very first install
+# and avoids updating .zprofile again
 if [[ -f /opt/homebrew/bin/brew ]]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
