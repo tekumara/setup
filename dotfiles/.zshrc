@@ -30,6 +30,9 @@ fi
 # minimal.zsh must run before zdharma/fast-syntax-highlighting
 source "$HOME/.zshrc.d/minimal.zsh"
 
+# setup forgit aliases manually in git.plugin.zsh
+FORGIT_NO_ALIASES=true
+
 source ~/.zsh_plugins.sh
 
 source "$HOME/.zshrc.d/aws.plugin.zsh"

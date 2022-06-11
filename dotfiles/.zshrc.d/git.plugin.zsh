@@ -17,9 +17,14 @@ alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %
 alias gla='gl --all'
 alias gdc='git diff --cached'
 alias grb='git rebase'
-alias grbi='git rebase -i'
 alias gcb='git checkout -b'
 alias gsh='git show'
+
+# forgit
+alias grbi='forgit::rebase'
+alias ga=forgit::add
+alias gdf=forgit::diff
+alias glf=forgit::log
 
 # other
 alias gdh='git diff "HEAD^" HEAD'
@@ -44,8 +49,3 @@ gbd() {
 alias hb='gh browse --branch $(git rev-parse HEAD)'
 alias hprc='gh pr create --fill -w'
 alias hprv='gh pr view --web'
-
-# forgit aliases take precedence over anything above
-alias ga=forgit::add
-alias gdf=forgit::diff
-alias glf=forgit::log
