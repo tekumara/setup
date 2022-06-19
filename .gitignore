@@ -1,4 +1,6 @@
 .DS_Store
 # ignore work plugins
 dotfiles/.zshrc.d/aws-doctor.plugin.zsh
+dotfiles/.zshrc.d/functions.plugin.zsh
+dotfiles/.zshrc.d/git-doctor.plugin.zsh
 dotfiles/.zshrc.d/setup.plugin.zsh
