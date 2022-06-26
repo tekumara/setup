@@ -43,10 +43,11 @@ cask "docker"
 brew "hadolint"
 
 # handy kubernetes tools
-brew "kubectx"
 brew "k9s"
 brew "helm"
 brew "k3d"
+## do not install dependencies, ie: kubernetes-cli, because we do so in kubectl.sh
+brew "kubectx", args: ["ignore-dependencies"]
 
 # python
 brew "pyenv"

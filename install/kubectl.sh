@@ -26,7 +26,6 @@ if [[ "$(/usr/bin/uname -m)" == "arm64" ]]; then
     # Apple Silicon (M1 Mac)
     sha256=d518a7642874d7c6ca863b12bb2ce591840c1798b460f1f97b1eea7fbb41b9c9
     url="https://dl.k8s.io/release/$v/bin/darwin/arm64/kubectl"
-
 else
     sha256=014d92af39ea8d3e57f01581c9ce44ea2b107c55d8cdeb838494014d034a6c17
     url="https://dl.k8s.io/release/$v/bin/darwin/amd64/kubectl"
@@ -35,9 +34,9 @@ fi
 # check any existing binary first, so we can skip if the desired version is already installed
 if ! [[ -f /usr/local/bin/kubectl ]] || ! echo "$sha256  /usr/local/bin/kubectl"  | shasum -s --check; then
     set -x
-    # remove any existing version installed by brew (as a dependency of kubectx) or docker
-    # nb: don't brew unlink because we want to keep the man pages installed by brew
+    # remove any existing version installed by us or docker
     rm -f /usr/local/bin/kubectl
+
     curl -fsSLo /usr/local/bin/kubectl $url
     echo "$sha256  /usr/local/bin/kubectl"  | shasum --check
     chmod a+x /usr/local/bin/kubectl
