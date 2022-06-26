@@ -14,6 +14,9 @@ brew "scmpuff"
 brew "gh"
 brew "zoxide"
 brew "diff-so-fancy"
+brew "saulpw/vd/visidata"
+brew "xsv"
+brew "hyperfine"
 
 # aws
 brew "awscli"
