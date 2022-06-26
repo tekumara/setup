@@ -4,6 +4,29 @@
 
 set -euo pipefail
 
+do_install() {
+    local url=$1
+    local dest=$2
+    local sha256=$3
+
+    # check sha of any existing binary first, and skip if already installed
+    # if the url is an archive, this will always fail and we'll download
+    if ! [[ -f "$dest" ]] || ! echo "$sha256  $dest"  | shasum -s --check; then
+        download=/tmp/$(basename "$url")
+        echo "Downloading $url"
+        curl -fsSLO --output-dir /tmp "$url"
+        echo "$sha256  $download"  | shasum --check
+
+        case "$download" in
+            *.tar.gz) tar -zxf $download -C /tmp && file=/tmp/$(basename "$dest") ;;
+            *)        file=$download ;;
+        esac
+
+        echo "Installing $file -> $dest"
+        install $file $dest
+    fi
+}
+
 # make sure the current user owns /usr/local/bin so kubectl can be installed there
 # homebrew already does chown /usr/local/bin on Intel Macs but not on ARM
 if [[ "$(stat -f '%u' /usr/local/bin)" != "$(id -u)" ]]; then
@@ -19,26 +42,24 @@ if [[ -f /usr/local/bin/kubectl && "$(stat -f '%u' /usr/local/bin/kubectl)" == "
     set +x
 fi
 
-# specific kubectl version, should be within +/- 1 version of the server
-v=v1.21.12
+# install specific kubectl version, should be within +/- 1 version of the server
+url="https://dl.k8s.io/release/v1.21.12/bin/$(uname -s | tr '[:upper:]' '[:lower:]')/$(uname -m)/kubectl"
 
-if [[ "$(/usr/bin/uname -m)" == "arm64" ]]; then
-    # Apple Silicon (M1 Mac)
-    sha256=d518a7642874d7c6ca863b12bb2ce591840c1798b460f1f97b1eea7fbb41b9c9
-    url="https://dl.k8s.io/release/$v/bin/darwin/arm64/kubectl"
-else
-    sha256=014d92af39ea8d3e57f01581c9ce44ea2b107c55d8cdeb838494014d034a6c17
-    url="https://dl.k8s.io/release/$v/bin/darwin/amd64/kubectl"
-fi
+case "$(uname -s)_$(uname -m)" in
+    Darwin_arm64) sha256=d518a7642874d7c6ca863b12bb2ce591840c1798b460f1f97b1eea7fbb41b9c9;;
+    Darwin_amd64) sha256=014d92af39ea8d3e57f01581c9ce44ea2b107c55d8cdeb838494014d034a6c17;;
+    *) echo "unknown arch $(uname -s)_$(uname -m)" && exit 42;;
+esac
 
-# check any existing binary first, so we can skip if the desired version is already installed
-if ! [[ -f /usr/local/bin/kubectl ]] || ! echo "$sha256  /usr/local/bin/kubectl"  | shasum -s --check; then
-    set -x
-    # remove any existing version installed by us or docker
-    rm -f /usr/local/bin/kubectl
+do_install $url /usr/local/bin/kubectl $sha256
 
-    curl -fsSLo /usr/local/bin/kubectl $url
-    echo "$sha256  /usr/local/bin/kubectl"  | shasum --check
-    chmod a+x /usr/local/bin/kubectl
-    set +x
-fi
+# install eks-iam-cache, saves 0.5 secs on each kubectl command
+url="https://github.com/sparebank1utvikling/eks-iam-cache/releases/download/v0.0.1/eks-iam-cache_0.0.1_$(uname -s | tr '[:upper:]' '[:lower:]')_$(uname -m).tar.gz"
+
+case "$(uname -s)_$(uname -m)" in
+    Darwin_arm64) sha256=d794bc2970840390ababaa20abe258f4d1d8b55fa4323e03255c243cdc69f258;;
+    Darwin_amd64) sha256=f97402a8dc3f51b2073ba1d11f3f854caf4bde03035e88c1c242ca28312da589;;
+    *) echo "unknown arch $(uname -s)_$(uname -m)" && exit 42;;
+esac
+
+do_install $url /usr/local/bin/eks-iam-cache $sha256
