@@ -127,7 +127,7 @@
     "files.trimTrailingWhitespace": false
   },
   "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "autoDocstring.docstringFormat": "sphinx",
   "jupyter.alwaysTrustNotebooks": true,
