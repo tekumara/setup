@@ -4,6 +4,7 @@
 # https://github.com/ahmetb/kubectl-aliases
 alias k='kubectl'
 alias kc='kubectx'
+alias kdp='kubectl delete pod'
 alias kg='kubectl get'
 alias kgp='kubectl get pods'
 alias kgpa='kubectl get pods --all-namespaces'
