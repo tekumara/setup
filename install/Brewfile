@@ -8,6 +8,7 @@ brew "fzf"
 brew "ripgrep"
 brew "wget"
 brew "jq"
+brew "jless"
 brew "yq"
 brew "mdcat"
 brew "scmpuff"
@@ -44,6 +45,7 @@ brew "git-lfs"
 
 cask "docker"
 brew "hadolint"
+brew "crane"
 
 # handy kubernetes tools
 brew "k9s"
@@ -51,6 +53,7 @@ brew "helm"
 brew "k3d"
 ## do not install dependencies, ie: kubernetes-cli, because we do so in kubectl.sh
 brew "kubectx", args: ["ignore-dependencies"]
+brew "stern"
 
 # python
 brew "pyenv"
