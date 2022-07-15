@@ -7,9 +7,11 @@ export AWS_CHAINED_SESSION_TOKEN_TTL=9h
 
 alias ave='aws-vault exec'
 
-# print AWS env vars as export statements
-aws_vault_export() {
-   aws-vault exec "$1" -- env | grep AWS | sed -e 's/^/export\ /'
+# print AWS env vars
+# save to a .env file for use in vscode, eg: awsenv [profile] > .env
+awsenv() {
+   [[ -z "$1" ]] && echo -e "Usage: $0 profile" >&2 && return 42
+   aws-vault exec "$1" -- env | grep AWS
 }
 
 ae() {
@@ -20,10 +22,10 @@ ae() {
    fi
 
    if [[ "$1" != "--unset" ]]; then
-      # eval AWS env vars in current shell
+      # export AWS env vars in current shell
       # ignore AWS_PAGER because it has spaces
       # ignore AWS_VAULT so we can switch to other roles in the same shell
-      eval $(aws_vault_export "$1" | egrep -v 'AWS_PAGER|AWS_VAULT|TOKEN_TTL')
+      eval $(awsenv "$1"  | sed -e 's/^/export\ /' | egrep -v 'AWS_PAGER|AWS_VAULT|TOKEN_TTL')
    fi
 }
 
