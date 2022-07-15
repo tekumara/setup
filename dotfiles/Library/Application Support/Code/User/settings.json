@@ -16,6 +16,7 @@
     "cicd",
     "cmds",
     "contextvars",
+    "dask",
     "dateutil",
     "deregister",
     "hashicorp",
@@ -28,6 +29,7 @@
     "kube",
     "kubectl",
     "kubernetes",
+    "kubes",
     "me's",
     "moto",
     "mypy",
@@ -129,7 +131,6 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "autoDocstring.docstringFormat": "sphinx",
   "jupyter.alwaysTrustNotebooks": true,
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -199,5 +200,7 @@
   ],
   "[dockercompose]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "autoflake.sortImports": true,
+  "autoflake.path": "${workspaceFolder}/.venv/bin/autoflake"
 }
