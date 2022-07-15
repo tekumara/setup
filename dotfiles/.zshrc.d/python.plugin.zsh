@@ -17,3 +17,5 @@ debugpy() {
     echo "Attach vscode debugger to port $port" >&2
     python -m debugpy --listen "$port" --wait-for-client "$@"
 }
+
+alias pyright=node_modules/.bin/pyright
