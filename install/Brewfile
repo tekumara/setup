@@ -76,8 +76,12 @@ brew "coursier/formulas/coursier"
 
 # golang
 brew "go"
+brew "gopls"
 brew "staticcheck"
 brew "goreleaser/tap/goreleaser"
+
+# rust
+brew "rust"
 
 # install mac apps
 cask "authy"
@@ -95,3 +99,4 @@ cask "slack" unless system "[[ -d '/Applications/Slack.app' ]]"
 cask "spotify"
 cask "vlc"
 cask "whatsapp"
+cask "zoom" unless system "[[ -d '/Applications/zoom.us.app' ]]"
