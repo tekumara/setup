@@ -18,6 +18,8 @@ brew "diff-so-fancy"
 brew "saulpw/vd/visidata"
 brew "xsv"
 brew "hyperfine"
+brew "lastpass-cli"
+brew "grpcurl"
 
 # aws
 brew "awscli"
