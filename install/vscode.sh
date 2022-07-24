@@ -22,4 +22,5 @@ code \
     --install-extension ziyasal.vscode-open-in-github               \
     --install-extension tomoyukim.vscode-mermaid-editor             \
     --install-extension ms-vscode-remote.remote-ssh                 \
-    --install-extension exiasr.hadolint
+    --install-extension exiasr.hadolint                             \
+    --install-extension tamasfe.even-better-toml
