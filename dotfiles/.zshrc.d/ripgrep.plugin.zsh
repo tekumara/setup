@@ -1,4 +1,7 @@
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 
 # search filenames
-alias rgf='rg --files | rg'
+rgf() {
+    # $1 = regex, $2 = path (optional)
+    rg --files ${2:-} | rg "$1"
+}
