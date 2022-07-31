@@ -23,6 +23,10 @@ pyenv virtualenvwrapper
 
 PIP_REQUIRE_VIRTUALENV=false && pip install --upgrade pip
 
+# upgrade virtualenv (installed by virtualenvwrapper) to ensure venvs
+# created by mkvenv/mktmpenv are seeded with the latest version of pip
+PIP_REQUIRE_VIRTUALENV=false && pip install --upgrade virtualenv
+
 # python tools
 # use a stable python3 path instead of the default brew path so
 # pipx packages aren't broken when brew upgrades python
