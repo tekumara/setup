@@ -20,6 +20,7 @@ brew "xsv"
 brew "hyperfine"
 brew "lastpass-cli"
 brew "grpcurl"
+brew "pstree"
 
 # aws
 brew "awscli"
