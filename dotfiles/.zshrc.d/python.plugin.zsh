@@ -18,7 +18,7 @@ debugpy() {
     if [[ -z $VIRTUAL_ENV ]]; then
         echo Could not find an activated virtualenv
     else
-        [[ -d $VIRTUAL_ENV/lib/python*/site-packages/debugpy(#q) ]] || (echo "Installing debugpy" && pip install debugpy)
+        [[ -d $VIRTUAL_ENV/lib/python*/site-packages/debugpy(#qN) ]] || (echo "Installing debugpy" && pip install debugpy)
         echo "Attach vscode debugger to port $port" >&2
         python -m debugpy --listen "$port" --wait-for-client "$@"
     fi

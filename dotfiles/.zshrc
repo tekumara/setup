@@ -51,6 +51,12 @@ fi
 if [[ -f "$HOME/.zshrc.d/aws-doctor.plugin.zsh" ]]; then
   source "$HOME/.zshrc.d/aws-doctor.plugin.zsh"
 fi
+if [[ -f "$HOME/.zshrc.d/git-doctor.plugin.zsh" ]]; then
+  source "$HOME/.zshrc.d/git-doctor.plugin.zsh"
+fi
+if [[ -f "$HOME/.zshrc.d/functions.plugin.zsh" ]]; then
+  source "$HOME/.zshrc.d/functions.plugin.zsh"
+fi
 
 # add fzf to path, and load fzf completion & keybindings (CTRL-T, CTRL-R)
 source ~/.fzf.zsh
