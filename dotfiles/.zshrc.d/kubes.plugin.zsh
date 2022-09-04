@@ -6,13 +6,15 @@ alias k='kubectl'
 alias kc='kubectx'
 alias kdp='kubectl delete pod'
 alias kg='kubectl get'
-alias kgp='kubectl get pods'
-alias kgpa='kubectl get pods --all-namespaces'
+alias kgp='kubectl get pod'
+alias kgpa='kubectl get pod --all-namespaces'
 alias kgd='kubectl get deployment'
 alias kgda='kubectl get deployment --all-namespaces'
 alias kgs='kubectl get service'
 alias kgsa='kubectl get service --all-namespaces'
 alias kge='kubectl get events --sort-by='{.lastTimestamp}''
+alias kgj='kubectl get job'
+
 keb() {
   kubectl exec -i -t "$@" -- /bin/bash
 }
