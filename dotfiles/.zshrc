@@ -35,27 +35,18 @@ FORGIT_NO_ALIASES=true
 
 source ~/.zsh_plugins.sh
 
-source "$HOME/.zshrc.d/aws.plugin.zsh"
+#source "$HOME/.zshrc.d/aws.plugin.zsh"
 source "$HOME/.zshrc.d/docker.plugin.zsh"
-source "$HOME/.zshrc.d/git.plugin.zsh"
+#source "$HOME/.zshrc.d/git.plugin.zsh"
 source "$HOME/.zshrc.d/golang.plugin.zsh"
-source "$HOME/.zshrc.d/java.plugin.zsh"
+#source "$HOME/.zshrc.d/java.plugin.zsh"
 source "$HOME/.zshrc.d/kubes.plugin.zsh"
 source "$HOME/.zshrc.d/node.plugin.zsh"
-source "$HOME/.zshrc.d/python.plugin.zsh"
+#source "$HOME/.zshrc.d/python.plugin.zsh"
 source "$HOME/.zshrc.d/ripgrep.plugin.zsh"
 source "$HOME/.zshrc.d/rust.plugin.zsh"
 if [[ -f "$HOME/Dropbox/Slack/functions.zsh" ]]; then
   source "$HOME/Dropbox/Slack/functions.zsh"
-fi
-if [[ -f "$HOME/.zshrc.d/aws-doctor.plugin.zsh" ]]; then
-  source "$HOME/.zshrc.d/aws-doctor.plugin.zsh"
-fi
-if [[ -f "$HOME/.zshrc.d/git-doctor.plugin.zsh" ]]; then
-  source "$HOME/.zshrc.d/git-doctor.plugin.zsh"
-fi
-if [[ -f "$HOME/.zshrc.d/functions.plugin.zsh" ]]; then
-  source "$HOME/.zshrc.d/functions.plugin.zsh"
 fi
 
 # add fzf to path, and load fzf completion & keybindings (CTRL-T, CTRL-R)
@@ -66,3 +57,14 @@ FORGIT_FZF_DEFAULT_OPTS="--reverse $FORGIT_FZF_DEFAULT_OPTS"
 
 # load completion system
 _load_compinit
+#setup-mac start
+source "$HOME/.zshrc.d/aws-doctor.plugin.zsh"
+source "$HOME/.zshrc.d/aws.plugin.zsh"
+source "$HOME/.zshrc.d/functions.plugin.zsh"
+source "$HOME/.zshrc.d/git-doctor.plugin.zsh"
+source "$HOME/.zshrc.d/git.plugin.zsh"
+source "$HOME/.zshrc.d/java.plugin.zsh"
+source "$HOME/.zshrc.d/python.plugin.zsh"
+source "$HOME/.zshrc.d/setup.plugin.zsh"
+
+#setup-mac end
