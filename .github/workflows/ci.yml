@@ -26,6 +26,13 @@ jobs:
         run: |
           chmod go-w /usr/local/share/zsh/site-functions /usr/local/share/zsh
 
+      - name: fix build to work with setup-mac
+        run: |
+          touch "$HOME/.zshrc.d/aws-doctor.plugin.zsh"
+          touch "$HOME/.zshrc.d/git-doctor.plugin.zsh"
+          touch "$HOME/.zshrc.d/functions.plugin.zsh"
+
+
       - name: install.sh
         run: ./install.sh
 
