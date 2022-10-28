@@ -23,4 +23,6 @@ code \
     --install-extension tomoyukim.vscode-mermaid-editor             \
     --install-extension ms-vscode-remote.remote-ssh                 \
     --install-extension exiasr.hadolint                             \
-    --install-extension tamasfe.even-better-toml
+    --install-extension tamasfe.even-better-toml                    \
+    --install-extension mikestead.dotenv                            \
+    --install-extension sourcery.sourcery
