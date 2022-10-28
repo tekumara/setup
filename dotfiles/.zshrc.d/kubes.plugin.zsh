@@ -4,16 +4,22 @@
 # https://github.com/ahmetb/kubectl-aliases
 alias k='kubectl'
 alias kc='kubectx'
-alias kdp='kubectl delete pod'
+alias kd='kubectl describe'
+alias kdd='kubectl describe deployment'
+alias kdj='kubectl describe job'
+alias kdn='kubectl describe node'
+alias kdp='kubectl describe pod'
 alias kg='kubectl get'
-alias kgp='kubectl get pod'
-alias kgpa='kubectl get pod --all-namespaces'
 alias kgd='kubectl get deployment'
 alias kgda='kubectl get deployment --all-namespaces'
+alias kgj='kubectl get job'
+alias kgn='kubectl get node'
+alias kgp='kubectl get pod'
+alias kgpa='kubectl get pod --all-namespaces'
 alias kgs='kubectl get service'
 alias kgsa='kubectl get service --all-namespaces'
 alias kge='kubectl get events --sort-by='{.lastTimestamp}''
-alias kgj='kubectl get job'
+alias kcomp='type __kubectl_compgen  > /dev/null || source <(kubectl completion zsh)'
 
 keb() {
   kubectl exec -i -t "$@" -- /bin/bash

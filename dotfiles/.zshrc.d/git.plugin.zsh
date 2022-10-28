@@ -25,6 +25,7 @@ alias grbi='forgit::rebase'
 alias ga=forgit::add
 alias gdf=forgit::diff
 alias glf=forgit::log
+alias gcf=forgit::fixup
 
 # other
 alias gdh='git diff "HEAD^" HEAD'
