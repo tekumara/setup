@@ -21,6 +21,7 @@ brew "hyperfine"
 brew "lastpass-cli"
 brew "grpcurl"
 brew "pstree"
+brew "direnv"
 
 # aws
 brew "awscli"
@@ -49,6 +50,7 @@ brew "git-lfs"
 cask "docker"
 brew "hadolint"
 brew "crane"
+brew "dive"
 
 # handy kubernetes tools
 brew "k9s"

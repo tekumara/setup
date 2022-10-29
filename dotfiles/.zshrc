@@ -52,6 +52,8 @@ fi
 # add fzf to path, and load fzf completion & keybindings (CTRL-T, CTRL-R)
 source ~/.fzf.zsh
 
+eval "$(direnv hook zsh)"
+
 # same order as git log
 FORGIT_FZF_DEFAULT_OPTS="--reverse $FORGIT_FZF_DEFAULT_OPTS"
 
