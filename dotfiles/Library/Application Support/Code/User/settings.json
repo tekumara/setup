@@ -210,5 +210,6 @@
   },
   "files.associations": {
     ".envrc": "dotenv"
-  }
+  },
+  "terminal.integrated.fontFamily": "MesloLGS NF"
 }
