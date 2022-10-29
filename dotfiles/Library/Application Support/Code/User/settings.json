@@ -17,6 +17,7 @@
     "cmds",
     "contextvars",
     "dask",
+    "dataframe",
     "dateutil",
     "deregister",
     "hashicorp",
@@ -202,5 +203,12 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "autoflake.sortImports": true,
-  "autoflake.path": "${workspaceFolder}/.venv/bin/autoflake"
+  "autoflake.path": "${workspaceFolder}/.venv/bin/autoflake",
+  "hadolint.hadolintPath": "/opt/homebrew/bin/hadolint",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.associations": {
+    ".envrc": "dotenv"
+  }
 }
