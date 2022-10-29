@@ -32,20 +32,7 @@
         "command": "-editor.action.triggerParameterHints",
         "when": "editorHasSignatureHelpProvider && editorTextFocus"
     },
-    {
-        "key": "cmd+j",
-        "command": "-workbench.action.togglePanel"
-    },
-    {
-        "key": "cmd+j",
-        "command": "workbench.action.focusActiveEditorGroup",
-        "when": "panelFocus"
-    },
-    {
-        "key": "cmd+j",
-        "command": "workbench.action.focusPanel",
-        "when": "!panelFocus"
-    },
+
     {
         "key": "alt+cmd+left",
         "command": "workbench.action.navigateBack"
