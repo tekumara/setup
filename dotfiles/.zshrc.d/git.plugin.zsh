@@ -47,6 +47,8 @@ gbd() {
 }
 
 # github cli
-alias hb='gh browse --branch $(git rev-parse HEAD)'
+hb() {
+    gh browse --branch "${1:-$(git rev-parse HEAD)}"
+}
 alias hprc='gh pr create --fill -w'
 alias hprv='gh pr view --web'
