@@ -36,13 +36,14 @@ krs() {
   kubectl run "$1" -it --image="$2" --command -- /bin/sh
 }
 
+# unset is needed becuase we are appending values below and
+# it may already have been set by the  parent process (eg: vscode)
 unset KUBECONFIG
+
 files=($HOME/.kube/*.yaml(N) $HOME/.k3d/kubeconfig*.yaml(N))
 for file in $files; do
   KUBECONFIG+="${KUBECONFIG+:}${file}"
 done
-
-export KUBECONFIG
 
 # kube context per shell https://github.com/ahmetb/kubectx/issues/12#issuecomment-557852519
 file="$(mktemp -t "kubectx.XXXXXX")"
