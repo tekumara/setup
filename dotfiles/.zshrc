@@ -55,8 +55,6 @@ source ~/.fzf.zsh
 # same order as git log
 FORGIT_FZF_DEFAULT_OPTS="--reverse $FORGIT_FZF_DEFAULT_OPTS"
 
-# load completion system
-_load_compinit
 #setup-mac start
 source "$HOME/.zshrc.d/aws-doctor.plugin.zsh"
 source "$HOME/.zshrc.d/aws.plugin.zsh"
@@ -68,6 +66,11 @@ source "$HOME/.zshrc.d/python.plugin.zsh"
 source "$HOME/.zshrc.d/setup.plugin.zsh"
 
 #setup-mac end
+
+# add brew package completions
+FPATH="$HOMEBREW_PREFIX/share/zsh/site-functions:${FPATH}"
+# load all completions
+_load_compinit
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
