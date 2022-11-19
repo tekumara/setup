@@ -19,6 +19,7 @@ alias kgpa='kubectl get pod --all-namespaces'
 alias kgs='kubectl get service'
 alias kgsa='kubectl get service --all-namespaces'
 alias kge='kubectl get events --sort-by='{.lastTimestamp}''
+alias kl='kubectl logs'
 alias kcomp='type __kubectl_compgen  > /dev/null || source <(kubectl completion zsh)'
 
 keb() {

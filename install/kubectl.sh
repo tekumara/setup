@@ -50,9 +50,7 @@ case "$(uname -sm)" in
     *) echo "error: unknown arch $(uname -sm)" && exit 42;;
 esac
 
-url="https://dl.k8s.io/release/v1.21.12/bin/$arch/kubectl"
-
-do_install $url /usr/local/bin/kubectl $sha256
+do_install "https://dl.k8s.io/release/v1.21.12/bin/$arch/kubectl" /usr/local/bin/kubectl $sha256
 
 # install eks-iam-cache, saves 0.5 secs on each kubectl command
 case "$(uname -sm)" in
@@ -61,6 +59,5 @@ case "$(uname -sm)" in
     *) echo "error: unknown arch $(uname -sm)" && exit 42;;
 esac
 
-url="https://github.com/sparebank1utvikling/eks-iam-cache/releases/download/v0.0.1/eks-iam-cache_0.0.1_$arch.tar.gz"
-
-do_install $url /usr/local/bin/eks-iam-cache $sha256
+do_install url="https://github.com/sparebank1utvikling/eks-iam-cache/releases/download/v0.0.1/eks-iam-cache_0.0.1_$arch.tar.gz" \
+    /usr/local/bin/eks-iam-cache $sha256
