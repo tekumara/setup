@@ -2,7 +2,7 @@
 # Based on romkatv/powerlevel10k/config/p10k-lean.zsh, checksum 30611.
 # Wizard options: nerdfont-complete + powerline, small icons, unicode, lean, 2 lines,
 # disconnected, no frame, sparse, few icons, concise, transient_prompt,
-# instant_prompt=verbose.
+# instant_prompt=quiet.
 # Type `p10k configure` to generate another config.
 #
 # Config for Powerlevel10k with lean prompt style. Type `p10k configure` to generate
