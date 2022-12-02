@@ -212,6 +212,7 @@
     ".envrc": "dotenv"
   },
   "terminal.integrated.fontFamily": "MesloLGS NF",
+  "autoDocstring.docstringFormat": "google",
   "launch": {
     "configurations": [
       {
