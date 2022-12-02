@@ -211,5 +211,19 @@
   "files.associations": {
     ".envrc": "dotenv"
   },
-  "terminal.integrated.fontFamily": "MesloLGS NF"
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "launch": {
+    "configurations": [
+      {
+        "name": "Python: Remote Attach",
+        "type": "python",
+        "request": "attach",
+        "connect": {
+          "host": "localhost",
+          "port": 62888
+        },
+        "justMyCode": false
+      }
+    ]
+  }
 }
