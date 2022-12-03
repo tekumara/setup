@@ -7,9 +7,10 @@
 # alias grs='git reset' # ie: unstage
 eval "$(scmpuff init -s)"
 
-# taken from scm breeze https://github.com/scmbreeze/scm_breeze/blob/master/lib/git/aliases.sh
+# adapted from scm breeze https://github.com/scmbreeze/scm_breeze/blob/master/lib/git/aliases.sh
 alias gc='git commit'
-alias gcm='git commit --amend'
+alias gca='git commit --amend'
+alias gcm='git commit -m'
 alias gb='git branch'
 alias gpl='git pull'
 alias gps='git push'
