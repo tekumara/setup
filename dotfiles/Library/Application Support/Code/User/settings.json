@@ -227,5 +227,6 @@
       }
     ]
   },
-  "python.defaultInterpreterPath": "~/.pyenv/versions/3.9.13/bin/python"
+  "python.defaultInterpreterPath": "~/.pyenv/versions/3.9.13/bin/python",
+  "terminal.integrated.localEchoEnabled": "off"
 }
