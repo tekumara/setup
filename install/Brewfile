@@ -87,6 +87,7 @@ brew "goreleaser/tap/goreleaser"
 
 # rust
 brew "rust"
+brew "rustfmt"
 
 # install mac apps
 cask "authy"
