@@ -23,6 +23,10 @@ brew "grpcurl"
 brew "pstree"
 brew "direnv"
 
+# encryption
+brew "age"
+brew "ykman"
+
 # aws
 brew "awscli"
 cask "session-manager-plugin", args: {'no-quarantine': true}
