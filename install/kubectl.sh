@@ -23,11 +23,6 @@ do_install() {
             *)        file=$download ;;
         esac
 
-        if [[ -d $file ]]; then
-            # handle case when archive extracts into a directory
-            file="$file"/$(basename "$file")
-        fi
-
         echo "Installing $file -> $dest"
         install "$file" "$dest"
     fi

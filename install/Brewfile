@@ -25,6 +25,7 @@ brew "direnv"
 
 # encryption
 brew "age"
+brew "age-plugin-yubikey"
 brew "ykman"
 
 # aws
