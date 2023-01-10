@@ -9,14 +9,18 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      # remove the packages we install that are already in the environment
-      # see https://github.com/actions/virtual-environments
-      - name: remove existing packages
+      # remove the packages that are already in the environment so we can install them.
+      # relink brew python packages - these are already installed but overwritten.
+      # we need them because they are dependencies of packages in the Brewfile
+      # see https://github.com/actions/runner-images
+      - name: reset runner environment
         run: |
           rm /usr/local/bin/aws
           rm /usr/local/bin/aws_completer
           rm /usr/local/bin/go
           rm /usr/local/bin/gofmt
+          brew unlink python@3.10 python@3.11
+          brew link --overwrite python@3.10 python@3.11
           rm "$HOME/.gitconfig"
           brew unlink git
 
