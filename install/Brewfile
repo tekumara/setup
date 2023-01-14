@@ -28,8 +28,9 @@ brew "age"
 brew "age-plugin-yubikey"
 brew "ykman"
 cask "homebrew/cask-drivers/yubico-authenticator"
-## gnu-getopt is needed for passage
+## gnu-getopt and tree are needed for passage
 brew "gnu-getopt"
+brew "tree"
 
 # aws
 brew "awscli"

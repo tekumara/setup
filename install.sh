@@ -20,3 +20,5 @@ install/python.sh
 install/vscode.sh
 install/defaults.sh
 install/dotfiles.sh
+install/passage.sh
+install/symlinks.sh
