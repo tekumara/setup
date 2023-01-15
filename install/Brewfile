@@ -84,8 +84,8 @@ brew "node"
 brew "yarn"
 brew "Schniz/tap/fnm"
 
-# java
-cask "AdoptOpenJDK/openjdk/adoptopenjdk11"
+# java (v17 for use with Spark)
+cask "homebrew/cask-versions/temurin17"
 brew "coursier/formulas/coursier"
 
 # golang
