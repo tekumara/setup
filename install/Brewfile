@@ -84,8 +84,8 @@ brew "node"
 brew "yarn"
 brew "fnm"
 
-# java (v17 for use with Spark)
-cask "homebrew/cask-versions/temurin17"
+# java
+cask "homebrew/cask-versions/temurin11"
 brew "coursier/formulas/coursier"
 
 # golang
