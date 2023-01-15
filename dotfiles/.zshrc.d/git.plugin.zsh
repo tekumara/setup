@@ -23,7 +23,8 @@ alias gsh='git show'
 
 # forgit
 alias grbi='forgit::rebase'
-alias ga=forgit::add
+# disabled see https://github.com/wfxr/forgit/issues/280
+#alias ga=forgit::add
 alias gdf=forgit::diff
 alias glf=forgit::log
 alias gcf=forgit::fixup
