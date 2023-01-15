@@ -18,12 +18,11 @@ brew "diff-so-fancy"
 brew "saulpw/vd/visidata"
 brew "xsv"
 brew "hyperfine"
-brew "lastpass-cli"
 brew "grpcurl"
 brew "pstree"
 brew "direnv"
 
-# encryption
+# encryption/security
 brew "age"
 brew "age-plugin-yubikey"
 brew "ykman"
@@ -31,6 +30,9 @@ cask "homebrew/cask-drivers/yubico-authenticator"
 ## gnu-getopt and tree are needed for passage
 brew "gnu-getopt"
 brew "tree"
+brew "lastpass-cli"
+brew "1password/tap/1password-cli"
+cask "authy"
 
 # aws
 brew "awscli"
@@ -96,7 +98,6 @@ brew "rust"
 brew "rustfmt"
 
 # mac desktop apps
-cask "authy"
 cask "calibre"
 cask "dropbox"
 cask "firefox"
