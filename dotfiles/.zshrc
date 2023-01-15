@@ -31,7 +31,7 @@ fi
 source "$HOME/.zshrc.d/minimal.zsh"
 
 # setup forgit aliases manually in git.plugin.zsh
-FORGIT_NO_ALIASES=true
+export FORGIT_NO_ALIASES=true
 
 source ~/.zsh_plugins.sh
 
@@ -53,7 +53,7 @@ fi
 source ~/.fzf.zsh
 
 # same order as git log
-FORGIT_FZF_DEFAULT_OPTS="--reverse $FORGIT_FZF_DEFAULT_OPTS"
+export FORGIT_FZF_DEFAULT_OPTS="--reverse $FORGIT_FZF_DEFAULT_OPTS"
 
 #setup-mac start
 source "$HOME/.zshrc.d/aws-doctor.plugin.zsh"
