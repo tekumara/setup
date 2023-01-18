@@ -38,10 +38,6 @@ jobs:
           touch "$HOME/.zshrc.d/functions.plugin.zsh"
           touch "$HOME/.zshrc.d/setup.plugin.zsh"
 
-      - name: pretend we have yubikey identities
-        run: |
-          touch ~/.passage/identities
-
       - name: install.sh
         run: ./install.sh
 
