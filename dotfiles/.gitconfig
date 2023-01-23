@@ -9,7 +9,7 @@
 	default = current
 
 	# When pushing a branch set it up to track the remote branch.
-    # Avoids "There is no tracking information for the current branch" when subsequently pulling.
+	# Avoids "There is no tracking information for the current branch" when subsequently pulling.
 	autoSetupRemote = true
 [rebase]
 	# Automatically create a temporary stash entry before the operation begins, and apply it after the operation ends.

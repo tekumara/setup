@@ -43,7 +43,7 @@ alias gcom='if git show-ref --verify --quiet refs/heads/main; then git checkout 
 # fetch main/master whilst remaining on the currently checked out branch. also updates local tracking branch
 alias gfom='if git show-ref --verify --quiet refs/heads/main; then git fetch origin main:main; else git fetch origin master:master; fi'
 
-# delete branch
+# delete branch locally and on origin
 gbd() {
     git branch -D "$1"; git push origin --delete "$1"
 }
