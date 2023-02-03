@@ -31,7 +31,8 @@ cask "homebrew/cask-drivers/yubico-authenticator"
 brew "gnu-getopt"
 brew "tree"
 brew "lastpass-cli"
-cask "1password/tap/1password-cli"
+cask "1password-cli"
+cask "1password"
 cask "authy"
 
 # aws
