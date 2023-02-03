@@ -42,6 +42,8 @@ alias gbu='current=$(git rev-parse --abbrev-ref HEAD) && git branch --set-upstre
 alias gcom='if git show-ref --verify --quiet refs/heads/main; then git checkout main; else git checkout master; fi'
 # fetch main/master whilst remaining on the currently checked out branch. also updates local tracking branch
 alias gfom='if git show-ref --verify --quiet refs/heads/main; then git fetch origin main:main; else git fetch origin master:master; fi'
+# merge main/master into the current branch
+alias gmm='if git show-ref --verify --quiet refs/heads/main; then git merge main; else git merge master; fi'
 
 # delete branch locally and on origin
 gbd() {
@@ -52,5 +54,7 @@ gbd() {
 hb() {
     gh browse --branch "${1:-$(git rev-parse HEAD)}"
 }
+# create pr for the current branch
 alias hprc='gh pr create --fill -w'
+# view pr for the current branch
 alias hprv='gh pr view --web'
