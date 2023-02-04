@@ -4,8 +4,8 @@
 
 set -euo pipefail
 
-# iterm2 settings
-# ---------------
+# iterm2
+# ------
 
 # specify the preferences directory
 defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "${PWD}/defaults/"
@@ -16,8 +16,8 @@ defaults write com.googlecode.iterm2.plist NoSyncNeverRemindPrefsChangesLostForF
 # when prefs have changed, copy them to the custom folder
 defaults write com.googlecode.iterm2.plist NoSyncNeverRemindPrefsChangesLostForFile_selection -bool false
 
-# Finder settings
-# ---------------
+# Finder
+# ------
 
 # Save screenshots to Downloads
 defaults write com.apple.screencapture location -string "${HOME}/Downloads"
@@ -34,11 +34,36 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCsp"
 # doesn't seem to work
 # defaults write "Apple Global Domain" com.apple.keyboard.fnState -bool true
 
-# Podcasts settings
-# -----------------
+# Podcasts
+# --------
 
 # disable automatic downloads when following to save disk space
 defaults write com.apple.podcasts MTPodcastAutoDownloadStateDefaultKey -bool false
 
-# Set default applications for file types
+# Dock
+# ----
+
+# auto-hide dock
+defaults write com.apple.dock autohide -bool true
+
+# show dock instantly https://macos-defaults.com/dock/autohide-delay.html
+defaults write com.apple.dock autohide-delay -float 0
+
+# Mission Control
+# ---------------
+
+# do not automatically rearrange Spaces based on most recent use
+defaults write com.apple.dock mru-spaces -bool false
+
+# Group windows by application
+defaults write com.apple.dock expose-group-apps -bool true
+
+# Windows & Apps
+# --------------
+
+# enable Stage Manager
+defaults write com.apple.WindowManager GloballyEnabled -bool true
+
+# Default applications
+# --------------------
 duti install/defaults.duti
