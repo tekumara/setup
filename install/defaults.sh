@@ -18,6 +18,7 @@ defaults write com.googlecode.iterm2.plist NoSyncNeverRemindPrefsChangesLostForF
 
 # Finder
 # ------
+# (requires logging in/out to take effect)
 
 # Save screenshots to Downloads
 defaults write com.apple.screencapture location -string "${HOME}/Downloads"
@@ -31,8 +32,12 @@ defaults write com.apple.finder _FXSortFoldersFirst -bool true
 # When performing a search, use the previous search scope
 defaults write com.apple.finder FXDefaultSearchScope -string "SCsp"
 
-# doesn't seem to work
-# defaults write "Apple Global Domain" com.apple.keyboard.fnState -bool true
+# Keyboard shortcuts
+# ------------------
+# (requires logging in/out to take effect)
+
+# Use F1, F2, etc. keys as standard function keys
+defaults write NSGlobalDomain com.apple.keyboard.fnState -bool true
 
 # Podcasts
 # --------
@@ -63,6 +68,18 @@ defaults write com.apple.dock expose-group-apps -bool true
 
 # enable Stage Manager
 defaults write com.apple.WindowManager GloballyEnabled -bool true
+
+# Stage Manager - Show windows from an application - One at a Time
+defaults write com.apple.WindowManager AppWindowGroupingBehavior -bool false
+
+# restart Dock for its settings to take effect
+killall Dock
+
+# Hot corners
+# -----------
+
+# top left: lock screen
+defaults write com.apple.dock wvous-tl-corner -integer 13
 
 # Default applications
 # --------------------
