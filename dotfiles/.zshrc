@@ -37,6 +37,7 @@ source ~/.zsh_plugins.sh
 
 #source "$HOME/.zshrc.d/aws.plugin.zsh"
 source "$HOME/.zshrc.d/docker.plugin.zsh"
+source "$HOME/.zshrc.d/dinstall.plugin.zsh"
 #source "$HOME/.zshrc.d/git.plugin.zsh"
 source "$HOME/.zshrc.d/golang.plugin.zsh"
 #source "$HOME/.zshrc.d/java.plugin.zsh"
