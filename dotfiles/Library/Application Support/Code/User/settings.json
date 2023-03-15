@@ -15,6 +15,7 @@
     "Checklist",
     "cicd",
     "cmds",
+    "consts",
     "contextvars",
     "dask",
     "dataframe",
@@ -24,6 +25,7 @@
     "httpx",
     "Intelli",
     "itertools",
+    "jaffles",
     "jupyter",
     "Kinesis",
     "kotahi",
@@ -61,7 +63,6 @@
     "Versioning",
     "virtualenv"
   ],
-  "diffEditor.ignoreTrimWhitespace": false,
   "go.formatTool": "goimports",
   "go.useLanguageServer": true,
   "yaml.customTags": [
@@ -133,6 +134,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "jupyter.alwaysTrustNotebooks": true,
+  "jupyter.interactiveWindow.creationMode": "perFile",
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -176,7 +178,6 @@
     "default": "right",
     "jupyter-notebook": "left"
   },
-  "jupyter.interactiveWindowMode": "perFile",
   "remote.SSH.connectTimeout": 60,
   "remote.SSH.defaultExtensions": [
     "ms-python.python",
@@ -196,9 +197,7 @@
   },
   "gitlens.currentLine.enabled": false,
   "gitlens.codeLens.enabled": false,
-  "terminal.integrated.commandsToSkipShell": [
-    "workbench.action.switchWindow"
-  ],
+  "terminal.integrated.commandsToSkipShell": ["workbench.action.switchWindow"],
   "[dockercompose]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -228,5 +227,11 @@
     ]
   },
   "python.defaultInterpreterPath": "~/.pyenv/versions/3.9.13/bin/python",
-  "terminal.integrated.localEchoEnabled": "off"
+  "terminal.integrated.localEchoEnabled": "off",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true
+  },
+  "git.openRepositoryInParentFolders": "never"
 }
