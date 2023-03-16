@@ -16,16 +16,20 @@ PIP_REQUIRE_VIRTUALENV=false $pip install --upgrade pip
 PIP_REQUIRE_VIRTUALENV=false $pip install --upgrade virtualenv
 
 # create pyenv versions for system-installed versions, so they can be selected with pyenv
-# and used in .python-version. We use the brew-installed versions because they are optimised
-# and don't require building from source, unlike versions installed via pyenv install
+# and used in .python-version. We use the brew-installed versions because they are optimised,
+# don't require building from source, and will receive patch upgrades, unlike versions
+# installed via pyenv install
 "$(brew --prefix)/bin/virtualenv" -p "$(brew --prefix)/bin/python3.9" --system-site-packages "$HOME/.pyenv/versions/3.9"
 "$(brew --prefix)/bin/virtualenv" -p "$(brew --prefix)/bin/python3.10" --system-site-packages "$HOME/.pyenv/versions/3.10"
 "$(brew --prefix)/bin/virtualenv" -p "$(brew --prefix)/bin/python3.11" --system-site-packages "$HOME/.pyenv/versions/3.11"
 
 pyenv global $default_python_version
 
-# install virtualenvwrapper upfront into pyenv global version
-pip install virtualenvwrapper
+# because we are using tekumara/zsh-pyenv-virtualenvwrapper-lazy
+# run pyenv virtualenvwrapper upfront so it pip installs virtualenvwrapper
+# must allow unbound variables for pyenv virtualenvwrapper
+set +u
+eval "$(pyenv init -)" && pyenv virtualenvwrapper
 
 # use a stable pyenv path instead of brew's pythonX.Y.Z path
 # so pipx packages aren't broken when brew upgrades python
