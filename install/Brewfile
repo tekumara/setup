@@ -72,6 +72,9 @@ brew "kubectx", args: ["ignore-dependencies"]
 brew "stern"
 
 # python
+brew "python@3.9"
+brew "python@3.10"
+brew "python@3.11"
 brew "pyenv"
 brew "pyenv-virtualenvwrapper"
 brew "pipx"

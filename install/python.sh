@@ -4,32 +4,31 @@
 
 set -euo pipefail
 
-# install python
-python_version=3.9.13
-pyenv install -s "$python_version"
-
 # set default python version
-# don't rely on the system/brew installed python as the global default
-# because virtualenvs using it will break when brew performs major upgrades
-pyenv global "$python_version"
+default_python_version=3.9
+pip="$(brew --prefix)/bin/pip${default_python_version}"
 
-# needed on first install so pip can be found
-export PATH="${HOME}/.pyenv/shims:${PATH}" && eval "$(pyenv init -)"
+# upgrade pip since installed
+PIP_REQUIRE_VIRTUALENV=false $pip install --upgrade pip
 
-# run pyenv virtualenvwrapper upfront so it downloads and installs itself
-# must allow unbound variables for virtualenvwrapper
-set +u
-pyenv virtualenvwrapper
-
-PIP_REQUIRE_VIRTUALENV=false && pip install --upgrade pip
-
-# upgrade virtualenv (installed by virtualenvwrapper) to ensure venvs
+# upgrade virtualenv (also used by virtualenvwrapper) to ensure venvs
 # created by mkvenv/mktmpenv are seeded with the latest version of pip
-PIP_REQUIRE_VIRTUALENV=false && pip install --upgrade virtualenv
+PIP_REQUIRE_VIRTUALENV=false $pip install --upgrade virtualenv
 
-# python tools
-# use a stable python3 path instead of the default brew path so
-# pipx packages aren't broken when brew upgrades python
+# create pyenv versions for system-installed versions, so they can be selected with pyenv
+# and used in .python-version. We use the brew-installed versions because they are optimised
+# and don't require building from source, unlike versions installed via pyenv install
+"$(brew --prefix)/bin/virtualenv" -p "$(brew --prefix)/bin/python3.9" --system-site-packages "$HOME/.pyenv/versions/3.9"
+"$(brew --prefix)/bin/virtualenv" -p "$(brew --prefix)/bin/python3.10" --system-site-packages "$HOME/.pyenv/versions/3.10"
+"$(brew --prefix)/bin/virtualenv" -p "$(brew --prefix)/bin/python3.11" --system-site-packages "$HOME/.pyenv/versions/3.11"
+
+pyenv global $default_python_version
+
+# install virtualenvwrapper upfront into pyenv global version
+pip install virtualenvwrapper
+
+# use a stable pyenv path instead of brew's pythonX.Y.Z path
+# so pipx packages aren't broken when brew upgrades python
 PIPX_DEFAULT_PYTHON=$(pyenv which python)
 export PIPX_DEFAULT_PYTHON
 
