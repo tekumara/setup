@@ -20,5 +20,9 @@ if [[ ! -d ~/.vim_runtime ]]; then
     sh ~/.vim_runtime/install_basic_vimrc.sh
 fi
 
-# run zsh to start antibody for the first time to download plugins
-zsh -c "source ~/.zshrc"
+# run zsh to start antibody and p10k for the first time so they initialise
+# and download any needed plugins
+#
+# use script to simulate an interactive terminal which is needed to trigger p10k initialisation
+# and switch to $HOME first so zsh starts there like it would with an interactive login
+(cd "$HOME" && echo exit | script -q zsh)
