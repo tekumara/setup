@@ -19,9 +19,18 @@ PIP_REQUIRE_VIRTUALENV=false $pip install --upgrade virtualenv
 # and used in .python-version. We use the brew-installed versions because they are optimised,
 # don't require building from source, and will receive patch upgrades, unlike versions
 # installed via pyenv install
-"$(brew --prefix)/bin/virtualenv" -p "$(brew --prefix)/bin/python3.9" --system-site-packages "$HOME/.pyenv/versions/3.9"
-"$(brew --prefix)/bin/virtualenv" -p "$(brew --prefix)/bin/python3.10" --system-site-packages "$HOME/.pyenv/versions/3.10"
-"$(brew --prefix)/bin/virtualenv" -p "$(brew --prefix)/bin/python3.11" --system-site-packages "$HOME/.pyenv/versions/3.11"
+pyenv_install_brew_version() {
+    "$(brew --prefix)/bin/virtualenv" -p "$(brew --prefix)/bin/python${1}" "$HOME/.pyenv/versions/${1}"
+    # remove pyvenv.cfg so pip install fails with "Could not find an activated virtualenv" and avoids
+    # unintentional installation into global site packages
+    # this also removes .pyenv/versions/X.Y/lib/pythonX.Y/site-packages from sys.path
+    # therefore sys.path is the same as when running $(brew --prefix)/bin/pythonX.Y
+    rm "$HOME/.pyenv/versions/${1}/pyvenv.cfg"
+}
+
+pyenv_install_brew_version 3.9
+pyenv_install_brew_version 3.10
+pyenv_install_brew_version 3.11
 
 pyenv global $default_python_version
 
