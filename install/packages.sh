@@ -49,5 +49,6 @@ if [[ -d "$HOME/Library/Caches/antibody" ]]; then
 fi
 
 # rust
-# use rustup rather because brew doesn't include clippy
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+# use rustup because brew doesn't include clippy
+# use --no-modify-path because we add ~/.cargo/bin to the path ourselves in rust.plugin.zsh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --no-modify-path
