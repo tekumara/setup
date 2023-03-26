@@ -6,3 +6,4 @@ export AWS_PAGER="less -F -X"
 
 # .local/bin is for pipx installed entrypoints
 export PATH="$PATH:$HOME/.local/bin"
+. "$HOME/.cargo/env"

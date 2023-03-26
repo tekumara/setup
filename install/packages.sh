@@ -47,3 +47,7 @@ go install github.com/go-delve/delve/cmd/dlv@latest
 if [[ -d "$HOME/Library/Caches/antibody" ]]; then
     antibody update
 fi
+
+# rust
+# use rustup rather because brew doesn't include clippy
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
