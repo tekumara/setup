@@ -10,10 +10,13 @@ eval "$(scmpuff init -s)"
 # adapted from scm breeze https://github.com/scmbreeze/scm_breeze/blob/master/lib/git/aliases.sh
 alias gc='git commit'
 alias gca='git commit --amend'
-alias gcm='git commit -m'
+gcm() {
+    git commit -m "${1-.}"
+}
 alias gb='git branch'
 alias gpl='git pull'
 alias gps='git push'
+alias gpa='gaa && gcm && gps'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gla='gl --all'
 alias gdc='git diff --cached'
