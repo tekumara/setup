@@ -6,21 +6,35 @@ set -euo pipefail
 
 # set default python version
 default_python_version=3.9
-pip="$(brew --prefix)/bin/pip${default_python_version}"
+# explictly use brew's pip to avoid using xcode or pyenv-installed pip
+# NB: xcode may have overwritten /usr/local/bin/pip so we use the
+# version in the $(brew --prefix)/opt/ path
+pip="$(brew --prefix)/opt/python@${default_python_version}/libexec/bin/pip"
 
-# upgrade pip since installed
-PIP_REQUIRE_VIRTUALENV=false $pip install --upgrade pip
+# upgrade pip since installed to the latest
+#
+# we force a reinstall to overwrite $(brew --prefix)/pip{,3,3.9} in case they
+# have been overwritten by an xcode cli tools upgrade .. this makes sure any
+# binaries installed via $(brew --prefix)/pip{,3,3.9} use brew's python and
+# land in $(brew --prefix)/bin rather than xcode's ~/Library/Python/3.9/bin/
+# which isn't on the path
+PIP_REQUIRE_VIRTUALENV=false $pip install --force-reinstall pip
 
 # upgrade virtualenv (also used by virtualenvwrapper) to ensure venvs
 # created by mkvenv/mktmpenv are seeded with the latest version of pip
-PIP_REQUIRE_VIRTUALENV=false $pip install --upgrade virtualenv
+#
+# we force a reinstall in case virtualenv was previously
+# installed into xcode's python directory (ie: ~/Library/Python/3.9/bin/).
+# This directory is not on the path, and re-installing using brew's pip
+# creates virtualenv in "$(brew --prefix)/bin" which is on the path
+PIP_REQUIRE_VIRTUALENV=false $pip install --force-reinstall virtualenv
 
 # create pyenv versions for system-installed versions, so they can be selected with pyenv
 # and used in .python-version. We use the brew-installed versions because they are optimised,
 # don't require building from source, and will receive patch upgrades, unlike versions
 # installed via pyenv install
 pyenv_install_brew_version() {
-    "$(brew --prefix)/bin/virtualenv" -p "$(brew --prefix)/bin/python${1}" "$HOME/.pyenv/versions/${1}"
+    virtualenv -p "$(brew --prefix)/bin/python${1}" "$HOME/.pyenv/versions/${1}"
     # remove pyvenv.cfg so pip install fails with "Could not find an activated virtualenv" and avoids
     # unintentional installation into global site packages
     # this also removes .pyenv/versions/X.Y/lib/pythonX.Y/site-packages from sys.path

@@ -23,6 +23,7 @@ fi
 # run zsh to start antibody and p10k for the first time so they initialise
 # and download any needed plugins
 #
-# use script to simulate an interactive terminal which is needed to trigger p10k initialisation
-# and switch to $HOME first so zsh starts there like it would with an interactive login
+# use script to run an interactive shell with a prompt (nb: zsh -ic has no prompt)
+# this is needed to trigger p10k initialisation
+# also, we switch to $HOME first so zsh starts there like it would with an interactive login
 (cd "$HOME" && echo exit | script -q zsh)
