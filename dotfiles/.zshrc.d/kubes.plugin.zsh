@@ -36,6 +36,22 @@ krs() {
   kubectl run "$1" -it --image="$2" --command -- /bin/sh
 }
 
+# create default config if it doesn't exist.
+# kubectl writes the current-context to the first file in KUBECONFIG
+# (see below). So we prefix this file with 00 so it appears first.
+# This gives us a stable default that doesn't change when the
+# alphanumeric order of the files in ~/.kube changes.
+default_config="$HOME/.kube/00_default.yaml"
+
+if [[ ! -f "$default_config" ]]; then
+  echo "$0: creating $default_config"
+    cat <<EOF >"${default_config}"
+apiVersion: v1
+kind: Config
+current-context: ""
+EOF
+fi
+
 # unset is needed because we are appending values below and
 # it may already have been set by the parent process (eg: vscode)
 unset KUBECONFIG
@@ -60,16 +76,8 @@ current-context: ""
 EOF
 
 kc-default() {
-  [[ "$#" -ne 1 ]] && echo -e "Usage: $0 default-context\n\neg: $0 docker-desktop" >&2 && return 42
-  # set default context by creating a file
-  # that appears first when ~/.kube is listed (see above)
-  # if no default is set then it will be the current-context as defined
-  # in the first file sorted alphanumerically
-  default_config="$HOME/.kube/00_config.yaml"
-    echo "Set default context in $default_config"
-    cat <<EOF >"${default_config}"
-apiVersion: v1
-kind: Config
-current-context: "$1"
-EOF
+  # set the kube context used when opening a new shell (aka the default context).
+  # to do this, we make sure the default config is ahead of the per-shell context,
+  # so the current-context setting is stored in the default config file
+  KUBECONFIG="${default_config}:${KUBECONFIG}" kubectx
 }
