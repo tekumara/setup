@@ -6,11 +6,6 @@
 .idea/
 *.iml
 
-# VSCode
-
-.vscode/
-*.code-workspace
-
 # Metals
 
 .metals/
