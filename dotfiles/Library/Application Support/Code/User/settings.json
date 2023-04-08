@@ -3,7 +3,11 @@
   "explorer.confirmDragAndDrop": false,
   "editor.copyWithSyntaxHighlighting": false,
   "[python]": {
-    "editor.defaultFormatter": "ms-python.python"
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnType": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
   },
   "cSpell.language": "en-GB",
   "cSpell.userWords": [
@@ -133,7 +137,6 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "jupyter.alwaysTrustNotebooks": true,
   "jupyter.interactiveWindow.creationMode": "perFile",
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -201,8 +204,6 @@
   "[dockercompose]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "autoflake.sortImports": true,
-  "autoflake.path": "${workspaceFolder}/.venv/bin/autoflake",
   "hadolint.hadolintPath": "/opt/homebrew/bin/hadolint",
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -226,12 +227,13 @@
       }
     ]
   },
-  "python.defaultInterpreterPath": "~/.pyenv/versions/3.9.13/bin/python",
+  "python.defaultInterpreterPath": "~/.pyenv/versions/3.9/bin/python",
   "terminal.integrated.localEchoEnabled": "off",
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.inlineSuggest.enabled": true,
-  "github.copilot.enable": {
-    "*": true
-  },
-  "git.openRepositoryInParentFolders": "never"
+  "git.openRepositoryInParentFolders": "never",
+  "rust-analyzer.inlayHints.typeHints.enable": false,
+  "markdown.validate.enabled": true,
+  "remote.SSH.externalSSH_ASKPASS": true,
+  "prettier.tabWidth": 4
 }
