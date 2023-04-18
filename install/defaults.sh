@@ -78,8 +78,8 @@ killall Dock
 # Hot corners
 # -----------
 
-# top left: lock screen
-defaults write com.apple.dock wvous-tl-corner -integer 13
+# bottom left: lock screen
+defaults write com.apple.dock wvous-bl-corner -integer 13
 
 # Default applications
 # --------------------
