@@ -26,7 +26,7 @@ brew "direnv"
 brew "age"
 brew "age-plugin-yubikey"
 brew "ykman"
-cask "homebrew/cask-drivers/yubico-authenticator"
+cask "yubico-authenticator"
 ## gnu-getopt and tree are needed for passage
 brew "gnu-getopt"
 brew "tree"
