@@ -1,6 +1,6 @@
 name: CI
 
-on: [push]
+on: [push, workflow_dispatch]
 
 jobs:
   build:
@@ -42,5 +42,5 @@ jobs:
         run: ./install.sh
 
       - name: Setup tmate session
-        if: ${{ failure() }}
+        if: ${{ github.event_name == 'workflow_dispatch' && failure() }}
         uses: mxschmitt/action-tmate@v3
