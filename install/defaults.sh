@@ -79,7 +79,7 @@ killall Dock
 # -----------
 
 # bottom left: lock screen
-defaults write com.apple.dock wvous-bl-corner -integer 13
+defaults write com.apple.dock wvous-br-corner -integer 13
 
 # Default applications
 # --------------------
