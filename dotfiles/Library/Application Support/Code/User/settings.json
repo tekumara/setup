@@ -232,8 +232,6 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.inlineSuggest.enabled": true,
   "git.openRepositoryInParentFolders": "never",
-  "rust-analyzer.inlayHints.typeHints.enable": false,
   "markdown.validate.enabled": true,
-  "remote.SSH.externalSSH_ASKPASS": true,
-  "prettier.tabWidth": 4
+  "remote.SSH.externalSSH_ASKPASS": true
 }
