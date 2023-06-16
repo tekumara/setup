@@ -233,5 +233,11 @@
   "editor.inlineSuggest.enabled": true,
   "git.openRepositoryInParentFolders": "never",
   "markdown.validate.enabled": true,
-  "remote.SSH.externalSSH_ASKPASS": true
+  "remote.SSH.externalSSH_ASKPASS": true,
+  "codeium.enableConfig": {
+    "*": true,
+    "markdown": true,
+    "toml": true
+  },
+  "cody.serverEndpoint": "https://sourcegraph.com"
 }
