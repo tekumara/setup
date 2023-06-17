@@ -18,9 +18,9 @@ do_install() {
         echo "$sha256  $download"  | shasum --check
 
         case "$download" in
-            # if download is a tar archive, then assume $(basename "$dest") is the desired file within the archive
-            *.tar.gz) tar -zxf "$download" -C /tmp && file=/tmp/$(basename "$dest") ;;
-            *)        file=$download ;;
+            # if download is an archive, then assume $(basename "$dest") is the desired file within the archive
+            *.tar.gz) tar -zxf "$download" && file=$(basename "$dest") ;;
+            *.zip) unzip "$download" && file=$(basename "$dest") ;;
         esac
 
         echo "Installing $file -> $dest"
