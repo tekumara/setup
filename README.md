@@ -15,13 +15,6 @@ cd ~/code/setup && ./install.sh
 
 Run it again to upgrade to the latest version.
 
-## why antibody?
-
-antibody is a fast and minimal plugin manager.
-
-It makes it easy to load plugins from github repos, and can update them.
-It's faster than zgen by ~90ms, and the plugin script it generates is much simpler to read.
-
 ## bench
 
 [zsh-bench](https://github.com/romkatv/zsh-bench):
@@ -32,10 +25,10 @@ creates_tty=0
 has_compsys=1
 has_syntax_highlighting=1
 has_autosuggestions=1
-has_git_prompt=0
-first_prompt_lag_ms=149.188
-first_command_lag_ms=780.334
-command_lag_ms=25.075
-input_lag_ms=7.178
-exit_time_ms=473.716
+has_git_prompt=1
+first_prompt_lag_ms=51.291
+first_command_lag_ms=416.695
+command_lag_ms=26.295
+input_lag_ms=6.631
+exit_time_ms=279.434
 ```

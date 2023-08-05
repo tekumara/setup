@@ -8,10 +8,12 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+source $HOMEBREW_PREFIX/opt/antidote/share/antidote/antidote.zsh
+
 # Generate new ~/.zsh_plugins.sh if it does not exist or ~/.zshrc is newer
 if [[ ! -f ~/.zsh_plugins.sh ]] || [[ ~/.zshrc -nt ~/.zsh_plugins.sh ]]; then
-  echo "antibody bundle"
-  antibody bundle <<- EOF > ~/.zsh_plugins.sh
+  echo "antidote bundle"
+  antidote bundle <<- EOF > ~/.zsh_plugins.sh
     #tekumara/history.zsh
 
     ajeetdsouza/zoxide
