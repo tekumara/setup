@@ -50,7 +50,14 @@ alias gmm='if git show-ref --verify --quiet refs/heads/main; then git merge main
 
 # delete branch locally and on origin
 gbd() {
-    git branch -D "$1"; git push origin --delete "$1"
+    git branch -D "$1"
+    git push -d origin "$1"
+}
+
+# delete tag locally and on origin
+gtd() {
+    git tag -d "$1"
+    git push -d origin "$1"
 }
 
 # github cli
