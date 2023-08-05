@@ -14,15 +14,12 @@ source $HOMEBREW_PREFIX/opt/antidote/share/antidote/antidote.zsh
 if [[ ! -f ~/.zsh_plugins.sh ]] || [[ ~/.zshrc -nt ~/.zsh_plugins.sh ]]; then
   echo "antidote bundle"
   antidote bundle <<- EOF > ~/.zsh_plugins.sh
-    #tekumara/history.zsh
-
     ajeetdsouza/zoxide
     wfxr/forgit
 
     romkatv/powerlevel10k
 
     zdharma-continuum/fast-syntax-highlighting
-    #zsh-users/zsh-history-substring-search
     zsh-users/zsh-autosuggestions
 
     tekumara/zsh-pyenv-virtualenvwrapper-lazy
@@ -34,6 +31,8 @@ source "$HOME/.zshrc.d/minimal.zsh"
 
 # setup forgit aliases manually in git.plugin.zsh
 export FORGIT_NO_ALIASES=true
+# same order as git log
+export FORGIT_FZF_DEFAULT_OPTS="--reverse $FORGIT_FZF_DEFAULT_OPTS"
 
 source ~/.zsh_plugins.sh
 
@@ -48,15 +47,9 @@ source "$HOME/.zshrc.d/node.plugin.zsh"
 #source "$HOME/.zshrc.d/python.plugin.zsh"
 source "$HOME/.zshrc.d/ripgrep.plugin.zsh"
 source "$HOME/.zshrc.d/rust.plugin.zsh"
-if [[ -f "$HOME/Dropbox/Slack/functions.zsh" ]]; then
-  source "$HOME/Dropbox/Slack/functions.zsh"
-fi
 
 # add fzf to path, and load fzf completion & keybindings (CTRL-T, CTRL-R)
 source ~/.fzf.zsh
-
-# same order as git log
-export FORGIT_FZF_DEFAULT_OPTS="--reverse $FORGIT_FZF_DEFAULT_OPTS"
 
 #setup-mac start
 source "$HOME/.zshrc.d/aws-doctor.plugin.zsh"
