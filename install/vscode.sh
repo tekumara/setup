@@ -11,6 +11,7 @@ code \
     --install-extension kddejong.vscode-cfn-lint                    \
     --install-extension hashicorp.terraform                         \
     --install-extension streetsidesoftware.code-spell-checker       \
+    --install-extension tekumara.typos-vscode                       \
     --install-extension fwcd.kotlin                                 \
     --install-extension foxundermoon.shell-format                   \
     --install-extension timonwong.shellcheck                        \
