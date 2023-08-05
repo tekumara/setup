@@ -16,12 +16,13 @@ alias mkvenv='virtualenv --clear .venv && . .venv/bin/activate'
 debugpy() {
     local port=62888
     if [[ -z $VIRTUAL_ENV ]]; then
-        echo "Could not find an activated virtualenv"
+        echo "Activate your virtualenv first to avoid module import errors."
     else
-        # use glob qualifer N (ie: null_glob) so that if the glob has no matches we don't die
-        [[ -d $VIRTUAL_ENV/lib/python*/site-packages/debugpy(#qN) ]] || (echo "Installing debugpy" && pip install debugpy)
+        local debugpy=~/.vscode/extensions/ms-python.python-*/pythonFiles/lib/python/debugpy
+        # use glob qualifier N (ie: null_glob) so that if the glob has no matches we don't die
+        [[ -d $~debugpy(#qN) ]] || { echo "vscode python extension not installed" && return }
         echo "Attach vscode debugger to port $port" >&2
-        python -m debugpy --listen "$port" --wait-for-client "$@"
+        python $~debugpy --listen "$port" --wait-for-client "$@"
     fi
 }
 
