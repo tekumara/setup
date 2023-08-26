@@ -12,7 +12,7 @@ com.microsoft.VSCode            .ndjson                                         
 com.microsoft.VSCode            .sha256                                         all
 com.microsoft.VSCode            .pom                                            all
 com.microsoft.VSCode            .tf                                             all
-org.videolan.vlc                public.mp3                                      all
+com.colliderli.iina             org.matroska.mkv                                all
 com.apple.iWork.Numbers         .csv                                            all
 com.apple.iWork.Numbers         .xls                                            all
 com.apple.iWork.Numbers         .xlsx                                           all
