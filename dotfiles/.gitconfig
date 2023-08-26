@@ -52,9 +52,9 @@
 	smudge = git-lfs smudge -- %f
 [diff-so-fancy]
 	first-run = false
-# allow local customizations in the .gitconfig_local file
-[include]
-	path = ~/.gitconfig_local
+[includeIf "gitdir:~/code/ghec/"]
+	# set alternate user.email for ghec repos
+	path = ~/.gitconfig_ghec
 [diff]
 	tool = bc
 [merge]
@@ -63,8 +63,9 @@
 [mergetool "bc"]
 	trustExitCode = true
 [credential "https://github.com"]
-	helper = 
+	helper =
 	helper = !/opt/homebrew/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = 
+	helper =
 	helper = !/opt/homebrew/bin/gh auth git-credential
+
