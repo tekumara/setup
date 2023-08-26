@@ -239,5 +239,9 @@
     "markdown": true,
     "toml": true
   },
-  "cody.serverEndpoint": "https://sourcegraph.com"
+  "cody.serverEndpoint": "https://sourcegraph.com",
+  "mochaExplorer.logpanel": true,
+  "rust-analyzer.inlayHints.typeHints.enable": false,
+  "editor.inlayHints.fontSize": 10,
+  "typos.path": "~/code/typos-vscode/target/debug/typos-lsp"
 }
