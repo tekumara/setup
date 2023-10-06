@@ -32,6 +32,7 @@ alias gca='git commit --amend'
 gcm() {
     git commit -m "${1-.}"
 }
+# add all unstaged changes, commit and push
 alias gpa='gaa && gcm && gps'
 alias gdh='git diff "HEAD^" HEAD'
 # show both staged and unstaged changes
@@ -45,6 +46,8 @@ alias gbu='current=$(git rev-parse --abbrev-ref HEAD) && git branch --set-upstre
 alias gcom='if git show-ref --verify --quiet refs/heads/main; then git checkout main; else git checkout master; fi'
 # fetch main/master whilst remaining on the currently checked out branch. also updates local tracking branch
 alias gfom='if git show-ref --verify --quiet refs/heads/main; then git fetch origin main:main; else git fetch origin master:master; fi'
+# pull origin main/master into the current branch
+alias gpom='if git show-ref --verify --quiet refs/heads/main; then git pull origin main; else git pull origin master; fi'
 # merge main/master into the current branch
 alias gmm='if git show-ref --verify --quiet refs/heads/main; then git merge main; else git merge master; fi'
 
@@ -68,3 +71,5 @@ hb() {
 alias hprc='gh pr create --fill -w'
 # view pr for the current branch
 alias hprv='gh pr view --web'
+# view ci.yml workflow in the browser
+alias hwv='gh workflow view -w ci.yml'
