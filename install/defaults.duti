@@ -13,6 +13,7 @@ com.microsoft.VSCode            .sha256                                         
 com.microsoft.VSCode            .pom                                            all
 com.microsoft.VSCode            .tf                                             all
 com.colliderli.iina             org.matroska.mkv                                all
+com.colliderli.iina             public.mpeg-4                                   all
 com.apple.iWork.Numbers         .csv                                            all
 com.apple.iWork.Numbers         .xls                                            all
 com.apple.iWork.Numbers         .xlsx                                           all
