@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: macos-13
 
     steps:
       - uses: actions/checkout@v2
@@ -17,10 +17,10 @@ jobs:
       # see https://github.com/actions/runner-images
       - name: reset runner environment
         run: |
-          rm /usr/local/bin/aws
-          rm /usr/local/bin/aws_completer
-          rm /usr/local/bin/go
-          rm /usr/local/bin/gofmt
+          rm -f /usr/local/bin/aws
+          rm -f /usr/local/bin/aws_completer
+          rm -f /usr/local/bin/go
+          rm -f /usr/local/bin/gofmt
           brew unlink python@3.10 python@3.11
           brew link --overwrite python@3.10 python@3.11
           rm "$HOME/.gitconfig"
