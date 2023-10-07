@@ -45,8 +45,9 @@ krs() {
 default_config="$HOME/.kube/00_default.yaml"
 
 if [[ ! -f "$default_config" ]]; then
+  mkdir -p $(dirname "$default_config")
   echo "$0: creating $default_config"
-    cat <<EOF >"${default_config}"
+  cat <<EOF >"${default_config}"
 apiVersion: v1
 kind: Config
 current-context: ""
@@ -60,9 +61,9 @@ unset KUBECONFIG
 # set KUBECONFIG to all config files in the paths below, so
 # we don't have to merge them into a single file
 #
-# use glob qualifer N (ie: null_glob) to prevent a "no matches found"
+# use glob qualifier N (ie: null_glob) to prevent a "no matches found"
 # error if the glob doesn't match any files
-files=($HOME/.kube/*.yaml(N) $HOME/.k3d/kubeconfig*.yaml(N))
+files=($HOME/.kube/*.yaml(N) $HOME/.k3d/kubeconfig*.yaml(N) $HOME/.kube/config)
 for file in $files; do
   KUBECONFIG+="${KUBECONFIG+:}${file}"
 done
