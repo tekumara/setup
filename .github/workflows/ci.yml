@@ -9,7 +9,7 @@ jobs:
     runs-on: macos-13
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       # remove the packages that are already in the environment so we can install them.
       # relink brew python packages - these are already installed but overwritten.
