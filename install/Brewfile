@@ -31,20 +31,16 @@ cask "yubico-authenticator"
 ## gnu-getopt and tree are needed for passage
 brew "gnu-getopt"
 brew "tree"
-brew "lastpass-cli"
 cask "1password-cli"
 cask "1password"
-cask "authy"
 
 # aws
 brew "awscli"
 cask "session-manager-plugin", args: {'no-quarantine': true}
 cask "aws-vault"
-brew "cfn-lint"
 
 # dev tools
 brew "shellcheck"
-cask "intellij-idea-ce"
 cask "visual-studio-code"
 cask "beyond-compare"
 ## for vscode symbol generation
