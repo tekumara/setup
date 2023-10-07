@@ -1,3 +1,7 @@
+# pyenv can't be lazy loaded because if a virtualenv is activated before
+# pyenv loads (eg: by an IDE terminal) it will break the virtualenv
+eval "$(pyenv init - --no-rehash zsh)"
+
 # prevent pip from installing globally
 export PIP_REQUIRE_VIRTUALENV=true
 
@@ -11,6 +15,13 @@ export PIPX_DEFAULT_PYTHON
 alias venv='{[[ -d .venv ]] && . .venv/bin/activate} || {[[ -d venv ]] && . venv/bin/activate} || echo "Missing .venv/"'
 # create venv and activate
 alias mkvenv='virtualenv --clear .venv && . .venv/bin/activate'
+
+# create a temp venv and activate
+mktmpenv() {
+    local venv="$(mktemp -d)"
+    virtualenv $venv
+    . $venv/bin/activate
+}
 
 # vscode debugger
 debugpy() {

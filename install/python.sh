@@ -6,7 +6,7 @@ set -euo pipefail
 
 # set default python version
 default_python_version=3.9
-# explictly use brew's pip to avoid using xcode or pyenv-installed pip
+# explicitly use brew's pip to avoid using xcode or pyenv-installed pip
 # NB: xcode may have overwritten /usr/local/bin/pip so we use the
 # version in the $(brew --prefix)/opt/ path
 pip="$(brew --prefix)/opt/python@${default_python_version}/libexec/bin/pip"
@@ -20,8 +20,8 @@ pip="$(brew --prefix)/opt/python@${default_python_version}/libexec/bin/pip"
 # which isn't on the path
 PIP_REQUIRE_VIRTUALENV=false $pip install --force-reinstall pip
 
-# upgrade virtualenv (also used by virtualenvwrapper) to ensure venvs
-# created by mkvenv/mktmpenv are seeded with the latest version of pip
+# upgrade virtualenv to ensure venvs created by mkvenv/mktmpenv are seeded
+# with the latest version of pip
 #
 # we force a reinstall in case virtualenv was previously
 # installed into xcode's python directory (ie: ~/Library/Python/3.9/bin/).
@@ -48,11 +48,8 @@ pyenv_install_brew_version 3.11
 
 pyenv global $default_python_version
 
-# because we are using tekumara/zsh-pyenv-virtualenvwrapper-lazy
-# run pyenv virtualenvwrapper upfront so it pip installs virtualenvwrapper
-# must allow unbound variables for pyenv virtualenvwrapper
-set +u
-eval "$(pyenv init -)" && pyenv virtualenvwrapper
+# initialise our pyenv
+eval "$(pyenv init -)"
 
 # use a stable pyenv path instead of brew's pythonX.Y.Z path
 # so pipx packages aren't broken when brew upgrades python
