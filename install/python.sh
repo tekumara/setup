@@ -5,7 +5,7 @@
 set -euo pipefail
 
 # set default python version
-default_python_version=3.9
+default_python_version=3.10
 # explicitly use brew's pip to avoid using xcode or pyenv-installed pip
 # NB: xcode may have overwritten /usr/local/bin/pip so we use the
 # version in the $(brew --prefix)/opt/ path
