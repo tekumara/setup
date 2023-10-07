@@ -37,12 +37,12 @@ export FORGIT_FZF_DEFAULT_OPTS="--reverse $FORGIT_FZF_DEFAULT_OPTS"
 source ~/.zsh_plugins.sh
 
 #source "$HOME/.zshrc.d/aws.plugin.zsh"
-source "$HOME/.zshrc.d/docker.plugin.zsh"
+#source "$HOME/.zshrc.d/docker.plugin.zsh"
 source "$HOME/.zshrc.d/dinstall.plugin.zsh"
 #source "$HOME/.zshrc.d/git.plugin.zsh"
 source "$HOME/.zshrc.d/golang.plugin.zsh"
 #source "$HOME/.zshrc.d/java.plugin.zsh"
-source "$HOME/.zshrc.d/kubes.plugin.zsh"
+#source "$HOME/.zshrc.d/kubes.plugin.zsh"
 source "$HOME/.zshrc.d/node.plugin.zsh"
 #source "$HOME/.zshrc.d/python.plugin.zsh"
 source "$HOME/.zshrc.d/ripgrep.plugin.zsh"
@@ -51,17 +51,6 @@ source "$HOME/.zshrc.d/rust.plugin.zsh"
 # add fzf to path, and load fzf completion & keybindings (CTRL-T, CTRL-R)
 source ~/.fzf.zsh
 
-#setup-mac start
-source "$HOME/.zshrc.d/aws-doctor.plugin.zsh"
-source "$HOME/.zshrc.d/aws.plugin.zsh"
-source "$HOME/.zshrc.d/functions.plugin.zsh"
-source "$HOME/.zshrc.d/git-doctor.plugin.zsh"
-source "$HOME/.zshrc.d/git.plugin.zsh"
-source "$HOME/.zshrc.d/java.plugin.zsh"
-source "$HOME/.zshrc.d/python.plugin.zsh"
-source "$HOME/.zshrc.d/setup.plugin.zsh"
-
-#setup-mac end
 
 # add brew package completions
 FPATH="$HOMEBREW_PREFIX/share/zsh/site-functions:${FPATH}"
@@ -74,3 +63,17 @@ _load_compinit
 # Enable direnv last, so that any env vars overwritten will
 # record their prior value if set above (eg: KUBECONFIG)
 eval "$(direnv hook zsh)"
+#setup-mac start
+source "$HOME/.zshrc.d/auth.plugin.zsh"
+source "$HOME/.zshrc.d/aws-doctor.plugin.zsh"
+source "$HOME/.zshrc.d/aws.plugin.zsh"
+source "$HOME/.zshrc.d/docker.plugin.zsh"
+source "$HOME/.zshrc.d/functions.plugin.zsh"
+source "$HOME/.zshrc.d/git-doctor.plugin.zsh"
+source "$HOME/.zshrc.d/git.plugin.zsh"
+source "$HOME/.zshrc.d/java.plugin.zsh"
+source "$HOME/.zshrc.d/kubes.plugin.zsh"
+source "$HOME/.zshrc.d/python.plugin.zsh"
+source "$HOME/.zshrc.d/setup.plugin.zsh"
+
+#setup-mac end

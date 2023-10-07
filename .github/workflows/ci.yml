@@ -35,9 +35,10 @@ jobs:
       - name: fix build to work with setup-mac
         run: |
           mkdir -p "$HOME/.zshrc.d"
+          touch "$HOME/.zshrc.d/auth.plugin.zsh"
           touch "$HOME/.zshrc.d/aws-doctor.plugin.zsh"
-          touch "$HOME/.zshrc.d/git-doctor.plugin.zsh"
           touch "$HOME/.zshrc.d/functions.plugin.zsh"
+          touch "$HOME/.zshrc.d/git-doctor.plugin.zsh"
           touch "$HOME/.zshrc.d/setup.plugin.zsh"
 
       - name: install.sh
