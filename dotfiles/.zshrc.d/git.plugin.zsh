@@ -16,7 +16,7 @@ alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %
 alias gla='gl --all'
 alias gdc='git diff --cached'
 alias grb='git rebase'
-alias gcb='git checkout -b'
+alias gcob='git checkout -b'
 alias gsh='git show'
 
 # forgit
