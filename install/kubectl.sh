@@ -58,15 +58,15 @@ fi
 # see https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/ for more info
 # and https://github.com/kubernetes/kubernetes/tree/master/CHANGELOG for a list of versions
 case "$(uname -sm)" in
-    # sha256 is hardcoded to match curl -L https://dl.k8s.io/release/v1.23.17/bin/darwin/arm64/kubectl.sha256
-    "Darwin arm64")  sha256=3b4590d67b31e3a94a9633064571c981907555da5376c34960cddfcd552f6114 && arch=darwin/arm64 ;;
+    # sha256 is hardcoded to match curl -L https://dl.k8s.io/release/v1.25.15/bin/darwin/arm64/kubectl.sha256
+    "Darwin arm64")  sha256=2c04ef309dfa159873a7b581708f1cb3bf009b12ae52882503bdcb04159698a3 && arch=darwin/arm64 ;;
 
-    # sha256 is hardcoded to match curl -L https://dl.k8s.io/release/v1.23.17/bin/darwin/amd64/kubectl.sha256
-    "Darwin x86_64") sha256=7ece6543e3ca2ae9698ef61bbb2a4e249aa21319df4ea1b27c136a9b005dd7d8 && arch=darwin/amd64 ;;
+    # sha256 is hardcoded to match curl -L https://dl.k8s.io/release/v1.25.15/bin/darwin/amd64/kubectl.sha256
+    "Darwin x86_64") sha256=0a8a164f7f8945da6ceeca6f509ee97442ba4151e1485ba8ef19ae839b6324c7 && arch=darwin/amd64 ;;
     *) echo "error: unknown arch $(uname -sm)" && exit 42;;
 esac
 
-do_install "https://dl.k8s.io/release/v1.23.17/bin/$arch/kubectl" /usr/local/bin/kubectl "$sha256"
+do_install "https://dl.k8s.io/release/v1.25.15/bin/$arch/kubectl" /usr/local/bin/kubectl "$sha256"
 
 # install eks-iam-cache, saves 0.5 secs on each kubectl command
 case "$(uname -sm)" in
