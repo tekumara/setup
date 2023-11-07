@@ -18,6 +18,7 @@ alias gdc='git diff --cached'
 alias grb='git rebase'
 alias gcob='git checkout -b'
 alias gsh='git show'
+alias gst='git stash'
 
 # forgit
 alias grbi='forgit::rebase'
