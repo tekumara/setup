@@ -3,11 +3,11 @@
   "explorer.confirmDragAndDrop": false,
   "editor.copyWithSyntaxHighlighting": false,
   "[python]": {
-    "editor.defaultFormatter": "ms-python.python",
     "editor.formatOnType": true,
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
-    }
+    },
+    "editor.defaultFormatter": "ms-python.black-formatter"
   },
   "cSpell.language": "en-GB",
   "cSpell.userWords": [
@@ -146,7 +146,6 @@
     "*.ipynb": "jupyter-notebook"
   },
   "omnisharp.useGlobalMono": "always",
-  "go.testEnvFile": "${workspaceFolder}/.env",
   "go.toolsManagement.autoUpdate": true,
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -201,7 +200,9 @@
   },
   "gitlens.currentLine.enabled": false,
   "gitlens.codeLens.enabled": false,
-  "terminal.integrated.commandsToSkipShell": ["workbench.action.switchWindow"],
+  "terminal.integrated.commandsToSkipShell": [
+    "workbench.action.switchWindow"
+  ],
   "[dockercompose]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -229,6 +230,9 @@
     ]
   },
   "python.defaultInterpreterPath": "~/.pyenv/versions/3.9/bin/python",
+  "python.testing.pytestArgs": [
+    "--color=yes"
+  ],
   "terminal.integrated.localEchoEnabled": "off",
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.inlineSuggest.enabled": true,
@@ -244,5 +248,7 @@
   "mochaExplorer.logpanel": true,
   "rust-analyzer.inlayHints.typeHints.enable": false,
   "editor.inlayHints.fontSize": 10,
-  "typos.path": "~/code/typos-vscode/target/debug/typos-lsp"
+  "typos.path": "~/code/typos-vscode/target/debug/typos-lsp",
+  "editor.inlineSuggest.suppressSuggestions": true,
+  "typos.logLevel": "info"
 }
