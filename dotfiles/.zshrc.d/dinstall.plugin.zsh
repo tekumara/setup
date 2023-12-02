@@ -3,14 +3,14 @@ dinstall() {
     local dest=$2
     local sha256=$3
 
-    { [[ -z "$url" ]] || [[ -z "$dest" ]]} && {
+    { [[ -z "$url" ]] || [[ -z "$dest" ]] ;} && {
         echo "Usage: $0 url dest [sha256]"
         return 42
     }
 
     # check sha of any existing binary first, and skip if already installed
     # if the url is an archive, this will always fail and we'll download
-    if ! [[ -f "$dest" ]] || [[ -z "$sha256" ]] || { ! echo "$sha256  $dest"  | shasum -s --check }; then
+    if ! [[ -f "$dest" ]] || [[ -z "$sha256" ]] || { ! echo "$sha256  $dest"  | shasum -s --check ;} then
         download=/tmp/$(basename "$url")
         echo "Downloading $url"
         curl -fsSLO --output-dir /tmp "$url"
