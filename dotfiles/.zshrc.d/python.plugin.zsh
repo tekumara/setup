@@ -29,7 +29,7 @@ debugpy() {
     if [[ -z $VIRTUAL_ENV ]]; then
         echo "Activate your virtualenv first to avoid module import errors."
     else
-        local debugpy=~/.vscode/extensions/ms-python.python-*/pythonFiles/lib/python/debugpy
+        local debugpy=$(ls -dt ~/.vscode/extensions/ms-python.python-*/pythonFiles/lib/python/debugpy | head -n 1)
         # use glob qualifier N (ie: null_glob) so that if the glob has no matches we don't die
         [[ -d $~debugpy(#qN) ]] || { echo "vscode python extension not installed" && return }
         echo "Attach vscode debugger to port $port" >&2
