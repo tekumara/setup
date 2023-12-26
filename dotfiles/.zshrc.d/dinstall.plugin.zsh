@@ -13,7 +13,7 @@ dinstall() {
     if ! [[ -f "$dest" ]] || [[ -z "$sha256" ]] || { ! echo "$sha256  $dest"  | shasum -s --check ;} then
         download=/tmp/$(basename "$url")
         echo "Downloading $url"
-        curl -fsSLO --output-dir /tmp "$url"
+        curl -fsSLo "$download" "$url"
         if [[ -n "$sha256" ]]; then
             echo "$sha256  $download"  | shasum --check
         else
@@ -22,12 +22,14 @@ dinstall() {
 
         case "$download" in
             # if download is a tar archive, then assume $(basename "$dest") is the desired file within the archive
-            *.tar.gz) tar -zxf "$download" -C /tmp && file=/tmp/$(basename "$dest") ;;
-            *.zip) unzip "$download" -d /tmp && file=/tmp/$(basename "$dest") ;;
+            # ** will find the extracted file in subdirs too (eg: /tmp/gh_2.40.1_linux_amd64/bin/gh) - for globbing
+            # to work this needs to be an array, hence the extra ( )
+            *.tar.gz) tar -zxf "$download" -C /tmp && file=(/tmp/**/$(basename "$dest")) ;;
+            *.zip) unzip "$download" -d /tmp && file=(/tmp/**/$(basename "$dest")) ;;
             *)        file=$download ;;
         esac
 
         echo "Installing $file -> $dest"
-        install "$file" "$dest"
+        install $file "$dest"
     fi
 }
