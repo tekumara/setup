@@ -48,6 +48,7 @@ brew "ctags"
 brew "nbdime"
 brew "terraform"
 brew "pandoc"
+brew "wiggle"
 ## later version than apple git
 brew "git"
 brew "git-lfs"

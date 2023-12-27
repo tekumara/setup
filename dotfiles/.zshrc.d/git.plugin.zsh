@@ -76,3 +76,14 @@ alias hprv='gh pr view --web'
 alias hwv='gh workflow view ci.yml'
 # view ci.yml workflow in the browser
 alias hwvb='gh workflow view -w ci.yml'
+
+wiggle-all() {
+    # apply all rej files
+    for rej in *.rej .*.rej(N); do
+        base="$(basename -s .rej "$rej")"
+        echo "Applying $rej to $base"
+        wiggle --replace "$base" "$rej"
+        rm "$rej"
+        rm "$base.porig"
+    done
+}
