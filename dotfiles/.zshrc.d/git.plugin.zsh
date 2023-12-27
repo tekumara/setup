@@ -72,5 +72,7 @@ hb() {
 alias hprc='gh pr create --fill -w'
 # view pr for the current branch
 alias hprv='gh pr view --web'
+# view ci.yml workflow
+alias hwv='gh workflow view ci.yml'
 # view ci.yml workflow in the browser
-alias hwv='gh workflow view -w ci.yml'
+alias hwvb='gh workflow view -w ci.yml'
