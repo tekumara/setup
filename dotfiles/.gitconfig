@@ -1,6 +1,11 @@
 [pull]
 	# Use merge to resolve divergent branches on pull.
 	rebase = false
+[branch "main"]
+	# Except for main/master use rebase instead of merge to preserve a linear history.
+	rebase = true
+[branch "master"]
+	rebase = true
 [push]
 	# When pushing a branch for the first time a remote branch needs to be supplied. This
 	# automatically sets the remote branch to one with the same name as the current branch.
