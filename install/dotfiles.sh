@@ -20,7 +20,7 @@ if [[ ! -d ~/.vim_runtime ]]; then
     sh ~/.vim_runtime/install_basic_vimrc.sh
 fi
 
-# run zsh to start antibody and p10k for the first time so they initialise
+# run zsh to start antidote and p10k for the first time so they initialise
 # and download any needed plugins
 #
 # use script to run an interactive shell with a prompt (nb: zsh -ic has no prompt)
