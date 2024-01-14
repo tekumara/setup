@@ -2,6 +2,7 @@
 # https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/kubectl/kubectl.plugin.zsh
 # https://github.com/ahmetb/kubectl-aliases
 alias k='kubectl'
+alias ka='kubectl attach -it'
 alias kc='kubectx'
 alias kd='kubectl describe'
 alias kdd='kubectl describe deployment'
