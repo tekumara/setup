@@ -42,6 +42,7 @@ pyenv_install_brew_version() {
     rm "$HOME/.pyenv/versions/${1}/pyvenv.cfg"
 }
 
+pyenv_install_brew_version 3.8
 pyenv_install_brew_version 3.9
 pyenv_install_brew_version 3.10
 pyenv_install_brew_version 3.11
