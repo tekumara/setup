@@ -45,7 +45,7 @@ go install github.com/go-delve/delve/cmd/dlv@latest
 
 # update antidote plugins if any
 if [[ -d "$HOME/Library/Caches/antidote" ]]; then
-    antidote update
+    zsh -ic "antidote update"
 fi
 
 # rust
