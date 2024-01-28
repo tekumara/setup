@@ -51,4 +51,8 @@ fi
 # rust
 # use rustup because brew doesn't include clippy
 # use --no-modify-path because we add ~/.cargo/bin to the path ourselves in rust.plugin.zsh
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --no-modify-path
+if ! hash rustup 2> /dev/null; then
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --no-modify-path
+else
+    rustup update
+fi
