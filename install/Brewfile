@@ -41,8 +41,9 @@ cask "aws-vault"
 
 # dev tools
 brew "shellcheck"
-cask "visual-studio-code"
 cask "beyond-compare"
+brew "nvim"
+cask "visual-studio-code"
 ## for vscode symbol generation
 brew "ctags"
 brew "nbdime"
