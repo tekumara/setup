@@ -73,4 +73,6 @@
 [credential "https://gist.github.com"]
 	helper =
 	helper = !/opt/homebrew/bin/gh auth git-credential
-
+[branch]
+	# git branch is sorted with most recent commits last
+	sort = committerdate

@@ -6,6 +6,16 @@
 # alias gco='git checkout'
 # alias grs='git reset' # ie: unstage
 eval "$(scmpuff init -s)"
+unalias gco
+gco() {
+    if [ $# -eq 0 ]; then
+        # use fzf to select branch ordered by most recent first. Strip remotes/origin so they're checked out as local branches.
+        local current_branch=$(git rev-parse --abbrev-ref HEAD)
+        git branch --all | grep -Ev "remotes/origin/(HEAD|$current_branch)" | sed 's|remotes/origin/||' | uniq | fzf --tac | xargs git checkout
+    else
+        git checkout "$@"
+    fi
+}
 
 # adapted from scm breeze https://github.com/scmbreeze/scm_breeze/blob/master/lib/git/aliases.sh
 alias gc='git commit'
