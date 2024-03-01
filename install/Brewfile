@@ -48,7 +48,7 @@ cask "visual-studio-code"
 ## for vscode symbol generation
 brew "ctags"
 brew "nbdime"
-brew "terraform"
+brew "hashicorp/tap/terraform"
 brew "pandoc"
 brew "wiggle"
 ## later version than apple git
