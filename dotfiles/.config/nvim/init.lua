@@ -12,19 +12,27 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    "neovim/nvim-lspconfig"
-})
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+    {'akinsho/toggleterm.nvim', version = "*", config = true},
+  })
 
-local lspconfig = require('lspconfig')
+require("mason").setup()
+require("mason-lspconfig").setup {
+  -- install typos_lsp into ~/.local/share/nvim/mason/bin
+  ensure_installed = { "typos_lsp" },
+}
+
 require('lspconfig').typos_lsp.setup({
-    config = {
-      -- log level of the language server. Defaults to ERROR.
-      cmd_env = { RUST_LOG = "ERROR" }
-  },
+  -- Logging level of the language server. Logs appear in :LspLog. Defaults to error.
+  cmd_env = { RUST_LOG = "debug" }
   init_options = {
-      -- custom config. Used together with any workspace config files.
-      config = '~/code/typos-vscode/crates/typos-lsp/tests/typos.toml',
-      -- how typos are rendered in the editor. Defaults to ERROR.
+      -- Custom config. Used together with any workspace config files, taking precedence for
+      -- settings declared in both. Equivalent to the typos `--config` cli argument.
+      -- config = '~/code/typos-lsp/crates/typos-lsp/tests/typos.toml',
+      -- How typos are rendered in the editor, eg: as errors, warnings, information, or hints.
+      -- Defaults to error.
       diagnosticSeverity = "Error"
   }
 })
