@@ -71,6 +71,7 @@ source "$HOME/.zshrc.d/git-doctor.plugin.zsh"
 source "$HOME/.zshrc.d/git.plugin.zsh"
 source "$HOME/.zshrc.d/java.plugin.zsh"
 source "$HOME/.zshrc.d/kubes.plugin.zsh"
+source "$HOME/.zshrc.d/migrations.plugin.zsh"
 source "$HOME/.zshrc.d/python.plugin.zsh"
 source "$HOME/.zshrc.d/setup.plugin.zsh"
 
