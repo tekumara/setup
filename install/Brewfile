@@ -47,7 +47,6 @@ brew "nvim"
 cask "visual-studio-code"
 ## for vscode symbol generation
 brew "ctags"
-brew "nbdime"
 brew "hashicorp/tap/terraform"
 brew "pandoc"
 brew "wiggle"

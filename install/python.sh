@@ -69,3 +69,4 @@ pipx_upgrade() {
 }
 
 pipx_upgrade aec-cli
+pipx_upgrade nbdime
