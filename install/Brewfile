@@ -86,7 +86,7 @@ brew "yarn"
 brew "fnm"
 
 # java
-cask "homebrew/cask-versions/temurin11"
+cask "temurin@11"
 brew "coursier/formulas/coursier"
 
 # golang
