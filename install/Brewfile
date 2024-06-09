@@ -87,7 +87,6 @@ brew "fnm"
 
 # java
 cask "temurin@11"
-brew "coursier/formulas/coursier"
 
 # golang
 brew "go"
