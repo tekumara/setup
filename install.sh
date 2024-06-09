@@ -17,7 +17,6 @@ fi
 install/fonts.sh
 install/kubectl.sh
 install/python.sh
-install/vscode.sh
 install/defaults.sh
 install/dotfiles.sh
 install/passage.sh
