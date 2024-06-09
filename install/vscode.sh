@@ -5,7 +5,7 @@
 set -uoe pipefail
 
 # install extensions
-code \
+code --force \
     --install-extension ms-python.python                            \
     --install-extension ms-python.vscode-pylance                    \
     --install-extension kddejong.vscode-cfn-lint                    \
