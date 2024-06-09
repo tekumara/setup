@@ -7,11 +7,25 @@
 # alias grs='git reset' # ie: unstage
 eval "$(scmpuff init -s)"
 unalias gco
+
+_dedup() {
+    # dedup unordered inputs, preserving order
+    # whereas uniq expects the input to be sorted for deduping
+    # eg:
+    # ❯ echo "b\na\nb\na" | uniq | sort | paste -s -d, -
+    # a,a,b,b
+    # ❯ echo "b\na\nb\na" | _dedup | paste -s -d, -
+    # b,a
+    #
+    # see https://unix.stackexchange.com/a/194790/2680
+    cat -n | sort -k2 -k1n  | uniq -f1 | sort -nk1,1 | cut -f2-
+}
+
 gco() {
     if [ $# -eq 0 ]; then
         # use fzf to select branch ordered by most recent first. Strip remotes/origin so they're checked out as local branches.
         local current_branch=$(git rev-parse --abbrev-ref HEAD)
-        git branch --all | grep -Ev "remotes/origin/(HEAD|$current_branch)" | sed 's|remotes/origin/||' | uniq | fzf --tac | xargs git checkout
+        git branch --all | grep -Ev "remotes/origin/(HEAD|$current_branch)" | sed 's|remotes/origin/||' | _dedup | fzf --tac | xargs git checkout
     else
         git checkout "$@"
     fi
