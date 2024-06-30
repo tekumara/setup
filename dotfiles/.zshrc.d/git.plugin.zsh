@@ -117,3 +117,22 @@ wiggles() {
         rm "$base.porig"
     done
 }
+
+# use git checkout completions (from homebrew git) for gco
+_gco () {
+        # set state the way the _git zsh wrapper does see
+        # see https://github.com/git/git/blob/790a17f/contrib/completion/git-completion.zsh#L271
+        local cur cword prev __git_cmd_idx
+        cur=${words[CURRENT]}
+        prev=${words[CURRENT-1]}
+        let cword=CURRENT
+
+        # as per https://github.com/git/git/blob/790a17f/contrib/completion/git-completion.zsh#L254
+        __git_cmd_idx=1
+
+        # calls https://github.com/git/git/blob/790a17f/contrib/completion/git-completion.bash#L1700
+        _git_checkout
+}
+
+compdef _gco gco
+autoload -Uz _git_checkout
