@@ -62,7 +62,6 @@ _load_compinit
 eval "$(direnv hook zsh)"
 #setup-mac start
 source "$HOME/.zshrc.d/auth.plugin.zsh"
-source "$HOME/.zshrc.d/aws-doctor.plugin.zsh"
 source "$HOME/.zshrc.d/aws.plugin.zsh"
 source "$HOME/.zshrc.d/docker.plugin.zsh"
 source "$HOME/.zshrc.d/functions.plugin.zsh"
