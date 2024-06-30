@@ -73,6 +73,9 @@
 [credential "https://gist.github.com"]
 	helper =
 	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential]
+	helper = cache --timeout 7200
+	helper = oauth
 [branch]
 	# git branch is sorted with most recent commits last
 	sort = committerdate
