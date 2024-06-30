@@ -62,6 +62,7 @@
 	path = ~/.gitconfig_ghec
 [diff]
 	tool = bc
+	algorithm = histogram
 [merge]
 	tool = bc
 	conflictstyle = zdiff3
