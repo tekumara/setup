@@ -38,6 +38,7 @@ alias gpl='git pull'
 alias gps='git push'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gla='gl --all'
+alias gm='git merge'
 alias gdc='git diff --cached'
 alias grb='git rebase'
 alias gcob='git checkout -b'
@@ -52,6 +53,7 @@ alias gdf=forgit::diff
 alias glf=forgit::log
 alias gcf=forgit::fixup
 alias grvf=forgit::revert::commit
+alias gcof=forgit::checkout::commit
 
 # other
 alias gca='git commit --amend'
@@ -93,6 +95,8 @@ gtd() {
 hb() {
     gh browse --branch "${1:-$(git rev-parse HEAD)}"
 }
+alias hprl='gh pr list'
+alias hprco='gh pr checkout'
 # create pr for the current branch
 alias hprc='gh pr create --fill -w'
 # view pr for the current branch
