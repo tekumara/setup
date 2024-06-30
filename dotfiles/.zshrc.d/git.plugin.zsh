@@ -25,6 +25,8 @@ gco() {
     if [ $# -eq 0 ]; then
         # use fzf to select branch to checkout
         # remote branches are shown without the remotes/origin prefix
+        # therefore git checkout will check out the equivalent local tracking branch,
+        # if it exists, otherwise it creates one
         local current_branch=$(git rev-parse --abbrev-ref HEAD)
         git branch --all | grep -Ev "remotes/origin/(HEAD|$current_branch)" | sed 's|remotes/origin/||' | _dedup | fzf | xargs git checkout
     else
@@ -118,21 +120,18 @@ wiggles() {
     done
 }
 
-# use git checkout completions (from homebrew git) for gco
+# use git checkout completions (installed by homebrew git) for gco
 _gco () {
-        # set state the way the _git zsh wrapper does see
-        # see https://github.com/git/git/blob/790a17f/contrib/completion/git-completion.zsh#L271
-        local cur cword prev __git_cmd_idx
-        cur=${words[CURRENT]}
-        prev=${words[CURRENT-1]}
-        let cword=CURRENT
+    # set state to mimic git checkout completion
 
-        # as per https://github.com/git/git/blob/790a17f/contrib/completion/git-completion.zsh#L254
-        __git_cmd_idx=1
+    local service=git
+    # replace first element of words (ie: gco) with git checkout
+    words=(git checkout "${(@)words[2,-1]}")
+    let CURRENT=CURRENT+1
 
-        # calls https://github.com/git/git/blob/790a17f/contrib/completion/git-completion.bash#L1700
-        _git_checkout
+    # call https://github.com/git/git/blob/790a17f/contrib/completion/git-completion.zsh#L271
+    # which wraps https://github.com/git/git/blob/790a17f/contrib/completion/git-completion.bash
+    _git
 }
 
 compdef _gco gco
-autoload -Uz _git_checkout
