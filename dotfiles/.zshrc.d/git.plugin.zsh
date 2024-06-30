@@ -9,7 +9,7 @@ eval "$(scmpuff init -s)"
 unalias gco
 
 _dedup() {
-    # dedup unordered inputs, preserving order
+    # dedup unordered inputs, preserves order by taking the first occurrence
     # whereas uniq expects the input to be sorted for deduping
     # eg:
     # ❯ echo "b\na\nb\na" | uniq | sort | paste -s -d, -
@@ -23,9 +23,10 @@ _dedup() {
 
 gco() {
     if [ $# -eq 0 ]; then
-        # use fzf to select branch ordered by most recent first. Strip remotes/origin so they're checked out as local branches.
+        # use fzf to select branch to checkout
+        # remote branches are shown without the remotes/origin prefix
         local current_branch=$(git rev-parse --abbrev-ref HEAD)
-        git branch --all | grep -Ev "remotes/origin/(HEAD|$current_branch)" | sed 's|remotes/origin/||' | _dedup | fzf --tac | xargs git checkout
+        git branch --all | grep -Ev "remotes/origin/(HEAD|$current_branch)" | sed 's|remotes/origin/||' | _dedup | fzf | xargs git checkout
     else
         git checkout "$@"
     fi

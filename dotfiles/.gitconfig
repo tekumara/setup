@@ -75,5 +75,6 @@
 	helper =
 	helper = !/opt/homebrew/bin/gh auth git-credential
 [branch]
-	# git branch is sorted with most recent commits last
-	sort = committerdate
+	# git branch is sorted with most recent commits first
+	# matches the order of git log
+	sort = -committerdate
