@@ -6,6 +6,22 @@
 # alias gco='git checkout'
 # alias grs='git reset' # ie: unstage
 eval "$(scmpuff init -s)"
+
+# adapted from scm breeze https://github.com/scmbreeze/scm_breeze/blob/master/lib/git/aliases.sh
+alias gc='git commit'
+alias gb='git branch'
+alias gpl='git pull'
+alias gps='git push'
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gla='gl --all'
+alias gm='git merge'
+alias gdc='git diff --cached'
+alias grb='git rebase'
+alias gcob='git checkout -b'
+alias gsh='git show'
+alias gst='git stash'
+
+# fancy git checkout
 unalias gco
 
 _dedup() {
@@ -34,19 +50,21 @@ gco() {
     fi
 }
 
-# adapted from scm breeze https://github.com/scmbreeze/scm_breeze/blob/master/lib/git/aliases.sh
-alias gc='git commit'
-alias gb='git branch'
-alias gpl='git pull'
-alias gps='git push'
-alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias gla='gl --all'
-alias gm='git merge'
-alias gdc='git diff --cached'
-alias grb='git rebase'
-alias gcob='git checkout -b'
-alias gsh='git show'
-alias gst='git stash'
+# use git checkout completions (installed by homebrew git) for gco
+_gco () {
+    # set state to mimic git checkout completion
+
+    local service=git
+    # replace first element of words (ie: gco) with git checkout
+    words=(git checkout "${(@)words[2,-1]}")
+    let CURRENT=CURRENT+1
+
+    # call https://github.com/git/git/blob/790a17f/contrib/completion/git-completion.zsh#L271
+    # which wraps https://github.com/git/git/blob/790a17f/contrib/completion/git-completion.bash
+    _git
+}
+
+compdef _gco gco
 
 # forgit
 alias grbi='forgit::rebase'
@@ -60,7 +78,7 @@ alias gcof=forgit::checkout::commit
 
 # other
 alias gca='git commit --amend'
-gcm() {
+function gcm {
     git commit -m "${1-.}"
 }
 # add all unstaged changes, commit and push
@@ -83,13 +101,13 @@ alias gpom='if git show-ref --verify --quiet refs/heads/main; then git pull orig
 alias gmm='if git show-ref --verify --quiet refs/heads/main; then git merge main; else git merge master; fi'
 
 # delete branch locally and on origin
-gbd() {
+function gbd {
     git branch -D "$1"
     git push -d origin "$1"
 }
 
 # delete tag locally and on origin
-gtd() {
+function gtd {
     git tag -d "$1"
     git push -d origin "$1"
 }
@@ -120,18 +138,3 @@ wiggles() {
     done
 }
 
-# use git checkout completions (installed by homebrew git) for gco
-_gco () {
-    # set state to mimic git checkout completion
-
-    local service=git
-    # replace first element of words (ie: gco) with git checkout
-    words=(git checkout "${(@)words[2,-1]}")
-    let CURRENT=CURRENT+1
-
-    # call https://github.com/git/git/blob/790a17f/contrib/completion/git-completion.zsh#L271
-    # which wraps https://github.com/git/git/blob/790a17f/contrib/completion/git-completion.bash
-    _git
-}
-
-compdef _gco gco
