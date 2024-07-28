@@ -232,7 +232,7 @@
       }
     ]
   },
-  "python.defaultInterpreterPath": "~/.pyenv/versions/3.9/bin/python",
+  "python.defaultInterpreterPath": "~/.pyenv/versions/3.11/bin/python",
   "python.testing.pytestArgs": [
     "--color=yes"
   ],
@@ -262,5 +262,5 @@
   "coverage-gutters.showLineCoverage": true,
   "markiscodecoverage.searchCriteria": "coverage.lcov",
   "go.goroot": "/opt/homebrew/opt/go/libexec/",
-  "typos.path": "~/code/typos-lsp/target/debug/typos-lsp",
+  "typos.path": "~/code/typos-lsp/target/debug/typos-lsp"
 }
