@@ -38,6 +38,6 @@ jobs:
       - name: install.sh
         run: ./install.sh
 
-      - name: Setup tmate session
-        if: ${{ github.event_name == 'workflow_dispatch' && failure() }}
-        uses: mxschmitt/action-tmate@v3
+      - name: Start sshx session on failed manual attempt
+        if: ${{ failure() && (github.event_name == 'workflow_dispatch' || github.run_attempt > 1) }}
+        run: curl -sSf https://sshx.io/get | sh && sshx
