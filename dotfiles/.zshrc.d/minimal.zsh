@@ -149,12 +149,13 @@ bindkey '^[[Z' reverse-menu-complete
 _load_compinit() {
     autoload -Uz compinit
 
-    # if dump exists and > 20 hours old
-    if [[ $_comp_path(#qNmh-20) ]]; then
-        # load existing dump and don't recreate (-C)
+    # if dump exists and < 20 hours old
+    if [[ $_comp_dumpfile(#qNmh-20) ]]; then
+        # load existing dump without checks (-C)
         compinit -C
     else
-        # zcompdump doesn't exist or is stale so create it
-        compinit
+        # ~/.zcompdump doesn't exist or is stale
+        # will be created if it doesn't exist or differs from $fpath
+        compinit -w
     fi
 }
