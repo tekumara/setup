@@ -49,8 +49,8 @@ source "$HOME/.zshrc.d/rust.plugin.zsh"
 source ~/.fzf.zsh
 
 
-# add brew package completions
-FPATH="$HOMEBREW_PREFIX/share/zsh/site-functions:${FPATH}"
+# add brew package completions + our completions
+FPATH="$HOMEBREW_PREFIX/share/zsh/site-functions:$HOME/.zshrc.d/completions:${FPATH}"
 # load all completions
 _load_compinit
 

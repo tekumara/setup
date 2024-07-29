@@ -50,22 +50,6 @@ gco() {
     fi
 }
 
-# use git checkout completions (installed by homebrew git) for gco
-_gco () {
-    # set state to mimic git checkout completion
-
-    local service=git
-    # replace first element of words (ie: gco) with git checkout
-    words=(git checkout "${(@)words[2,-1]}")
-    let CURRENT=CURRENT+1
-
-    # call https://github.com/git/git/blob/790a17f/contrib/completion/git-completion.zsh#L271
-    # which wraps https://github.com/git/git/blob/790a17f/contrib/completion/git-completion.bash
-    _git
-}
-
-compdef _gco gco
-
 # forgit
 alias grbi='forgit::rebase'
 # disabled see https://github.com/wfxr/forgit/issues/280
