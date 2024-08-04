@@ -47,7 +47,6 @@ default_config="$HOME/.kube/00_default.yaml"
 
 if [[ ! -f "$default_config" ]]; then
   mkdir -p $(dirname "$default_config")
-  echo "$0: creating $default_config"
   cat <<EOF >"${default_config}"
 apiVersion: v1
 kind: Config
