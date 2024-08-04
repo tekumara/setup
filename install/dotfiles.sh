@@ -26,4 +26,11 @@ fi
 # use script to run an interactive shell with a prompt (nb: zsh -ic has no prompt)
 # this is needed to trigger p10k initialisation
 # also, we switch to $HOME first so zsh starts there like it would with an interactive login
-(cd "$HOME" && echo exit | script -q zsh)
+# place a space in front of the exit command so its not saved to zsh history
+(cd "$HOME" && echo " exit $?" | SHELL=/bin/zsh script -qe zsh | tee /tmp/zsh.out)
+
+if grep -qE ":\d+:" /tmp/zsh.out; then
+    # if line numbers appear then it means there was an error, eg:
+    # /home/compute/.zshrc:11: command not found: antidote
+    echo "zsh first run failed" && exit 42
+fi
