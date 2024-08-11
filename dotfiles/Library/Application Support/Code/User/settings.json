@@ -262,5 +262,7 @@
   "coverage-gutters.showLineCoverage": true,
   "markiscodecoverage.searchCriteria": "coverage.lcov",
   "go.goroot": "/opt/homebrew/opt/go/libexec/",
-  "typos.path": "~/code/typos-lsp/target/debug/typos-lsp"
+  "typos.path": "~/code/typos-lsp/target/debug/typos-lsp",
+  "D2.previewSketch": true,
+  "D2.execPath": "/opt/homebrew/bin/d2"
 }
