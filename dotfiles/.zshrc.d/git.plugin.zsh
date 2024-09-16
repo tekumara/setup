@@ -44,7 +44,7 @@ gco() {
         # therefore git checkout will check out the equivalent local tracking branch,
         # if it exists, otherwise it creates one
         local current_branch=$(git rev-parse --abbrev-ref HEAD)
-        git branch --all | grep -Ev "remotes/origin/(HEAD|$current_branch)" | sed 's|remotes/origin/||' | _dedup | fzf | xargs git checkout
+        git branch --all | grep -Ev "remotes/origin/(HEAD|$current_branch$)" | sed 's|remotes/origin/||' | _dedup | fzf | xargs git checkout
     else
         git checkout "$@"
     fi
