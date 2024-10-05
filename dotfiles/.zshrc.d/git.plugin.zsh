@@ -100,8 +100,15 @@ function gtd {
 hb() {
     gh browse --branch "${1:-$(git rev-parse HEAD)}"
 }
-alias hprl='gh pr list'
-alias hprco='gh pr checkout'
+
+hprco() {
+    if [ $# -eq 0 ]; then
+        gh pr list
+    else
+        gh pr checkout "$@"
+    fi
+}
+
 # create pr for the current branch
 alias hprc='gh pr create --fill -w'
 # view pr for the current branch
