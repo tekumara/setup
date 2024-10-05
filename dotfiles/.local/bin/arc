@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+osascript -e "tell application \"Arc\"
+  make new tab with properties {URL:\"$1\"}
+  activate
+end tell"
