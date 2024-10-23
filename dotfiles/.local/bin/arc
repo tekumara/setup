@@ -1,6 +1,25 @@
 #!/usr/bin/env bash
 
+to_url() {
+    local input="$1"
+
+    if [[ "$input" =~ ^(https?://|file://) ]]; then
+        # If it's already a URL, return as is
+        echo "$input"
+    elif [ -e "$input" ]; then
+        # If it's a local file, convert to absolute path and then to file URL
+        local absolute_path
+        absolute_path=$(realpath "$input")
+        echo "file://$absolute_path"
+    else
+        # If it's neither a URL nor a local file, assume it's a web address and prepend https://
+       echo "$input"
+    fi
+}
+
+url=$(to_url "$1")
+
 osascript -e "tell application \"Arc\"
-  make new tab with properties {URL:\"$1\"}
+  make new tab with properties {URL:\"$url\"}
   activate
 end tell"
