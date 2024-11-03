@@ -1,1 +1,1 @@
-eval "$(fnm env --use-on-cd --resolve-engines --shell zsh)"
+eval "$(fnm env --use-on-cd --shell zsh)"
