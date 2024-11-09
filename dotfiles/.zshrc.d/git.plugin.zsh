@@ -97,18 +97,21 @@ function gtd {
 }
 
 # github cli
+
+# open the current branch in the browser
 hb() {
     gh browse --branch "${1:-$(git rev-parse HEAD)}"
 }
-
+# list prs
+alias hprl='gh pr list'
+# checkout pr
 hprco() {
     if [ $# -eq 0 ]; then
-        gh pr list
+        gh pr list | fzf --delimiter='\t' --with-nth=1,2 | cut -f1 | xargs gh pr checkout
     else
         gh pr checkout "$@"
     fi
 }
-
 # create pr for the current branch
 alias hprc='gh pr create --fill -w'
 # view pr for the current branch
