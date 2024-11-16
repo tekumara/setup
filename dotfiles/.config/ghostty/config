@@ -1,0 +1,6 @@
+font-family = "MesloLGS NF"
+
+# ⌥← backward word
+# ⌥→ forward word
+keybind = alt+left=esc:b
+keybind = alt+right=esc:f
