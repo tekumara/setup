@@ -1,6 +1,18 @@
 font-family = "MesloLGS NF"
 
-# ⌥← backward word
-# ⌥→ forward word
-keybind = alt+left=esc:b
-keybind = alt+right=esc:f
+# beginning-of-line (C-a)
+keybind = cmd+left=text:\x01
+# end-of-line (C-e)
+keybind = cmd+right=text:\x05
+# forward-word (M-f)
+keybind = opt+right=esc:f
+# backward-word (M-b)
+keybind = opt+left=esc:b
+
+# kill-line (C-k)
+keybind = cmd+delete=text:\x0b
+# unix-line-discard (C-u)
+keybind = cmd+backspace=text:\x15
+# kill-word (M-d)
+keybind = opt+delete=esc:d
+
