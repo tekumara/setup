@@ -1,3 +1,5 @@
+# ghostty has nerd fonts built in, but use MesloLGS because it has less line spacing
+# and its being used elsewhere 
 font-family = "MesloLGS NF"
 
 # beginning-of-line (C-a)

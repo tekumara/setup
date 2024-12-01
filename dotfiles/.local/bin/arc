@@ -13,7 +13,7 @@ to_url() {
         echo "file://$absolute_path"
     else
         # If it's neither a URL nor a local file, assume it's a web address and prepend https://
-       echo "$input"
+       echo "https://$input"
     fi
 }
 
