@@ -45,6 +45,7 @@ pyenv_install_brew_version() {
 pyenv_install_brew_version 3.9
 pyenv_install_brew_version 3.10
 pyenv_install_brew_version 3.11
+pyenv_install_brew_version 3.12
 
 pyenv global $default_python_version
 
