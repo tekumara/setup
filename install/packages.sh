@@ -32,7 +32,7 @@ elif [[ "${SKIP_BREW_UPDATE:-}" == "" ]]; then
 fi
 
 # install packages in Brewfile
-brew bundle install --verbose --no-lock --file install/Brewfile
+brew bundle install --verbose --file install/Brewfile
 
 # rehash shims in case we've just upgraded pyenv via brew
 pyenv rehash
