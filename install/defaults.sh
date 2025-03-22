@@ -70,6 +70,7 @@ defaults write com.apple.dock expose-group-apps -bool true
 defaults write com.apple.WindowManager GloballyEnabled -bool true
 
 # Stage Manager - Show windows from an application - One at a Time
+# All at Once required for TWS
 defaults write com.apple.WindowManager AppWindowGroupingBehavior -bool false
 
 # restart Dock for its settings to take effect

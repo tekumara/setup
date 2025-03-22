@@ -12,6 +12,8 @@ com.microsoft.VSCode            .ndjson                                         
 com.microsoft.VSCode            .sha256                                         all
 com.microsoft.VSCode            .pom                                            all
 com.microsoft.VSCode            .tf                                             all
+com.microsoft.VSCode            .yaml                                           all
+com.microsoft.VSCode            .py                                             all
 com.colliderli.iina             org.matroska.mkv                                all
 com.colliderli.iina             public.mpeg-4                                   all
 com.apple.iWork.Numbers         .csv                                            all
