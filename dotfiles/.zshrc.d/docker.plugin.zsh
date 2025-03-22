@@ -16,6 +16,7 @@ des() { docker exec -it "$1" sh }
 alias dc='docker compose'
 alias dcr='docker compose run --service-ports --rm'
 alias dcrb='docker compose run --service-ports --rm --entrypoint /bin/bash'
+alias dcrs='docker compose run --service-ports --rm --entrypoint /bin/sh'
 alias dcb='docker compose build'
 alias dce='docker compose exec'
 alias dcp='docker compose push'
