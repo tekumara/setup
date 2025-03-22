@@ -59,6 +59,7 @@ alias glf=forgit::log
 alias gcf=forgit::fixup
 alias grvf=forgit::revert::commit
 alias gcof=forgit::checkout::commit
+alias gstf=forgit::stash::show
 
 # other
 alias gca='git commit --amend'
@@ -114,6 +115,8 @@ hprco() {
 }
 # create pr for the current branch
 alias hprc='gh pr create --fill -w'
+# show pr checks
+alias hprch='gh pr checks'
 # view pr for the current branch
 alias hprv='gh pr view --web'
 # view ci.yml workflow
