@@ -7,7 +7,15 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-    "buffer_font_size": 15,
+    "assistant": {
+        "default_model": {
+            "provider": "copilot_chat",
+            "model": "gpt-4o"
+        },
+        "version": "2"
+    },
+    "theme": "One Dark",
+    "buffer_font_size": null,
     // save when changing focus away from a specific buffer
     "autosave": "on_focus_change"
 }
