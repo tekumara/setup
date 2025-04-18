@@ -262,8 +262,16 @@
   "coverage-gutters.showLineCoverage": true,
   "markiscodecoverage.searchCriteria": "coverage.lcov",
   "go.goroot": "/opt/homebrew/opt/go/libexec/",
-  "typos.path": "~/code/typos-lsp/target/debug/typos-lsp",
   "D2.previewSketch": true,
   "D2.execPath": "/opt/homebrew/bin/d2",
-  "makefile.configureOnOpen": false
+  "makefile.configureOnOpen": false,
+  "harper-ls.linters.sentence_capitalization": false,
+  "harper-ls.linters.spell_check": false,
+  "harper-ls.linters.long_sentences": false,
+  "tlaplus.tlc.statisticsSharing": "share",
+  "jupyter.notebookFileRoot": "${workspaceFolder}",
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "github.copilot.chat.codesearch.enabled": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "terminal.integrated.enableImages": true,
 }
