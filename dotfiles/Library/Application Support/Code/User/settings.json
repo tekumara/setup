@@ -273,5 +273,5 @@
   "terminal.integrated.enableMultiLinePasteWarning": "never",
   "github.copilot.chat.codesearch.enabled": true,
   "github.copilot.nextEditSuggestions.enabled": true,
-  "terminal.integrated.enableImages": true,
+  "terminal.integrated.enableImages": true
 }

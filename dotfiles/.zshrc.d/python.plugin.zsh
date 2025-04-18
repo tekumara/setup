@@ -14,7 +14,7 @@ export PIPX_DEFAULT_PYTHON
 # activate virtualenv in .venv/ or venv/
 alias venv='{[[ -d .venv ]] && . .venv/bin/activate} || {[[ -d venv ]] && . venv/bin/activate} || echo "Missing .venv/"'
 # create .venv, using python version set by pyenv, and activate
-alias mkvenv='virtualenv --python $(pyenv which python) --clear .venv && . .venv/bin/activate'
+alias mkvenv='virtualenv --python $(pyenv which python) .venv && . .venv/bin/activate'
 
 # create temp venv, using python version set by pyenv, and activate
 mktmpenv() {
@@ -37,4 +37,4 @@ debugpy() {
     fi
 }
 
-alias pyright=node_modules/.bin/pyright
+alias pyright='[ -e .venv/bin/pyright ] && .venv/bin/pyright || node_modules/.bin/pyright'
