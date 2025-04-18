@@ -21,3 +21,4 @@ install/defaults.sh
 install/dotfiles.sh
 install/passage.sh
 install/symlinks.sh
+install/crontab.sh

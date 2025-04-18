@@ -1,0 +1,1 @@
+30 14 * * * cp ~/.zsh_history ~/.zsh_history_backup/$(date +\%Y_\%m_\%d).bak
