@@ -234,7 +234,8 @@
   },
   "python.defaultInterpreterPath": "~/.pyenv/versions/3.11/bin/python",
   "python.testing.pytestArgs": [
-    "--color=yes"
+    "--color=yes",
+    "-vv"
   ],
   "terminal.integrated.localEchoEnabled": "off",
   "diffEditor.ignoreTrimWhitespace": false,
@@ -273,5 +274,14 @@
   "terminal.integrated.enableMultiLinePasteWarning": "never",
   "github.copilot.chat.codesearch.enabled": true,
   "github.copilot.nextEditSuggestions.enabled": true,
-  "terminal.integrated.enableImages": true
+  "terminal.integrated.enableImages": true,
+  "anyscalecompute.ray-distributed-debugger.initialized": true,
+  "anyscalecompute.ray-distributed-debugger.clusterDashboards": [
+    {
+      "host": "127.0.0.1:8265",
+      "localRoot": "${workspaceFolder}"
+    }
+  ],
+  "github.copilot.chat.agent.thinkingTool": true,
+  "github.copilot.chat.edits.temporalContext.enabled": true
 }
