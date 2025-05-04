@@ -39,7 +39,7 @@ debugpy() {
 
 pyright() {
   if [ -e .venv/bin/pyright ]; then
-    .venv/bin/pyright "$@"
+    PYRIGHT_PYTHON_IGNORE_WARNINGS=1 .venv/bin/pyright "$@"
   else
     node_modules/.bin/pyright "$@"
   fi
