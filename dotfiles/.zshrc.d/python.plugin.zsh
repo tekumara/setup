@@ -38,9 +38,11 @@ debugpy() {
 }
 
 pyright() {
-  if [ -e .venv/bin/pyright ]; then
-    PYRIGHT_PYTHON_IGNORE_WARNINGS=1 .venv/bin/pyright "$@"
+  if [ -e .venv/lib/*/site-packages/pyright/dist/index.js ]; then
+    # installed via pypi
+    node .venv/lib/*/site-packages/pyright/dist/index.js "$@"
   else
+    # installed via npm
     node_modules/.bin/pyright "$@"
   fi
 }
