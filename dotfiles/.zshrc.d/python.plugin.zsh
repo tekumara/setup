@@ -37,4 +37,10 @@ debugpy() {
     fi
 }
 
-alias pyright='[ -e .venv/bin/pyright ] && .venv/bin/pyright || node_modules/.bin/pyright'
+pyright() {
+  if [ -e .venv/bin/pyright ]; then
+    .venv/bin/pyright "$@"
+  else
+    node_modules/.bin/pyright "$@"
+  fi
+}
