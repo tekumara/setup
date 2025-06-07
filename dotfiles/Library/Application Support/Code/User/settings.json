@@ -21,6 +21,7 @@
     "cmds",
     "consts",
     "contextvars",
+    "cuda",
     "dask",
     "dataframe",
     "dateutil",
@@ -270,7 +271,7 @@
   "harper-ls.linters.spell_check": false,
   "harper-ls.linters.long_sentences": false,
   "tlaplus.tlc.statisticsSharing": "share",
-  "jupyter.notebookFileRoot": "${workspaceFolder}",
+  //"jupyter.notebookFileRoot": "${workspaceFolder}",
   "terminal.integrated.enableMultiLinePasteWarning": "never",
   "github.copilot.chat.codesearch.enabled": true,
   "github.copilot.nextEditSuggestions.enabled": true,
@@ -283,5 +284,10 @@
     }
   ],
   "github.copilot.chat.agent.thinkingTool": true,
-  "github.copilot.chat.edits.temporalContext.enabled": true
+  "github.copilot.chat.edits.temporalContext.enabled": true,
+  "inlineChat.enableV2": true,
+  "inlineChat.hideOnRequest": true,
+  "github.copilot.nextEditSuggestions.fixes": true,
+  // switch cases will be indented, indentation will be 4 spaces
+  "shellformat.flag": "-ci -i=4"
 }
