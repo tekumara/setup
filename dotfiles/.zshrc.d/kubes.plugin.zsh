@@ -95,8 +95,8 @@ _kpf() {
   #set -x
 
   usage() {
-      echo "Start/stop kubectl port-forward whilst running a command."  >&2
-      echo "Usage: kfp TYPE/NAME [TEST_PORT:]REMOTE_PORT [...[TEST_PORT_N:]REMOTE_PORT_N] command [args..]" >&2
+      echo "Start/stop kubectl port-forward whilst optionally running a command."  >&2
+      echo "Usage: kfp TYPE/NAME [TEST_PORT:]REMOTE_PORT [...[TEST_PORT_N:]REMOTE_PORT_N] [command] [args..]" >&2
       echo "   eg: kfp pod/my-pod 8080:80 curl http://localhost:8080"  >&2
       exit 42
   }
@@ -129,9 +129,13 @@ _kpf() {
   done
   [[ "${#ports[@]}" -eq 0 ]] && die "No port mappings specified"
 
-  # parse command
-  [[ "$#" -eq 0 ]] && die "No command specified"
+  # If no command, port-forward in foreground
+  if [[ "$#" -eq 0 ]]; then
+    echo "kubectl port-forward $resource ${ports[@]}" >&2
+    exec kubectl port-forward "$resource" "${ports[@]}"
+  fi
 
+  # parse command
   kubectl port-forward "$resource" "${ports[@]}" >&2 &
   kubectl_pid=$!
   echo kubectl port-forward "$resource" "${ports[@]}" >&2
