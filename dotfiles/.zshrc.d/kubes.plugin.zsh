@@ -85,8 +85,13 @@ kc-default() {
 }
 
 kpf() {
+  # run in a subshell so that we can use exit in error handling
+  # without affecting the parent shell
+  ( _kpf "$@" )
+}
+
+_kpf() {
   set -euo pipefail
-  set -x
 
   [[ "$#" -eq 0 ]] && echo -e "Start/stop kubectl port-forward whilst running a command.\n\nUsage: $0 TYPE/NAME [LOCAL_PORT:]REMOTE_PORT command [args..]" >&2 && exit 42
 
@@ -94,14 +99,12 @@ kpf() {
       echo -e ERROR: "$@" >&2
       cleanup 42
   }
-
   cleanup() {
       local exit_status="$?"
       kill "$kubectl_pid"
       wait "$kubectl_pid" 2> /dev/null || true
       echo "kubectl port-forward stopped" >&2
-      set +x
-      return "${exit_status}"
+      exit "${exit_status}"
   }
 
   kubectl port-forward "$1" "$2" >&2 &
