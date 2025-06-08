@@ -92,28 +92,55 @@ kpf() {
 
 _kpf() {
   set -euo pipefail
+  #set -x
 
-  [[ "$#" -eq 0 ]] && echo -e "Start/stop kubectl port-forward whilst running a command.\n\nUsage: $0 TYPE/NAME [LOCAL_PORT:]REMOTE_PORT command [args..]" >&2 && exit 42
+  usage() {
+      echo "Start/stop kubectl port-forward whilst running a command."  >&2
+      echo "Usage: kfp TYPE/NAME [TEST_PORT:]REMOTE_PORT [...[TEST_PORT_N:]REMOTE_PORT_N] command [args..]" >&2
+      echo "   eg: kfp pod/my-pod 8080:80 curl http://localhost:8080"  >&2
+      exit 42
+  }
 
   die() {
       echo -e ERROR: "$@" >&2
       cleanup 42
   }
+
   cleanup() {
       local exit_status="$?"
-      kill "$kubectl_pid"
-      wait "$kubectl_pid" 2> /dev/null || true
-      echo "kubectl port-forward stopped" >&2
+      if [[ -n "${kubectl_pid:-}" ]]; then
+        kill "$kubectl_pid"
+        wait "$kubectl_pid" 2> /dev/null || true
+        echo "kubectl port-forward stopped" >&2
+      fi
       exit "${exit_status}"
   }
 
-  kubectl port-forward "$1" "$2" >&2 &
+  # parse resource
+  [[ "$#" -eq 0 ]] && usage
+  local resource="$1"
+  shift
+
+  # parse ports
+  local ports=()
+  while [[ "$#" -gt 0 && ( "$1" == *:* || "$1" =~ ^[0-9]+$ ) ]]; do
+    ports+=("$1")
+    shift
+  done
+  [[ "${#ports[@]}" -eq 0 ]] && die "No port mappings specified"
+
+  # parse command
+  [[ "$#" -eq 0 ]] && die "No command specified"
+
+  kubectl port-forward "$resource" "${ports[@]}" >&2 &
   kubectl_pid=$!
-  echo kubectl port-forward "$1" "$2" >&2
+  echo kubectl port-forward "$resource" "${ports[@]}" >&2
 
   trap 'cleanup' ERR
-  timeout 5 sh -c "until nc -z localhost ${2%:*} ; do sleep 0.1; done" || die "timed out"
-  shift 2
+
+  local test_port="${ports[1]%%:*}"
+  timeout 5 sh -c "until nc -z localhost ${test_port} ; do sleep 0.1; done" || die "timed out waiting for port $test_port"
+
   "$@"
   cleanup
 }
