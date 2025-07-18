@@ -108,7 +108,6 @@ cask "whatsapp"
 cask "zoom" unless system "[[ -d '/Applications/zoom.us.app' ]]"
 
 vscode "ms-python.python"
-vscode "ms-python.vscode-pylance"
 vscode "kddejong.vscode-cfn-lint"
 vscode "hashicorp.terraform"
 vscode "streetsidesoftware.code-spell-checker"
