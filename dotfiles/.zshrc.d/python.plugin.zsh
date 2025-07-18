@@ -38,7 +38,7 @@ debugpy() {
 }
 
 pyright() {
-  if [[ -e .venv/lib/*/site-packages/pyright/dist/index.js ]]; then
+  if [[ -e .venv/lib/*/site-packages/pyright/dist/index.js(#qN) ]]; then
     # installed via pypi
     node .venv/lib/*/site-packages/pyright/dist/index.js "$@"
   else
