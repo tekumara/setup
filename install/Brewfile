@@ -38,7 +38,7 @@ cask "1password"
 # aws
 brew "awscli"
 cask "session-manager-plugin", args: {'no-quarantine': true}
-cask "aws-vault"
+cask "aws-vault-binary"
 
 # dev tools
 brew "shellcheck"
