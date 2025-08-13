@@ -27,6 +27,7 @@
     "dateutil",
     "deregister",
     "Duckdb",
+    "evals",
     "hashicorp",
     "httpx",
     "idempotently",
@@ -289,5 +290,10 @@
   "inlineChat.hideOnRequest": true,
   "github.copilot.nextEditSuggestions.fixes": true,
   // switch cases will be indented, indentation will be 4 spaces
-  "shellformat.flag": "-ci -i=4"
+  "shellformat.flag": "-ci -i=4",
+  "python.analysis.supportAllPythonDocuments": true,
+  "jupyter.widgetScriptSources": [
+    "jsdelivr.com",
+    "unpkg.com"
+  ],
 }
