@@ -129,9 +129,7 @@ wiggles() {
     for rej in **/*.rej(DN); do
         base="${rej%.rej}"
         echo "Applying $rej to $base"
-        wiggle --replace "$base" "$rej"
-        rm "$rej"
-        rm "$base.porig"
+        wiggle --replace "$base" "$rej" && { rm "$rej" && rm "$base.porig" ; }
     done
 }
 
