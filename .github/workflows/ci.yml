@@ -30,6 +30,7 @@ jobs:
           touch "$HOME/.zshrc.d/aws-doctor.plugin.zsh"
           touch "$HOME/.zshrc.d/functions.plugin.zsh"
           touch "$HOME/.zshrc.d/git-doctor.plugin.zsh"
+          touch "$HOME/.zshrc.d/migrations.plugin.zsh"
           touch "$HOME/.zshrc.d/setup.plugin.zsh"
 
       - name: install.sh
