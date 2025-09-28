@@ -20,6 +20,7 @@ if [[ ! -f ~/.zsh_plugins.sh ]] || [[ ~/.zshrc -nt ~/.zsh_plugins.sh ]]; then
 
     zdharma-continuum/fast-syntax-highlighting
     zsh-users/zsh-autosuggestions
+    mafredri/zsh-async
 EOF
 fi
 
