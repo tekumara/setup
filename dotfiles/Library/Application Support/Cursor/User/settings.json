@@ -1,0 +1,251 @@
+{
+    "files.autoSave": "afterDelay",
+    "explorer.confirmDragAndDrop": false,
+    "editor.copyWithSyntaxHighlighting": false,
+    "[python]": {
+        "editor.formatOnType": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        },
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    "cSpell.language": "en-GB",
+    "cSpell.userWords": [
+        "argh",
+        "asyncio",
+        "awscli",
+        "boto",
+        "botocore",
+        "Checklist",
+        "cicd",
+        "cmds",
+        "consts",
+        "contextvars",
+        "dask",
+        "dataframe",
+        "dateutil",
+        "deregister",
+        "hashicorp",
+        "httpx",
+        "Intelli",
+        "itertools",
+        "jaffles",
+        "jupyter",
+        "Kinesis",
+        "kotahi",
+        "kube",
+        "kubectl",
+        "kubernetes",
+        "kubes",
+        "me's",
+        "moto",
+        "mypy",
+        "ncurses",
+        "ndarray",
+        "orjson",
+        "pandarallel",
+        "pargs",
+        "pydantic",
+        "pyright",
+        "pyspark",
+        "pytest",
+        "pytoml",
+        "RBAC",
+        "rebased",
+        "recurse",
+        "repos",
+        "resp",
+        "setup",
+        "setuptools",
+        "Stats",
+        "Struct",
+        "structlog",
+        "Stubber",
+        "tekumara",
+        "tensorboard",
+        "typer",
+        "unmerged",
+        "Versioning",
+        "virtualenv"
+    ],
+    "go.formatTool": "goimports",
+    "go.useLanguageServer": true,
+    "yaml.customTags": [
+        "!And",
+        "!And sequence",
+        "!If",
+        "!If sequence",
+        "!Not",
+        "!Not sequence",
+        "!Equals",
+        "!Equals sequence",
+        "!Or",
+        "!Or sequence",
+        "!FindInMap",
+        "!FindInMap sequence",
+        "!Base64",
+        "!Join",
+        "!Join sequence",
+        "!Cidr",
+        "!Ref",
+        "!Sub",
+        "!Sub sequence",
+        "!GetAtt",
+        "!GetAZs",
+        "!ImportValue",
+        "!ImportValue sequence",
+        "!Select",
+        "!Select sequence",
+        "!Split",
+        "!Split sequence"
+    ],
+    "yaml.validate": false,
+    "files.exclude": {
+        ".pytest_cache/": true,
+        "**/__pycache__/": true,
+        "**/.classpath": true,
+        "**/.factorypath": true,
+        "**/.project": true,
+        "**/.settings": true
+    },
+    "markdownlint.config": {
+        "MD026": {
+            "punctuation": ".,;:!"
+        },
+        "MD032": false,
+        "MD040": false
+    },
+    "python.languageServer": "None",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportIncompatibleMethodOverride": "error",
+        "reportGeneralTypeIssues": "error"
+    },
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": false,
+    "files.watcherExclude": {
+        "**/.ammonite": true,
+        "**/.bloop": true,
+        "**/.metals": true,
+        "**/.tox": true
+    },
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "files.trimTrailingWhitespace": false
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "jupyter.interactiveWindow.creationMode": "perFile",
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "omnisharp.useGlobalMono": "always",
+    "go.toolsManagement.autoUpdate": true,
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "search.exclude": {
+        "**/.metals": true,
+        "**/.tox": true,
+        "**/.venv": true,
+        "**/.vscode": true,
+        "**/vendor": true
+    },
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "redhat.telemetry.enabled": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "[yaml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "java.project.importHint": false,
+    "maven.excludedFolders": [
+        "**/.git",
+        "**/node_modules",
+        "**/target",
+        "**/bin",
+        "**/archetype-resources"
+    ],
+    "maven.terminal.favorites": [
+        {
+            "alias": "Generate TeamCity configs",
+            "command": "teamcity-configs:generate"
+        }
+    ],
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "remote.SSH.connectTimeout": 60,
+    "remote.SSH.defaultExtensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+    ],
+    "remote.SSH.maxReconnectionAttempts": 2,
+    "terminal.integrated.scrollback": 5000,
+    "terminal.integrated.persistentSessionScrollback": 500,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.quickSuggestions": {
+            "strings": true
+        }
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "gitlens.currentLine.enabled": false,
+    "gitlens.codeLens.enabled": false,
+    "terminal.integrated.commandsToSkipShell": [
+        "workbench.action.switchWindow"
+    ],
+    "[dockercompose]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "hadolint.hadolintPath": "/opt/homebrew/bin/hadolint",
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "files.associations": {
+        ".envrc": "dotenv"
+    },
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "autoDocstring.docstringFormat": "google",
+    "launch": {
+        "configurations": [
+            {
+                "name": "Python: Remote Attach",
+                "type": "python",
+                "request": "attach",
+                "connect": {
+                    "host": "localhost",
+                    "port": 62888
+                },
+                "justMyCode": false
+            }
+        ]
+    },
+    "python.defaultInterpreterPath": "~/.pyenv/versions/3.9/bin/python",
+    "python.testing.pytestArgs": [
+        "--color=yes"
+    ],
+    "terminal.integrated.localEchoEnabled": "off",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.inlineSuggest.enabled": true,
+    "git.openRepositoryInParentFolders": "never",
+    "markdown.validate.enabled": true,
+    "remote.SSH.externalSSH_ASKPASS": true,
+    "mochaExplorer.logpanel": true,
+    "rust-analyzer.inlayHints.typeHints.enable": false,
+    "editor.inlayHints.fontSize": 10,
+    "editor.inlineSuggest.suppressSuggestions": true,
+    "typos.logLevel": "info",
+    "cursorpyright.analysis.typeCheckingMode": "basic",
+    "workbench.activityBar.orientation": "vertical",
+    "makefile.configureOnOpen": false,
+    "cSpell.diagnosticLevel": "Hint"
+}
