@@ -65,7 +65,10 @@
 	algorithm = histogram
 [merge]
 	tool = bc
-	conflictstyle = zdiff3
+	conflictstyle = diff3
+[merge "mergiraf"]
+    name = mergiraf
+    driver = mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L
 [mergetool "bc"]
 	trustExitCode = true
 [credential "https://github.com"]
