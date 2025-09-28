@@ -26,9 +26,9 @@ has_compsys=1
 has_syntax_highlighting=1
 has_autosuggestions=1
 has_git_prompt=1
-first_prompt_lag_ms=51.291
-first_command_lag_ms=416.695
-command_lag_ms=26.295
-input_lag_ms=6.631
-exit_time_ms=279.434
+first_prompt_lag_ms=79.991
+first_command_lag_ms=529.746
+command_lag_ms=25.576
+input_lag_ms=7.013
+exit_time_ms=346.790
 ```
