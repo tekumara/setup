@@ -291,9 +291,19 @@
   "github.copilot.nextEditSuggestions.fixes": true,
   // switch cases will be indented, indentation will be 4 spaces
   "shellformat.flag": "-ci -i=4",
+  "python.terminal.shellIntegration.enabled": true,
+  "terminal.integrated.suggest.enabled": true,
   "python.analysis.supportAllPythonDocuments": true,
   "jupyter.widgetScriptSources": [
     "jsdelivr.com",
     "unpkg.com"
   ],
+  "cSpell.diagnosticLevel": "Hint",
+  "github.copilot.chat.notebook.enhancedNextEditSuggestions.enabled": true,
+  "chat.tools.terminal.autoApprove": {
+    "uv": true
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
 }

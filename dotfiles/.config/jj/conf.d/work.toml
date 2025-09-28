@@ -1,0 +1,4 @@
+--when.repositories = ["~/code/ghec"]
+
+[user]
+email = "oliver.mannion@xero.com"
