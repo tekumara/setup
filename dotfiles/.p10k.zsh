@@ -1621,7 +1621,9 @@
     local workspace
 
     command -v jj >/dev/null 2>&1 || return
-    if workspace=$(jj workspace root 2>/dev/null); then
+
+    # check if we are in a jj repo
+    if [[ -n ./(../)#(.jj)(#qN/) ]]; then
       p10k display "*/jj=show"
       p10k display "*/vcs=hide"
     else
@@ -1629,6 +1631,8 @@
       p10k display "*/vcs=show"
       return
     fi
+
+    workspace=$PWD
 
     # track current workspace for the async worker
     if [[ $_my_jj_workspace != "$workspace" ]]; then
