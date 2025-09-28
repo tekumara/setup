@@ -1,0 +1,16 @@
+"$schema" = "https://jj-vcs.github.io/jj/latest/config-schema.json"
+
+[user]
+name = "Oliver Mannion"
+email = "125105+tekumara@users.noreply.github.com"
+
+[snapshot]
+auto-track = "~(.claude/ | CLAUDE.md)"
+
+[aliases]
+# see https://github.com/jj-vcs/jj/discussions/2425#discussioncomment-11425112
+tug = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@-"]
+
+[git]
+# Prevent pushing work in progress or anything explicitly labeled "private"
+private-commits = "description(glob:'wip:*') | description(glob:'private:*')"

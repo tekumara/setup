@@ -49,9 +49,11 @@ brew "hashicorp/tap/terraform"
 brew "pandoc"
 brew "wiggle"
 
+# source control
 ## later version than apple git
 brew "git"
 brew "git-lfs"
+brew "jj"
 brew "mergiraf"
 
 # docker
