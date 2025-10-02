@@ -215,7 +215,7 @@
             }
         ]
     },
-    "python.defaultInterpreterPath": "~/.pyenv/versions/3.9/bin/python",
+    "python.defaultInterpreterPath": ".venv/bin/python",
     "python.testing.pytestArgs": [
         "--color=yes"
     ],
@@ -236,5 +236,6 @@
     "cSpell.diagnosticLevel": "Hint",
     "[github-actions-workflow]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "workbench.colorTheme": "Cursor Dark Midnight"
 }
