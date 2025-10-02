@@ -116,13 +116,6 @@
         "MD040": false
     },
     "python.languageServer": "None",
-    "python.analysis.typeCheckingMode": "basic",
-    "python.analysis.diagnosticSeverityOverrides": {
-        "reportIncompatibleMethodOverride": "error",
-        "reportGeneralTypeIssues": "error"
-    },
-    "python.linting.pylintEnabled": false,
-    "python.linting.flake8Enabled": false,
     "files.watcherExclude": {
         "**/.ammonite": true,
         "**/.bloop": true,
@@ -145,7 +138,6 @@
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
-    "omnisharp.useGlobalMono": "always",
     "go.toolsManagement.autoUpdate": true,
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -170,12 +162,6 @@
         "**/target",
         "**/bin",
         "**/archetype-resources"
-    ],
-    "maven.terminal.favorites": [
-        {
-            "alias": "Generate TeamCity configs",
-            "command": "teamcity-configs:generate"
-        }
     ],
     "notebook.cellToolbarLocation": {
         "default": "right",
@@ -247,5 +233,8 @@
     "cursorpyright.analysis.typeCheckingMode": "basic",
     "workbench.activityBar.orientation": "vertical",
     "makefile.configureOnOpen": false,
-    "cSpell.diagnosticLevel": "Hint"
+    "cSpell.diagnosticLevel": "Hint",
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
