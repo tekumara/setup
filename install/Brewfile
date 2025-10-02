@@ -123,6 +123,7 @@ vscode "redhat.vscode-yaml"
 vscode "tamasfe.even-better-toml"
 vscode "tekumara.typos-vscode"
 vscode "timonwong.shellcheck"
+vscode "charliermarsh.ruff"
 
 # other
 vscode "adpyke.vscode-sql-formatter"
