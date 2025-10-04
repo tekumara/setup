@@ -8,7 +8,7 @@ set -euo pipefail
 # this handles reruns within the same terminal of the very first install
 # and avoids updating .zprofile again
 if [[ -f /opt/homebrew/bin/brew ]]; then
-    eval "$(/opt/homebrew/bin/brew shellenv)"
+    eval "$(/opt/homebrew/bin/brew shellenv zsh)"
 fi
 
 # install brew
@@ -21,8 +21,8 @@ if ! hash brew 2> /dev/null; then
         # additional steps are needed to add it to the path
         echo "Adding Homebrew to your PATH in .zprofile"
         set -x
-        echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> "$HOME"/.zprofile
-        eval "$(/opt/homebrew/bin/brew shellenv)"
+        echo 'eval "$(/opt/homebrew/bin/brew shellenv zsh)"' >> "$HOME"/.zprofile
+        eval "$(/opt/homebrew/bin/brew shellenv zsh)"
         set +x
     fi
 
