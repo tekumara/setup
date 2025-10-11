@@ -124,6 +124,8 @@ vscode "tamasfe.even-better-toml"
 vscode "tekumara.typos-vscode"
 vscode "timonwong.shellcheck"
 vscode "charliermarsh.ruff"
+vscode "rust-lang.rust-analyzer"
+vscode "bierner.markdown-preview-github-styles"
 
 # other
 vscode "adpyke.vscode-sql-formatter"
