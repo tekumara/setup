@@ -16,6 +16,10 @@ require("lazy").setup({
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
     {'akinsho/toggleterm.nvim', version = "*", config = true},
+    {
+      'nvim-telescope/telescope.nvim',
+      dependencies = { 'nvim-lua/plenary.nvim' },
+    },
   })
 
 require("mason").setup()
