@@ -30,6 +30,9 @@ debugpy() {
         echo "Activate your virtualenv first to avoid module import errors."
     else
         local debugpy=$(ls -dtr ~/.vscode/extensions/ms-python.debugpy-*/bundled/libs/debugpy | head -n 1)
+        # enable global qualifier syntax ie:(#q...) see https://zsh.sourceforge.io/Doc/Release/Expansion.html#Glob-Qualifiers
+        # this is set locally for this function only
+        setopt localoptions extendedglob
         # use glob qualifier N (ie: null_glob) so that if the glob has no matches we don't die
         [[ -d $~debugpy(#qN) ]] || { echo "vscode python extension not installed" && return }
         echo "Attach vscode debugger to port $port" >&2
