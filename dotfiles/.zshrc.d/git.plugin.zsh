@@ -103,6 +103,7 @@ function gtd {
 hb() {
     gh browse --branch "${1:-$(git rev-parse HEAD)}"
 }
+alias hbm='if git show-ref --verify --quiet refs/heads/main; then gh browse --branch main; else gh browse --branch master; fi'
 # list prs
 alias hprl='gh pr list'
 # checkout pr
