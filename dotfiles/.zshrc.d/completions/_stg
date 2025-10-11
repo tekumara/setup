@@ -1,0 +1,7 @@
+#compdef stg
+
+# csv file completion for stg 
+# see https://github.com/tekumara/actual-scripts/blob/main/stg
+_stg() {
+  _arguments '*:filename:_files -g "*.csv"'
+}
