@@ -28,7 +28,7 @@ require("mason-lspconfig").setup {
   ensure_installed = { "typos_lsp" },
 }
 
-require('lspconfig').typos_lsp.setup({
+vim.lsp.config("typos_lsp", {
   -- Logging level of the language server. Logs appear in :LspLog. Defaults to error.
   cmd = { "/Users/oliver.mannion/code/typos-lsp/target/debug/typos-lsp" },
   cmd_env = { RUST_LOG = "info" },
