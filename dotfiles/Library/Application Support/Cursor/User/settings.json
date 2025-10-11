@@ -237,5 +237,6 @@
     "[github-actions-workflow]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "workbench.colorTheme": "Cursor Dark Midnight"
+    "workbench.colorTheme": "Cursor Dark Midnight",
+    "go.goroot": "/opt/homebrew/opt/go/libexec/"
 }
