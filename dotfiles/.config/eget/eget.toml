@@ -1,0 +1,3 @@
+# see https://github.com/zyedidia/eget?tab=readme-ov-file#configuration
+[global]
+target = "~/.local/bin"
