@@ -99,11 +99,12 @@ function gtd {
 
 # github cli
 
-# open the current branch in the browser
-hb() {
+# open in browser at HEAD
+hbh() {
     gh browse --branch "${1:-$(git rev-parse HEAD)}"
 }
-alias hbm='if git show-ref --verify --quiet refs/heads/main; then gh browse --branch main; else gh browse --branch master; fi'
+# open in browser at main/master
+alias hb='if git show-ref --verify --quiet refs/heads/main; then gh browse --branch main; else gh browse --branch master; fi'
 # list prs
 alias hprl='gh pr list'
 # checkout pr
