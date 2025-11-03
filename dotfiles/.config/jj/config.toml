@@ -14,3 +14,6 @@ tug = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@-"]
 [git]
 # Prevent pushing work in progress or anything explicitly labeled "private"
 private-commits = "description(glob:'wip:*') | description(glob:'private:*')"
+
+[ui]
+default-command = "log"
