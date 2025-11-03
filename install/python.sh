@@ -13,18 +13,18 @@ pip="$(brew --prefix)/opt/python@${default_python_version}/libexec/bin/pip"
 
 # upgrade pip since installed to the latest
 #
-# we force a reinstall to overwrite $(brew --prefix)/pip{,3,3.9} in case they
+# we force a reinstall to overwrite $(brew --prefix)/pip{,3,3.10} in case they
 # have been overwritten by an xcode cli tools upgrade .. this makes sure any
-# binaries installed via $(brew --prefix)/pip{,3,3.9} use brew's python and
-# land in $(brew --prefix)/bin rather than xcode's ~/Library/Python/3.9/bin/
+# binaries installed via $(brew --prefix)/pip{,3,3.10} use brew's python and
+# land in $(brew --prefix)/bin rather than xcode's ~/Library/Python/3.10/bin/
 # which isn't on the path
 PIP_REQUIRE_VIRTUALENV=false $pip install --force-reinstall pip
 
-# upgrade virtualenv to ensure venvs created by mkvenv/mktmpenv are seeded
-# with the latest version of pip
+# upgrade virtualenv to ensure venvs
+# created by mkvenv/mktmpenv are seeded with the latest version of pip
 #
 # we force a reinstall in case virtualenv was previously
-# installed into xcode's python directory (ie: ~/Library/Python/3.9/bin/).
+# installed into xcode's python directory (ie: ~/Library/Python/3.10/bin/).
 # This directory is not on the path, and re-installing using brew's pip
 # creates virtualenv in "$(brew --prefix)/bin" which is on the path
 PIP_REQUIRE_VIRTUALENV=false $pip install --force-reinstall virtualenv
@@ -42,7 +42,6 @@ pyenv_install_brew_version() {
     rm "$HOME/.pyenv/versions/${1}/pyvenv.cfg"
 }
 
-pyenv_install_brew_version 3.9
 pyenv_install_brew_version 3.10
 pyenv_install_brew_version 3.11
 pyenv_install_brew_version 3.12
@@ -68,5 +67,6 @@ pipx_upgrade() {
     fi
 }
 
-pipx_upgrade aec-cli
 pipx_upgrade nbdime
+pipx_upgrade aec-cli
+

@@ -71,7 +71,6 @@ brew "kubectx", args: ["ignore-dependencies"]
 brew "stern"
 
 # python
-brew "python@3.9"
 brew "python@3.10"
 brew "python@3.11"
 brew "python@3.12"
@@ -126,11 +125,12 @@ vscode "timonwong.shellcheck"
 vscode "charliermarsh.ruff"
 vscode "rust-lang.rust-analyzer"
 vscode "bierner.markdown-preview-github-styles"
+vscode "hashicorp.terraform"
+vscode "ziyasal.vscode-open-in-github"
 
 # other
 vscode "adpyke.vscode-sql-formatter"
 vscode "fwcd.kotlin"
-vscode "hashicorp.terraform"
 vscode "kddejong.vscode-cfn-lint"
 vscode "mhutchie.git-graph"
 vscode "mikestead.dotenv"
@@ -138,4 +138,3 @@ vscode "njpwerner.autodocstring"
 vscode "sourcery.sourcery"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "tomoyukim.vscode-mermaid-editor"
-vscode "ziyasal.vscode-open-in-github"
