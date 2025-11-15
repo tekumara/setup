@@ -57,7 +57,7 @@ brew "jj"
 brew "mergiraf"
 
 # docker
-cask "docker"
+cask "docker-desktop"
 brew "hadolint"
 brew "crane"
 brew "dive"
