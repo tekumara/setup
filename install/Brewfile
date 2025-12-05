@@ -53,7 +53,9 @@ brew "wiggle"
 ## later version than apple git
 brew "git"
 brew "git-lfs"
+brew "lazygit"
 brew "jj"
+brew "jjui"
 brew "mergiraf"
 
 # docker
