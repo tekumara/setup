@@ -38,44 +38,48 @@ krs() {
   kubectl run "$1" -it --image="$2" --command -- /bin/sh
 }
 
-# create default config if it doesn't exist.
-# kubectl writes the current-context to the first file in KUBECONFIG
-# (see below). So we prefix this file with 00 so it appears first.
-# This gives us a stable default that doesn't change when the
-# alphanumeric order of the files in ~/.kube changes.
-default_config="$HOME/.kube/00_default.yaml"
+_init_kubeconfig() {
+  # create default config if it doesn't exist.
+  # kubectl writes the current-context to the first file in KUBECONFIG
+  # (see below). So we prefix this file with 00 so it appears first.
+  # This gives us a stable default that doesn't change when the
+  # alphanumeric order of the files in ~/.kube changes.
+  default_config="$HOME/.kube/00_default.yaml"
 
-if [[ ! -f "$default_config" ]]; then
-  mkdir -p $(dirname "$default_config")
-  cat <<EOF >"${default_config}"
-apiVersion: v1
-kind: Config
-current-context: ""
+  if [[ ! -f "$default_config" ]]; then
+    mkdir -p $(dirname "$default_config")
+    cat <<EOF >"${default_config}"
+  apiVersion: v1
+  kind: Config
+  current-context: ""
 EOF
-fi
+  fi
 
-# unset is needed because we are appending values below and
-# it may already have been set by the parent process (eg: vscode)
-unset KUBECONFIG
+  # unset is needed because we are appending values below and
+  # it may already have been set by the parent process (eg: vscode)
+  unset KUBECONFIG
 
-# set KUBECONFIG to all config files in the paths below, so
-# we don't have to merge them into a single file
-#
-# use glob qualifier N (ie: null_glob) to prevent a "no matches found"
-# error if the glob doesn't match any files
-files=($HOME/.kube/*.yaml(N) $HOME/.k3d/kubeconfig*.yaml(N) $HOME/.kube/config)
-for file in $files; do
-  KUBECONFIG+="${KUBECONFIG+:}${file}"
-done
+  # set KUBECONFIG to all config files in the paths below, so
+  # we don't have to merge them into a single file
+  #
+  # use glob qualifier N (ie: null_glob) to prevent a "no matches found"
+  # error if the glob doesn't match any files
+  local files=($HOME/.kube/*.yaml(N) $HOME/.k3d/kubeconfig*.yaml(N) $HOME/.kube/config)
+  local file
+  for file in $files; do
+    KUBECONFIG+="${KUBECONFIG+:}${file}"
+  done
 
-# kube context per shell https://github.com/ahmetb/kubectx/issues/12#issuecomment-557852519
-file="$(mktemp ${TMPDIR:-/tmp/}kubectx.XXXXXXXX)"
-export KUBECONFIG="${file}:${KUBECONFIG}"
-cat <<EOF >"${file}"
-apiVersion: v1
-kind: Config
-current-context: ""
+  # kube context per shell https://github.com/ahmetb/kubectx/issues/12#issuecomment-557852519
+  file="$(mktemp ${TMPDIR:-/tmp/}kubectx.XXXXXXXX)"
+  export KUBECONFIG="${file}:${KUBECONFIG}"
+  cat <<EOF >"${file}"
+  apiVersion: v1
+  kind: Config
+  current-context: ""
 EOF
+}
+_init_kubeconfig
 
 kc-default() {
   # set the kube context used when opening a new shell (aka the default context).
