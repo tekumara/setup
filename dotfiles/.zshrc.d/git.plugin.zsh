@@ -120,11 +120,16 @@ alias hprc='gh pr create --fill -w'
 # show pr checks
 alias hprch='gh pr checks'
 # view pr for the current branch
-alias hprv='gh pr view --web'
+# - jj repos will supply the closest remote bookmark as the branch arg
+#   for git repos this will be empty and gh finds the branch
+alias hprv='gh pr view --web $(jj log --no-graph --limit 1 -r "heads(::@ & remote_bookmarks())" -T "bookmarks.join(\" \")" 2>/dev/null)'
 # view ci.yml workflow
 alias hwv='gh workflow view ci.yml'
 # view ci.yml workflow in the browser
 alias hwvb='gh workflow view -w ci.yml'
+
+alias lg='lazygit'
+alias lgl='lazygit log'
 
 wiggles() {
     # apply all rej files
