@@ -20,3 +20,6 @@ keybind = cmd+backspace=text:\x15
 # kill-word (M-d)
 keybind = opt+delete=esc:d
 
+# avoid prompting when nvim wants to read from the clipboard
+# via OSC 52 sequences (ie: over ssh)
+clipboard-read = allow
