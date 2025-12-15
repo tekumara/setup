@@ -135,13 +135,14 @@ alias lgl='lazygit log'
 jn() {
     local bookmark=$(jj bookmark list -a --sort committer-date- -T "self ++ \"\n\"" | fzf)
     if [ -z "$bookmark" ]; then
-    echo "No bookmark selected"
+        echo "No bookmark selected"
         return
     fi
+
     if [[ "$bookmark" == *"@origin" ]]; then
-        # The (Q) flag strips quotes: "name"@origin -> name@origin
-        # needed because of https://github.com/jj-vcs/jj/issues/8328
-        jj bookmark track "${(Q)bookmark}"
+        local b="${bookmark%@*}"
+        local r="${bookmark#*@}"
+        jj bookmark track "$b" --remote="$r"
     fi
     jj new "$bookmark"
 }
