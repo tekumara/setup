@@ -75,3 +75,5 @@ source "$HOME/.zshrc.d/python.plugin.zsh"
 source "$HOME/.zshrc.d/setup.plugin.zsh"
 
 #setup-mac end
+
+if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)"; fi
