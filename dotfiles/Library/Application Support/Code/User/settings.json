@@ -301,11 +301,40 @@
   "cSpell.diagnosticLevel": "Hint",
   "github.copilot.chat.notebook.enhancedNextEditSuggestions.enabled": true,
   "chat.tools.terminal.autoApprove": {
-    "uv": true
+    "uv": true,
   },
   "[github-actions-workflow]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
-  "typos.path": "~/code/typos-lsp/target/debug/typos-lsp",
+  "chat.viewSessions.orientation": "stacked",
+  "chat.tools.urls.autoApprove": {
+    "https://learn.microsoft.com": {
+      "approveRequest": false,
+      "approveResponse": true
+    },
+    "https://github.com": true,
+    "https://unix.stackexchange.com": {
+      "approveRequest": false,
+      "approveResponse": true
+    },
+    "https://wiki.archlinux.org": {
+      "approveRequest": false,
+      "approveResponse": true
+    },
+    "https://reddit.com": true,
+    "https://www.reddit.com": {
+      "approveRequest": false,
+      "approveResponse": true
+    },
+    "https://docs.jj-vcs.dev": {
+      "approveRequest": false,
+      "approveResponse": true
+    }
+  },
+  "remote.SSH.remotePlatform": {
+    "windows": "windows"
+  },
   "git.enableSmartCommit": true,
+  "typos.path": "~/code/typos-lsp/target/debug/typos-lsp",
+  "editor.columnSelection": true,
 }
