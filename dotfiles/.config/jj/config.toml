@@ -21,4 +21,4 @@ diff-formatter = ["difft", "--color=always", "$left", "$right"]
 
 [template-aliases]
 # format remote bookmarks for use in gh pr view --web
-gh_remote_bookmark = "remote_bookmarks.filter(|b| b.remote() != 'git').map(|b| b.remote() ++ ':' ++ b.name())"
+gh_remote_bookmark = "remote_bookmarks.filter(|b| b.remote() != 'git').map(|b| if(b.remote() == 'origin', b.name(), b.remote() ++ ':' ++ b.name()))"
