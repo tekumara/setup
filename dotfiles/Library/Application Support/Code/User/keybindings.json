@@ -43,11 +43,6 @@
     },
     {
         "key": "tab",
-        "command": "tabout",
-        "when": "editorTextFocus && !editorHasMultipleSelections && !inSnippetMode && !inlineSuggestionVisible && !suggestWidgetVisible && !tabShouldAcceptInlineEdit"
-    },
-    {
-        "key": "tab",
         "command": "-tabout",
         "when": "editorTextFocus && !editorHasMultipleSelections && !inSnippetMode && !inlineSuggestionVisible && !suggestWidgetVisible"
     }
