@@ -16,6 +16,7 @@ com.microsoft.VSCode            .yaml                                           
 com.microsoft.VSCode            .py                                             all
 com.colliderli.iina             org.matroska.mkv                                all
 com.colliderli.iina             public.mpeg-4                                   all
+com.colliderli.iina             .webm                                           all
 com.apple.iWork.Numbers         .csv                                            all
 com.apple.iWork.Numbers         .xls                                            all
 com.apple.iWork.Numbers         .xlsx                                           all
