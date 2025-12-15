@@ -22,3 +22,12 @@ diff-formatter = ["difft", "--color=always", "$left", "$right"]
 [template-aliases]
 # format remote bookmarks for use in gh pr view --web
 gh_remote_bookmark = "remote_bookmarks.filter(|b| b.remote() != 'git').map(|b| if(b.remote() == 'origin', b.name(), b.remote() ++ ':' ++ b.name()))"
+
+[merge-tools.cursor]
+program = "cursor"
+merge-args = ["--wait", "--merge", "$left", "$right", "$base", "$output"]
+merge-tool-edits-conflict-markers = true
+conflict-marker-style = "git"
+diff-args = ["--diff", "$left", "$right", "--wait"]
+diff-invocation-mode = "file-by-file"
+edit-args = []
