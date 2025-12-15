@@ -131,6 +131,21 @@ alias hwvb='gh workflow view -w ci.yml'
 alias lg='lazygit'
 alias lgl='lazygit log'
 
+# analog to gco for jj
+jn() {
+    local bookmark=$(jj bookmark list -a --sort committer-date- -T "self ++ \"\n\"" | fzf)
+    if [ -z "$bookmark" ]; then
+    echo "No bookmark selected"
+        return
+    fi
+    if [[ "$bookmark" == *"@origin" ]]; then
+        # The (Q) flag strips quotes: "name"@origin -> name@origin
+        # needed because of https://github.com/jj-vcs/jj/issues/8328
+        jj bookmark track "${(Q)bookmark}"
+    fi
+    jj new "$bookmark"
+}
+
 wiggles() {
     # apply all rej files
     for rej in **/*.rej(DN); do
