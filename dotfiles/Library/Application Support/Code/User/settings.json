@@ -306,4 +306,5 @@
   "[github-actions-workflow]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
+  "typos.path": "~/code/typos-lsp/target/debug/typos-lsp",
 }

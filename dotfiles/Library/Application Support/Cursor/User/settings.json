@@ -229,7 +229,7 @@
     "rust-analyzer.inlayHints.typeHints.enable": false,
     "editor.inlayHints.fontSize": 10,
     "editor.inlineSuggest.suppressSuggestions": true,
-    "typos.logLevel": "info",
+    "typos.logLevel": "debug",
     "cursorpyright.analysis.typeCheckingMode": "basic",
     "workbench.activityBar.orientation": "vertical",
     "makefile.configureOnOpen": false,
@@ -238,5 +238,6 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "workbench.colorTheme": "Cursor Dark Midnight",
-    "go.goroot": "/opt/homebrew/opt/go/libexec/"
+    "go.goroot": "/opt/homebrew/opt/go/libexec/",
+    "typos.path": "~/code/typos-lsp/target/debug/typos-lsp"
 }
