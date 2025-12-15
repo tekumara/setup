@@ -23,3 +23,6 @@ keybind = opt+delete=esc:d
 # avoid prompting when nvim wants to read from the clipboard
 # via OSC 52 sequences (ie: over ssh)
 clipboard-read = allow
+
+# move two lines at a time via the mouse scroll wheel
+mouse-scroll-multiplier = 2.0
