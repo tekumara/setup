@@ -8,3 +8,5 @@ dotfiles/.zshrc.d/setup.plugin.zsh
 dotfiles/.zshrc.d/migrations.plugin.zsh
 # created from docker completion command
 dotfiles/.zshrc.d/completions/_docker
+# Jujutsu repo-local generated metadata/config
+dotfiles/.config/jj/repos/
