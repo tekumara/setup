@@ -17,9 +17,9 @@ com.microsoft.VSCode            .py                                             
 com.colliderli.iina             org.matroska.mkv                                all
 com.colliderli.iina             public.mpeg-4                                   all
 com.colliderli.iina             .webm                                           all
-com.apple.iWork.Numbers         .csv                                            all
-com.apple.iWork.Numbers         .xls                                            all
-com.apple.iWork.Numbers         .xlsx                                           all
+com.apple.Numbers               .csv                                            all
+com.apple.Numbers               .xls                                            all
+com.apple.Numbers               .xlsx                                           all
 com.AceMoney874954830.wineskin  .ofx                                            all
 com.AceMoney874954830.wineskin  .qif                                            all
 company.thebrowser.Browser      .svg                                            all
