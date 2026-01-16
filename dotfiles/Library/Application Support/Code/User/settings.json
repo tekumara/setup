@@ -336,5 +336,5 @@
   },
   "git.enableSmartCommit": true,
   "typos.path": "~/code/typos-lsp/target/debug/typos-lsp",
-  "editor.columnSelection": true,
+  "claudeCode.preferredLocation": "panel",
 }
