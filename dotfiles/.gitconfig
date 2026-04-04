@@ -29,8 +29,6 @@
 	#  don't page if output will fit on one screen (for things like git config -l)
 	pager = diff-so-fancy | less --tabs=4 -RFXi
 	# pager = less -F -X
-	# global ignore
-	excludesfile = ~/.gitignore_global
 [init]
 	defaultBranch = main
 [user]
@@ -72,10 +70,10 @@
 [mergetool "bc"]
 	trustExitCode = true
 [credential "https://github.com"]
-	helper = 
+	helper =
 	helper = !/opt/homebrew/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = 
+	helper =
 	helper = !/opt/homebrew/bin/gh auth git-credential
 [branch]
 	# git branch is sorted with most recent commits first
