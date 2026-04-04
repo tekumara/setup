@@ -1,0 +1,120 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+usage() {
+  cat <<'EOF'
+Usage: track-remote.sh [--dry-run] [<branch>]
+
+Track a git-configured remote branch.
+
+Makes a jj bookmark track a remote repo, so `jj git push` works.
+The remote and upstream branch name are read from git config.
+
+If <branch> is not given, it defaults to the closest bookmark to @ (via
+`jj log -r 'closest_bookmark(@)'`).
+
+Options:
+  --dry-run   Print commands without running them
+  --help      Show this message and exit
+EOF
+}
+
+die() {
+  printf 'error: %s\n' "$*" >&2
+  exit 1
+}
+
+remote_exists() {
+  git remote get-url "$1" >/dev/null 2>&1
+}
+
+require_cmd() {
+  command -v "$1" >/dev/null 2>&1 || die "missing required command: $1"
+}
+
+ensure_remote_name() {
+  local branch="$1"
+  local remote_spec="$2"
+  local remote_name
+  local existing_url
+
+  if remote_exists "$remote_spec"; then
+    printf '%s\n' "$remote_spec"
+    return 0
+  fi
+
+  if [[ "$branch" == */* ]]; then
+    remote_name="${branch%%/*}"
+  else
+    remote_name="$branch"
+  fi
+
+  if remote_exists "$remote_name"; then
+    existing_url="$(git remote get-url "$remote_name")"
+    [[ "$existing_url" == "$remote_spec" ]] || die "remote ${remote_name} already exists with URL ${existing_url}, expected ${remote_spec}"
+  else
+    run jj git remote add "$remote_name" "$remote_spec"
+  fi
+
+  printf '%s\n' "$remote_name"
+}
+
+print_command() {
+  local arg
+  printf '+' >&2
+  for arg in "$@"; do
+    printf ' %q' "$arg" >&2
+  done
+  printf '\n' >&2
+}
+
+run() {
+  print_command "$@"
+  if (( DRY_RUN )); then
+    return 0
+  fi
+  "$@"
+}
+
+DRY_RUN=0
+
+if [[ "${1-}" == "--help" || "${1-}" == "-h" ]]; then
+  usage
+  exit 0
+fi
+
+if [[ "${1-}" == "--dry-run" ]]; then
+  DRY_RUN=1
+  shift
+fi
+
+if [[ $# -gt 1 ]]; then
+  usage >&2
+  exit 1
+fi
+
+require_cmd git
+require_cmd jj
+
+if [[ $# -eq 0 ]]; then
+  branch="$(
+    jj log --no-graph --limit 1 -r 'closest_bookmark(@)' -T 'bookmarks.join(" ")'
+  )"
+  read -r branch _ <<<"$branch"
+  branch="${branch//$'\r'/}"
+  [[ -n "$branch" ]] || die "no closest bookmark for @; pass <branch> explicitly"
+else
+  branch="$1"
+fi
+remote_spec="$(git config --get "branch.${branch}.remote" || true)"
+merge_ref="$(git config --get "branch.${branch}.merge" || true)"
+
+[[ -n "$remote_spec" ]] || die "git config key branch.${branch}.remote is not set"
+[[ -n "$merge_ref" ]] || die "git config key branch.${branch}.merge is not set"
+[[ "$merge_ref" == refs/heads/* ]] || die "expected branch.${branch}.merge to be under refs/heads/, got: $merge_ref"
+
+bookmark_name="${merge_ref#refs/heads/}"
+remote_name="$(ensure_remote_name "$branch" "$remote_spec")"
+
+run jj bookmark track --remote "$remote_name" "$bookmark_name"
