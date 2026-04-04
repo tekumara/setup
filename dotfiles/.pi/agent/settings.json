@@ -1,9 +1,9 @@
 {
-  "lastChangelogVersion": "0.70.2",
+  "lastChangelogVersion": "0.78.0",
   "defaultProvider": "openai",
-  "defaultModel": "gpt-5.4",
+  "defaultModel": "gpt-5.5",
   "defaultThinkingLevel": "high",
-  "hideThinkingBlock": true,
+  "hideThinkingBlock": false,
   "packages": [
     {
       "source": "git:github.com/tmustier/pi-extensions",
@@ -12,17 +12,31 @@
         "usage-extension/index.ts"
       ]
     },
-    "git:github.com/lucasmeijer/pi-bash-live-view",
-    "npm:pi-fff",
     "git:github.com/earendil-works/pi-review",
     "npm:pi-anycopy",
     "npm:pi-codex-web-search",
     "npm:pi-mcp-adapter",
     "npm:pi-simplify",
     "git:github.com/supabitapp/supaterm-skills",
-    "git:github.com/jojopirker/pi-timer"
+    "git:github.com/jojopirker/pi-timer",
+    "npm:@jademind/pi-visual",
+    "git:github.com/dbachelder/pi-btw",
+    "git:github.com/kostyay/pi-k-excalidraw",
+    "npm:@ff-labs/pi-fff",
+    "npm:pi-subagents",
+    "git:github.com/nicobailon/visual-explainer",
+    "npm:pi-code-previews",
+    "git:https://github.com/badlogic/pi-diff-review",
+    "https://github.com/umputun/revdiff"
   ],
   "terminal": {
     "showTerminalProgress": true
-  }
+  },
+  "enabledModels": [
+    "openai/gpt-5.5",
+    "openai/gpt-5.3-codex",
+    "openai/o3-deep-research",
+    "anthropic/claude-opus-4-8",
+    "anthropic/claude-sonnet-4-6"
+  ]
 }
