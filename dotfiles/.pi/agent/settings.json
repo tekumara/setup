@@ -1,0 +1,14 @@
+{
+  "lastChangelogVersion": "0.66.1",
+  "defaultProvider": "openai",
+  "defaultModel": "gpt-5.4",
+  "defaultThinkingLevel": "high",
+  "hideThinkingBlock": true,
+  "packages": [
+    "npm:@aemonculaba/pi-search",
+    "git:github.com/tmustier/pi-extensions",
+    "git:github.com/supabitapp/supaterm",
+    "npm:pi-bash-live-view",
+    "npm:pi-interactive-shell"
+  ]
+}
