@@ -7,15 +7,57 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-    "assistant": {
-        "default_model": {
-            "provider": "copilot_chat",
-            "model": "gpt-4o"
+  "project_panel": {
+    "dock": "right"
+  },
+  "outline_panel": {
+    "dock": "right"
+  },
+  "collaboration_panel": {
+    "dock": "right"
+  },
+  "agent": {
+    "dock": "left",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "git_panel": {
+    "dock": "right"
+  },
+  "agent_servers": {
+    "pi-acp": {
+      "type": "registry"
+    }
+  },
+  "theme": "One Dark",
+  "buffer_font_size": null,
+  // save when changing focus away from a specific buffer
+  "autosave": "on_focus_change",
+  "lsp": {
+    "typos": {
+      "binary": {
+        // Prefer your install instead of auto-download when applicable.
+        "ignore_system_version": false,
+        "path": "/Users/oliver.mannion/code/typos-lsp/target/debug/typos-lsp",
+        "arguments": [],
+        "env": {
+          // Rust tracing; shows in Zed's log when debugging the server process.
+          "RUST_LOG": "typos_lsp=debug",
         },
-        "version": "2"
+      },
+      "initialization_options": {
+        // Path to your typos config file, .typos.toml by default.
+        //"config": ".typos.toml",
+        // Diagnostic severity within Zed. "Information" by default, can be:
+        // "Error", "Hint", "Information", "Warning"
+        "diagnosticSeverity": "Information",
+        // Minimum logging level for the LSP, displayed in Zed's logs. "info" by default, can be:
+        // "debug", "error", "info", "off", "trace", "warn"
+        "logLevel": "trace",
+        // Traces the communication between ZED and the language server. Recommended for debugging only. "off" by default, can be:
+        // "messages", "off", "verbose"
+        "trace.server": "messages",
+      },
     },
-    "theme": "One Dark",
-    "buffer_font_size": null,
-    // save when changing focus away from a specific buffer
-    "autosave": "on_focus_change"
+  },
 }
