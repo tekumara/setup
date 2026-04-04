@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.78.0",
+  "lastChangelogVersion": "0.79.8",
   "defaultProvider": "openai",
   "defaultModel": "gpt-5.5",
   "defaultThinkingLevel": "high",
@@ -27,7 +27,8 @@
     "git:github.com/nicobailon/visual-explainer",
     "npm:pi-code-previews",
     "git:https://github.com/badlogic/pi-diff-review",
-    "https://github.com/umputun/revdiff"
+    "https://github.com/umputun/revdiff",
+    "npm:pi-goal"
   ],
   "terminal": {
     "showTerminalProgress": true
@@ -38,5 +39,6 @@
     "openai/o3-deep-research",
     "anthropic/claude-opus-4-8",
     "anthropic/claude-sonnet-4-6"
-  ]
+  ],
+  "theme": "dark"
 }
