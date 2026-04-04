@@ -2,6 +2,6 @@
 "resolve cursor" = { key_sequence = ["x", "r"], args = ["resolve", "--tool", "cursor"] }
 "resolve vscode" = { key_sequence = ["x", "v"], args = ["resolve", "--tool", "vscode"] }
 "new main" = { args = ["new", "main"] }
-"tug" = { key = ["ctrl+t"], args = ["bookmark", "move", "--from", "closest_bookmark($change_id)", "--to", "closest_pushable($change_id)"] }
+"tug" = { key_sequence = ["x", "t"], args = ["bookmark", "move", "--from", "heads(::$change_id & bookmarks())", "--to", "$change_id"] }
 "beyond compare" = { key_sequence = ["x", "b"], args = ["diff", "--tool", "bcomp", "-r", "$change_id"]}
 "difft" = { key_sequence = ["x", "d"], args = ["diff", "--tool", "difft", "-r", "$change_id"], show = "interactive"}
