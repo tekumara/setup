@@ -4,7 +4,7 @@ lua = '''jj_interactive("resolve", "--tool", "cursor")'''
 
 [[bindings]]
 action = "resolve-cursor"
-seq = ["x", "r"]
+seq = ["x", "c"]
 scope = "revisions"
 desc = "resolve cursor"
 
@@ -59,3 +59,33 @@ action = "diff-difft"
 seq = ["x", "d"]
 scope = "revisions"
 desc = "difft diff"
+
+[[actions]]
+name = "diff-hunk"
+lua = '''exec_shell("hunk diff " .. context.change_id())'''
+
+[[bindings]]
+action = "diff-hunk"
+seq = ["x", "h"]
+scope = "revisions"
+desc = "hunk diff"
+
+[[actions]]
+name = "diff-revdiff"
+lua = '''exec_shell("revdiff " .. context.change_id() .. "- " .. context.change_id())'''
+
+[[bindings]]
+action = "diff-revdiff"
+seq = ["x", "r"]
+scope = "revisions"
+desc = "revdiff"
+
+[[actions]]
+name = "diff-default"
+lua = '''jj_interactive("diff", "--color-words", "-r", context.change_id())'''
+
+[[bindings]]
+action = "diff-default"
+seq = ["x", "j"]
+scope = "revisions"
+desc = "default jj diff"
