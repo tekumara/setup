@@ -234,7 +234,6 @@
       }
     ]
   },
-  "python.defaultInterpreterPath": ".venv/bin/python",
   "python.testing.pytestArgs": [
     "--color=yes",
     "-vv"
@@ -308,6 +307,8 @@
   },
   "chat.viewSessions.orientation": "stacked",
   "chat.tools.urls.autoApprove": {
+    "https://code.visualstudio.com": true,
+    "https://github.com/microsoft/vscode/wiki/*": true,
     "https://learn.microsoft.com": {
       "approveRequest": false,
       "approveResponse": true
@@ -327,6 +328,10 @@
       "approveResponse": true
     },
     "https://docs.jj-vcs.dev": {
+      "approveRequest": false,
+      "approveResponse": true
+    },
+    "https://search.brave.com/search": {
       "approveRequest": false,
       "approveResponse": true
     }

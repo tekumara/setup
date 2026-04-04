@@ -239,5 +239,6 @@
     },
     "workbench.colorTheme": "Cursor Dark Midnight",
     "go.goroot": "/opt/homebrew/opt/go/libexec/",
-    "typos.path": "~/code/typos-lsp/target/debug/typos-lsp"
+    "typos.path": "~/code/typos-lsp/target/debug/typos-lsp",
+    "window.autoDetectColorScheme": false
 }
