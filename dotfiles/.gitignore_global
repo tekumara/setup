@@ -24,3 +24,5 @@ venv/
 # Java
 
 target/
+
+**/.claude/settings.local.json
