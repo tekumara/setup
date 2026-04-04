@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ -f .envrc ]; then
+  . ./.envrc
+fi
+
+exec /opt/homebrew/bin/fnm exec --using default codex "$@"
