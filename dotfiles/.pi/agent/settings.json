@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.67.68",
+  "lastChangelogVersion": "0.70.2",
   "defaultProvider": "openai",
   "defaultModel": "gpt-5.4",
   "defaultThinkingLevel": "high",
@@ -8,13 +8,21 @@
     {
       "source": "git:github.com/tmustier/pi-extensions",
       "extensions": [
-        "files-widget/index.ts"
+        "files-widget/index.ts",
+        "usage-extension/index.ts"
       ]
     },
-    "git:github.com/supabitapp/supaterm",
     "git:github.com/lucasmeijer/pi-bash-live-view",
     "npm:pi-fff",
     "git:github.com/earendil-works/pi-review",
-    "npm:@winds-ai/pi-native-codex-web-search"
-  ]
+    "npm:pi-anycopy",
+    "npm:pi-codex-web-search",
+    "npm:pi-mcp-adapter",
+    "npm:pi-simplify",
+    "git:github.com/supabitapp/supaterm-skills",
+    "git:github.com/jojopirker/pi-timer"
+  ],
+  "terminal": {
+    "showTerminalProgress": true
+  }
 }
