@@ -1,7 +1,61 @@
-[custom_commands]
-"resolve cursor" = { key_sequence = ["x", "r"], args = ["resolve", "--tool", "cursor"] }
-"resolve vscode" = { key_sequence = ["x", "v"], args = ["resolve", "--tool", "vscode"] }
-"new main" = { args = ["new", "main"] }
-"tug" = { key_sequence = ["x", "t"], args = ["bookmark", "move", "--from", "heads(::$change_id & bookmarks())", "--to", "$change_id"] }
-"beyond compare" = { key_sequence = ["x", "b"], args = ["diff", "--tool", "bcomp", "-r", "$change_id"]}
-"difft" = { key_sequence = ["x", "d"], args = ["diff", "--tool", "difft", "-r", "$change_id"], show = "interactive"}
+[[actions]]
+name = "resolve-cursor"
+lua = '''jj_interactive("resolve", "--tool", "cursor")'''
+
+[[bindings]]
+action = "resolve-cursor"
+seq = ["x", "r"]
+scope = "revisions"
+desc = "resolve cursor"
+
+[[actions]]
+name = "resolve-vscode"
+lua = '''jj_interactive("resolve", "--tool", "vscode")'''
+
+[[bindings]]
+action = "resolve-vscode"
+seq = ["x", "v"]
+scope = "revisions"
+desc = "resolve vscode"
+
+[[actions]]
+name = "new-main"
+lua = '''jj_async("new", "main")
+revisions.refresh()'''
+
+[[bindings]]
+action = "new-main"
+seq = ["x", "m"]
+scope = "revisions"
+desc = "new main"
+
+[[actions]]
+name = "tug"
+lua = '''jj_async("bookmark", "move", "--from", "heads(::" .. context.change_id() .. " & bookmarks())", "--to", context.change_id())
+revisions.refresh()'''
+
+[[bindings]]
+action = "tug"
+seq = ["x", "t"]
+scope = "revisions"
+desc = "bookmark move to here"
+
+[[actions]]
+name = "diff-bcomp"
+lua = '''jj_interactive("diff", "--tool", "bcomp", "-r", context.change_id())'''
+
+[[bindings]]
+action = "diff-bcomp"
+seq = ["x", "b"]
+scope = "revisions"
+desc = "beyond compare diff"
+
+[[actions]]
+name = "diff-difft"
+lua = '''jj_interactive("diff", "--tool", "difft", "-r", context.change_id())'''
+
+[[bindings]]
+action = "diff-difft"
+seq = ["x", "d"]
+scope = "revisions"
+desc = "difft diff"
