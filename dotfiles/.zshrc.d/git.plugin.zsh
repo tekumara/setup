@@ -133,15 +133,28 @@ alias lgl='lazygit log'
 
 # analog to gco for jj
 jn() {
+    local bookmark
     if [ $# -eq 0 ]; then
-        local bookmark=$(jj bookmark list -a --sort committer-date- -T "self ++ \"\n\"" | fzf)
+        bookmark=$(jj bookmark list -a --sort committer-date- -T "self ++ \"\n\"" | fzf)
         if [ -z "$bookmark" ]; then
             echo "No bookmark selected"
             return
         fi
     else
-        local bookmark="$1"
+        bookmark="$1"
     fi
+
+    # track remote bookmark if it is not already tracked
+    if [[ "$bookmark" == *@origin ]]; then
+        local base="${bookmark%@origin}"
+        local tracked
+        tracked=$(jj bookmark list --tracked --remote origin "$base" -T "self")
+        if [ -z "$tracked" ]; then
+            jj bookmark track --remote origin "$base"
+        fi
+        bookmark="$base"
+    fi
+
     jj new "$bookmark"
 }
 
