@@ -1,7 +1,0 @@
-{
-  "providers": {
-    "openai": {
-      "baseUrl": "https://us.api.openai.com/v1"
-    }
-  }
-}
