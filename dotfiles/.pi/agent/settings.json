@@ -1,8 +1,8 @@
 {
-  "lastChangelogVersion": "0.79.8",
+  "lastChangelogVersion": "0.80.3",
   "defaultProvider": "openai",
   "defaultModel": "gpt-5.5",
-  "defaultThinkingLevel": "high",
+  "defaultThinkingLevel": "xhigh",
   "hideThinkingBlock": false,
   "packages": [
     {
@@ -19,10 +19,8 @@
     "npm:pi-simplify",
     "git:github.com/supabitapp/supaterm-skills",
     "git:github.com/jojopirker/pi-timer",
-    "npm:@jademind/pi-visual",
     "git:github.com/dbachelder/pi-btw",
     "git:github.com/kostyay/pi-k-excalidraw",
-    "npm:@ff-labs/pi-fff",
     "npm:pi-subagents",
     "git:github.com/nicobailon/visual-explainer",
     "npm:pi-code-previews",
