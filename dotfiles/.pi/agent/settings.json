@@ -2,7 +2,7 @@
   "lastChangelogVersion": "0.80.3",
   "defaultProvider": "openai",
   "defaultModel": "gpt-5.5",
-  "defaultThinkingLevel": "xhigh",
+  "defaultThinkingLevel": "high",
   "hideThinkingBlock": false,
   "packages": [
     {
@@ -26,7 +26,8 @@
     "npm:pi-code-previews",
     "git:https://github.com/badlogic/pi-diff-review",
     "https://github.com/umputun/revdiff",
-    "npm:pi-goal"
+    "npm:pi-goal",
+    "npm:pi-smart-fetch"
   ],
   "terminal": {
     "showTerminalProgress": true
@@ -36,7 +37,8 @@
     "openai/gpt-5.3-codex",
     "openai/o3-deep-research",
     "anthropic/claude-opus-4-8",
-    "anthropic/claude-sonnet-4-6"
+    "anthropic/claude-sonnet-4-6",
+    "anthropic/claude-sonnet-5"
   ],
   "theme": "dark"
 }

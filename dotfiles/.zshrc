@@ -49,7 +49,6 @@ source "$HOME/.zshrc.d/rust.plugin.zsh"
 # add fzf to path, and load fzf completion & keybindings (CTRL-T, CTRL-R)
 source ~/.fzf.zsh
 
-
 # add brew package completions + our completions
 FPATH="$HOMEBREW_PREFIX/share/zsh/site-functions:$HOME/.zshrc.d/completions:${FPATH}"
 # load all completions

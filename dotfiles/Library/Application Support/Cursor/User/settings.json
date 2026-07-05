@@ -240,5 +240,13 @@
     "workbench.colorTheme": "Cursor Dark Midnight",
     "go.goroot": "/opt/homebrew/opt/go/libexec/",
     "typos.path": "~/code/typos-lsp/target/debug/typos-lsp",
-    "window.autoDetectColorScheme": false
+    "window.autoDetectColorScheme": false,
+    "yaml.disableSchemaDetection": [
+        "**/.github/workflows/*.yml",
+        "**/.github/workflows/*.yaml",
+        "**/.gitea/workflows/*.yml",
+        "**/.gitea/workflows/*.yaml",
+        "**/.forgejo/workflows/*.yml",
+        "**/.forgejo/workflows/*.yaml"
+    ]
 }

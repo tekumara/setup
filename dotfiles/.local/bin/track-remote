@@ -4,7 +4,7 @@ set -euo pipefail
 
 usage() {
   cat <<'EOF'
-Usage: track-remote.sh [--dry-run] [<branch>]
+Usage: track-remote [--dry-run] [<branch>]
 
 Track a git-configured remote branch.
 
@@ -71,7 +71,7 @@ print_command() {
 
 run() {
   print_command "$@"
-  if (( DRY_RUN )); then
+  if ((DRY_RUN)); then
     return 0
   fi
   "$@"
