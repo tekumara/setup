@@ -95,7 +95,9 @@ cask "temurin@11"
 brew "go"
 brew "gopls"
 brew "staticcheck"
-cask "goreleaser/tap/goreleaser", trusted: true
+# trust whole tap because goreleaser cask references sibling casks in the tap
+tap "goreleaser/tap", trusted: true
+cask "goreleaser/tap/goreleaser"
 
 # mac desktop apps
 cask "calibre"
