@@ -56,3 +56,8 @@ if ! hash rustup 2> /dev/null; then
 else
     rustup update
 fi
+
+# node
+eval "$(fnm env --use-on-cd --shell zsh)"
+
+npm install -g --ignore-scripts @earendil-works/pi-coding-agent
