@@ -8,7 +8,7 @@ set -euo pipefail
 # this handles reruns within the same terminal of the very first install
 # and avoids updating .zprofile again
 if [[ -f /opt/homebrew/bin/brew ]]; then
-    eval "$(/opt/homebrew/bin/brew shellenv zsh)"
+    eval "$(/opt/homebrew/bin/brew shellenv bash)"
 fi
 
 # install brew
@@ -22,7 +22,7 @@ if ! hash brew 2> /dev/null; then
         echo "Adding Homebrew to your PATH in .zprofile"
         set -x
         echo 'eval "$(/opt/homebrew/bin/brew shellenv zsh)"' >> "$HOME"/.zprofile
-        eval "$(/opt/homebrew/bin/brew shellenv zsh)"
+        eval "$(/opt/homebrew/bin/brew shellenv bash)"
         set +x
     fi
 
@@ -58,6 +58,6 @@ else
 fi
 
 # node
-eval "$(fnm env --use-on-cd --shell zsh)"
+eval "$(fnm env --use-on-cd --shell bash)"
 
 npm install -g --ignore-scripts @earendil-works/pi-coding-agent
