@@ -15,7 +15,7 @@ brew "sd"
 brew "gh"
 brew "zoxide"
 brew "diff-so-fancy"
-brew "saulpw/vd/visidata"
+brew "saulpw/vd/visidata", trusted: true
 brew "hyperfine"
 brew "grpcurl"
 brew "pstree"
@@ -45,7 +45,7 @@ brew "nvim"
 cask "visual-studio-code"
 ## for vscode symbol generation
 brew "ctags"
-brew "hashicorp/tap/terraform"
+brew "hashicorp/tap/terraform", trusted: true
 brew "pandoc"
 brew "wiggle"
 
@@ -95,7 +95,7 @@ cask "temurin@11"
 brew "go"
 brew "gopls"
 brew "staticcheck"
-cask "goreleaser/tap/goreleaser"
+cask "goreleaser/tap/goreleaser", trusted: true
 
 # mac desktop apps
 cask "calibre"
