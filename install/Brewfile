@@ -1,4 +1,6 @@
 # setup tools
+# custom casks pinned for this setup repo
+tap "tekumara/setup", "https://github.com/tekumara/setup.git", trusted: { casks: ["cleanshot@4.6.2"] }
 brew "stow"
 brew "duti"
 brew "antidote"
@@ -106,7 +108,7 @@ cask "firefox"
 cask "google-drive"
 cask "google-chrome" unless system "[[ -d '/Applications/Google Chrome.app' ]]"
 cask "iterm2"
-cask "cleanshot"
+cask "tekumara/setup/cleanshot@4.6.2"
 cask "macbreakz"
 cask "slack" unless system "[[ -d '/Applications/Slack.app' ]]"
 cask "spotify"
