@@ -1,8 +1,8 @@
 {
   "lastChangelogVersion": "0.80.6",
   "defaultProvider": "openai",
-  "defaultModel": "gpt-5.5",
-  "defaultThinkingLevel": "high",
+  "defaultModel": "gpt-5.6-terra",
+  "defaultThinkingLevel": "medium",
   "hideThinkingBlock": false,
   "packages": [
     {
@@ -26,6 +26,7 @@
     "https://github.com/umputun/revdiff",
     "npm:pi-goal",
     "npm:pi-web-access",
+    "git:github.com/DietrichGebert/ponytail",
   ],
   "terminal": {
     "showTerminalProgress": true
@@ -36,7 +37,10 @@
     "openai/o3-deep-research",
     "anthropic/claude-opus-4-8",
     "anthropic/claude-sonnet-4-6",
-    "anthropic/claude-sonnet-5"
+    "anthropic/claude-sonnet-5",
+    "openai/gpt-5.6-luna",
+    "openai/gpt-5.6-sol",
+    "openai/gpt-5.6-terra"
   ],
   "theme": "dark"
 }
