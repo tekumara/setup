@@ -30,9 +30,3 @@ source = "openclaw/gogcli"
 resolved_url = "https://github.com/openclaw/gogcli"
 resolved_path = ".agents/skills/gog-sheets"
 resolved_commit = "5800e0ef0d9f0a5468afa2f1f2a016612d8a7399"
-
-[skills.librarian]
-source = "mitsuhiko/agent-stuff"
-resolved_url = "https://github.com/mitsuhiko/agent-stuff"
-resolved_path = "skills/librarian"
-resolved_commit = "c77d49797ad3fb78888e5b002ae606a93777c6b1"

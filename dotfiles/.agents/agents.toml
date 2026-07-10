@@ -23,7 +23,3 @@ source = "openclaw/gogcli"
 [[skills]]
 name = "gog-sheets"
 source = "openclaw/gogcli"
-
-[[skills]]
-name = "librarian"
-source = "mitsuhiko/agent-stuff"

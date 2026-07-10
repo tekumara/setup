@@ -14,7 +14,6 @@
     },
     "git:github.com/earendil-works/pi-review",
     "npm:pi-anycopy",
-    "npm:pi-codex-web-search",
     "npm:pi-mcp-adapter",
     "npm:pi-simplify",
     "git:github.com/supabitapp/supaterm-skills",
@@ -27,7 +26,7 @@
     "git:https://github.com/badlogic/pi-diff-review",
     "https://github.com/umputun/revdiff",
     "npm:pi-goal",
-    "npm:pi-smart-fetch"
+    "npm:pi-web-access",
   ],
   "terminal": {
     "showTerminalProgress": true
