@@ -1,0 +1,29 @@
+version = 1
+agents = ["claude", "cursor", "codex", "vscode", "opencode"]
+
+[trust]
+allow_all = true
+
+[[skills]]
+name = "dotagents"
+source = "getsentry/dotagents"
+
+[[skills]]
+name = "gog"
+source = "openclaw/gogcli"
+
+[[skills]]
+name = "gog-docs"
+source = "openclaw/gogcli"
+
+[[skills]]
+name = "gog-drive"
+source = "openclaw/gogcli"
+
+[[skills]]
+name = "gog-sheets"
+source = "openclaw/gogcli"
+
+[[skills]]
+name = "librarian"
+source = "mitsuhiko/agent-stuff"
