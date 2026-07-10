@@ -15,7 +15,6 @@
     "git:github.com/earendil-works/pi-review",
     "npm:pi-anycopy",
     "npm:pi-mcp-adapter",
-    "npm:pi-simplify",
     "git:github.com/supabitapp/supaterm-skills",
     "git:github.com/jojopirker/pi-timer",
     "git:github.com/dbachelder/pi-btw",
