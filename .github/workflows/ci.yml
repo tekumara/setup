@@ -9,7 +9,7 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       # remove the packages that are already in the environment so we can install them.
       # we need them because they are dependencies of packages in the Brewfile
