@@ -9,8 +9,10 @@ Contains installation scripts, .zshrc and dotfiles for a minimal, fast zsh exper
 On a fresh mac:
 
 ```
-git clone https://github.com/tekumara/setup.git ~/code/setup
-cd ~/code/setup && ./install.sh
+dir=~/code/tekumara/setup
+mkdir -p $dir
+git clone https://github.com/tekumara/setup.git $dir
+(cd $dir && ./install.sh)
 ```
 
 Run it again to upgrade to the latest version.
