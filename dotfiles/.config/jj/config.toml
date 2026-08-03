@@ -7,6 +7,7 @@ email = "125105+tekumara@users.noreply.github.com"
 [aliases]
 # see https://github.com/jj-vcs/jj/discussions/2425#discussioncomment-11425112
 tug = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@-"]
+spr = ["util", "exec", "--", "jj-spr"]
 
 [git]
 # Prevent pushing work in progress or anything explicitly labeled "private"

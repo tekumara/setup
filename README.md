@@ -3,7 +3,7 @@
 [![Build](https://github.com/tekumara/setup/actions/workflows/ci.yml/badge.svg)](https://github.com/tekumara/setup/actions/workflows/ci.yml)
 
 Contains installation scripts, .zshrc and dotfiles for a minimal, fast zsh experience.
-
+    
 ## install
 
 On a fresh mac:

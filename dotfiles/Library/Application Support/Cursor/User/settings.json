@@ -215,7 +215,6 @@
             }
         ]
     },
-    "python.defaultInterpreterPath": ".venv/bin/python",
     "python.testing.pytestArgs": [
         "--color=yes"
     ],
@@ -248,5 +247,6 @@
         "**/.gitea/workflows/*.yaml",
         "**/.forgejo/workflows/*.yml",
         "**/.forgejo/workflows/*.yaml"
-    ]
+    ],
+    "python.defaultInterpreterPath": "/Users/oliver.mannion/.local/bin/python3.11"
 }
