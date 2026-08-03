@@ -5,28 +5,22 @@
   "defaultThinkingLevel": "medium",
   "hideThinkingBlock": false,
   "packages": [
-    {
-      "source": "git:github.com/tmustier/pi-extensions",
-      "extensions": [
-        "files-widget/index.ts",
-        "usage-extension/index.ts"
-      ]
-    },
     "git:github.com/earendil-works/pi-review",
     "npm:pi-anycopy",
     "npm:pi-mcp-adapter",
     "git:github.com/supabitapp/supaterm-skills",
-    "git:github.com/jojopirker/pi-timer",
     "git:github.com/dbachelder/pi-btw",
     "git:github.com/kostyay/pi-k-excalidraw",
-    "npm:pi-subagents",
     "git:github.com/nicobailon/visual-explainer",
     "npm:pi-code-previews",
     "git:https://github.com/badlogic/pi-diff-review",
     "https://github.com/umputun/revdiff",
     "npm:pi-goal",
     "npm:pi-web-access",
+    "git:github.com/tekumara/pi-timer@fix/show-thinking-level",
     "git:github.com/DietrichGebert/ponytail",
+    "npm:@mobrienv/pi-tidy-subagents",
+    "npm:@mobrienv/pi-tidy-tools"
   ],
   "terminal": {
     "showTerminalProgress": true
