@@ -42,14 +42,5 @@ if [[ -d "$HOME/Library/Caches/antidote" ]]; then
     zsh -fc "source $HOMEBREW_PREFIX/opt/antidote/share/antidote/antidote.zsh && antidote update"
 fi
 
-# rust
-# use rustup because brew doesn't include clippy
-# use --no-modify-path because we add ~/.cargo/bin to the path ourselves in rust.plugin.zsh
-if ! hash rustup 2> /dev/null; then
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --no-modify-path
-else
-    rustup update
-fi
-
 # install/upgrade packages in ~/.config/mise/config.toml
 mise upgrade

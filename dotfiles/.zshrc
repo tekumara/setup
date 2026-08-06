@@ -44,7 +44,6 @@ source "$HOME/.zshrc.d/golang.plugin.zsh"
 source "$HOME/.zshrc.d/mise.plugin.zsh"
 #source "$HOME/.zshrc.d/python.plugin.zsh"
 source "$HOME/.zshrc.d/ripgrep.plugin.zsh"
-source "$HOME/.zshrc.d/rust.plugin.zsh"
 
 # add fzf to path, and load fzf completion & keybindings (CTRL-T, CTRL-R)
 source ~/.fzf.zsh
