@@ -54,9 +54,4 @@ else
     rustup update
 fi
 
-# node
-eval "$(fnm env --use-on-cd --shell bash)"
-
-npm install -g --ignore-scripts @earendil-works/pi-coding-agent
-
 mise upgrade
