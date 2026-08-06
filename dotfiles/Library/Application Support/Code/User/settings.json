@@ -112,13 +112,7 @@
     "**/.project": true,
     "**/.settings": true
   },
-  "markdownlint.config": {
-    "MD026": {
-      "punctuation": ".,;:!"
-    },
-    "MD032": false,
-    "MD040": false
-  },
+  "markdownlint.configFile": "${userHome}/.config/markdownlint.json",
   "python.languageServer": "Pylance",
   "python.analysis.typeCheckingMode": "basic",
   "python.analysis.diagnosticSeverityOverrides": {

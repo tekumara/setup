@@ -108,13 +108,7 @@
         "**/.project": true,
         "**/.settings": true
     },
-    "markdownlint.config": {
-        "MD026": {
-            "punctuation": ".,;:!"
-        },
-        "MD032": false,
-        "MD040": false
-    },
+    "markdownlint.configFile": "${userHome}/.config/markdownlint.json",
     "python.languageServer": "None",
     "files.watcherExclude": {
         "**/.ammonite": true,
@@ -205,7 +199,7 @@
         "configurations": [
             {
                 "name": "Python: Remote Attach",
-                "type": "python",
+                "type": "debugpy",
                 "request": "attach",
                 "connect": {
                     "host": "localhost",
