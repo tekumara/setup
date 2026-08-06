@@ -77,7 +77,6 @@ brew "stern"
 
 # python
 brew "uv"
-
 # needed for building some python packages
 brew "automake"
 brew "libtool"
@@ -96,7 +95,6 @@ cask "dropbox"
 cask "firefox"
 cask "google-drive"
 cask "google-chrome" unless system "[[ -d '/Applications/Google Chrome.app' ]]"
-cask "iterm2"
 cask "tekumara/setup/cleanshot@4.6.3"
 cask "tekumara/setup/macbreakz@5.44"
 cask "slack" unless system "[[ -d '/Applications/Slack.app' ]]"
@@ -122,14 +120,3 @@ vscode "rust-lang.rust-analyzer"
 vscode "bierner.markdown-preview-github-styles"
 vscode "hashicorp.terraform"
 vscode "ziyasal.vscode-open-in-github"
-
-# other
-vscode "adpyke.vscode-sql-formatter"
-vscode "fwcd.kotlin"
-vscode "kddejong.vscode-cfn-lint"
-vscode "mhutchie.git-graph"
-vscode "mikestead.dotenv"
-vscode "njpwerner.autodocstring"
-vscode "sourcery.sourcery"
-vscode "streetsidesoftware.code-spell-checker"
-vscode "tomoyukim.vscode-mermaid-editor"
