@@ -82,7 +82,6 @@ brew "automake"
 brew "libtool"
 
 # golang
-brew "go"
 brew "gopls"
 brew "staticcheck"
 # trust whole tap because goreleaser cask references sibling casks in the tap
