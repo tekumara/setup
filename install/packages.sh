@@ -34,9 +34,6 @@ fi
 # install packages in Brewfile
 brew bundle install --verbose --file install/Brewfile
 
-# rehash shims in case we've just upgraded pyenv via brew
-pyenv rehash
-
 # install fzf key bindings & fuzzy completion and update zshrc
 "$(brew --prefix)"/opt/fzf/install --all --no-bash
 

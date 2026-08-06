@@ -1,25 +1,20 @@
-# pyenv can't be lazy loaded because if a virtualenv is activated before
-# pyenv loads (eg: by an IDE terminal) it will break the virtualenv
-eval "$(pyenv init - --no-rehash zsh)"
-
 # prevent pip from installing globally
 export PIP_REQUIRE_VIRTUALENV=true
 
-# use a stable pyenv path instead of brew's pythonX.Y.Z path
-# so pipx packages aren't broken when brew upgrades python
-# NB: we don't use `pyenv which python` here because it's slooow (200ms)
-PIPX_DEFAULT_PYTHON="$HOME/.pyenv/versions/$(cat ~/.pyenv/version)/bin/python"
+# use brew's versioned python so pipx packages aren't broken when brew
+# upgrades the unversioned python symlink
+PIPX_DEFAULT_PYTHON="$(brew --prefix)/bin/python3.10"
 export PIPX_DEFAULT_PYTHON
 
 # activate virtualenv in .venv/ or venv/
 alias venv='{[[ -d .venv ]] && . .venv/bin/activate} || {[[ -d venv ]] && . venv/bin/activate} || echo "Missing .venv/"'
-# create .venv, using python version set by pyenv, and activate
-alias mkvenv='virtualenv --python $(pyenv which python) .venv && . .venv/bin/activate'
+# create .venv with the default python and activate
+alias mkvenv='virtualenv --python "$PIPX_DEFAULT_PYTHON" .venv && . .venv/bin/activate'
 
-# create temp venv, using python version set by pyenv, and activate
+# create temp venv with the default python and activate
 mktmpenv() {
     local venv="$(mktemp -d)"
-    virtualenv --python $(pyenv which python) $venv
+    virtualenv --python "$PIPX_DEFAULT_PYTHON" $venv
     . $venv/bin/activate
 }
 
