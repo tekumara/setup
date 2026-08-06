@@ -37,9 +37,6 @@ brew bundle install --verbose --file install/Brewfile
 # install fzf key bindings & fuzzy completion and update zshrc
 "$(brew --prefix)"/opt/fzf/install --all --no-bash
 
-# golang tools
-go install github.com/go-delve/delve/cmd/dlv@latest
-
 # update antidote plugins if any
 if [[ -d "$HOME/Library/Caches/antidote" ]]; then
     zsh -fc "source $HOMEBREW_PREFIX/opt/antidote/share/antidote/antidote.zsh && antidote update"
@@ -54,4 +51,5 @@ else
     rustup update
 fi
 
+# install/upgrade packages in ~/.config/mise/config.toml
 mise upgrade

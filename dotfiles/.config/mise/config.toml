@@ -1,4 +1,5 @@
 [tools]
+"go:github.com/go-delve/delve/cmd/dlv" = "latest"
 node = "latest"
 "npm:@earendil-works/pi-coding-agent" = "latest"
 "pipx:aec-cli" = "latest"
