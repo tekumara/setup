@@ -1,4 +1,8 @@
 [tools]
+node = "latest"
 "npm:@earendil-works/pi-coding-agent" = "latest"
 "pipx:aec-cli" = "latest"
 "pipx:nbdime" = "latest"
+
+[settings]
+idiomatic_version_file_enable_tools = ["node"]

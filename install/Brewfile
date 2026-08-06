@@ -4,6 +4,7 @@ tap "tekumara/setup", "https://github.com/tekumara/setup.git", trusted: { casks:
 brew "stow"
 brew "duti"
 brew "antidote"
+brew "mise"
 
 # cli tools
 brew "fzf"
@@ -76,16 +77,10 @@ brew "stern"
 
 # python
 brew "uv"
-brew "mise"
 
 # needed for building some python packages
 brew "automake"
 brew "libtool"
-
-# node
-brew "node"
-brew "yarn"
-brew "fnm"
 
 # java
 cask "temurin@11"
