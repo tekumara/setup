@@ -19,13 +19,3 @@ pip="$(brew --prefix)/opt/python@${default_python_version}/libexec/bin/pip"
 # land in $(brew --prefix)/bin rather than xcode's ~/Library/Python/3.10/bin/
 # which isn't on the path
 PIP_REQUIRE_VIRTUALENV=false $pip install --force-reinstall pip
-
-# upgrade virtualenv to ensure venvs
-# created by mkvenv/mktmpenv are seeded with the latest version of pip
-#
-# we force a reinstall in case virtualenv was previously
-# installed into xcode's python directory (ie: ~/Library/Python/3.10/bin/).
-# This directory is not on the path, and re-installing using brew's pip
-# creates virtualenv in "$(brew --prefix)/bin" which is on the path
-PIP_REQUIRE_VIRTUALENV=false $pip install --force-reinstall virtualenv
-
