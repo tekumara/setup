@@ -78,7 +78,8 @@ brew "stern"
 brew "python@3.10"
 brew "python@3.11"
 brew "python@3.12"
-brew "pipx"
+brew "uv"
+brew "mise"
 
 # needed for building some python packages
 brew "automake"

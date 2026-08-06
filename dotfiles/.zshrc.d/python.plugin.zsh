@@ -1,20 +1,19 @@
 # prevent pip from installing globally
 export PIP_REQUIRE_VIRTUALENV=true
 
-# use brew's versioned python so pipx packages aren't broken when brew
-# upgrades the unversioned python symlink
-PIPX_DEFAULT_PYTHON="$(brew --prefix)/bin/python3.10"
-export PIPX_DEFAULT_PYTHON
+# use brew's versioned python so tools aren't broken when brew upgrades the
+# unversioned python symlink
+DEFAULT_PYTHON="$(brew --prefix)/bin/python3.10"
 
 # activate virtualenv in .venv/ or venv/
 alias venv='{[[ -d .venv ]] && . .venv/bin/activate} || {[[ -d venv ]] && . venv/bin/activate} || echo "Missing .venv/"'
 # create .venv with the default python and activate
-alias mkvenv='virtualenv --python "$PIPX_DEFAULT_PYTHON" .venv && . .venv/bin/activate'
+alias mkvenv='virtualenv --python "$DEFAULT_PYTHON" .venv && . .venv/bin/activate'
 
 # create temp venv with the default python and activate
 mktmpenv() {
     local venv="$(mktemp -d)"
-    virtualenv --python "$PIPX_DEFAULT_PYTHON" $venv
+    virtualenv --python "$DEFAULT_PYTHON" $venv
     . $venv/bin/activate
 }
 

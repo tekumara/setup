@@ -1,0 +1,3 @@
+[tools]
+"pipx:aec-cli" = "latest"
+"pipx:nbdime" = "latest"

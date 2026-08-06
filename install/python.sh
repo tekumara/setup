@@ -29,21 +29,3 @@ PIP_REQUIRE_VIRTUALENV=false $pip install --force-reinstall pip
 # creates virtualenv in "$(brew --prefix)/bin" which is on the path
 PIP_REQUIRE_VIRTUALENV=false $pip install --force-reinstall virtualenv
 
-# use brew's versioned python so pipx packages aren't broken when brew
-# upgrades the unversioned python symlink
-PIPX_DEFAULT_PYTHON="$(brew --prefix)/bin/python${default_python_version}"
-export PIPX_DEFAULT_PYTHON
-
-pipx_upgrade() {
-	# install or upgrade pipx package
-	pipx_venvs=${PIPX_HOME:-$HOME/.local/pipx}/venvs
-
-    if [[ -d "$pipx_venvs/$1" ]]; then
-        pipx upgrade "$1"
-    else
-        pipx install "$1"
-    fi
-}
-
-pipx_upgrade nbdime
-pipx_upgrade aec-cli

@@ -4,7 +4,7 @@ export LESS="-iR"
 # awscli: don't page if output will fit on one screen
 export AWS_PAGER="less -F -X"
 
-# .local/bin is for pipx installed entrypoints
+# .local/bin is for user-installed entrypoints
 export PATH="$PATH:$HOME/.local/bin"
 
 export EDITOR=nvim
