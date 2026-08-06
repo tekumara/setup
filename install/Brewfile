@@ -82,9 +82,6 @@ brew "uv"
 brew "automake"
 brew "libtool"
 
-# java
-cask "temurin@11"
-
 # golang
 brew "go"
 brew "gopls"
