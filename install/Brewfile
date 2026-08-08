@@ -68,7 +68,6 @@ brew "dive"
 
 # handy kubernetes tools
 brew "k9s"
-brew "helm"
 brew "k3d"
 brew "kubectx"
 brew "stern"
