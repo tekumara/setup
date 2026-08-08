@@ -11,6 +11,7 @@ node = "latest"
 "pipx:cruft" = "latest"
 "pipx:nbdime" = "latest"
 rust = "latest"
+terraform = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]
