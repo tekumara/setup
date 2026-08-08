@@ -87,6 +87,7 @@ tap "goreleaser/tap", trusted: true
 cask "goreleaser/tap/goreleaser"
 
 # mac desktop apps
+cask "agentsview"
 cask "calibre"
 cask "dropbox"
 cask "firefox"
