@@ -15,7 +15,6 @@ if [[ -f /opt/homebrew/bin/brew ]]; then
 fi
 
 install/fonts.sh
-install/kubectl.sh
 install/python.sh
 install/defaults.sh
 install/dotfiles.sh

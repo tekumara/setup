@@ -1,6 +1,7 @@
 [tools]
 go = "latest"
 "go:github.com/go-delve/delve/cmd/dlv" = "latest"
+kubectl = "1.34"
 node = "latest"
 "npm:@earendil-works/pi-coding-agent" = "latest"
 "pipx:aec-cli" = "latest"
