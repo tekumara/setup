@@ -15,9 +15,7 @@ brew "jless"
 brew "yq"
 brew "scmpuff"
 brew "sd"
-brew "gh"
 brew "zoxide"
-brew "diff-so-fancy"
 brew "saulpw/vd/visidata", trusted: true
 brew "hyperfine"
 brew "grpcurl"
@@ -38,7 +36,7 @@ cask "1password"
 
 # aws
 brew "awscli"
-cask "session-manager-plugin", args: {'no-quarantine': true}
+cask "session-manager-plugin"
 cask "aws-vault-binary"
 
 # dev tools
@@ -55,7 +53,9 @@ brew "wiggle"
 ## later version than apple git
 brew "git"
 brew "git-lfs"
+brew "gh"
 brew "lazygit"
+brew "diff-so-fancy"
 brew "jj"
 brew "jjui"
 brew "mergiraf"
