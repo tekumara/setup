@@ -10,7 +10,7 @@ alias mkvenv='uv venv --seed .venv && . .venv/bin/activate'
 mktmpenv() {
     local venv="$(mktemp -d)"
     uv venv --seed "$venv"
-    . $venv/bin/activate
+    . "$venv/bin/activate"
 }
 
 # vscode debugger
@@ -26,7 +26,7 @@ debugpy() {
         # use glob qualifier N (ie: null_glob) so that if the glob has no matches we don't die
         [[ -d $~debugpy(#qN) ]] || { echo "vscode python extension not installed" && return }
         echo "Attach vscode debugger to port $port" >&2
-        python $~debugpy --listen "$port" --wait-for-client "$@"
+        uv run python $~debugpy --listen "$port" --wait-for-client "$@"
     fi
 }
 
