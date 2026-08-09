@@ -17,3 +17,6 @@ terraform = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = ["node", "java"]
+
+[settings.status]
+missing_tools = "always"
