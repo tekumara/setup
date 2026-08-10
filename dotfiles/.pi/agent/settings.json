@@ -24,7 +24,8 @@
     "npm:@spences10/pi-redact",
     "npm:@plannotator/pi-extension",
     "git:github.com/algal/pi-openai-server-compaction",
-    "git:github.com/tekumara/pi-timer@fix/show-thinking-level"
+    "git:github.com/tekumara/pi-timer@fix/show-thinking-level",
+    "npm:pi-session-finder"
   ],
   "terminal": {
     "showTerminalProgress": true
