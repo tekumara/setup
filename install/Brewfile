@@ -16,7 +16,6 @@ brew "yq"
 brew "scmpuff"
 brew "sd"
 brew "zoxide"
-brew "saulpw/vd/visidata", trusted: true
 brew "hyperfine"
 brew "grpcurl"
 brew "pstree"
