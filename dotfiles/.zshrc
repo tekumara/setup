@@ -40,7 +40,7 @@ source "$HOME/.zshrc.d/dinstall.plugin.zsh"
 #source "$HOME/.zshrc.d/git.plugin.zsh"
 #source "$HOME/.zshrc.d/java.plugin.zsh"
 #source "$HOME/.zshrc.d/kubes.plugin.zsh"
-source "$HOME/.zshrc.d/mise.plugin.zsh"
+#source "$HOME/.zshrc.d/mise.plugin.zsh"
 #source "$HOME/.zshrc.d/python.plugin.zsh"
 source "$HOME/.zshrc.d/ripgrep.plugin.zsh"
 
@@ -58,19 +58,19 @@ _load_compinit
 # Enable direnv last, so that any env vars overwritten will
 # record their prior value if set above (eg: KUBECONFIG)
 eval "$(direnv hook zsh)"
+
 #setup-mac start
+FPATH="$HOMEBREW_PREFIX/share/zsh/site-functions:$HOME/.zshrc.d/completions:${FPATH}"
 source "$HOME/.zshrc.d/auth.plugin.zsh"
 source "$HOME/.zshrc.d/aws.plugin.zsh"
 source "$HOME/.zshrc.d/docker.plugin.zsh"
 source "$HOME/.zshrc.d/functions.plugin.zsh"
 source "$HOME/.zshrc.d/git-doctor.plugin.zsh"
 source "$HOME/.zshrc.d/git.plugin.zsh"
-source "$HOME/.zshrc.d/java.plugin.zsh"
 source "$HOME/.zshrc.d/kubes.plugin.zsh"
 source "$HOME/.zshrc.d/migrations.plugin.zsh"
+source "$HOME/.zshrc.d/mise.plugin.zsh"
 source "$HOME/.zshrc.d/python.plugin.zsh"
 source "$HOME/.zshrc.d/setup.plugin.zsh"
 
 #setup-mac end
-
-if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)"; fi
