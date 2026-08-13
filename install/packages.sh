@@ -45,3 +45,6 @@ fi
 # install/upgrade tools from this repo's mise config
 # (~/.config/mise/config.toml is only created later by stow)
 MISE_GLOBAL_CONFIG_FILE="$PWD/dotfiles/.config/mise/config.toml" mise upgrade
+
+# install global skills in agents.toml
+"$HOME/.local/share/mise/installs/npm-sentry-dotagents/latest/node_modules/.bin/dotagents" install

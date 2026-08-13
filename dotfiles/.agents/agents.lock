@@ -5,28 +5,28 @@ version = 1
 source = "getsentry/dotagents"
 resolved_url = "https://github.com/getsentry/dotagents"
 resolved_path = "skills/dotagents"
-resolved_commit = "daa3a13bbe9c67794bdd183b934378960e65b950"
+resolved_commit = "58faa853e1a62a2d1a0d9a595cc8c37b9c9e8d94"
 
 [skills.gog]
 source = "openclaw/gogcli"
 resolved_url = "https://github.com/openclaw/gogcli"
 resolved_path = ".agents/skills/gog"
-resolved_commit = "5800e0ef0d9f0a5468afa2f1f2a016612d8a7399"
+resolved_commit = "7175a08f8c9f4832a1d4880a5e75659267b40e45"
 
 [skills.gog-docs]
 source = "openclaw/gogcli"
 resolved_url = "https://github.com/openclaw/gogcli"
 resolved_path = ".agents/skills/gog-docs"
-resolved_commit = "5800e0ef0d9f0a5468afa2f1f2a016612d8a7399"
+resolved_commit = "7175a08f8c9f4832a1d4880a5e75659267b40e45"
 
 [skills.gog-drive]
 source = "openclaw/gogcli"
 resolved_url = "https://github.com/openclaw/gogcli"
 resolved_path = ".agents/skills/gog-drive"
-resolved_commit = "5800e0ef0d9f0a5468afa2f1f2a016612d8a7399"
+resolved_commit = "7175a08f8c9f4832a1d4880a5e75659267b40e45"
 
 [skills.gog-sheets]
 source = "openclaw/gogcli"
 resolved_url = "https://github.com/openclaw/gogcli"
 resolved_path = ".agents/skills/gog-sheets"
-resolved_commit = "5800e0ef0d9f0a5468afa2f1f2a016612d8a7399"
+resolved_commit = "7175a08f8c9f4832a1d4880a5e75659267b40e45"
