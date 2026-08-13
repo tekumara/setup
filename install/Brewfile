@@ -41,13 +41,13 @@ cask "aws-vault-binary"
 # dev tools
 cask "agentsview"
 cask "beyond-compare"
-brew "supaterm"
+cask "supaterm"
 brew "shellcheck"
 
 # editors
 brew "nvim"
 cask "visual-studio-code"
-brew "zed"
+cask "zed"
 ## for vscode symbol generation
 brew "ctags"
 brew "pandoc"
