@@ -39,10 +39,15 @@ cask "session-manager-plugin"
 cask "aws-vault-binary"
 
 # dev tools
-brew "shellcheck"
+cask "agentsview"
 cask "beyond-compare"
+brew "supaterm"
+brew "shellcheck"
+
+# editors
 brew "nvim"
 cask "visual-studio-code"
+brew "zed"
 ## for vscode symbol generation
 brew "ctags"
 brew "pandoc"
@@ -85,7 +90,7 @@ tap "goreleaser/tap", trusted: true
 cask "goreleaser/tap/goreleaser"
 
 # mac desktop apps
-cask "agentsview"
+cask "arc"
 cask "calibre"
 cask "dropbox"
 cask "firefox"
@@ -94,6 +99,7 @@ cask "google-drive"
 cask "google-chrome" unless system "[[ -d '/Applications/Google Chrome.app' ]]"
 cask "tekumara/setup/cleanshot@4.6.3"
 cask "tekumara/setup/macbreakz@5.44"
+cask "tldraw"
 cask "slack" unless system "[[ -d '/Applications/Slack.app' ]]"
 cask "spotify"
 cask "iina"
