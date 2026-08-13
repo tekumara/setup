@@ -65,7 +65,7 @@ brew "jjui"
 brew "mergiraf"
 
 # docker
-cask "docker-desktop" unless system "[[ -d '/Applications/Docker.app' || -d '/Applications/Rancher Desktop.app' ]]"
+# cask "docker-desktop" unless system "[[ -d '/Applications/Docker.app' || -d '/Applications/Rancher Desktop.app' ]]"
 brew "hadolint"
 brew "crane"
 brew "dive"
