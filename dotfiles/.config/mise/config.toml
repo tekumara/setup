@@ -3,6 +3,7 @@ claude = "latest"
 codex = "latest"
 go = "latest"
 "go:github.com/go-delve/delve/cmd/dlv" = "latest"
+"go:honnef.co/go/tools/cmd/staticcheck" = "latest"
 # check https://helm.sh/docs/topics/version_skew/#supported-version-skew when updating
 helm = "4.2"
 kubectl = "1.34"

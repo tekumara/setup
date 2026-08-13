@@ -84,7 +84,6 @@ brew "libtool"
 
 # golang
 brew "gopls"
-brew "staticcheck"
 # trust whole tap because goreleaser cask references sibling casks in the tap
 tap "goreleaser/tap", trusted: true
 cask "goreleaser/tap/goreleaser"
