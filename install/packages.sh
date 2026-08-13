@@ -42,5 +42,6 @@ if [[ -d "$HOME/Library/Caches/antidote" ]]; then
     zsh -fc "source $HOMEBREW_PREFIX/opt/antidote/share/antidote/antidote.zsh && antidote update"
 fi
 
-# install/upgrade packages in ~/.config/mise/config.toml
-mise upgrade
+# install/upgrade tools from this repo's mise config
+# (~/.config/mise/config.toml is only created later by stow)
+MISE_GLOBAL_CONFIG_FILE="$PWD/dotfiles/.config/mise/config.toml" mise upgrade
