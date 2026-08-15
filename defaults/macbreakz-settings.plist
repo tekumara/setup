@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSWindow Frame ActivityMonitor</key>
+	<string>0 0 211 107 0 0 1728 1084 </string>
+	<key>NSWindow Frame NSSpellCheckerSpellingPanel</key>
+	<string>496 477 431 262 0 0 1728 1084 </string>
+	<key>NSWindow Frame NSSpellCheckerSubstitutionsPanel2</key>
+	<string>692 403 348 141 0 0 1728 1084 </string>
+	<key>NSWindow Frame PreferencesWindow</key>
+	<string>483 419 645 458 0 0 1728 1084 </string>
+	<key>NSWindow Frame SUStatusFrame</key>
+	<string>999 266 400 135 0 0 1920 1055 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>650 489 620 398 0 0 1920 1050 </string>
+	<key>NSWindow Frame stretchmanager</key>
+	<string>626 277 667 494 0 0 1920 1050 </string>
+	<key>SUAutomaticallyUpdate</key>
+	<false/>
+	<key>SUEnableAutomaticChecks</key>
+	<false/>
+	<key>SUHasLaunchedBefore</key>
+	<true/>
+	<key>SULastCheckTime</key>
+	<date>2026-08-13T00:37:44Z</date>
+	<key>SUScheduledCheckInterval</key>
+	<integer>0</integer>
+	<key>SUSendProfileInfo</key>
+	<false/>
+	<key>SUSkippedVersion</key>
+	<string>5.48</string>
+	<key>SUUpdateGroupIdentifier</key>
+	<integer>1890781867</integer>
+	<key>SUUpdateRelaunchingMarker</key>
+	<false/>
+	<key>StretchWebPageCollectionDisabledKeysDictionaryKey</key>
+	<dict/>
+	<key>dockless</key>
+	<true/>
+	<key>durationOfAdaptationPeriodInDays</key>
+	<integer>42</integer>
+	<key>firstLaunch</key>
+	<integer>1</integer>
+	<key>lastQuitTime</key>
+	<real>807884534.32492304</real>
+	<key>mailing_list_haveShownJoinMailingListDialog</key>
+	<true/>
+	<key>mailing_list_launchCounter</key>
+	<integer>295</integer>
+	<key>menuBarItemShowApplicationName</key>
+	<false/>
+	<key>menuBarItemShowTimeToNextBreak</key>
+	<false/>
+	<key>persistentSettings</key>
+	<dict>
+		<key>ActiveSubStateOfWorkingState</key>
+		<dict/>
+		<key>BreakState</key>
+		<dict>
+			<key>activeTicks</key>
+			<integer>0</integer>
+			<key>breakDuration</key>
+			<integer>2400</integer>
+			<key>computedRemainingTime</key>
+			<integer>0</integer>
+			<key>currentBreakDuration</key>
+			<integer>2400</integer>
+			<key>currentlyObservedBreak</key>
+			<integer>2400</integer>
+			<key>elapsedTicksForInfo</key>
+			<integer>0</integer>
+			<key>forceBreak</key>
+			<integer>0</integer>
+			<key>illustrationStyle</key>
+			<integer>0</integer>
+			<key>initialBreakDuration</key>
+			<integer>960</integer>
+			<key>localizedAdaptationPeriodText</key>
+			<string></string>
+			<key>maxTicksForInfo</key>
+			<integer>180</integer>
+			<key>numberOfStretches</key>
+			<integer>3</integer>
+			<key>numberOfTips</key>
+			<integer>1</integer>
+			<key>ticksPerStretch</key>
+			<integer>180</integer>
+			<key>ticksPerTip</key>
+			<integer>180</integer>
+		</dict>
+		<key>CountdownSubStateOfWorkingState</key>
+		<dict/>
+		<key>DisabledFor2HoursState</key>
+		<dict/>
+		<key>DisabledFor4HoursState</key>
+		<dict/>
+		<key>DisabledForRestOfTodayState</key>
+		<dict/>
+		<key>DisplayStretchSubStateOfBreakState</key>
+		<dict/>
+		<key>DisplayTipSubStateOfBreakState</key>
+		<dict/>
+		<key>MicroBreakSubStateOfWorkingState</key>
+		<dict/>
+		<key>TakingBreakSubStateOfBreakState</key>
+		<dict/>
+		<key>WorkingState</key>
+		<dict>
+			<key>activeTicks</key>
+			<integer>0</integer>
+			<key>activityLevel</key>
+			<integer>101</integer>
+			<key>clockKeepsRunningActive</key>
+			<true/>
+			<key>clockKeepsRunningDelay</key>
+			<integer>40</integer>
+			<key>clockRunsBackwardsActive</key>
+			<false/>
+			<key>clockRunsBackwardsDelay</key>
+			<integer>120</integer>
+			<key>computedActivityValue</key>
+			<real>6</real>
+			<key>computedTimeToBreakValue</key>
+			<integer>6</integer>
+			<key>dayOfTheYear</key>
+			<integer>163</integer>
+			<key>dayOfYear</key>
+			<integer>220</integer>
+			<key>elapsedTicks</key>
+			<integer>2148</integer>
+			<key>extraTime</key>
+			<integer>0</integer>
+			<key>idleTimeBeforeBreak</key>
+			<integer>60</integer>
+			<key>initialIntervalBetweenBreaks</key>
+			<integer>11520</integer>
+			<key>intervalBetweenBreaks</key>
+			<integer>9600</integer>
+			<key>lastActiveTick</key>
+			<integer>6</integer>
+			<key>maxActivityLevel</key>
+			<integer>480</integer>
+			<key>microBreakMode</key>
+			<integer>4</integer>
+			<key>shouldDetectInformalBreak</key>
+			<true/>
+			<key>showActivityMonitor</key>
+			<false/>
+			<key>showWarning1MinuteBeforeBreak</key>
+			<true/>
+			<key>showWarning3MinutesBeforeBreak</key>
+			<true/>
+			<key>showWarning5MinutesBeforeBreak</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>playSoundInbetweenStretches</key>
+	<false/>
+	<key>playSoundWhenActivityReachesDangerLevel</key>
+	<false/>
+	<key>soundFilePathWhenActivityReachesDangerLevel</key>
+	<string>/System/Library/Sounds/Basso.aiff</string>
+	<key>soundFilePathWhenActivityReachesDropsToSafeLevel</key>
+	<string>/System/Library/Sounds/Hero.aiff</string>
+	<key>soundFilePathWhenActivityReachesWarningLevel</key>
+	<string>/System/Library/Sounds/Submarine.aiff</string>
+	<key>soundFilePathWhenMessageAppears</key>
+	<string>/System/Library/Sounds/Pop.aiff</string>
+	<key>soundFilePathWhenTheBreakEnds</key>
+	<string>/System/Library/Sounds/Pop.aiff</string>
+	<key>soundFilePathWhenTheBreakStarts</key>
+	<string>/System/Library/Sounds/Pop.aiff</string>
+	<key>suaPreventionActivateMicrobreak</key>
+	<true/>
+	<key>suaSoundPreferences</key>
+	<integer>1</integer>
+</dict>
+</plist>
