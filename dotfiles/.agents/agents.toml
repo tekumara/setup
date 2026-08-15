@@ -1,5 +1,5 @@
 version = 1
-agents = ["claude", "cursor", "codex", "vscode", "opencode"]
+agents = ["claude", "cursor", "codex", "vscode", "pi"]
 
 [trust]
 allow_all = true
@@ -23,3 +23,7 @@ source = "openclaw/gogcli"
 [[skills]]
 name = "gog-sheets"
 source = "openclaw/gogcli"
+
+[[skills]]
+name = "gh-stack"
+source = "github/gh-stack"

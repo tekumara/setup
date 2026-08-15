@@ -7,6 +7,12 @@ resolved_url = "https://github.com/getsentry/dotagents"
 resolved_path = "skills/dotagents"
 resolved_commit = "58faa853e1a62a2d1a0d9a595cc8c37b9c9e8d94"
 
+[skills.gh-stack]
+source = "github/gh-stack"
+resolved_url = "https://github.com/github/gh-stack"
+resolved_path = "skills/gh-stack"
+resolved_commit = "14fc42ed9b6c376a53b2f999f138d3bd26dac546"
+
 [skills.gog]
 source = "openclaw/gogcli"
 resolved_url = "https://github.com/openclaw/gogcli"
