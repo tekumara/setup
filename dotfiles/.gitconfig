@@ -55,9 +55,9 @@
 	required = true
 [diff-so-fancy]
 	first-run = false
-[includeIf "gitdir:~/code/ghec/"]
-	# set alternate user.email for ghec repos
-	path = ~/.gitconfig_ghec
+[includeIf "gitdir:~/code/work/"]
+	# set alternate user.email for work repos
+	path = ~/code/work/.gitconfig
 [diff]
 	tool = bc
 	algorithm = histogram

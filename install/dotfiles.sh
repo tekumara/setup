@@ -15,6 +15,10 @@ if [[ -d ~/Dropbox/secret/dotfiles ]]; then
     stow --no-folding -vv dotfiles -d ~/Dropbox/secret -t ~
 fi
 
+if [[ ! -f ~/code/work/.gitconfig ]]; then
+    echo "WARNING: ~/code/work/.gitconfig does not exist, work git config (eg. user.email) won't be applied"
+fi
+
 ## vim settings
 if [[ ! -d ~/.vim_runtime ]]; then
     git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
