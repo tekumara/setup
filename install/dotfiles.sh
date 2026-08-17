@@ -10,9 +10,9 @@ if [[ -s ~/.zshrc ]]; then
 fi
 
 # install dotfile symlinks
-stow -vv dotfiles -t ~
+stow --no-folding -vv dotfiles -t ~
 if [[ -d ~/Dropbox/secret/dotfiles ]]; then
-    stow -vv dotfiles -d ~/Dropbox/secret -t ~
+    stow --no-folding -vv dotfiles -d ~/Dropbox/secret -t ~
 fi
 
 ## vim settings
