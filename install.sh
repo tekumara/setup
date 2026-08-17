@@ -18,6 +18,8 @@ install/fonts.sh
 install/python.sh
 install/defaults.sh
 install/dotfiles.sh
+# agents.sh must run after packages.sh and dotfiles.sh
+install/agents.sh
 install/passage.sh
 install/symlinks.sh
 install/crontab.sh
