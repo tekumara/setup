@@ -12,7 +12,6 @@
     "git:github.com/kostyay/pi-k-excalidraw",
     "git:github.com/nicobailon/visual-explainer",
     "npm:pi-code-previews",
-    "git:https://github.com/badlogic/pi-diff-review",
     "https://github.com/umputun/revdiff",
     "npm:pi-goal",
     "npm:pi-web-access",
