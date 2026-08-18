@@ -122,7 +122,10 @@ alias hprch='gh pr checks'
 # view pr for the current branch
 # - jj repos will supply the closest remote bookmark as the branch arg
 #   for git repos this will be empty and gh finds the branch
-alias hprv='gh pr view --web $(jj log --no-graph --limit 1 -r "heads(::@ & remote_bookmarks() ~ ::trunk())" -T "gh_remote_bookmark")'
+hprv() {
+    local branch=$(jj log --no-graph --limit 1 -r "heads(::@ & remote_bookmarks() ~ ::trunk())" -T "gh_remote_bookmark" 2>/dev/null)
+    gh pr view --web $branch "$@"
+}
 # view ci.yml workflow
 alias hwv='gh workflow view ci.yml'
 # view ci.yml workflow in the browser
