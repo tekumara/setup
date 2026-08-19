@@ -295,6 +295,8 @@
   "github.copilot.chat.notebook.enhancedNextEditSuggestions.enabled": true,
   "chat.tools.terminal.autoApprove": {
     "uv": true,
+    "gh": true,
+    "jj": true
   },
   "[github-actions-workflow]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
@@ -334,6 +336,6 @@
     "windows": "windows"
   },
   "git.enableSmartCommit": true,
-  "typos.path": "~/code/typos-lsp/target/debug/typos-lsp",
   "claudeCode.preferredLocation": "panel",
+  "terminal.integrated.initialHint": false,
 }
