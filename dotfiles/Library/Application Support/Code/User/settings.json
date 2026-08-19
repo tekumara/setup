@@ -338,4 +338,5 @@
   "git.enableSmartCommit": true,
   "claudeCode.preferredLocation": "panel",
   "terminal.integrated.initialHint": false,
+  "terminal.integrated.inheritEnv": false,
 }
