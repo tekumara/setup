@@ -1,6 +1,7 @@
 [tools]
 claude = "latest"
 codex = "latest"
+"github:kenn-io/forge" = "latest"
 go = "latest"
 "go:github.com/go-delve/delve/cmd/dlv" = "latest"
 "go:honnef.co/go/tools/cmd/staticcheck" = "latest"
