@@ -55,9 +55,8 @@
 	required = true
 [diff-so-fancy]
 	first-run = false
-[includeIf "gitdir:~/code/work/"]
-	# set alternate user.email for work repos
-	path = ~/code/work/.gitconfig
+[include]
+    path = ~/code/work/.gitconfig
 [diff]
 	tool = bc
 	algorithm = histogram
