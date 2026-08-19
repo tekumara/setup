@@ -5,7 +5,7 @@
 set -euo pipefail
 
 # install and pin the default uv Python version
-uv python pin --global 3.10
+uv python pin --global 3.14
 
 # For agents that expect `python` on PATH.
 mkdir -p "$HOME/.local/bin"
