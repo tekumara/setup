@@ -11,7 +11,7 @@ resolved_commit = "b0027e21f13154c2036f4e62cdcce3ce769e01e6"
 source = "github/gh-stack"
 resolved_url = "https://github.com/github/gh-stack"
 resolved_path = "skills/gh-stack"
-resolved_commit = "14fc42ed9b6c376a53b2f999f138d3bd26dac546"
+resolved_commit = "ab00aa4a3f2dddc51aa65849c68b391a1b079311"
 
 [skills.gog]
 source = "openclaw/gogcli"
