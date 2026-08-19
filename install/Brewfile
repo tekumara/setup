@@ -40,6 +40,9 @@ cask "aws-vault-binary"
 
 # dev tools
 cask "agentsview"
+cask "ghosthub"
+# tmux needed for ghosthub
+brew "tmux"
 cask "beyond-compare"
 cask "supaterm"
 brew "shellcheck"
@@ -63,6 +66,7 @@ brew "diff-so-fancy"
 brew "jj"
 brew "jjui"
 brew "mergiraf"
+brew "umputun/apps/revdiff", trusted: true
 
 # docker
 # cask "docker-desktop" unless system "[[ -d '/Applications/Docker.app' || -d '/Applications/Rancher Desktop.app' ]]"
@@ -96,6 +100,7 @@ cask "firefox"
 cask "ghostty"
 cask "google-drive"
 cask "google-chrome" unless system "[[ -d '/Applications/Google Chrome.app' ]]"
+cask "handy"
 cask "meetingbar"
 cask "cleanshot"
 cask "tekumara/setup/macbreakz@5.44"
