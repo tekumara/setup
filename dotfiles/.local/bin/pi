@@ -4,7 +4,4 @@ if [ -f .envrc ]; then
   . ./.envrc
 fi
 
-# so pi can find utils installed by homebrew when run via the vscode extension
-export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin${PATH:+:$PATH}"
-
 exec mise exec -- pi "$@"
