@@ -40,7 +40,7 @@ cask "aws-vault-binary"
 
 # dev tools
 cask "agentsview"
-cask "ghosthub"
+cask "kenn-io/tap/ghosthub", trusted: true
 # tmux needed for ghosthub
 brew "tmux"
 cask "beyond-compare"
