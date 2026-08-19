@@ -46,11 +46,6 @@ source "$HOME/.zshrc.d/ripgrep.plugin.zsh"
 # add fzf to path, and load fzf completion & keybindings (CTRL-T, CTRL-R)
 source ~/.fzf.zsh
 
-# add brew package completions + our completions
-FPATH="$HOMEBREW_PREFIX/share/zsh/site-functions:$HOME/.zshrc.d/completions:${FPATH}"
-# load all completions
-_load_compinit
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -58,8 +53,14 @@ _load_compinit
 # record their prior value if set above (eg: KUBECONFIG)
 eval "$(direnv hook zsh)"
 
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+# fpath=(/Users/oliver.mannion/.docker/completions $fpath)
+# autoload -Uz compinit
+# compinit
+# End of Docker CLI completions
+
 #setup-mac start
-FPATH="$HOMEBREW_PREFIX/share/zsh/site-functions:$HOME/.zshrc.d/completions:${FPATH}"
+FPATH="$HOME/.zshrc.d/completions:${FPATH}"
 source "$HOME/.zshrc.d/auth.plugin.zsh"
 source "$HOME/.zshrc.d/aws.plugin.zsh"
 source "$HOME/.zshrc.d/docker.plugin.zsh"
@@ -74,3 +75,5 @@ source "$HOME/.zshrc.d/python.plugin.zsh"
 source "$HOME/.zshrc.d/setup.plugin.zsh"
 
 #setup-mac end
+
+_load_compinit
