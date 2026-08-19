@@ -3,18 +3,15 @@
 
 # bundle_id                     uti | url_scheme | extension | MIME_type        role
 
-com.microsoft.VSCode            public.plain-text                               all
-com.microsoft.VSCode            .md                                             all
-com.microsoft.VSCode            .log                                            all
-com.microsoft.VSCode            .xml                                            all
-com.microsoft.VSCode            .json                                           all
-com.microsoft.VSCode            .ndjson                                         all
-com.microsoft.VSCode            .sha256                                         all
-com.microsoft.VSCode            .pom                                            all
-com.microsoft.VSCode            .tf                                             all
-com.microsoft.VSCode            .yaml                                           all
+dev.zed.Zed                     public.plain-text                               all
+dev.zed.Zed                     .md                                             all
+dev.zed.Zed                     .log                                            all
+dev.zed.Zed                     .xml                                            all
+dev.zed.Zed                     .json                                           all
+dev.zed.Zed                     .ndjson                                         all
+dev.zed.Zed                     .yaml                                           all
 com.microsoft.VSCode            .py                                             all
-com.colliderli.iina             org.matroska.mkv                                all
+com.colliderli.iina             .mkv                                            all
 com.colliderli.iina             public.mpeg-4                                   all
 com.colliderli.iina             .webm                                           all
 com.apple.Numbers               .csv                                            all
