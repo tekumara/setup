@@ -1,11 +1,24 @@
-[pull]
-	# Use merge to resolve divergent branches on pull.
-	rebase = false
+[branch]
+	# git branch is sorted with most recent commits first
+	# matches the order of git log
+	sort = -committerdate
 [branch "main"]
 	# Except for main/master use rebase instead of merge to preserve a linear history.
 	rebase = true
 [branch "master"]
 	rebase = true
+[tag]
+	# use version sort for tags instead of the default alphabetical sort
+	sort = version:refname
+[fetch]
+	# remove any remote-tracking references (eg: origin/*) that no longer exist on the remote
+	prune = true
+	pruneTags = true
+	# fetch all remotes when running `git fetch` without arguments
+	all = true
+[pull]
+	# Use merge to resolve divergent branches on pull.
+	rebase = false
 [push]
 	# When pushing a branch for the first time a remote branch needs to be supplied. This
 	# automatically sets the remote branch to one with the same name as the current branch.
@@ -22,7 +35,10 @@
 	autoStash = true
 
 	# merge squash & fixup commits see https://robots.thoughtbot.com/autosquashing-git-commits
-	autosquash = true
+	autoSquash = true
+
+	# update branch refs that point to rebased commits, keeping stacked branches in sync
+	updateRefs = true
 [core]
 	# checkout as-is, commit as-is
 	autocrlf = false
@@ -74,7 +90,4 @@
 [credential "https://gist.github.com"]
 	helper =
 	helper = !/opt/homebrew/bin/gh auth git-credential
-[branch]
-	# git branch is sorted with most recent commits first
-	# matches the order of git log
-	sort = -committerdate
+
