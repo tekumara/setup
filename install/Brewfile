@@ -22,6 +22,10 @@ brew "pstree"
 brew "direnv"
 brew "dust"
 
+# pdf/images
+brew "poppler"
+brew "imagemagick"
+
 # encryption/security
 brew "age"
 brew "age-plugin-yubikey"
@@ -39,7 +43,7 @@ cask "session-manager-plugin"
 cask "aws-vault-binary"
 
 # dev tools
-cask "agentsview"
+cask "agentsview", trusted: true
 cask "kenn-io/tap/ghosthub", trusted: true
 # tmux needed for ghosthub
 brew "tmux"
