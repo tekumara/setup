@@ -43,7 +43,8 @@ cask "session-manager-plugin"
 cask "aws-vault-binary"
 
 # dev tools
-cask "kenn-io/tap/agentsview", trusted: true
+tap "kenn-io/tap"
+cask "agentsview", trusted: true
 cask "kenn-io/tap/ghosthub", trusted: true
 # tmux needed for ghosthub
 brew "tmux"
