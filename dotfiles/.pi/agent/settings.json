@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.84.3",
+  "lastChangelogVersion": "0.85.1",
   "defaultProvider": "github-copilot",
   "defaultModel": "gpt-5.6-terra",
   "defaultThinkingLevel": "high",
@@ -13,8 +13,6 @@
     "https://github.com/umputun/revdiff",
     "npm:pi-goal",
     "npm:pi-web-access",
-    "git:github.com/DietrichGebert/ponytail",
-    "npm:pi-input-history",
     "npm:pi-fzfp",
     "npm:@juicesharp/rpiv-ask-user-question",
     "npm:@spences10/pi-redact",
@@ -22,7 +20,8 @@
     "git:github.com/algal/pi-openai-server-compaction",
     "npm:pi-timer",
     "npm:pi-session-finder",
-    "npm:@yceachan/pi-switch-cwd"
+    "npm:@yceachan/pi-switch-cwd",
+    "git:github.com/DietrichGebert/ponytail"
   ],
   "terminal": {
     "showTerminalProgress": true
