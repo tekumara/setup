@@ -44,7 +44,9 @@ cask "aws-vault-binary"
 
 # dev tools
 tap "kenn-io/tap"
-cask "agentsview", trusted: true
+# TODO: Remove explicit adopt once Homebrew releases the fix for mixed formula/cask batches:
+# https://github.com/Homebrew/brew/commit/60f242dfd6dab43cbf19654aa118c96a4f7c6ab6
+cask "agentsview", args: { adopt: true }
 cask "kenn-io/tap/ghosthub", trusted: true
 # tmux needed for ghosthub
 brew "tmux"
