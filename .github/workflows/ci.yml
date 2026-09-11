@@ -4,9 +4,16 @@ on:
   push:
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: macos-latest
+    env:
+      # Authenticate mise's GitHub API requests to avoid the low unauthenticated
+      # rate limit on shared GitHub Actions runner IP addresses.
+      GITHUB_TOKEN: ${{ github.token }}
 
     steps:
       - uses: actions/checkout@v7
