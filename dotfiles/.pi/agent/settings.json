@@ -16,20 +16,21 @@
     "npm:pi-fzfp",
     "npm:@juicesharp/rpiv-ask-user-question",
     "npm:@spences10/pi-redact",
-    "npm:@plannotator/pi-extension",
     "git:github.com/algal/pi-openai-server-compaction",
     "npm:pi-timer",
     "npm:pi-session-finder",
     "npm:@yceachan/pi-switch-cwd",
-    "git:github.com/DietrichGebert/ponytail"
+    "npm:@plannotator/pi-extension",
+    "git:github.com/tmustier/pine-of-glass"
   ],
   "terminal": {
     "showTerminalProgress": true
   },
   "enabledModels": [
-    "github-copilot/gpt-5.6-luna:high",
-    "github-copilot/gpt-5.6-sol:medium",
-    "github-copilot/gpt-5.6-terra:high"
+    "github-copilot/gpt-5.6-luna",
+    "github-copilot/gpt-5.6-sol",
+    "github-copilot/gpt-5.6-terra",
+    "github-copilot/gpt-6-astra"
   ],
   "theme": "dark",
   "treeFilterMode": "no-tools"
