@@ -10,8 +10,6 @@
     "git:github.com/supabitapp/supaterm-skills",
     "git:github.com/dbachelder/pi-btw",
     "npm:pi-code-previews",
-    "https://github.com/umputun/revdiff",
-    "npm:pi-goal",
     "npm:pi-web-access",
     "npm:pi-fzfp",
     "npm:@juicesharp/rpiv-ask-user-question",
