@@ -27,3 +27,7 @@ source = "openclaw/gogcli"
 [[skills]]
 name = "gh-stack"
 source = "github/gh-stack"
+
+[[mcp]]
+name = "slack"
+url = "https://mcp.slack.com/mcp"
