@@ -1,9 +1,12 @@
 {
-  "lastChangelogVersion": "0.87.1",
+  "lastChangelogVersion": "0.99.1",
   "defaultProvider": "github-copilot",
-  "defaultModel": "gpt-6-astra",
-  "defaultThinkingLevel": "medium",
-  "hideThinkingBlock": false,
+  "defaultModel": "gpt-6-sol",
+  "hideThinkingBlock": true,
+  "defaultTools": [
+    "+codemode"
+  ],
+  "tuiMode": "fullscreen",
   "packages": [
     "git:github.com/earendil-works/pi-review",
     "npm:pi-mcp-adapter",
@@ -12,7 +15,6 @@
     "npm:pi-code-previews",
     "npm:pi-web-access",
     "npm:pi-fzfp",
-    "npm:@juicesharp/rpiv-ask-user-question",
     "npm:@spences10/pi-redact",
     "git:github.com/algal/pi-openai-server-compaction",
     "npm:pi-timer",
@@ -28,7 +30,8 @@
   "enabledModels": [
     "github-copilot/gpt-6-luna",
     "github-copilot/gpt-6-sol",
-    "github-copilot/gpt-6-astra"
+    "github-copilot/gpt-6-astra",
+    "anthropic/claude-opus-5-5"
   ],
   "theme": "dark",
   "treeFilterMode": "no-tools"
