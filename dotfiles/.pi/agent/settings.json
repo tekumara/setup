@@ -18,7 +18,6 @@
     "npm:@spences10/pi-redact",
     "git:github.com/algal/pi-openai-server-compaction",
     "npm:pi-timer",
-    "npm:pi-session-finder",
     "npm:@yceachan/pi-switch-cwd",
     "npm:@plannotator/pi-extension",
     "git:github.com/tmustier/pine-of-glass",
