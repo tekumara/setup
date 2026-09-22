@@ -1,7 +1,7 @@
 {
-  "lastChangelogVersion": "0.99.1",
+  "lastChangelogVersion": "0.99.2",
   "defaultProvider": "github-copilot",
-  "defaultModel": "gpt-6-sol",
+  "defaultModel": "gpt-6.1-sol",
   "hideThinkingBlock": true,
   "defaultTools": [
     "+codemode"
@@ -22,16 +22,17 @@
     "npm:@yceachan/pi-switch-cwd",
     "npm:@plannotator/pi-extension",
     "git:github.com/tmustier/pine-of-glass",
-    "https://github.com/monotykamary/pi-model-sort"
+    "https://github.com/monotykamary/pi-model-sort",
+    "npm:@juicesharp/rpiv-ask-user-question"
   ],
   "terminal": {
     "showTerminalProgress": true
   },
   "enabledModels": [
     "github-copilot/gpt-6-luna",
-    "github-copilot/gpt-6-sol",
     "github-copilot/gpt-6-astra",
-    "anthropic/claude-opus-5-5"
+    "anthropic/claude-opus-5-5",
+    "github-copilot/gpt-6.1-sol"
   ],
   "theme": "dark",
   "treeFilterMode": "no-tools"
