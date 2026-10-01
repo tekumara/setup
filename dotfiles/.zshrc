@@ -10,7 +10,8 @@ fi
 
 # Generate new ~/.zsh_plugins.sh if it does not exist or ~/.zshrc is newer
 if [[ ! -f ~/.zsh_plugins.sh ]] || [[ ~/.zshrc -nt ~/.zsh_plugins.sh ]]; then
-  source $HOMEBREW_PREFIX/opt/antidote/share/antidote/antidote.zsh
+  # Non-login shells may not have HOMEBREW_PREFIX from .zprofile yet.
+  source "${HOMEBREW_PREFIX:-$(brew --prefix)}/opt/antidote/share/antidote/antidote.zsh"
   echo "antidote bundle"
   antidote bundle <<- EOF > ~/.zsh_plugins.sh
     ajeetdsouza/zoxide
@@ -77,3 +78,5 @@ source "$HOME/.zshrc.d/setup.plugin.zsh"
 #setup-mac end
 
 _load_compinit
+
+#zprof
