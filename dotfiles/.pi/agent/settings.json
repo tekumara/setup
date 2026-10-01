@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "1.0.4",
+  "lastChangelogVersion": "1.1.0",
   "defaultProvider": "github-copilot",
   "defaultModel": "gpt-6.1-sol",
   "defaultThinkingLevel": "xhigh",
@@ -10,7 +10,6 @@
   ],
   "packages": [
     "git:github.com/earendil-works/pi-review",
-    "npm:pi-mcp-adapter",
     "git:github.com/supabitapp/supaterm-skills",
     "git:github.com/dbachelder/pi-btw",
     "npm:pi-web-access",
@@ -21,22 +20,16 @@
     "npm:@yceachan/pi-switch-cwd",
     "npm:@plannotator/pi-extension",
     "git:github.com/tmustier/pine-of-glass",
-    "https://github.com/monotykamary/pi-model-sort",
-    "npm:@juicesharp/rpiv-ask-user-question",
-    "npm:@dev.fast/pi-whiteboard"
+    "https://github.com/monotykamary/pi-model-sort"
   ],
   "terminal": {
     "showTerminalProgress": true
   },
   "enabledModels": [
     "github-copilot/gpt-6-luna",
-    "github-copilot/gpt-6-astra",
-    "anthropic/claude-opus-5-5",
-    "github-copilot/gpt-6.1-sol"
+    "github-copilot/gpt-6.1-sol",
+    "anthropic/claude-haiku-5-5",
+    "anthropic/claude-opus-5-5"
   ],
-  "theme": "dark",
-  "treeFilterMode": "no-tools",
-  "extensions": [
-    "-builtin:mcp"
-  ]
+  "treeFilterMode": "no-tools"
 }

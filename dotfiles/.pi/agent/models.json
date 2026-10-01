@@ -1,8 +1,5 @@
 {
   "providers": {
-    "openai": {
-      "baseUrl": "https://us.api.openai.com/v1"
-    },
     "github-copilot": {
       "modelOverrides": {
         "gpt-5.3-codex": { "contextWindow": 400000 },
