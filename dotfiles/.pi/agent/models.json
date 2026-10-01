@@ -12,9 +12,22 @@
         "gpt-5.6-luna": { "contextWindow": 272000 },
         "gpt-5.6-sol": { "contextWindow": 272000 },
         "gpt-5.6-terra": { "contextWindow": 272000 },
-        "gpt-6-astra": { "contextWindow": 272000 },
-        "gpt-6-luna": { "contextWindow": 272000 },
-        "gpt-6-sol": { "contextWindow": 272000 }
+        "gpt-6-astra": {
+          "contextWindow": 272000,
+          "promptCache": { "short": 1800, "long": 1800 }
+        },
+        "gpt-6-luna": {
+          "contextWindow": 272000,
+          "promptCache": { "short": 1800, "long": 1800 }
+        },
+        "gpt-6.1-sol": {
+          "contextWindow": 272000,
+          "promptCache": { "short": 1800, "long": 1800 }
+        },
+        "gpt-6-sol": {
+          "contextWindow": 272000,
+          "promptCache": { "short": 1800, "long": 1800 }
+        }
       }
     }
   }

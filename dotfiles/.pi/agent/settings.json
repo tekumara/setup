@@ -1,18 +1,18 @@
 {
-  "lastChangelogVersion": "0.99.2",
+  "lastChangelogVersion": "1.0.4",
   "defaultProvider": "github-copilot",
   "defaultModel": "gpt-6.1-sol",
+  "defaultThinkingLevel": "xhigh",
   "hideThinkingBlock": true,
+  "cacheWarming": "idle",
   "defaultTools": [
     "+codemode"
   ],
-  "tuiMode": "fullscreen",
   "packages": [
     "git:github.com/earendil-works/pi-review",
     "npm:pi-mcp-adapter",
     "git:github.com/supabitapp/supaterm-skills",
     "git:github.com/dbachelder/pi-btw",
-    "npm:pi-code-previews",
     "npm:pi-web-access",
     "npm:pi-fzfp",
     "npm:@spences10/pi-redact",
@@ -22,7 +22,8 @@
     "npm:@plannotator/pi-extension",
     "git:github.com/tmustier/pine-of-glass",
     "https://github.com/monotykamary/pi-model-sort",
-    "npm:@juicesharp/rpiv-ask-user-question"
+    "npm:@juicesharp/rpiv-ask-user-question",
+    "npm:@dev.fast/pi-whiteboard"
   ],
   "terminal": {
     "showTerminalProgress": true
@@ -34,5 +35,8 @@
     "github-copilot/gpt-6.1-sol"
   ],
   "theme": "dark",
-  "treeFilterMode": "no-tools"
+  "treeFilterMode": "no-tools",
+  "extensions": [
+    "-builtin:mcp"
+  ]
 }
