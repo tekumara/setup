@@ -35,6 +35,7 @@ export FORGIT_FZF_DEFAULT_OPTS="--reverse $FORGIT_FZF_DEFAULT_OPTS"
 
 source ~/.zsh_plugins.sh
 
+source "$HOME/.zshrc.d/agents.plugin.zsh"
 #source "$HOME/.zshrc.d/aws.plugin.zsh"
 #source "$HOME/.zshrc.d/docker.plugin.zsh"
 source "$HOME/.zshrc.d/dinstall.plugin.zsh"
@@ -72,6 +73,7 @@ source "$HOME/.zshrc.d/git.plugin.zsh"
 source "$HOME/.zshrc.d/kubes.plugin.zsh"
 source "$HOME/.zshrc.d/migrations.plugin.zsh"
 source "$HOME/.zshrc.d/mise.plugin.zsh"
+source "$HOME/.zshrc.d/node.plugin.zsh"
 source "$HOME/.zshrc.d/python.plugin.zsh"
 source "$HOME/.zshrc.d/setup.plugin.zsh"
 
