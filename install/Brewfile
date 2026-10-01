@@ -21,6 +21,7 @@ brew "grpcurl"
 brew "pstree"
 brew "direnv"
 brew "dust"
+brew "watch"
 
 # pdf/images
 brew "poppler"
