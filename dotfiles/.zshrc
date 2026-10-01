@@ -79,4 +79,9 @@ source "$HOME/.zshrc.d/setup.plugin.zsh"
 
 _load_compinit
 
+# super.engineering terminal sends modified arrow sequences for Option+Left/Right.
+# nb: doesn't fix less which needs its own keybindings for Option+Left/Right.
+bindkey $'\e[1;3D' backward-word
+bindkey $'\e[1;3C' forward-word
+
 #zprof
