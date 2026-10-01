@@ -339,4 +339,14 @@
   "claudeCode.preferredLocation": "panel",
   "terminal.integrated.initialHint": false,
   "terminal.integrated.inheritEnv": false,
+  "yaml.disableSchemaDetection": [
+    "**/.github/workflows/*.yml",
+    "**/.github/workflows/*.yaml",
+    "**/.gitea/workflows/*.yml",
+    "**/.gitea/workflows/*.yaml",
+    "**/.forgejo/workflows/*.yml",
+    "**/.forgejo/workflows/*.yaml"
+  ],
+  "chat.useHooks": true,
+  "chat.hookFilesLocations": {"~/.copilot/hooks": true}
 }
