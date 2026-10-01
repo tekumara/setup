@@ -1,13 +1,19 @@
 {
-  "lastChangelogVersion": "1.1.0",
-  "defaultProvider": "github-copilot",
-  "defaultModel": "gpt-6.1-sol",
-  "defaultThinkingLevel": "xhigh",
-  "hideThinkingBlock": true,
   "cacheWarming": "idle",
+  "defaultModel": "gpt-6.1-sol",
+  "defaultProvider": "github-copilot",
+  "defaultThinkingLevel": "xhigh",
   "defaultTools": [
     "+codemode"
   ],
+  "enabledModels": [
+    "github-copilot/gpt-6-luna",
+    "github-copilot/gpt-6.1-sol",
+    "anthropic/claude-haiku-5-5",
+    "anthropic/claude-opus-5-5"
+  ],
+  "hideThinkingBlock": true,
+  "lastChangelogVersion": "1.1.0",
   "packages": [
     "git:github.com/earendil-works/pi-review",
     "git:github.com/supabitapp/supaterm-skills",
@@ -25,11 +31,5 @@
   "terminal": {
     "showTerminalProgress": true
   },
-  "enabledModels": [
-    "github-copilot/gpt-6-luna",
-    "github-copilot/gpt-6.1-sol",
-    "anthropic/claude-haiku-5-5",
-    "anthropic/claude-opus-5-5"
-  ],
   "treeFilterMode": "no-tools"
 }
