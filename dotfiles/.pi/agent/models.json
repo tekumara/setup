@@ -1,5 +1,13 @@
 {
   "providers": {
+    "anthropic": {
+      "modelOverrides": {
+        "claude-haiku-5-5": {
+          "contextWindow": 100000,
+          "promptCache": { "short": 300, "long": 3600 }
+        }
+      }
+    },
     "github-copilot": {
       "modelOverrides": {
         "gpt-5.3-codex": { "contextWindow": 400000 },

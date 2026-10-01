@@ -10,24 +10,25 @@
     "github-copilot/gpt-6-luna",
     "github-copilot/gpt-6.1-sol",
     "anthropic/claude-haiku-5-5",
-    "anthropic/claude-opus-5-5"
+    "anthropic/claude-sonnet-5-5"
   ],
   "hideThinkingBlock": true,
   "lastChangelogVersion": "1.1.0",
   "packages": [
+    "git:github.com/algal/pi-openai-server-compaction",
     "git:github.com/earendil-works/pi-review",
     "git:github.com/supabitapp/supaterm-skills",
-    "git:github.com/dbachelder/pi-btw",
-    "npm:pi-web-access",
-    "npm:pi-fzfp",
-    "npm:@spences10/pi-redact",
-    "git:github.com/algal/pi-openai-server-compaction",
-    "npm:pi-timer",
-    "npm:@yceachan/pi-switch-cwd",
     "npm:@plannotator/pi-extension",
-    "git:github.com/tmustier/pine-of-glass",
-    "https://github.com/monotykamary/pi-model-sort"
+    "npm:@spences10/pi-redact",
+    "npm:@yceachan/pi-switch-cwd",
+    "npm:pi-btw",
+    "npm:pi-fzfp",
+    "npm:pi-model-sort",
+    "npm:pi-timer",
+    "npm:pi-web-access",
+    "npm:pine-of-glass"
   ],
+  "showCacheMissNotices": true,
   "terminal": {
     "showTerminalProgress": true
   },
